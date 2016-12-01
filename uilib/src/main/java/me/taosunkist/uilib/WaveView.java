@@ -6,15 +6,18 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.os.Handler;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 
 /**
  * TODO: document your custom view class.
+ * 波形水纹动态控件
+ *
+ * @author Sunkis
  */
 public class WaveView extends View {
-    private String mExampleString; // TODO: use a default from R.string...
     private int mExampleColor = Color.RED; // TODO: use a default from R.color...
     private float mExampleDimension = 0; // TODO: use a default from R.dimen...
     private int mViewWidth;
@@ -25,8 +28,6 @@ public class WaveView extends View {
      * 绘制Path的画笔
      */
     private Paint mPathPen;
-    private float mTextWidth;
-    private float mTextHeight;
 
     public WaveView(Context context) {
         super(context);
@@ -56,7 +57,6 @@ public class WaveView extends View {
         final TypedArray a = getContext().obtainStyledAttributes(
                 attrs, R.styleable.WaveView, defStyle, 0);
 
-        mExampleString = a.getString(R.styleable.WaveView_exampleString);
         mExampleColor = a.getColor(R.styleable.WaveView_exampleColor, mExampleColor);
         // Use getDimensionPixelSize or getDimensionPixelOffset when dealing with
         // values that should fall on pixel boundaries.
@@ -71,9 +71,6 @@ public class WaveView extends View {
         // Update TextPaint and text measurements from attributes
         mTextPaint.setTextSize(mExampleDimension);
         mTextPaint.setColor(mExampleColor);
-        mTextWidth = mTextPaint.measureText(mExampleString);
-        Paint.FontMetrics fontMetrics = mTextPaint.getFontMetrics();
-        mTextHeight = fontMetrics.bottom;
 
         mPathPen = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPathPen.setColor(mExampleColor);
@@ -96,11 +93,6 @@ public class WaveView extends View {
         int contentWidth = getWidth() - paddingLeft - paddingRight;
         int contentHeight = getHeight() - paddingTop - paddingBottom;
 
-        // Draw the text.
-        canvas.drawText(mExampleString,
-                paddingLeft + (contentWidth - mTextWidth) / 2,
-                paddingTop + (contentHeight + mTextHeight) / 2,
-                mTextPaint);
         drawPath(canvas);
     }
 
@@ -112,7 +104,14 @@ public class WaveView extends View {
     private void drawPath(Canvas canvas) {
         canvas.translate(mViewWidth / 2, mViewHeight / 2);
         Path path = new Path();
+        path.lineTo(0, 0);
+        path.lineTo(45, 45);
         path.quadTo(0, 0, 100, 100);
+        path.quadTo(122, 122, 222, 222);
         canvas.drawPath(path, mPathPen);
+    }
+
+    public void run() {
+
     }
 }

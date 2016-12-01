@@ -4,11 +4,11 @@
     android:layout_height="match_parent">
 
     <me.taosunkist.uilib.WaveView
+        android:id="@+id/wave_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
-        app:exampleColor="#7733b5e5"
-        app:exampleDimension="24sp"
-        app:exampleString="Hello, WaveView" />
+        app:exampleColor="#000000"
+        app:exampleDimension="24sp" />
 
 </FrameLayout>
