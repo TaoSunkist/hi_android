@@ -12,8 +12,8 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
-import my.sample.android.uikit.R;
-import my.sample.android.uikit.tools.ResourcesUtil;
+import me.taosunkist.uilib.R;
+
 
 /**
  * Created by Sunkist on 2016/4/12.

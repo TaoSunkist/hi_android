@@ -102,13 +102,33 @@ public class WaveView extends View {
      * @param canvas
      */
     private void drawPath(Canvas canvas) {
+        drawCartesianCoordinates(canvas);
+        mPathPen.setColor(Color.BLACK);
         canvas.translate(mViewWidth / 2, mViewHeight / 2);
         Path path = new Path();
-        path.lineTo(0, 0);
-        path.lineTo(45, 45);
-        path.quadTo(0, 0, 100, 100);
-        path.quadTo(122, 122, 222, 222);
+        path.lineTo(500, 500);
+        path.moveTo(500, 250);
+        path.setLastPoint(250,0);
+        path.lineTo(500, 0);
+        path.setLastPoint(300,0);
         canvas.drawPath(path, mPathPen);
+    }
+
+    /**
+     * 绘制平面坐标系
+     *
+     * @param canvas
+     */
+    private void drawCartesianCoordinates(Canvas canvas) {
+        mPathPen.setColor(Color.YELLOW);
+        Path yPath = new Path();
+        yPath.moveTo(mViewWidth / 2, 0);
+        yPath.lineTo(mViewWidth / 2, mViewHeight);
+        canvas.drawPath(yPath, mPathPen);
+        Path xPath = new Path();
+        xPath.moveTo(0, mViewHeight / 2);
+        xPath.lineTo(mViewWidth, mViewHeight / 2);
+        canvas.drawPath(xPath, mPathPen);
     }
 
     public void run() {
