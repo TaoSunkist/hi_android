@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dagger2/dagger2.iml" filepath="$PROJECT_DIR$/dagger2/dagger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-android.iml" filepath="$PROJECT_DIR$/hello-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/uilib/uilib.iml" filepath="$PROJECT_DIR$/uilib/uilib.iml" />
     </modules>

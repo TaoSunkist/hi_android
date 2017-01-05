@@ -18,9 +18,14 @@ public class BezierCurveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bezier_curve);
         waveView = (WaveView) findViewById(R.id.wave_view);
-        waveView.run();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        waveView.run();
+    }
     public static void open(Context context) {
         Intent starter = new Intent(context, BezierCurveActivity.class);
         context.startActivity(starter);

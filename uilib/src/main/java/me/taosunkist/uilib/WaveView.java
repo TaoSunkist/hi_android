@@ -9,6 +9,7 @@ import android.graphics.Path;
 import android.os.Handler;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -17,7 +18,7 @@ import android.view.View;
  *
  * @author Sunkis
  */
-public class WaveView extends View {
+public class WaveView extends View implements Runnable {
     private int mExampleColor = Color.RED; // TODO: use a default from R.color...
     private float mExampleDimension = 0; // TODO: use a default from R.dimen...
     private int mViewWidth;
@@ -96,6 +97,8 @@ public class WaveView extends View {
         drawPath(canvas);
     }
 
+    int x1, y1, x2, y2;
+
     /**
      * 绘制路径
      *
@@ -106,11 +109,7 @@ public class WaveView extends View {
         mPathPen.setColor(Color.BLACK);
         canvas.translate(mViewWidth / 2, mViewHeight / 2);
         Path path = new Path();
-        path.lineTo(500, 500);
-        path.moveTo(500, 250);
-        path.setLastPoint(250,0);
-        path.lineTo(500, 0);
-        path.setLastPoint(300,0);
+        path.quadTo(200, 400, 600, 800);
         canvas.drawPath(path, mPathPen);
     }
 
@@ -131,7 +130,18 @@ public class WaveView extends View {
         canvas.drawPath(xPath, mPathPen);
     }
 
-    public void run() {
+    private Handler handler = new Handler();
 
+    @Override
+    public void run() {
+        x2--;
+        y2++;
+        Log.d("WaveView", y2 + "");
+        invalidate();
+        if (x2 >= 1000) {
+            handler.removeCallbacks(this);
+        } else {
+            handler.postDelayed(this, 10);
+        }
     }
 }
