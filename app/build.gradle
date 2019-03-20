@@ -50,7 +50,7 @@ android {
 protobuf {
 //    protoc { artifact = 'com.google.protobuf:protoc:3.6.1' }
     protoc {
-        path = '/Users/taohui/DevStation/hi_golang/bin/protoc'
+        path = '/Users/taohui/DevStation/hi_golang/bin/protoc'//可以配置成环境变量
     }
     plugins {
         javalite { artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0" }

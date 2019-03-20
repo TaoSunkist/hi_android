@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         init();
     }
-    private  TextView goGrpc;
+
+    private TextView goGrpc;
 
     private void init() {
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -55,8 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         goGrpc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                getSupportFragmentManager().beginTransaction().add(R.id.content_root,GrpcFragment.newInstance()).addToBackStack(GrpcFragment.TAG).commitAllowingStateLoss();
+                getSupportFragmentManager().beginTransaction().add(R.id.content_root, me.taosunkist.hello.fragment.grpc.GrpcFragment.newInstance()).addToBackStack(GrpcFragment.TAG).commitAllowingStateLoss();
             }
         });
     }
