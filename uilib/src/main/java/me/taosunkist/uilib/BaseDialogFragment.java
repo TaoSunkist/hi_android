@@ -1,8 +1,10 @@
 package me.taosunkist.uilib;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -30,6 +32,7 @@ public class BaseDialogFragment extends Fragment implements View.OnClickListener
         return baseDialogFragment;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         loadAnimation();
@@ -49,6 +52,7 @@ public class BaseDialogFragment extends Fragment implements View.OnClickListener
         return view;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -61,6 +65,7 @@ public class BaseDialogFragment extends Fragment implements View.OnClickListener
      *
      * @param view
      */
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private void findViewById(View view) {
         mGround = (RelativeLayout) view.findViewById(R.id.group);
         mBody = (RelativeLayout) view.findViewById(R.id.body);
@@ -69,6 +74,7 @@ public class BaseDialogFragment extends Fragment implements View.OnClickListener
         getView().setOnKeyListener(this);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private void loadAnimation() {
         mCoverInAnim = AnimationUtils.loadAnimation(getContext(), R.anim.dialog_normal_fade_in);
         mBodyInAnim = AnimationUtils.loadAnimation(getContext(), R.anim.dialog_body_normal_slide_in);
@@ -140,6 +146,7 @@ public class BaseDialogFragment extends Fragment implements View.OnClickListener
         return false;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private View getBodyView(RelativeLayout relativeGroup) {
         RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         relativeParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);

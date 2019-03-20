@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import me.taosunkist.uilib.WaveView;
 
@@ -18,6 +19,7 @@ public class BezierCurveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bezier_curve);
         waveView = (WaveView) findViewById(R.id.wave_view);
+        Toast.makeText(this, "1111", Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -7,4 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_qr_code">QR Code</string>
     <string name="action_dashboard">Dashboard</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
