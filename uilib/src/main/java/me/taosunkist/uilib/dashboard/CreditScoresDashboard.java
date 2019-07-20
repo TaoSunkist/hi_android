@@ -24,9 +24,7 @@ import me.taosunkist.uilib.R;
  * 自定义的信用分数仪表盘
  */
 public class CreditScoresDashboard extends View {
-    /**
-     * 起点角度
-     */
+    /* 起点角度 */
     private static final int ANGLE_START = 135;
     /**
      * 终点角度
@@ -123,35 +121,35 @@ public class CreditScoresDashboard extends View {
         //通过内部的弧形进度控制外部刻度的大小，计算规则为：内部弧形滚动Bar的Size+tick的Size+刻度间距
         typedArray.recycle();
         //全宽=内部扇形进度条的宽度+刻度的高度+刻度的顶部间距+刻度的底部间距+30dp
-        mTickFont.width = FontUtil.measureFontSize(tickFontSize, String.valueOf(maxScores), true);
-        mTickFont.height = FontUtil.measureFontSize(tickFontSize, String.valueOf(maxScores), false);
+        mTickFont.setWidth(FontUtil.measureFontSize(tickFontSize, String.valueOf(maxScores), true));
+        mTickFont.setHeight(FontUtil.measureFontSize(tickFontSize, String.valueOf(maxScores), false));
         this.mDashWidth = mInnerAcrProgressBarAllSize
                 + mTickMarginBottom * 2
                 + mTickHeight * 2
                 + mTickFontMargin * 2
-                + mTickFont.width * 2;
+                + mTickFont.getWidth() * 2;
 
         mDashHeight = mDashWidth;
         this.mOuterBarStrokeWidth = mTickHeight + mTickMarginBottom + mTickMarginBottom / 2;
         //刻度的上下边距和高宽
         mTickRectF.left = mDashWidth / 2 - mTickWidth;
         mTickRectF.right = mDashWidth / 2 + mTickWidth;
-        mTickRectF.top = mTickFont.width + mTickFontMargin;
+        mTickRectF.top = mTickFont.getWidth() + mTickFontMargin;
         mTickRectF.bottom = mTickRectF.top + mTickHeight;
 
         //计算隐藏的Bar的区域
         this.outerArcProgressBarRectF.set(
-                mTickFont.width + mTickFontMargin + mTickMarginBottom
-                , mTickFont.width + mTickFontMargin + mTickMarginBottom
-                , mDashWidth - mTickFont.width - mTickFontMargin - mTickMarginBottom
-                , mDashHeight - mTickFont.width - mTickFontMargin - mTickMarginBottom
+                mTickFont.getWidth() + mTickFontMargin + mTickMarginBottom
+                , mTickFont.getWidth() + mTickFontMargin + mTickMarginBottom
+                , mDashWidth - mTickFont.getWidth() - mTickFontMargin - mTickMarginBottom
+                , mDashHeight - mTickFont.getWidth() - mTickFontMargin - mTickMarginBottom
         );
 
         this.gradientScallopBarRectF.set(
-                mTickFont.width
-                , mTickFont.width
-                , mDashWidth - mTickFont.width
-                , mDashWidth - mTickFont.width);
+                mTickFont.getWidth()
+                , mTickFont.getWidth()
+                , mDashWidth - mTickFont.getWidth()
+                , mDashWidth - mTickFont.getWidth());
 
         this.mSweepGradient = new SweepGradient(
                 this.mDashWidth / 2
@@ -213,8 +211,8 @@ public class CreditScoresDashboard extends View {
         x = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.cos(135 * Math.PI / 180));
         y = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.sin(135 * Math.PI / 180));
         canvas.drawText(String.valueOf(minScores)
-                , x - mTickFont.width + mTickFont.width / 2
-                , y - mTickFont.height
+                , x - mTickFont.getWidth() + mTickFont.getWidth() / 2
+                , y - mTickFont.getHeight()
                 , mTickFontPen);
 
         x = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.cos(189 * Math.PI / 180));
@@ -234,22 +232,22 @@ public class CreditScoresDashboard extends View {
         x = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.cos(306 * Math.PI / 180));
         y = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.sin(306 * Math.PI / 180));
         canvas.drawText(scoresRange.size() != 0 ? scoresRange.get(2) : ""
-                , x - mTickFont.width
+                , x - mTickFont.getWidth()
                 , y
                 , mTickFontPen);
 
         x = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.cos(351 * Math.PI / 180));
         y = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.sin(351 * Math.PI / 180));
         canvas.drawText(scoresRange.size() != 0 ? scoresRange.get(3) : ""
-                , x - mTickFont.width
+                , x - mTickFont.getWidth()
                 , y
                 , mTickFontPen);
 
         x = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.cos(405 * Math.PI / 180));
         y = (float) (((mDashWidth) / 2) + mDashWidth / 2 * Math.sin(405 * Math.PI / 180));
         canvas.drawText(String.valueOf(maxScores)
-                , x - mTickFont.width + mTickFont.width / 2
-                , y - mTickFont.height
+                , x - mTickFont.getWidth() + mTickFont.getWidth() / 2
+                , y - mTickFont.getHeight()
                 , mTickFontPen);
     }
 
