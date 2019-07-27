@@ -16,6 +16,8 @@ import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger
 
 import me.taosunkist.hello.R
+import kotlin.math.cos
+import kotlin.math.sin
 
 
 /**
@@ -187,30 +189,30 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
         canvas.drawColor(Color.WHITE)
         canvas.restore()
 
-        var x: Float
-        var y: Float
-        x = (mDashWidth / 2 + mDashWidth / 2 * Math.cos(135 * Math.PI / 180)).toFloat()
+        var x = 0f
+        var y = 0f
+        x = (mDashWidth / 2 + mDashWidth / 2 * cos(135 * Math.PI / 180)).toFloat()
         y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(135 * Math.PI / 180)).toFloat()
         canvas.drawText(minScores.toString(), x - mTickFont!!.width + mTickFont!!.width / 2, y - mTickFont!!.height, mTickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * Math.cos(189 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(189 * Math.PI / 180)).toFloat()
+        x = (mDashWidth / 2 + mDashWidth / 2 * cos(189 * Math.PI / 180)).toFloat()
+        y = (mDashWidth / 2 + mDashWidth / 2 * sin(189 * Math.PI / 180)).toFloat()
         canvas.drawText(if (scoresRange.size != 0) scoresRange[0] else "", x, y, mTickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * Math.cos(234 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(234 * Math.PI / 180)).toFloat()
+        x = (mDashWidth / 2 + mDashWidth / 2 * cos(234 * Math.PI / 180)).toFloat()
+        y = (mDashWidth / 2 + mDashWidth / 2 * sin(234 * Math.PI / 180)).toFloat()
         canvas.drawText(if (scoresRange.size != 0) scoresRange[1] else "", x, y, mTickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * Math.cos(306 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(306 * Math.PI / 180)).toFloat()
+        x = (mDashWidth / 2 + mDashWidth / 2 * cos(306 * Math.PI / 180)).toFloat()
+        y = (mDashWidth / 2 + mDashWidth / 2 * sin(306 * Math.PI / 180)).toFloat()
         canvas.drawText(if (scoresRange.size != 0) scoresRange[2] else "", x - mTickFont!!.width, y, mTickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * Math.cos(351 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(351 * Math.PI / 180)).toFloat()
+        x = (mDashWidth / 2 + mDashWidth / 2 * cos(351 * Math.PI / 180)).toFloat()
+        y = (mDashWidth / 2 + mDashWidth / 2 * sin(351 * Math.PI / 180)).toFloat()
         canvas.drawText(if (scoresRange.size != 0) scoresRange[3] else "", x - mTickFont!!.width, y, mTickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * Math.cos(405 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(405 * Math.PI / 180)).toFloat()
+        x = (mDashWidth / 2 + mDashWidth / 2 * cos(405 * Math.PI / 180)).toFloat()
+        y = (mDashWidth / 2 + mDashWidth / 2 * sin(405 * Math.PI / 180)).toFloat()
         canvas.drawText(maxScores.toString(), x - mTickFont!!.width + mTickFont!!.width / 2, y - mTickFont!!.height, mTickFontPen!!)
     }
 
@@ -231,9 +233,7 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
     companion object {
         /* 起点角度 */
         private val ANGLE_START = 135
-        /**
-         * 终点角度
-         */
+        /* 终点角度 */
         private val ANGLE_END = 270
     }
 }
