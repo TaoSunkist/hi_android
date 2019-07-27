@@ -1,12 +1,13 @@
-package me.taosunkist.hello
+package me.taosunkist.hello.ui.colorfuldashboard
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.AppCompatSeekBar
 import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatSeekBar
+import me.taosunkist.hello.R
 
-import me.taosunkist.uilib.dashboard.ArcProgressBar
-import me.taosunkist.uilib.dashboard.CreditScoresDashboard
+import me.taosunkist.hello.ui.colorfuldashboard.view.dashboard.ArcProgressBar
+import me.taosunkist.hello.ui.colorfuldashboard.view.dashboard.CreditScoresDashboard
 
 class DashboardActivity : AppCompatActivity() {
 

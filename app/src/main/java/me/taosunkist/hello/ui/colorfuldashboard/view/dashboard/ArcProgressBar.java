@@ -1,4 +1,4 @@
-package me.taosunkist.uilib.dashboard;
+package me.taosunkist.hello.ui.colorfuldashboard.view.dashboard;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,8 +12,7 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
-import me.taosunkist.uilib.R;
-
+import me.taosunkist.hello.R;
 
 /**
  * Created by Sunkist on 2016/4/12.

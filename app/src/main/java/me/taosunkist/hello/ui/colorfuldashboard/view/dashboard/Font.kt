@@ -1,4 +1,4 @@
-package me.taosunkist.uilib.dashboard
+package me.taosunkist.hello.ui.colorfuldashboard.view.dashboard
 
 import android.text.TextUtils
 

@@ -1,27 +1,24 @@
-package me.taosunkist.hello
+package me.taosunkist.hello.ui.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewAnimationUtils
-import android.widget.TextView
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.navigation.NavigationView
+import me.taosunkist.hello.R
+import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
+import me.taosunkist.hello.ui.grpc.GrpcFragment
+import kotlin.math.max
 
-import io.grpc.Grpc
-import me.taosunkist.hello.fragment.grpc.GrpcFragment
-import me.taosunkist.uilib.BaseDialogFragment
-
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
-    private var goGrpc: TextView? = null
+class DashBoardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,20 +31,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
 
         val fab = findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener { supportFragmentManager.beginTransaction().add(android.R.id.content, BaseDialogFragment.newInstance()).addToBackStack(null).commit() }
 
         val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
-        val toggle = ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        //drawer.setDrawerListener(toggle);
+        val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-        goGrpc = findViewById(R.id.go_grpc)
-        goGrpc!!.setOnClickListener { supportFragmentManager.beginTransaction().add(R.id.content_root, me.taosunkist.hello.fragment.grpc.GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss() }
+        findViewById<View>(R.id.go_grpc).setOnClickListener { supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss() }
     }
 
     override fun onBackPressed() {
@@ -75,7 +68,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             if (actionView != null) {
                 val actionViewCenterX = (actionView.left + actionView.right) / 2
                 val actionHeightCenterY = (actionView.top + actionView.bottom) / 2
-                val radius = Math.max(actionView.width, actionView.height)
+                val radius = max(actionView.width, actionView.height)
                 var animator: android.animation.Animator? = null
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                     animator = ViewAnimationUtils.createCircularReveal(actionView, actionViewCenterX, actionHeightCenterY, 0f, radius.toFloat())

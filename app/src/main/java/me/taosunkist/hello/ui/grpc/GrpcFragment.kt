@@ -1,9 +1,8 @@
-package me.taosunkist.hello.fragment.grpc
+package me.taosunkist.hello.ui.grpc
 
 import android.app.Activity
 import android.os.AsyncTask
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.text.TextUtils
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,18 +11,16 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-
+import androidx.fragment.app.Fragment
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.lang.ref.WeakReference
 import java.util.concurrent.TimeUnit
-
 import io.grpc.ManagedChannel
 import io.grpc.ManagedChannelBuilder
 import javapb.GreeterGrpc
 import javapb.HelloRequest
 import me.taosunkist.hello.R
-
 
 /**
  * A simple [Fragment] subclass.
