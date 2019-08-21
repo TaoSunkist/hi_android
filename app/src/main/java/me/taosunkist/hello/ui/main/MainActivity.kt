@@ -15,7 +15,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
-import me.taosunkist.hello.ui.grpc.GrpcFragment
+import me.taosunkist.hello.ui.list.RecyclerViewOrientationFragment
+//import me.taosunkist.hello.ui.grpc.GrpcFragment
 import kotlin.math.max
 
 class DashBoardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -40,7 +41,7 @@ class DashBoardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-        findViewById<View>(R.id.go_grpc).setOnClickListener { supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss() }
+//        findViewById<View>(R.id.go_grpc).setOnClickListener { supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss() }
     }
 
     override fun onBackPressed() {
@@ -93,7 +94,7 @@ class DashBoardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-
+            supportFragmentManager.beginTransaction().add(R.id.content_root, RecyclerViewOrientationFragment.newInstance()).addToBackStack(RecyclerViewOrientationFragment.tag).commitAllowingStateLoss()
         }
 
         val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)

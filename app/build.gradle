@@ -23,16 +23,16 @@ android {
     }
     sourceSets {
         main {
-            proto {
-                // In addition to the default 'src/main/proto'
-                srcDir 'src/main/protobuf'
-                srcDir 'src/main/protocolbuffers'
-                // In addition to the default '**/*.proto' (use with caution).
-                // Using an extension other than 'proto' is NOT recommended,
-                // because when proto files are published along with class files, we can
-                // only tell the type of a file from its extension.
-                include '**/*.protodevel'
-            }
+//            proto {
+//                // In addition to the default 'src/main/proto'
+//                srcDir 'src/main/protobuf'
+//                srcDir 'src/main/protocolbuffers'
+//                // In addition to the default '**/*.proto' (use with caution).
+//                // Using an extension other than 'proto' is NOT recommended,
+//                // because when proto files are published along with class files, we can
+//                // only tell the type of a file from its extension.
+//                include '**/*.protodevel'
+//            }
             java {
                 main.java.srcDirs += 'src/main/kotlin'
                 main.java.srcDirs += 'src/main/java'
@@ -44,6 +44,10 @@ android {
                 // In addition to the default 'src/test/proto'
                 srcDir 'src/test/protocolbuffers'
             }
+            java{
+                main.java.srcDirs += 'src/test/kotlin'
+                main.java.srcDirs += 'src/test/java'
+            }
         }
 
     }
@@ -51,29 +55,29 @@ android {
         all*.exclude group: 'com.google.guava', module: 'listenablefuture'
     }
 }
-protobuf {
-//    protoc { artifact = 'com.google.protobuf:protoc:3.6.1' }
-    protoc {
-        path = '/Users/taohui/DevStation/hi_golang/bin/protoc'//可以配置成环境变量
-    }
-    plugins {
-        javalite { artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0" }
-        grpc {
-            artifact = 'io.grpc:protoc-gen-grpc-java:1.19.0' // CURRENT_GRPC_VERSION
-        }
-    }
-
-    generateProtoTasks {
-        all().each { task ->
-            task.plugins {
-                javalite {}
-                grpc { // Options added to --grpc_out
-                    option 'lite'
-                }
-            }
-        }
-    }
-}
+//protobuf {
+////    protoc { artifact = 'com.google.protobuf:protoc:3.6.1' }
+//    protoc {
+//        path = '/Users/taohui/DevStation/hi_golang/bin/protoc'//可以配置成环境变量
+//    }
+//    plugins {
+//        javalite { artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0" }
+//        grpc {
+//            artifact = 'io.grpc:protoc-gen-grpc-java:1.19.0' // CURRENT_GRPC_VERSION
+//        }
+//    }
+//
+//    generateProtoTasks {
+//        all().each { task ->
+//            task.plugins {
+//                javalite {}
+//                grpc { // Options added to --grpc_out
+//                    option 'lite'
+//                }
+//            }
+//        }
+//    }
+//}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'junit:junit:4.13-beta-3'
@@ -91,6 +95,9 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta2'
     implementation 'com.google.android.material:material:1.1.0-alpha08'
     implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
+    implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.0'
 
 
 }
