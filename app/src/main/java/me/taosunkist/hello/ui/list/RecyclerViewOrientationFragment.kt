@@ -29,34 +29,16 @@ class RecyclerViewOrientationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recyclerView = view.findViewById<RecyclerView>(R.id.fragment_recycler_view_orientation_recycler_view)
-        val recyclerViewAdapter = RecyclerViewAdapter()
+        var recyclerView = view.findViewById<RecyclerView>(R.id.fragment_recycler_view_orientation_recycler_view)
+        val recyclerViewAdapter = MyAdapter()
 
         recyclerView.adapter = recyclerViewAdapter
+        val manager = PageLayoutManager(2, 4)
+        recyclerView.layoutManager = manager
+
+        manager.setMarginHorizontal(1)
+        manager.setMarginVertical(5)
 
     }
 
-    inner class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            return ViewHolder(AppCompatImageView(parent.context).apply {
-                setImageResource(R.drawable.btn_radio_off_mtrl)
-                setOnClickListener {
-                    items.add(items[items.size - 1] + 1)
-                    Toast.makeText(context, "${items.size}", Toast.LENGTH_SHORT).show()
-                    notifyDataSetChanged()
-                }
-            })
-        }
-
-        override fun getItemCount(): Int {
-            return items.size
-        }
-
-        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        }
-
-        inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        }
-    }
 }
