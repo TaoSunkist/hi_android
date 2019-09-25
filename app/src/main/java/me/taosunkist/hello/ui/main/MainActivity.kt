@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.view.ViewAnimationUtils
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -16,10 +15,11 @@ import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
 import me.taosunkist.hello.ui.list.RecyclerViewOrientationFragment
+import me.taosunkist.hello.ui.notification.NotificationFragment
 //import me.taosunkist.hello.ui.grpc.GrpcFragment
 import kotlin.math.max
 
-class DashBoardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,7 +92,7 @@ class DashBoardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
-
+            supportFragmentManager.beginTransaction().add(R.id.content_root, NotificationFragment.newInstance("", "")).addToBackStack(NotificationFragment.TAG).commitAllowingStateLoss()
         } else if (id == R.id.nav_send) {
             supportFragmentManager.beginTransaction().add(R.id.content_root, RecyclerViewOrientationFragment.newInstance()).addToBackStack(RecyclerViewOrientationFragment.tag).commitAllowingStateLoss()
         }
