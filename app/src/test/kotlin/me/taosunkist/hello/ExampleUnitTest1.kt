@@ -1,22 +1,16 @@
 package me.taosunkist.hello
 
 import android.annotation.SuppressLint
-import io.reactivex.Flowable
 import io.reactivex.Observable
-import io.reactivex.Scheduler
-import io.reactivex.Single
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import org.junit.Test
 
 import org.junit.Assert.*
-import org.reactivestreams.Publisher
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
-import java.util.concurrent.TimeoutException
 import java.util.concurrent.atomic.AtomicInteger
 
 /**
@@ -120,8 +114,19 @@ class ExampleUnitTest1 {
 
     @Test
     fun testTime() {
-        val startOfDayTime = beginningOfDayTime(useUTC = true).time
-        println("${startOfDayTime}")
+        val currentOfDayTimestamp = beginningOfDayTime(useUTC = true).time
+
+        val currentOfDate = Calendar.getInstance().apply {
+            timeInMillis = currentOfDayTimestamp
+        }.time
+
+        val oldOfDayTimestamp = beginningOfDayTime(useUTC = true).time
+        val oldDayOfDate = Calendar.getInstance().apply {
+            timeInMillis = oldOfDayTimestamp
+            add(Calendar.DAY_OF_MONTH, -1)
+        }.time
+
+        println("$currentOfDate after $oldDayOfDate ${currentOfDate.after(oldDayOfDate)}")
     }
 
     fun beginningOfDayTime(useUTC: Boolean = false): Date {
