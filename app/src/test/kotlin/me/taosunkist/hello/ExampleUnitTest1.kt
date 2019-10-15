@@ -1,6 +1,7 @@
 package me.taosunkist.hello
 
 import android.annotation.SuppressLint
+import com.google.gson.Gson
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
@@ -136,5 +137,18 @@ class ExampleUnitTest1 {
         cal.set(Calendar.SECOND, 0)
         cal.set(Calendar.MILLISECOND, 0)
         return cal.time
+    }
+
+    data class TestGson(val name: String, var isRead: Boolean?)
+
+    @Test
+    fun testGson() {
+        val json = """{"name":"啊","iRead":true}"""
+        val gson = Gson()
+        val testGson = TestGson(name = "啊", isRead = false)
+        var testGson2: TestGson
+        val testGson21 = gson.fromJson("", TestGson::class.java)
+//        val raw = gson.toJson(testGson2)
+        println(testGson21)
     }
 }

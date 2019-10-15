@@ -2,9 +2,12 @@ package me.taosunkist.hello.ui.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.view.Menu
 import android.view.MenuItem
 import android.view.ViewAnimationUtils
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -16,6 +19,8 @@ import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
 import me.taosunkist.hello.ui.list.RecyclerViewOrientationFragment
 import me.taosunkist.hello.ui.notification.NotificationFragment
+import me.taosunkist.hello.ui.notification.OccasionType
+import me.taosunkist.hello.ui.notification.ReminderType
 //import me.taosunkist.hello.ui.grpc.GrpcFragment
 import kotlin.math.max
 
@@ -86,9 +91,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (id == R.id.nav_camera) {
 
         } else if (id == R.id.nav_gallery) {
-
+            Toast.makeText(this, "nav_gallery", Toast.LENGTH_SHORT).show()
         } else if (id == R.id.nav_slideshow) {
-
+            Toast.makeText(this, "nav_slideshow", Toast.LENGTH_SHORT).show()
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
@@ -102,3 +107,4 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 }
+
