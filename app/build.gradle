@@ -110,6 +110,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    /* 滑动按钮的第三方库 */
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 }
 repositories {
     mavenCentral()
