@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:orientation="vertical"
     tools:context="me.taosunkist.hello.ui.main.MainActivity"
     tools:showIn="@layout/app_bar_main">
-
-    <TextView
-        android:id="@+id/go_grpc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
-        android:padding="12dp"
-        android:text="Grpc" />
 
     <FrameLayout
         android:id="@+id/content_root"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp" />
-</RelativeLayout>
+        android:layout_height="match_parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_main_diamond_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_purchase_diamond1"
+        android:visibility="gone" />
+
+    <me.taosunkist.hello.widget.IdolMoodView
+        android:id="@+id/activity_main_idol_mood_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</FrameLayout>

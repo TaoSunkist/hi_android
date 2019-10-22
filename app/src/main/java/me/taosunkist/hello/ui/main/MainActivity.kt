@@ -2,10 +2,9 @@ package me.taosunkist.hello.ui.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.ViewAnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -17,12 +16,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
+import me.taosunkist.hello.ui.grpc.GrpcFragment
 import me.taosunkist.hello.ui.list.RecyclerViewOrientationFragment
 import me.taosunkist.hello.ui.notification.NotificationFragment
-import me.taosunkist.hello.ui.notification.OccasionType
-import me.taosunkist.hello.ui.notification.ReminderType
-//import me.taosunkist.hello.ui.grpc.GrpcFragment
+import me.taosunkist.hello.widget.Mood
 import kotlin.math.max
+import me.taosunkist.hello.widget.IdolMoodView
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -36,17 +36,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val fab = findViewById<FloatingActionButton>(R.id.fab)
-
-        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val idolMoodView: IdolMoodView = findViewById(R.id.activity_main_idol_mood_view)
+        val fab: FloatingActionButton = findViewById(R.id.fab)
+        val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
+        val navigationView: NavigationView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navigationView = findViewById<NavigationView>(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
 
-//        findViewById<View>(R.id.go_grpc).setOnClickListener { supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss() }
+//        findViewById<View>(R.id.go_grpc).setOnClickListener {
+//            supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss()
+//        }
+
+        navigationView.setNavigationItemSelectedListener(this)
+        idolMoodView.also { it.switchIdolMood() }
+                .setOnClickListener {
+                    idolMoodView.switchIdolMood()
+                }
+
+        fab.setOnClickListener { idolMoodView.switchIdolMood(Mood.values().random()) }
     }
 
     override fun onBackPressed() {
@@ -59,7 +69,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
@@ -89,13 +98,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val id = item.itemId
 
         if (id == R.id.nav_camera) {
-
         } else if (id == R.id.nav_gallery) {
             Toast.makeText(this, "nav_gallery", Toast.LENGTH_SHORT).show()
         } else if (id == R.id.nav_slideshow) {
             Toast.makeText(this, "nav_slideshow", Toast.LENGTH_SHORT).show()
         } else if (id == R.id.nav_manage) {
-
         } else if (id == R.id.nav_share) {
             supportFragmentManager.beginTransaction().add(R.id.content_root, NotificationFragment.newInstance("", "")).addToBackStack(NotificationFragment.TAG).commitAllowingStateLoss()
         } else if (id == R.id.nav_send) {

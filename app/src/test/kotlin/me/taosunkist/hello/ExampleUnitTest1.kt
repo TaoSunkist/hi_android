@@ -3,7 +3,9 @@ package me.taosunkist.hello
 import android.annotation.SuppressLint
 import com.google.gson.Gson
 import io.reactivex.Observable
+import io.reactivex.Single
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxkotlin.Observables
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import org.junit.Test
@@ -13,6 +15,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
+import java.util.function.Consumer
+import kotlin.math.sin
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -150,5 +154,32 @@ class ExampleUnitTest1 {
         val testGson21 = gson.fromJson("", TestGson::class.java)
 //        val raw = gson.toJson(testGson2)
         println(testGson21)
+    }
+
+    @Test
+    fun testObservable() {
+        val s1 = Single.create<Int> {
+            Thread.sleep(500)
+            it.onSuccess(5)
+        }.toObservable()
+        val s2 = Single.create<Int> {
+            Thread.sleep(2000)
+            it.onSuccess(3)
+        }.toObservable()
+
+        Observables.zip(s1, s2) { left, right ->
+            println("taohui ${left} ${right}")
+            left + right
+        }.subscribeOn(Schedulers.io()).observeOn(Schedulers.newThread()).subscribe(
+                {
+                    println("${it}")
+                },
+                {
+                    println("${it}")
+                }
+        ).addTo(CompositeDisposable())
+        while (true) {
+
+        }
     }
 }
