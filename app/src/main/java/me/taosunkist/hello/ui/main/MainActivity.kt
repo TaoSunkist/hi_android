@@ -15,10 +15,12 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
+import me.taosunkist.hello.ui.aliplayer.AliplayerFragment
 import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
 import me.taosunkist.hello.ui.grpc.GrpcFragment
 import me.taosunkist.hello.ui.list.RecyclerViewOrientationFragment
 import me.taosunkist.hello.ui.notification.NotificationFragment
+import me.taosunkist.hello.ui.watermark.WatermarkFragment
 import me.taosunkist.hello.widget.Mood
 import kotlin.math.max
 import me.taosunkist.hello.widget.IdolMoodView
@@ -44,7 +46,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawer.addDrawerListener(toggle)
         toggle.syncState()
-
 
 //        findViewById<View>(R.id.go_grpc).setOnClickListener {
 //            supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss()
@@ -76,6 +77,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.action_settings) {
+            supportFragmentManager.beginTransaction().add(R.id.content_root, AliplayerFragment.newInstance()).addToBackStack(WatermarkFragment.tag).commitAllowingStateLoss()
             return true
         } else if (id == R.id.action_dashboard) {
             startActivity(Intent(this, DashboardActivity::class.java))

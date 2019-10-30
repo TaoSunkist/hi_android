@@ -182,4 +182,38 @@ class ExampleUnitTest1 {
 
         }
     }
+
+    @Test
+    fun compareVersion() {
+        println("2.0.0(1)".substringBefore("("))
+        println("${compareVersionNames("1.1.1", "1.1.1")}")
+    }
+
+    fun compareVersionNames(oldVersionName: String, newVersionName: String): Int {
+        var res = 0
+
+        val oldNumbers = oldVersionName.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        val newNumbers = newVersionName.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+
+        val maxIndex = oldNumbers.size.coerceAtMost(newNumbers.size)
+
+        for (i in 0 until maxIndex) {
+            val oldVersionPart = Integer.valueOf(oldNumbers[i])
+            val newVersionPart = Integer.valueOf(newNumbers[i])
+
+            if (oldVersionPart < newVersionPart) {
+                res = -1
+                break
+            } else if (oldVersionPart > newVersionPart) {
+                res = 1
+                break
+            }
+        }
+
+        if (res == 0 && oldNumbers.size != newNumbers.size) {
+            res = if (oldNumbers.size > newNumbers.size) 1 else -1
+        }
+
+        return res
+    }
 }

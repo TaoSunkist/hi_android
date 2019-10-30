@@ -10,8 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
-import com.example.picturechooser.PictureCfg
-import com.example.picturechooser.PictureChooser
+import me.taosunkist.hello.picturechooser.PictureCfg
+import me.taosunkist.hello.picturechooser.PictureChooser
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import me.taosunkist.hello.R
