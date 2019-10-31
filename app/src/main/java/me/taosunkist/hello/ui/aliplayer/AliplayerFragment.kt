@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import com.aliyun.player.source.UrlSource
 import com.example.aliplayer.AliyunVodPlayerView
 import com.example.aliplayer.PlayParameter
+import me.taosunkist.hello.ExampleUnitTest1
 import me.taosunkist.hello.R
+import me.taosunkist.hello.TatameResponse
 
 class AliplayerFragment : Fragment() {
 
@@ -39,6 +41,10 @@ class AliplayerFragment : Fragment() {
         mAliyunVodPlayerView.setAutoPlay(true)
         setPlaySource()
     }
+
+    /*
+    {"httpStatusCode":200,"data":"PAID","error":{"code":0,"message":"请求成功"},"timestamp":"2019-10-31 14:13:34"}
+     */
 
     private fun setPlaySource() {
         val urlSource = UrlSource()
