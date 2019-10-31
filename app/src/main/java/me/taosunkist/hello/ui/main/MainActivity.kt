@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.action_settings) {
-            supportFragmentManager.beginTransaction().add(R.id.content_root, AliplayerFragment.newInstance()).addToBackStack(WatermarkFragment.tag).commitAllowingStateLoss()
+            supportFragmentManager.beginTransaction().add(R.id.content_root, WatermarkFragment.newInstance()).addToBackStack(WatermarkFragment.tag).commitAllowingStateLoss()
             return true
         } else if (id == R.id.action_dashboard) {
             startActivity(Intent(this, DashboardActivity::class.java))

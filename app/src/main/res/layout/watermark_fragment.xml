@@ -6,25 +6,33 @@
     android:orientation="vertical"
     tools:context=".ui.watermark.WatermarkFragment">
 
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/make"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/ripple_gradient_radius10dp"
-        android:text="生成水印视频"
-        android:textColor="@android:color/white" />
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/make"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_gradient_radius10dp"
+            android:text="生成水印视频"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/make2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_gradient_radius10dp"
+            android:text="生成水印视频"
+            android:textColor="@android:color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/target"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/fragment_watermark_travel_button"
-        android:layout_width="wrap_content"
-        android:clickable="true"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_home_travel"
-        android:focusable="true" />
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:background="@android:color/white" />
 </LinearLayout>
