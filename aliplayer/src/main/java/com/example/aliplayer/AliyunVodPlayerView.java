@@ -272,9 +272,9 @@ public class AliyunVodPlayerView extends RelativeLayout implements ITheme {
         mControlView.hide(ControlView.HideType.Normal);
 
         //显示网络变化的提示
-        if (!isLocalSource() && mTipsView != null) {
-            mTipsView.showNetChangeTipView();
-        }
+//        if (!isLocalSource() && mTipsView != null) {
+//            mTipsView.showNetChangeTipView();
+//        }
     }
 
     private void on4GToWifi() {

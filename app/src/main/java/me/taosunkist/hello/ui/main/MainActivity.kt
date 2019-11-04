@@ -69,6 +69,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        supportFragmentManager.beginTransaction().add(R.id.content_root, AliplayerFragment.newInstance()).addToBackStack(AliplayerFragment.tag).commitAllowingStateLoss()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return true

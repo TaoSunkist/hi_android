@@ -29,7 +29,7 @@ public class TipsView extends RelativeLayout implements ITheme {
     //缓冲加载提示
     private LoadingView mNetLoadingView = null;
     //网络变化提示
-    private NetChangeView mNetChangeView = null;
+//    private NetChangeView mNetChangeView = null;
     //网络请求加载提示
     private LoadingView mBufferLoadingView = null;
     //提示点击事件
@@ -93,17 +93,17 @@ public class TipsView extends RelativeLayout implements ITheme {
      * 显示网络变化提示
      */
     public void showNetChangeTipView() {
-        if (mNetChangeView == null) {
-            mNetChangeView = new NetChangeView(getContext());
-            mNetChangeView.setOnNetChangeClickListener(onNetChangeClickListener);
-            addSubView(mNetChangeView);
-        }
+//        if (mNetChangeView == null) {
+//            mNetChangeView = new NetChangeView(getContext());
+//            mNetChangeView.setOnNetChangeClickListener(onNetChangeClickListener);
+//            addSubView(mNetChangeView);
+//        }
 
         if (mErrorView != null && mErrorView.getVisibility() == VISIBLE) {
             //显示错误对话框了，那么网络切换的对话框就不显示了。
             //都出错了，还显示网络切换，没有意义
         } else {
-            mNetChangeView.setVisibility(VISIBLE);
+//            mNetChangeView.setVisibility(VISIBLE);
         }
 
     }
@@ -270,9 +270,9 @@ public class TipsView extends RelativeLayout implements ITheme {
      * 隐藏网络变化的tip
      */
     public void hideNetChangeTipView() {
-        if (mNetChangeView != null && mNetChangeView.getVisibility() == VISIBLE) {
-            mNetChangeView.setVisibility(INVISIBLE);
-        }
+//        if (mNetChangeView != null && mNetChangeView.getVisibility() == VISIBLE) {
+//            mNetChangeView.setVisibility(INVISIBLE);
+//        }
     }
 
     /**

@@ -11,10 +11,13 @@ import com.example.aliplayer.PlayParameter
 import me.taosunkist.hello.ExampleUnitTest1
 import me.taosunkist.hello.R
 import me.taosunkist.hello.TatameResponse
+import me.taosunkist.hello.ui.watermark.WatermarkFragment
 
 class AliplayerFragment : Fragment() {
 
     companion object {
+        val tag: String = AliplayerFragment::class.java.simpleName
+
         @JvmStatic
         fun newInstance() = AliplayerFragment().apply { }
     }
