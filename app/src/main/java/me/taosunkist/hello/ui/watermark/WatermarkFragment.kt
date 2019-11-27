@@ -30,6 +30,14 @@ class WatermarkFragment : Fragment() {
         val tag: String = WatermarkFragment::class.java.simpleName
 
         fun newInstance() = WatermarkFragment()
+
+        fun pxToDp(px: Int): Float {
+            return (px / Resources.getSystem().displayMetrics.density)
+        }
+
+        fun dpToPx(dp: Int): Float {
+            return (dp * Resources.getSystem().displayMetrics.density)
+        }
     }
 
     private lateinit var viewModel: WatermarkViewModel
@@ -157,13 +165,5 @@ class WatermarkFragment : Fragment() {
         canvas.drawColor(Color.TRANSPARENT)
         staticLayout.draw(canvas)
         return image
-    }
-
-    fun pxToDp(px: Int): Float {
-        return (px / Resources.getSystem().displayMetrics.density)
-    }
-
-    fun dpToPx(dp: Int): Float {
-        return (dp * Resources.getSystem().displayMetrics.density)
     }
 }

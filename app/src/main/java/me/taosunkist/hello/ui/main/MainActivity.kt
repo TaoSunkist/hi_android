@@ -1,7 +1,13 @@
 package me.taosunkist.hello.ui.main
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+import android.text.style.StyleSpan
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -9,11 +15,18 @@ import android.view.ViewAnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
+import io.reactivex.Observable
+import io.reactivex.Observable.*
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxkotlin.addTo
+import io.reactivex.schedulers.Schedulers
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.aliplayer.AliplayerFragment
 import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
@@ -24,6 +37,7 @@ import me.taosunkist.hello.ui.watermark.WatermarkFragment
 import me.taosunkist.hello.widget.Mood
 import kotlin.math.max
 import me.taosunkist.hello.widget.IdolMoodView
+import java.util.concurrent.TimeUnit
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -38,7 +52,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val idolMoodView: IdolMoodView = findViewById(R.id.activity_main_idol_mood_view)
+//        val idolMoodView: IdolMoodView = findViewById(R.id.activity_main_idol_mood_view)
+        val textView: AppCompatTextView = findViewById(R.id.content_main_text_view)
+
         val fab: FloatingActionButton = findViewById(R.id.fab)
         val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
         val navigationView: NavigationView = findViewById(R.id.nav_view)
@@ -47,18 +63,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
+//        supportFragmentManager.beginTransaction().add(R.id.content_root, AliplayerFragment.newInstance()).addToBackStack(AliplayerFragment.tag).commitAllowingStateLoss()
 //        findViewById<View>(R.id.go_grpc).setOnClickListener {
 //            supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss()
 //        }
 
-        navigationView.setNavigationItemSelectedListener(this)
-        idolMoodView.also { it.switchIdolMood() }
-                .setOnClickListener {
-                    idolMoodView.switchIdolMood()
-                }
+        val text = textView.text
 
-        fab.setOnClickListener { idolMoodView.switchIdolMood(Mood.values().random()) }
+        val spannableString = SpannableString(text)
+        val colorSpan = ForegroundColorSpan(Color.BLUE)
+        spannableString.setSpan(colorSpan, text.indexOf(" "), spannableString.length, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+        val colorSpan2 = ForegroundColorSpan(Color.BLACK)
+        spannableString.setSpan(colorSpan2, 0, text.indexOf(" "), Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+        textView.text = spannableString
+
+        navigationView.setNavigationItemSelectedListener(this)
+//        idolMoodView.also { it.switchIdolMood() }.setOnClickListener { idolMoodView.switchIdolMood() }
+
     }
+
 
     override fun onBackPressed() {
         val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
@@ -69,14 +92,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        supportFragmentManager.beginTransaction().add(R.id.content_root, AliplayerFragment.newInstance()).addToBackStack(AliplayerFragment.tag).commitAllowingStateLoss()
-    }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return true
+    }
+
+    override fun onResume() {
+        super.onResume()
+        interval(2, TimeUnit.SECONDS)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe {
+                    println("taohui $it")
+                }.addTo(CompositeDisposable())
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
