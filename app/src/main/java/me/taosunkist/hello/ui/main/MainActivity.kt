@@ -16,6 +16,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.tatame_frontline.ui.home.HomeFragment
 import com.example.tatame_frontline.ui.login.LoginFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
@@ -91,7 +92,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onResume() {
         super.onResume()
-        supportFragmentManager.beginTransaction().add(R.id.content_root, LoginFragment.newInstance()).addToBackStack(LoginFragment.TAG).commit()
+        supportFragmentManager.beginTransaction().add(R.id.content_root, HomeFragment.newInstance()).addToBackStack(HomeFragment.TAG).commit()
         interval(2, TimeUnit.SECONDS)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
