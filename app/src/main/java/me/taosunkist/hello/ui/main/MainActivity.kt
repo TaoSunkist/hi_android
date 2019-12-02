@@ -2,15 +2,12 @@ package me.taosunkist.hello.ui.main
 
 import android.content.Intent
 import android.graphics.Color
-import android.graphics.Typeface
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.text.style.StyleSpan
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.view.ViewAnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -19,24 +16,20 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.tatame_frontline.ui.login.LoginFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import io.reactivex.Observable
 import io.reactivex.Observable.*
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import me.taosunkist.hello.R
-import me.taosunkist.hello.ui.aliplayer.AliplayerFragment
 import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
-import me.taosunkist.hello.ui.grpc.GrpcFragment
 import me.taosunkist.hello.ui.list.RecyclerViewOrientationFragment
 import me.taosunkist.hello.ui.notification.NotificationFragment
 import me.taosunkist.hello.ui.watermark.WatermarkFragment
-import me.taosunkist.hello.widget.Mood
 import kotlin.math.max
-import me.taosunkist.hello.widget.IdolMoodView
 import java.util.concurrent.TimeUnit
 
 
@@ -63,7 +56,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-//        supportFragmentManager.beginTransaction().add(R.id.content_root, AliplayerFragment.newInstance()).addToBackStack(AliplayerFragment.tag).commitAllowingStateLoss()
 //        findViewById<View>(R.id.go_grpc).setOnClickListener {
 //            supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss()
 //        }
@@ -99,6 +91,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onResume() {
         super.onResume()
+        supportFragmentManager.beginTransaction().add(R.id.content_root, LoginFragment.newInstance()).addToBackStack(LoginFragment.TAG).commit()
         interval(2, TimeUnit.SECONDS)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

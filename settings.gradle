@@ -1,1 +1,1 @@
-include ':app', ':aliplayer'
+include ':app', ':aliplayer', ':tatame-frontline'

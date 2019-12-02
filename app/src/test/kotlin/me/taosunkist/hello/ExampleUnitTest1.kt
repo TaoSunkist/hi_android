@@ -17,8 +17,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
-import java.util.function.Consumer
-import kotlin.math.sin
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -237,5 +235,27 @@ class ExampleUnitTest1 {
         val gson = Gson()
         val tatameResponse = gson.fromJson<TatameResponse<OrderStatus>>(jsonString, object : TypeToken<TatameResponse<OrderStatus>>() {}.type)
         println(tatameResponse)
+    }
+
+    private var compositeDisposable = CompositeDisposable()
+
+    @Test
+    fun testComposi() {
+
+        loop(30)
+
+        while (true) {
+
+        }
+    }
+
+    private fun loop(runOnTime: Int) {
+        var runOnTimeAlternative = runOnTime
+        compositeDisposable.dispose()
+        compositeDisposable = CompositeDisposable()
+        Observable.interval(30, TimeUnit.SECONDS).subscribeOn(Schedulers.io())
+                .subscribe {
+                        println("taohui runOnTime: $runOnTime, compositeDisposable: $compositeDisposable, it: $it")
+                }.addTo(compositeDisposable)
     }
 }

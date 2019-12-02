@@ -94,7 +94,7 @@ public class TipsView extends RelativeLayout implements ITheme {
      */
     public void showNetChangeTipView() {
 //        if (mNetChangeView == null) {
-//            mNetChangeView = new NetChangeView(getContext());
+//            mNetChangeView = ic_new_message_label NetChangeView(getContext());
 //            mNetChangeView.setOnNetChangeClickListener(onNetChangeClickListener);
 //            addSubView(mNetChangeView);
 //        }

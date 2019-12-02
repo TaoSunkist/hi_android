@@ -185,7 +185,7 @@ public class AdvVideoView extends RelativeLayout {
         });
 
         //播放器状态监听
-//        mAdvVideoAliyunVodPlayer.setOnStateChangedListener(new IPlayer.OnStateChangedListener() {
+//        mAdvVideoAliyunVodPlayer.setOnStateChangedListener(ic_new_message_label IPlayer.OnStateChangedListener() {
 //            @Override
 //            public void onStateChanged(int newState) {
 //                //暂停状态
@@ -229,7 +229,7 @@ public class AdvVideoView extends RelativeLayout {
         });
 
         //url过期监听
-//        mAdvVideoAliyunVodPlayer.setOnUrlTimeExpiredListener(new IAliyunVodPlayer.OnUrlTimeExpiredListener() {
+//        mAdvVideoAliyunVodPlayer.setOnUrlTimeExpiredListener(ic_new_message_label IAliyunVodPlayer.OnUrlTimeExpiredListener() {
 //            @Override
 //            public void onUrlTimeExpired(String vid, String quality) {
 //                if (mOutUrlTimeExpiredListener != null) {
@@ -239,13 +239,13 @@ public class AdvVideoView extends RelativeLayout {
 //        });
 //
 //        //请求源过期信息
-//        mAdvVideoAliyunVodPlayer.setOnTimeExpiredErrorListener(new IAliyunVodPlayer.OnTimeExpiredErrorListener() {
+//        mAdvVideoAliyunVodPlayer.setOnTimeExpiredErrorListener(ic_new_message_label IAliyunVodPlayer.OnTimeExpiredErrorListener() {
 //            @Override
 //            public void onTimeExpiredError() {
 //                if (mTipsView != null) {
 //                    mTipsView.hideAll();
 //                    mTipsView.showErrorTipViewWithoutCode("鉴权过期");
-//                    mTipsView.setOnTipClickListener(new TipsView.OnTipClickListener() {
+//                    mTipsView.setOnTipClickListener(ic_new_message_label TipsView.OnTipClickListener() {
 //                        @Override
 //                        public void onContinuePlay() {
 //                        }

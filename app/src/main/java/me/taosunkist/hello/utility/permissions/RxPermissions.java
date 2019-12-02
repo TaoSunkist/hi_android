@@ -174,7 +174,7 @@ public class RxPermissions {
 
       PublishSubject<Permission> subject =
           mRxPermissionsFragment.getSubjectByPermission(permission);
-      // Create a new subject if not exists
+      // Create a ic_new_message_label subject if not exists
       if (subject == null) {
         unrequestedPermissions.add(permission);
         subject = PublishSubject.create();

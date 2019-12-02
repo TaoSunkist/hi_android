@@ -16,11 +16,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
-import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.FragmentActivity
 
-import com.watermark.androidwm_light.bean.WatermarkText
-import com.watermark.androidwm_light.utils.BitmapUtils
 import me.taosunkist.hello.R
 
 
@@ -46,7 +43,7 @@ class WatermarkFragment : Fragment() {
         return inflater.inflate(R.layout.watermark_fragment, container, false)
     }
 
-    val drawableResIds = listOf(R.drawable.bg_default, R.drawable.qq20191031, R.drawable.qq20191032, R.drawable.qq20191033)
+    val drawableResIds = listOf(R.drawable.bg_frontline_default, R.drawable.qq20191031, R.drawable.qq20191032, R.drawable.qq20191033)
     var drawableResIdsIndex: Int = 0
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

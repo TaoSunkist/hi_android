@@ -9,11 +9,6 @@
     tools:context="me.taosunkist.hello.ui.main.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <FrameLayout
-        android:id="@+id/content_root"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/activity_main_diamond_image_view"
         android:layout_width="100dp"
@@ -22,23 +17,32 @@
         android:src="@drawable/ic_purchase_diamond1"
         android:visibility="gone" />
 
-<!--    <me.taosunkist.hello.widget.IdolMoodView-->
-<!--        android:id="@+id/activity_main_idol_mood_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:visibility="gone" />-->
+    <!--    <me.taosunkist.hello.widget.IdolMoodView-->
+    <!--        android:id="@+id/activity_main_idol_mood_view"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:visibility="gone" />-->
 
-<!--    <me.taosunkist.hello.widget.TatameEnergyBar-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:orientation="horizontal" />-->
+    <!--    <me.taosunkist.hello.widget.TatameEnergyBar-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal" />-->
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/content_main_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_xxlarge"
+        android:background="@drawable/bg_button_gray_solid"
+        android:drawableStart="@drawable/ic_countdown_gray_bg"
+        android:drawableEnd="@drawable/ic_travel_gray_bg"
+        android:drawablePadding="@dimen/margin_medium"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_medium"
         android:text="111111 22222"
         android:textColor="@android:color/black" />
 
@@ -51,4 +55,9 @@
         android:min="0"
         android:progress="20"
         android:progressDrawable="@drawable/layer_list_progress_drawable" />
+
+    <FrameLayout
+        android:id="@+id/content_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </FrameLayout>

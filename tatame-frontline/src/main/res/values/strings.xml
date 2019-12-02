@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tatame-Frontline</string>
+    <string name="fragment_authentication_agreement_button_text">已阅读并同意《Tatame用户协议》</string>
+    <string name="fragment_authentication_login_button_title">立即登录</string>
+    <string name="fragment_authentication_cellphone_hint">输入手机号</string>
+    <string name="fragment_authentication_get_verification_code_button_title">获取验证码</string>
+    <string name="fragment_authentication_verification_code_help">没收到?</string>
+    <string name="fragment_authentication_verification_code_hint">输入验证码</string>
+
+</resources>
