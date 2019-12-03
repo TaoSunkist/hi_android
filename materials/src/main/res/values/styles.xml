@@ -1,0 +1,11 @@
+<resources>
+
+    <integer name="anim_duration_short">200</integer>
+
+    <style name="defaultOvalWhiteDismissButtonStyle">
+        <item name="android:background">@drawable/bg_oval_black_28dp</item>
+        <item name="android:padding">@dimen/margin_medium</item>
+        <item name="android:src">@drawable/ic_nav_dismiss_white</item>
+    </style>
+
+</resources>

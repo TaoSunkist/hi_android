@@ -126,7 +126,10 @@ dependencies {
     implementation 'com.alivc.conan:AlivcConan:0.9.5'
     implementation project(path: ':aliplayer')
     implementation project(path: ':tatame-frontline')
+    implementation project(path: ':materials')
+
 }
+
 repositories {
     mavenCentral()
 }

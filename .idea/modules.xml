@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/aliplayer/aliplayer.iml" filepath="$PROJECT_DIR$/aliplayer/aliplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/hi_android.iml" filepath="$PROJECT_DIR$/.idea/hi_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materials/materials.iml" filepath="$PROJECT_DIR$/materials/materials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tatame-component/tatame-component.iml" filepath="$PROJECT_DIR$/tatame-component/tatame-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/tatame-frontline/tatame-frontline.iml" filepath="$PROJECT_DIR$/tatame-frontline/tatame-frontline.iml" />
     </modules>
   </component>

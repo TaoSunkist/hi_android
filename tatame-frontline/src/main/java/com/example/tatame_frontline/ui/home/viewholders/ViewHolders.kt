@@ -5,13 +5,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.tatame_frontline.R
 import com.example.tatame_frontline.ui.home.adapters.IdolsListViewPagerAdapter
 import com.example.tatame_frontline.ui.home.models.IdolsViewPagerUIModel
 import com.flyco.tablayout.CommonTabLayout
+import com.flyco.tablayout.listener.OnTabSelectListener
 
-class IdolsViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class IdolsViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), OnTabSelectListener {
+
     companion object {
         const val ITEM_TYPE = 1
     }
@@ -22,11 +25,32 @@ class IdolsViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemVie
     init {
         val uiModel = IdolsViewPagerUIModel.fake()
         commonTabLayout.setTabData(uiModel.tabEntities)
+        commonTabLayout.setOnTabSelectListener(this)
     }
 
     fun bind() {
         viewPager.adapter = IdolsListViewPagerAdapter()
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageScrollStateChanged(state: Int) {
+                println("taohui IdolsViewPagerViewHolder, onPageScrollStateChanged ${state}")
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                println("taohui IdolsViewPagerViewHolder, onPageScrolled ${position}, ${positionOffset}, ${positionOffsetPixels}")
+            }
+
+            override fun onPageSelected(position: Int) {
+                println("taohui IdolsViewPagerViewHolder, onPageSelected ${position}")
+            }
+        })
     }
+
+    override fun onTabSelect(position: Int) {
+        viewPager.setCurrentItem(position, true)
+    }
+
+    override fun onTabReselect(position: Int) {}
+
 }
 
 class ProfileViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -34,8 +58,7 @@ class ProfileViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemV
         const val ITEM_TYPE = 2
     }
 
-    fun bind() {
-    }
+    fun bind() {}
 }
 
 /* idol的列表 */

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_gray">#F1F1F1</color>
+
+    <!-- Gradient Colors -->
+    <color name="colorPrimary1">#B35BFF</color>
+    <color name="colorPrimary2">#805FED</color>
+
+    <color name="colorPrimary">@color/colorPrimary1</color>
+    <color name="colorPrimaryDark">#641EA0</color>
+    <color name="colorAccent">@color/colorPrimary1</color>
+
+    <color name="colorTextGrayLight">#A6A6A6</color>
+    <color name="colorSubjectTextGrayLight">#6E6E6E</color>
+    <color name="colorTextGray">#7B7B7B</color>
+    <color name="colorTextGrayDark">#080808</color>
+
+    <!-- -->
+    <color name="colorMessageCellRead">#F8F8F8</color>
+    <color name="colorMessageCellUnread">@color/white</color>
+
+    <color name="image_overlay_true">#80000000</color>
+    <color name="image_overlay_false">#20000000</color>
+
+    <!-- 分割线颜色 -->
+    <color name="divideColor">#DFDFDF</color>
+    <color name="divideColor1">#FFEBEBEB</color>
+
+    <color name="bgGrayLight">#EFEFEF</color>
+
+    <color name="errorTextColor">#E64040</color>
+
+    <color name="textColorDark">#FF414141</color>
+    <color name="textColorGrayDark">#FF6E6E6E</color>
+
+    <color name="backgroundColorGray">#F6F6F6</color>
+    <color name="dialogContentTextColorBlack">#030303</color>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F2F2FA"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margin_large"
+    android:paddingEnd="@dimen/margin_large">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view_chat_message_input_voice_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:focusable="false"
+        android:src="@drawable/ic_rounded_voice" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/view_chat_message_input_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_weight="1"
+        android:background="@drawable/bg_white_4_rounded_4dp"
+        android:imeOptions="actionSend"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/colorTextGrayDark" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view_chat_message_input_emoji_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:src="@drawable/ic_smile_face" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view_chat_message_input_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_addition" />
+
+</LinearLayout>
