@@ -34,7 +34,6 @@ import me.taosunkist.hello.ui.watermark.WatermarkFragment
 import kotlin.math.max
 import java.util.concurrent.TimeUnit
 
-
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
