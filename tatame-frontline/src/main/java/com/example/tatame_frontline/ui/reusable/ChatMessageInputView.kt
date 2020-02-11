@@ -20,15 +20,15 @@ interface ChatMessageInputViewDelegate {
 class ChatMessageInputView : FrameLayout {
 
     constructor(context: Context) : super(context) {
-        commonInit(context, null)
+        commonInit(context)
     }
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        commonInit(context, attrs)
+        commonInit(context)
     }
 
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        commonInit(context, attrs)
+        commonInit(context)
     }
 
     private lateinit var editTextView: AppCompatEditText
@@ -37,9 +37,8 @@ class ChatMessageInputView : FrameLayout {
 
     var delegate: ChatMessageInputViewDelegate? by weak()
 
-    private fun commonInit(context: Context,
-                           attrs: AttributeSet?) {
-        View.inflate(context, R.layout.view_chat_message_input, this)
+    private fun commonInit(context: Context) {
+        View.inflate(context, R.layout.view_chat_message_input, this@ChatMessageInputView)
         editTextView = findViewById(R.id.view_chat_message_input_edit_text)
         emojiButton = findViewById<View>(R.id.view_chat_message_input_emoji_button).apply {
             setOnClickListener {
