@@ -89,45 +89,39 @@ allprojects {
 //}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'junit:junit:4.13-beta-3'
-    //    GRPC
-    implementation 'io.grpc:grpc-okhttp:1.22.1' // CURRENT_GRPC_VERSION
-    implementation 'io.grpc:grpc-protobuf-lite:1.22.1' // CURRENT_GRPC_VERSION
-    implementation 'io.grpc:grpc-stub:1.22.1' // CURRENT_GRPC_VERSION
 
-    implementation 'javax.annotation:javax.annotation-api:1.3.2'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation junit
+    implementation flycoTabLayout_lib
+    implementation grpc_okhttp
+    implementation grpc_protobuf_lite
+    implementation grpc_stub
+    implementation javax_annotation_api
+    implementation kotlin_stdlib_jdk7
+    implementation appcompat
+    implementation viewpager
+    implementation recyclerview
+    implementation constraint_layout
+    implementation material
+    implementation multidex
+    implementation rxandroid
+    implementation rxkotlin
+    implementation rxrelay
+    implementation legacy_support_v4
+    implementation singledateandtimepicker
+    implementation appcompat
+    implementation constraintlayout
+    implementation cardview
+    implementation design
+    implementation lifecycle_extensions
+    implementation lifecycle_viewmodel_ktx
+    implementation converter_gson
+    implementation androidwm_light
+    implementation aliyunPlayer
+    implementation alivcConan
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.viewpager:viewpager:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha01'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta4'
-    implementation 'com.google.android.material:material:1.2.0-alpha04'
-    implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
-    implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.0'
-
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.github.florent37:singledateandtimepicker:2.1.4'
-    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
-
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.android.support:design:29.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
-    /* 滑动按钮的第三方库 */
-    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
-    implementation 'com.huangyz0918:androidwm-light:0.1.2'
-    implementation 'com.aliyun.sdk.android:AliyunPlayer:4.7.1-full'
-    implementation 'com.alivc.conan:AlivcConan:0.9.5'
     implementation project(path: ':aliplayer')
-    implementation project(path: ':tatame-frontline')
+    implementation project(path: ':tatame-component')
     implementation project(path: ':materials')
-
 }
 
 repositories {

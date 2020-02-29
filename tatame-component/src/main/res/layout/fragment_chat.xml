@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.tatame_component.ui.resuable.ChatView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_id_content_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/view_controller_chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2FA">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/view_controller_chat_dismiss_image_button"
+            style="@style/defaultOvalWhiteDismissButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_xlarge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/view_controller_chat_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_xlarge"
+            android:maxLength="10"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/common_id_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/common_id_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/cell_chat_left">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.example.tatame_component.ui.resuable.ChatMessageInputView
+        android:id="@+id/view_controller_chat_input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/view_controller_chat_keyboard_container"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#0000FF"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+</com.example.tatame_component.ui.resuable.ChatView>

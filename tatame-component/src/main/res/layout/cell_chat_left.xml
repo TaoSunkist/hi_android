@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.example.tatame_component.ui.resuable.CircleImageView
+        android:id="@+id/cell_chat_user_image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/margin_large"
+        android:src="@drawable/placeholder_user" />
+
+    <com.example.tatame_component.ui.resuable.ChatContentContainer
+        android:id="@+id/cell_chat_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_xxlarge"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/margin_large" />
+
+</LinearLayout>

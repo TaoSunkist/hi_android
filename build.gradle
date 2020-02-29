@@ -10,15 +10,15 @@ buildscript {
         maven { url 'https://maven.aliyun.com/repository/releases' }
 
     }
+    apply from: 'thirdparty-lib/config.gradle'
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath 'com.android.tools.build:gradle:3.5.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         /*
         classpath "com.google.protobuf:protobuf-gradle-plugin:0.8.5"
         error resolver: https://androidstudio.googleblog.com/2018/06/android-studio-32-beta-2-available.html
          */
-//        classpath "com.google.protobuf:protobuf-gradle-plugin:0.8.6"
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
     }
 }

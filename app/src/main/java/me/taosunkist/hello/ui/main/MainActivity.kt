@@ -16,23 +16,17 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.tatame_frontline.ui.chat.ChatFragment
-import com.example.tatame_frontline.ui.home.HomeFragment
-import com.example.tatame_frontline.ui.login.LoginFragment
+import com.example.tatame_component.ui.resuable.chat.ChatFragment
+import com.example.tatame_component.ui.resuable.home.HomeFragment
+import com.example.tatame_component.ui.resuable.login.LoginFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import io.reactivex.Observable.*
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
 import me.taosunkist.hello.ui.list.RecyclerViewOrientationFragment
 import me.taosunkist.hello.ui.notification.NotificationFragment
 import me.taosunkist.hello.ui.watermark.WatermarkFragment
 import kotlin.math.max
-import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 

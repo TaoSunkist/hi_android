@@ -12,7 +12,6 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/materials" />
             <option value="$PROJECT_DIR$/tatame-component" />
-            <option value="$PROJECT_DIR$/tatame-frontline" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
