@@ -90,8 +90,8 @@ allprojects {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation junit
     implementation flycoTabLayout_lib
+    implementation junit
     implementation grpc_okhttp
     implementation grpc_protobuf_lite
     implementation grpc_stub
@@ -108,7 +108,6 @@ dependencies {
     implementation rxrelay
     implementation legacy_support_v4
     implementation singledateandtimepicker
-    implementation appcompat
     implementation constraintlayout
     implementation cardview
     implementation design
@@ -120,7 +119,8 @@ dependencies {
     implementation alivcConan
 
     implementation project(path: ':aliplayer')
-    implementation project(path: ':tatame-component')
+    /* 智梦空间 */
+    implementation project(path: ':tatame')
     implementation project(path: ':materials')
 }
 

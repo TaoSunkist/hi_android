@@ -11,7 +11,7 @@
             <option value="$PROJECT_DIR$/aliplayer" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/materials" />
-            <option value="$PROJECT_DIR$/tatame-component" />
+            <option value="$PROJECT_DIR$/tatame" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

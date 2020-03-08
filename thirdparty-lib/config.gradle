@@ -1,5 +1,5 @@
 ext {
-    junit = 'junit:junit:4.13-beta-3'
+    junit = 'junit:junit:4.12'
     flycoTabLayout_lib = "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar"
     grpc_okhttp = 'io.grpc:grpc-okhttp:1.22.1' // CURRENT_GRPC_VERSION
     grpc_protobuf_lite = 'io.grpc:grpc-protobuf-lite:1.22.1' // CURRENT_GRPC_VERSION
@@ -27,4 +27,7 @@ ext {
     androidwm_light = 'com.huangyz0918:androidwm-light:0.1.2'
     aliyunPlayer = 'com.aliyun.sdk.android:AliyunPlayer:4.7.1-full'
     alivcConan = 'com.alivc.conan:AlivcConan:0.9.5'
+    coreKtx = 'androidx.core:core-ktx:1.2.0'
+    fakeit = 'com.github.moove-it:fakeit:v0.7'
+
 }
