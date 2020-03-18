@@ -3,6 +3,7 @@ package me.taosunkist.hello.ui.grpc
 import android.app.Activity
 import android.os.AsyncTask
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -14,15 +15,13 @@ import androidx.fragment.app.Fragment
 import java.lang.ref.WeakReference
 import java.util.concurrent.TimeUnit
 import io.grpc.ManagedChannel
-//import javapb.GreeterGrpc
-//import javapb.HelloRequest
+import io.grpc.ManagedChannelBuilder
+import javapb.GreeterGrpc
+import javapb.HelloRequest
 import me.taosunkist.hello.R
+import java.io.PrintWriter
+import java.io.StringWriter
 
-/**
- * A simple [Fragment] subclass.
- * Use the [GrpcFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class GrpcFragment : Fragment() {
 
     companion object {
@@ -67,23 +66,23 @@ class GrpcFragment : Fragment() {
         private var channel: ManagedChannel? = null
 
         override fun doInBackground(vararg params: String): String {
-//            val host = params[0]
-//            val message = params[1]
-//            val portStr = params[2]
-//            val port = if (TextUtils.isEmpty(portStr)) 0 else Integer.valueOf(portStr)
-//            try {
-//                channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build()
-//                val stub = GreeterGrpc.newBlockingStub(channel)
-//                val request = HelloRequest.newBuilder().setName(message).build()
-//                val reply = stub.sayHello(request)
-//                return reply.message
-//            } catch (e: Exception) {
-//                val sw = StringWriter()
-//                val pw = PrintWriter(sw)
-//                e.printStackTrace(pw)
-//                pw.flush()
-//                return String.format("Failed... : %n%s", sw)
-//            }
+            val host = params[0]
+            val message = params[1]
+            val portStr = params[2]
+            val port = if (TextUtils.isEmpty(portStr)) 0 else Integer.valueOf(portStr)
+            try {
+                channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build()
+                val stub = GreeterGrpc.newBlockingStub(channel)
+                val request = HelloRequest.newBuilder().setName(message).build()
+                val reply = stub.sayHello(request)
+                return reply.message
+            } catch (e: Exception) {
+                val sw = StringWriter()
+                val pw = PrintWriter(sw)
+                e.printStackTrace(pw)
+                pw.flush()
+                return String.format("Failed... : %n%s", sw)
+            }
             return "Failed, please setup grpc environment."
         }
 

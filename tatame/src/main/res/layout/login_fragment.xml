@@ -6,185 +6,185 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_frontline_default">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg_frontline_default"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@drawable/bg_frontline_default"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:orientation="vertical">-->
 
-        <ScrollView
-            android:id="@+id/fragment_authentication_scrollview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none">
+<!--        <ScrollView-->
+<!--            android:id="@+id/fragment_authentication_scrollview"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scrollbars="none">-->
 
-            <LinearLayout
-                android:id="@+id/fragment_authentication_content_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingStart="@dimen/margin_xxlarge"
-                android:paddingEnd="@dimen/margin_xxlarge">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/fragment_authentication_content_container"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingStart="@dimen/margin_xxlarge"-->
+<!--                android:paddingEnd="@dimen/margin_xxlarge">-->
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_xxxlarge"
-                    android:text="欢迎加入前线神器"
-                    android:textColor="@android:color/white"
-                    android:textSize="25sp" />
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/margin_xxxlarge"-->
+<!--                    android:text="欢迎加入前线神器"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="25sp" />-->
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_xxxlarge"
-                    android:layout_marginBottom="@dimen/margin_small"
-                    android:orientation="vertical">
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/margin_xxxlarge"-->
+<!--                    android:layout_marginBottom="@dimen/margin_small"-->
+<!--                    android:orientation="vertical">-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/margin_medium"
-                        android:orientation="horizontal">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="@dimen/margin_medium"-->
+<!--                        android:orientation="horizontal">-->
 
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/fragment_authentication_cellphone_edittext"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@null"
-                            android:hint="@string/fragment_authentication_cellphone_hint"
-                            android:inputType="number"
-                            android:maxLength="11"
-                            android:maxLines="1"
-                            android:paddingStart="0dp"
-                            android:paddingEnd="@dimen/margin_medium"
-                            android:singleLine="true"
-                            android:textColor="@android:color/white"
-                            android:textColorHint="#99FFFFFF"
-                            android:textSize="18sp" />
+<!--                        <androidx.appcompat.widget.AppCompatEditText-->
+<!--                            android:id="@+id/fragment_authentication_cellphone_edittext"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:background="@null"-->
+<!--                            android:hint="@string/fragment_authentication_cellphone_hint"-->
+<!--                            android:inputType="number"-->
+<!--                            android:maxLength="11"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:paddingStart="0dp"-->
+<!--                            android:paddingEnd="@dimen/margin_medium"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:textColorHint="#99FFFFFF"-->
+<!--                            android:textSize="18sp" />-->
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/fragment_authentication_get_verification_code_button"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@drawable/selector_verification_code_button"
-                            android:gravity="center"
-                            android:minHeight="0dp"
-                            android:padding="@dimen/margin_medium"
-                            android:text="@string/fragment_authentication_get_verification_code_button_title"
-                            android:textColor="@android:color/white"
-                            android:textSize="12sp" />
-                    </LinearLayout>
+<!--                        <androidx.appcompat.widget.AppCompatButton-->
+<!--                            android:id="@+id/fragment_authentication_get_verification_code_button"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="3"-->
+<!--                            android:background="@drawable/selector_verification_code_button"-->
+<!--                            android:gravity="center"-->
+<!--                            android:minHeight="0dp"-->
+<!--                            android:padding="@dimen/margin_medium"-->
+<!--                            android:text="@string/fragment_authentication_get_verification_code_button_title"-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:textSize="12sp" />-->
+<!--                    </LinearLayout>-->
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#aaFFFFFF" />
-                </com.google.android.material.textfield.TextInputLayout>
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="#aaFFFFFF" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_xlarge"
-                    android:orientation="vertical">
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/margin_xlarge"-->
+<!--                    android:orientation="vertical">-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_medium"
-                        android:layout_marginBottom="@dimen/margin_medium"
-                        android:orientation="horizontal">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/margin_medium"-->
+<!--                        android:layout_marginBottom="@dimen/margin_medium"-->
+<!--                        android:orientation="horizontal">-->
 
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/fragment_authentication_verification_code_edittext"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@null"
-                            android:hint="@string/fragment_authentication_verification_code_hint"
-                            android:inputType="phone"
-                            android:maxLength="4"
-                            android:maxLines="1"
-                            android:paddingStart="0dp"
-                            android:paddingEnd="@dimen/margin_medium"
-                            android:singleLine="true"
-                            android:textColor="@android:color/white"
-                            android:textColorHint="#99FFFFFF"
-                            android:textSize="18sp" />
+<!--                        <androidx.appcompat.widget.AppCompatEditText-->
+<!--                            android:id="@+id/fragment_authentication_verification_code_edittext"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:background="@null"-->
+<!--                            android:hint="@string/fragment_authentication_verification_code_hint"-->
+<!--                            android:inputType="phone"-->
+<!--                            android:maxLength="4"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:paddingStart="0dp"-->
+<!--                            android:paddingEnd="@dimen/margin_medium"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:textColorHint="#99FFFFFF"-->
+<!--                            android:textSize="18sp" />-->
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/fragment_authentication_get_help_button"
-                            style="@style/noBackgroundButtonStyle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/fragment_authentication_verification_code_help"
-                            android:textColor="@android:color/white"
-                            android:textSize="18sp"
-                            android:visibility="gone" />
-                    </LinearLayout>
+<!--                        <androidx.appcompat.widget.AppCompatButton-->
+<!--                            android:id="@+id/fragment_authentication_get_help_button"-->
+<!--                            style="@style/noBackgroundButtonStyle"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/fragment_authentication_verification_code_help"-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:visibility="gone" />-->
+<!--                    </LinearLayout>-->
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#aaFFFFFF" />
-                </com.google.android.material.textfield.TextInputLayout>
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="#aaFFFFFF" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_large"
-                    android:orientation="horizontal">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/margin_large"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <androidx.appcompat.widget.AppCompatCheckBox
-                        android:id="@+id/fragment_authentication_agreement_checkbox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:button="@drawable/selector_agreement_checks" />
+<!--                    <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--                        android:id="@+id/fragment_authentication_agreement_checkbox"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:button="@drawable/selector_agreement_checks" />-->
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/fragment_authentication_agreement_text_button"
-                        style="@style/noBackgroundButtonStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="@dimen/margin_medium"
-                        android:drawablePadding="@dimen/margin_medium"
-                        android:gravity="center"
-                        android:text="@string/fragment_authentication_agreement_button_text"
-                        android:textColor="@android:color/white"
-                        android:textSize="12sp" />
-                </LinearLayout>
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/fragment_authentication_agreement_text_button"-->
+<!--                        style="@style/noBackgroundButtonStyle"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_marginStart="@dimen/margin_medium"-->
+<!--                        android:drawablePadding="@dimen/margin_medium"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="@string/fragment_authentication_agreement_button_text"-->
+<!--                        android:textColor="@android:color/white"-->
+<!--                        android:textSize="12sp" />-->
+<!--                </LinearLayout>-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/fragment_authentication_login_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_xxxlarge"
-                    android:layout_marginBottom="@dimen/margin_xxxlarge"
-                    android:background="@drawable/ripple_button_login"
-                    android:gravity="center"
-                    android:paddingTop="@dimen/margin_xlarge"
-                    android:paddingBottom="@dimen/margin_xlarge"
-                    android:text="@string/fragment_authentication_login_button_title"
-                    android:textColor="#F39688"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/fragment_authentication_login_button"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/margin_xxxlarge"-->
+<!--                    android:layout_marginBottom="@dimen/margin_xxxlarge"-->
+<!--                    android:background="@drawable/ripple_button_login"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingTop="@dimen/margin_xlarge"-->
+<!--                    android:paddingBottom="@dimen/margin_xlarge"-->
+<!--                    android:text="@string/fragment_authentication_login_button_title"-->
+<!--                    android:textColor="#F39688"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/fragment_authentication_version_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center"
-                    android:textColor="@android:color/white"
-                    tools:text="VERSION\n服务器" />
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/fragment_authentication_version_text"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    tools:text="VERSION\n服务器" />-->
 
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
+<!--            </LinearLayout>-->
+<!--        </ScrollView>-->
+<!--    </LinearLayout>-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

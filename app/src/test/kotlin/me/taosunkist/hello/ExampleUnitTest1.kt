@@ -240,7 +240,7 @@ class ExampleUnitTest1 {
     private var compositeDisposable = CompositeDisposable()
 
     @Test
-    fun testComposi() {
+    fun testComposite() {
 
         loop(30)
 
