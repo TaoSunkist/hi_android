@@ -4,10 +4,11 @@
     package="me.taosunkist.hello">
 
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="me.taosunkist.hello.HiApplication"
+        android:name=".HiApplication"
         android:allowBackup="false"
         android:fullBackupContent="@xml/backup_descriptor"
         android:hardwareAccelerated="false"
@@ -17,7 +18,12 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.controller.home.HomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_main_view_controller"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
+            android:name=".ui.AppEntranceActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -26,7 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.colorfuldashboard.DashboardActivity" />
+        <activity android:name=".ui.frgment.colorfuldashboard.DashboardActivity" />
     </application>
 
 </manifest>

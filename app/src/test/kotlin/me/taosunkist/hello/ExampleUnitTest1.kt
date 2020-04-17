@@ -253,7 +253,7 @@ class ExampleUnitTest1 {
         var runOnTimeAlternative = runOnTime
         compositeDisposable.dispose()
         compositeDisposable = CompositeDisposable()
-        Observable.interval(30, TimeUnit.SECONDS).subscribeOn(Schedulers.io())
+        Observable.interval(1, TimeUnit.SECONDS).subscribeOn(Schedulers.io())
                 .subscribe {
                         println("taohui runOnTime: $runOnTime, compositeDisposable: $compositeDisposable, it: $it")
                 }.addTo(compositeDisposable)

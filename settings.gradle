@@ -1,1 +1,1 @@
-include ':app', ':aliplayer', ':tatame', ':materials'
+include ':app', ':materials'

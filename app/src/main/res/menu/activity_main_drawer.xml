@@ -18,6 +18,10 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Tools" />
+        <item
+            android:id="@+id/nav_tatame_battery"
+            android:icon="@android:drawable/ic_lock_idle_low_battery"
+            android:title="Battery" />
     </group>
 
     <item android:title="Communicate">

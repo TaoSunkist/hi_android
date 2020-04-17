@@ -4,18 +4,16 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aliplayer/aliplayer.iml" filepath="$PROJECT_DIR$/aliplayer/aliplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/hi_android.iml" filepath="$PROJECT_DIR$/.idea/hi_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/hi_android.iml" filepath="$PROJECT_DIR$/.idea/hi_android.iml" group="hi_android" />
       <module fileurl="file://$PROJECT_DIR$/aliplayer/hi_android-aliplayer.iml" filepath="$PROJECT_DIR$/aliplayer/hi_android-aliplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/hi_android-app.iml" filepath="$PROJECT_DIR$/app/hi_android-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aliplayer/hi_android-hi_android-aliplayer.iml" filepath="$PROJECT_DIR$/aliplayer/hi_android-hi_android-aliplayer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/hi_android-hi_android-app.iml" filepath="$PROJECT_DIR$/app/hi_android-hi_android-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/materials/hi_android-hi_android-materials.iml" filepath="$PROJECT_DIR$/materials/hi_android-hi_android-materials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/hi_android-hi_android-app.iml" filepath="$PROJECT_DIR$/app/hi_android-hi_android-app.iml" group="hi_android/app" />
+      <module fileurl="file://$PROJECT_DIR$/materials/hi_android-hi_android-materials.iml" filepath="$PROJECT_DIR$/materials/hi_android-hi_android-materials.iml" group="hi_android/materials" />
       <module fileurl="file://$PROJECT_DIR$/materials/hi_android-materials.iml" filepath="$PROJECT_DIR$/materials/hi_android-materials.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tatame/hi_android-tatame-component.iml" filepath="$PROJECT_DIR$/tatame/hi_android-tatame-component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-tatame/hi_android-tatame-component.iml" filepath="$PROJECT_DIR$/app-tatame/hi_android-tatame-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/tatame-frontline/hi_android-tatame-frontline.iml" filepath="$PROJECT_DIR$/tatame-frontline/hi_android-tatame-frontline.iml" />
       <module fileurl="file://$PROJECT_DIR$/materials/materials.iml" filepath="$PROJECT_DIR$/materials/materials.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tatame/tatame.iml" filepath="$PROJECT_DIR$/tatame/tatame.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tatame/tatame-component.iml" filepath="$PROJECT_DIR$/tatame/tatame-component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-tatame/tatame-component.iml" filepath="$PROJECT_DIR$/app-tatame/tatame-component.iml" />
       <module fileurl="file://$PROJECT_DIR$/tatame-frontline/tatame-frontline.iml" filepath="$PROJECT_DIR$/tatame-frontline/tatame-frontline.iml" />
     </modules>
   </component>
