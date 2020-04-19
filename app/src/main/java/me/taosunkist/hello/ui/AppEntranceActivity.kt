@@ -13,6 +13,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
+import me.taosunkist.hello.ui.controller.home.HomeActivity
 import me.taosunkist.hello.ui.frgment.colorfuldashboard.DashboardActivity
 import me.taosunkist.hello.ui.frgment.notification.ReminderFragment
 import me.taosunkist.hello.ui.frgment.watermark.WatermarkFragment
@@ -84,16 +85,15 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 	override fun onNavigationItemSelected(item: MenuItem): Boolean {
 		val id = item.itemId
 
-		if (id == R.id.nav_camera) {
-		} else if (id == R.id.nav_gallery) {
-			Toast.makeText(this, "nav_gallery", Toast.LENGTH_SHORT).show()
-		} else if (id == R.id.nav_slideshow) {
-			Toast.makeText(this, "nav_slideshow", Toast.LENGTH_SHORT).show()
-		} else if (id == R.id.nav_manage) {
-		} else if (id == R.id.nav_share) {
-			supportFragmentManager.beginTransaction().add(R.id.content_root, ReminderFragment.newInstance("", "")).addToBackStack(ReminderFragment.TAG).commitAllowingStateLoss()
-		} else if (id == R.id.nav_tatame_battery) {
-			startActivity(Intent(this, AppEntranceActivity::class.java))
+		when (id) {
+			R.id.nav_camera -> {
+			}
+			R.id.nav_share -> {
+				supportFragmentManager.beginTransaction().add(R.id.content_root, ReminderFragment.newInstance("", "")).addToBackStack(ReminderFragment.TAG).commitAllowingStateLoss()
+			}
+			R.id.nav_tatame_battery -> {
+				startActivity(Intent(this, HomeActivity::class.java))
+			}
 		}
 
 		val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)

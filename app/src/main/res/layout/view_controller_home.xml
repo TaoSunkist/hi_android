@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/common_id_content_container"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_controller_content_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:clipChildren="false"
     android:clipToPadding="false">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/view_controller_databindviewcontroller_appcompatbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DatabindingViewController"
+        android:textAllCaps="false" />
 
-</FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

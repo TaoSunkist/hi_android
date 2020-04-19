@@ -3,7 +3,9 @@ ext {
     extJunit = 'androidx.test.ext:junit:1.1.1'
     coreKtx = 'androidx.core:core-ktx:1.2.0'
     kotlinStdlibJdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61"
+    kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:1.3.71"
     appcompat = 'androidx.appcompat:appcompat:1.1.0'
+    legacySupport = 'androidx.legacy:legacy-support-v4:1.0.0'
     espressoCore = 'androidx.test.espresso:espresso-core:3.2.0'
 
     grpcOkhttp = 'io.grpc:grpc-okhttp:1.22.1' // CURRENT_GRPC_VERSION
