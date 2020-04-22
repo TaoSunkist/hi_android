@@ -14,4 +14,5 @@
     <string name="title_activity_main_view_controller">MainViewControllerActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="controller_view_gift_box_result_prize_describe_text_view">获得钻石%1$s枚~</string>
 </resources>

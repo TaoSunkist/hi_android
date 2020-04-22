@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.controller.databinding.DatabindingViewController
+import me.taosunkist.hello.ui.controller.giftbox.GiftBoxViewController
 import me.taosunkist.hello.ui.reusable.viewcontroller.controller.BaseViewController
 
 class HomeViewController : BaseViewController() {
@@ -16,7 +17,12 @@ class HomeViewController : BaseViewController() {
 	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
 		return inflater.inflate(R.layout.view_controller_home, container, false).apply {
 			this.findViewById<View>(R.id.view_controller_databindviewcontroller_appcompatbutton).setOnClickListener { launchDatabindingUI() }
+			this.findViewById<View>(R.id.view_controller_giftboxviewcontroller_appcompatbutton).setOnClickListener { launchGiftBoxUI() }
 		}
+	}
+
+	private fun launchGiftBoxUI() {
+		present(viewController = GiftBoxViewController(), animated = true)
 	}
 
 	private fun launchDatabindingUI() {

@@ -115,6 +115,7 @@ dependencies {
     /* Image Loading/Processing */
     implementation picasso
     implementation legacySupport
+    implementation fakeit
 }
 
 repositories {

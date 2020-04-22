@@ -6,6 +6,7 @@ import android.os.Looper
 import androidx.multidex.MultiDexApplication
 import com.google.gson.Gson
 import com.jakewharton.rxrelay2.BehaviorRelay
+import com.mooveit.library.Fakeit
 import io.reactivex.disposables.CompositeDisposable
 import me.taosunkist.hello.utility.weak
 
@@ -15,6 +16,8 @@ import me.taosunkist.hello.utility.weak
 class HiApplication : MultiDexApplication() {
 	override fun onCreate() {
 		super.onCreate()
+
+		Fakeit.init()
 	}
 
 	companion object {

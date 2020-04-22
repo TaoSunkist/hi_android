@@ -11,7 +11,14 @@
         android:id="@+id/view_controller_databindviewcontroller_appcompatbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DatabindingViewController"
+        android:text="DatabindingView"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/view_controller_giftboxviewcontroller_appcompatbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GiftBoxView"
         android:textAllCaps="false" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
