@@ -22,6 +22,10 @@
             android:id="@+id/nav_tatame_battery"
             android:icon="@android:drawable/ic_lock_idle_low_battery"
             android:title="Battery" />
+        <item
+            android:id="@+id/nav_grpc"
+            android:icon="@android:drawable/ic_menu_more"
+            android:title="Grpc" />
     </group>
 
     <item android:title="Communicate">

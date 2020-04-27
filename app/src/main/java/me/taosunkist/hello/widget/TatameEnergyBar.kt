@@ -6,11 +6,11 @@ import android.os.Build
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import me.taosunkist.hello.Dimens.dpToPx
 import me.taosunkist.hello.R
-import android.widget.FrameLayout
 
 data class EnergyViewUIModel(val energyCount: Int) {
     constructor() : this(energyCount = (0..2).random())

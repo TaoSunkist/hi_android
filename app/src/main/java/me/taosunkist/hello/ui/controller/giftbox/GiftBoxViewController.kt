@@ -4,20 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.Observable
 import com.mooveit.library.Fakeit
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.Observables
 import io.reactivex.rxkotlin.addTo
 import me.taosunkist.hello.R
-import me.taosunkist.hello.databinding.ViewControllerDatabindingBinding
 import me.taosunkist.hello.databinding.ViewControllerGiftBoxBinding
 import me.taosunkist.hello.ui.controller.giftbox.model.OpenBoxResultUIModel
 import me.taosunkist.hello.ui.reusable.viewcontroller.controller.BaseViewController
-import me.taosunkist.hello.ui.reusable.viewcontroller.controller.ViewController
 import me.taosunkist.hello.utility.MainThread
-import java.util.concurrent.TimeUnit
-import java.util.concurrent.atomic.AtomicInteger
 
 data class GiftBoxUIModel(val name: String) {
 	companion object {

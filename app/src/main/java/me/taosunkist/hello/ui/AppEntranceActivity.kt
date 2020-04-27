@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.ViewAnimationUtils
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -15,10 +14,12 @@ import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.controller.home.HomeActivity
 import me.taosunkist.hello.ui.frgment.colorfuldashboard.DashboardActivity
+import me.taosunkist.hello.ui.frgment.grpc.GrpcFragment
 import me.taosunkist.hello.ui.frgment.notification.ReminderFragment
 import me.taosunkist.hello.ui.frgment.watermark.WatermarkFragment
 import kotlin.math.max
 
+/*Gradle execute generateDebugProto*/
 class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,11 +38,6 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 
 		drawer.addDrawerListener(toggle)
 		toggle.syncState()
-
-//        findViewById<View>(R.id.go_grpc).setOnClickListener {
-//            supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss()
-//        }
-
 		navigationView.setNavigationItemSelectedListener(this)
 	}
 
@@ -89,10 +85,13 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 			R.id.nav_camera -> {
 			}
 			R.id.nav_share -> {
-				supportFragmentManager.beginTransaction().add(R.id.content_root, ReminderFragment.newInstance("", "")).addToBackStack(ReminderFragment.TAG).commitAllowingStateLoss()
+				supportFragmentManager.beginTransaction().add(R.id.content_root, ReminderFragment.newInstance()).addToBackStack(ReminderFragment.TAG).commitAllowingStateLoss()
 			}
 			R.id.nav_tatame_battery -> {
 				startActivity(Intent(this, HomeActivity::class.java))
+			}
+			R.id.nav_grpc -> {
+				supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss()
 			}
 		}
 

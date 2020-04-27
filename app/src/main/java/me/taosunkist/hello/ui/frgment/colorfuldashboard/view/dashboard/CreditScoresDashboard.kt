@@ -1,20 +1,13 @@
 package me.taosunkist.hello.ui.frgment.colorfuldashboard.view.dashboard
 
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Matrix
-import android.graphics.Paint
-import android.graphics.RectF
-import android.graphics.Region
-import android.graphics.SweepGradient
+import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import java.util.ArrayList
+import me.taosunkist.hello.R
+import java.util.*
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger
-
-import me.taosunkist.hello.R
 import kotlin.math.cos
 import kotlin.math.sin
 

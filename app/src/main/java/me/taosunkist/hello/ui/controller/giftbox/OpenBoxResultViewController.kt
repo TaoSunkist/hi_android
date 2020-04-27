@@ -5,18 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.*
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.databinding.DataBindingUtil
 import com.zhimeng.frontline.ui.reusable.viewcontroller.presentation.PresentingAnimation
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ControllerViewGiftBoxResultBinding
-import me.taosunkist.hello.databinding.ViewControllerDatabindingBinding
-import me.taosunkist.hello.databinding.ViewControllerGiftBoxBinding
-import me.taosunkist.hello.ui.controller.databinding.DatabindingUIModel
 import me.taosunkist.hello.ui.controller.giftbox.model.OpenBoxResultUIModel
 import me.taosunkist.hello.ui.reusable.viewcontroller.controller.BaseViewController
-import me.taosunkist.hello.utility.annotation.ViewRes
 import me.taosunkist.hello.utility.weak
 
 interface OpenBoxResultViewControllerDelegate {

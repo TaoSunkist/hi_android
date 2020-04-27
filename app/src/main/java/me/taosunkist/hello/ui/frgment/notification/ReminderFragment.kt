@@ -13,13 +13,13 @@ import android.media.AudioAttributes
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import com.flyco.tablayout.SegmentTabLayout
 import com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
 import com.google.gson.annotations.SerializedName
@@ -187,7 +187,7 @@ class ReminderFragment : Fragment() {
 		const val NOTIFICATION_CHANNEL_ID = "com.zhimeng.tatame"
 
 		@JvmStatic
-		fun newInstance(param1: String, param2: String) = ReminderFragment().apply { arguments = Bundle().apply { } }
+		fun newInstance() = ReminderFragment().apply { arguments = Bundle().apply { } }
 	}
 
 

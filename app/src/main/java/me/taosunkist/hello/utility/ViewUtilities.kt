@@ -5,8 +5,8 @@ import android.view.View
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import com.squareup.picasso.Picasso
-import me.taosunkist.hello.ui.uimodels.ImageUIModel
 import me.taosunkist.hello.R
+import me.taosunkist.hello.ui.uimodels.ImageUIModel
 
 fun View.setFrame(x: Int, y: Int, width: Int, height: Int) {
     layout(x, y, x + width, y + height)

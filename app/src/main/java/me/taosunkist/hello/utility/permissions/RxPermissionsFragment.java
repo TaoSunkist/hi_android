@@ -8,9 +8,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.FrameLayout;
+
 import androidx.annotation.NonNull;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import io.reactivex.subjects.PublishSubject;
 
 public class RxPermissionsFragment extends Fragment {

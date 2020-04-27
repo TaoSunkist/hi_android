@@ -1,7 +1,5 @@
 import org.junit.Test
 
-import org.junit.Assert.*
-
 class ExampleUnitTest1Test {
 
     @Test

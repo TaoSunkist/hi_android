@@ -2,7 +2,6 @@ package me.taosunkist.hello.ui.reusable.viewcontroller.controller
 
 import android.view.View
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
 import me.taosunkist.hello.Dimens
 
 abstract class BaseViewController : ViewController() {
