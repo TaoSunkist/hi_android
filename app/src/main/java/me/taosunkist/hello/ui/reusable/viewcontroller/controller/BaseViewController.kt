@@ -1,31 +1,68 @@
 package me.taosunkist.hello.ui.reusable.viewcontroller.controller
 
 import android.view.View
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LifecycleRegistry
 import io.reactivex.disposables.CompositeDisposable
 import me.taosunkist.hello.Dimens
 
-abstract class BaseViewController : ViewController() {
+abstract class BaseViewController : ViewController(), LifecycleOwner {
 
-    val compositeDisposable = CompositeDisposable()
+	val compositeDisposable = CompositeDisposable()
 
-    override fun viewWillUnload(view: View) {
-        super.viewWillUnload(view)
-        this.compositeDisposable.clear()
-    }
+	private val lifecycleRegistry: LifecycleRegistry = LifecycleRegistry(this)
 
-    fun fitSafeArea(contentView: View) {
-        contentView.setPadding(0, Dimens.safeArea.top, 0, Dimens.safeArea.bottom)
-    }
+	override fun viewDidLoad(view: View) {
+		super.viewDidLoad(view)
+		lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
+	}
 
-    fun showProgressDialog(message: String) {
-        activity.showProgressDialog(message = message)
-    }
+	override fun viewWillAppear(animated: Boolean) {
+		super.viewWillAppear(animated)
+		lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
+	}
 
-    fun showProgressDialog(messageRes: Int) {
-        activity.showProgressDialog(messageRes = messageRes)
-    }
+	override fun viewDidAppear(animated: Boolean) {
+		super.viewDidAppear(animated)
+		lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_RESUME)
+	}
 
-    fun dismissProgressDialog(animated: Boolean = true, completion: (() -> Unit)? = null) {
-        activity.dismissProgressDialog(animated = animated, completion = completion)
-    }
+	override fun viewWillDisappear(animated: Boolean) {
+		super.viewWillDisappear(animated)
+		lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+	}
+
+	override fun viewDidDisappear(animated: Boolean) {
+		super.viewDidDisappear(animated)
+		lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_STOP)
+	}
+
+	override fun viewWillUnload(view: View) {
+		super.viewWillUnload(view)
+		this.compositeDisposable.clear()
+		lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+	}
+
+	override fun getLifecycle(): Lifecycle {
+		return lifecycleRegistry
+	}
+
+	fun fitSafeArea(contentView: View) {
+		contentView.setPadding(0, Dimens.safeArea.top, 0, Dimens.safeArea.bottom)
+	}
+
+	fun showProgressDialog(message: String) {
+		activity.showProgressDialog(message = message)
+	}
+
+	fun showProgressDialog(messageRes: Int) {
+		activity.showProgressDialog(messageRes = messageRes)
+	}
+
+	fun dismissProgressDialog(animated: Boolean = true, completion: (() -> Unit)? = null) {
+		activity.dismissProgressDialog(animated = animated, completion = completion)
+	}
+
+
 }

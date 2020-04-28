@@ -105,7 +105,6 @@ abstract class ViewController {
     }
 
     /* Internal Methods */
-
     open fun doCreateView(container: ViewGroup, activity: BaseActivity) {
         _activity = activity
         _view = onCreateView(LayoutInflater.from(container.context), container)
