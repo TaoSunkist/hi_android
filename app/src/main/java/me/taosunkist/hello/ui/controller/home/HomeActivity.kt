@@ -3,7 +3,7 @@ package me.taosunkist.hello.ui.controller.home
 import android.content.Intent
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
-import com.zhimeng.frontline.ui.reusable.viewcontroller.controller.NavigationController
+import me.taosunkist.hello.ui.reusable.viewcontroller.controller.NavigationController
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import me.taosunkist.hello.Dimens

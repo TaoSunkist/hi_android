@@ -1,6 +1,6 @@
 package me.taosunkist.hello.ui.reusable.viewcontroller
 
-import com.zhimeng.frontline.ui.reusable.viewcontroller.presentation.PresentingAnimation
+import me.taosunkist.hello.ui.reusable.viewcontroller.presentation.PresentingAnimation
 import me.taosunkist.hello.ui.reusable.viewcontroller.controller.ViewController
 import me.taosunkist.hello.ui.reusable.viewcontroller.host.ControllerHost
 

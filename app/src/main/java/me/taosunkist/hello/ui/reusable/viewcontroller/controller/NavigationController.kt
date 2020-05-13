@@ -1,4 +1,4 @@
-package com.zhimeng.frontline.ui.reusable.viewcontroller.controller
+package me.taosunkist.hello.ui.reusable.viewcontroller.controller
 
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import me.taosunkist.hello.ui.reusable.viewcontroller.host.ControllerHost
 
 open class NavigationController(root: ViewController) : ViewController() {
 
-    protected var controllerHost: ControllerHost? = null
+    private var controllerHost: ControllerHost? = null
     var root = root
     private var pendingRoot: ViewController? = root
 

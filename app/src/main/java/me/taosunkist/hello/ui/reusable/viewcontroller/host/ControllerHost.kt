@@ -11,8 +11,8 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.GestureDetectorCompat
-import com.zhimeng.frontline.ui.reusable.viewcontroller.presentation.PresentationStyle
-import com.zhimeng.frontline.ui.reusable.viewcontroller.presentation.PresentingAnimation
+import me.taosunkist.hello.ui.reusable.viewcontroller.presentation.PresentationStyle
+import me.taosunkist.hello.ui.reusable.viewcontroller.presentation.PresentingAnimation
 import me.taosunkist.hello.ui.reusable.viewcontroller.BaseActivity
 import me.taosunkist.hello.ui.reusable.viewcontroller.animation.AnimationEndListener
 import me.taosunkist.hello.ui.reusable.viewcontroller.controller.ViewController

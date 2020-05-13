@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.*
 import androidx.databinding.DataBindingUtil
-import com.zhimeng.frontline.ui.reusable.viewcontroller.presentation.PresentingAnimation
+import me.taosunkist.hello.ui.reusable.viewcontroller.presentation.PresentingAnimation
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ControllerViewGiftBoxResultBinding
 import me.taosunkist.hello.ui.controller.giftbox.model.OpenBoxResultUIModel
