@@ -11,10 +11,11 @@ abstract class BaseViewController : ViewController(), LifecycleOwner {
 
 	val compositeDisposable = CompositeDisposable()
 
-	private val lifecycleRegistry: LifecycleRegistry = LifecycleRegistry(this)
+	private lateinit var lifecycleRegistry: LifecycleRegistry
 
 	override fun viewDidLoad(view: View) {
 		super.viewDidLoad(view)
+		lifecycleRegistry = LifecycleRegistry(this)
 		lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
 	}
 

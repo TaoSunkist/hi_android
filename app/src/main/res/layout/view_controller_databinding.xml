@@ -3,9 +3,6 @@
 
     <data>
 
-        <variable
-            name="uiModel"
-            type="me.taosunkist.hello.ui.controller.databinding.DatabindingUIModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -19,7 +16,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@{String.valueOf(uiModel.interval)}"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
             android:textSize="24sp" />

@@ -29,14 +29,12 @@ class DatabindingViewController : BaseViewController() {
 
 	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
 		binding = DataBindingUtil.inflate(inflater, R.layout.view_controller_databinding, container, false)
-		binding.uiModel = DatabindingUIModel(interval = 1)
 		return binding.root
 	}
 
 	override fun viewDidLoad(view: View) {
 		super.viewDidLoad(view)
 		io.reactivex.Observable.interval(1, TimeUnit.SECONDS).observeOn(MainThread).subscribe {
-			binding.uiModel!!.interval = it
 			println("$it")
 		}.addTo(compositeDisposable = compositeDisposable)
 	}
