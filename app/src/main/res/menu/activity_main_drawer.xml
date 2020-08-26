@@ -26,6 +26,10 @@
             android:id="@+id/nav_grpc"
             android:icon="@android:drawable/ic_menu_more"
             android:title="Grpc" />
+        <item
+            android:id="@+id/nav_progress"
+            android:icon="@android:drawable/progress_horizontal"
+            android:title="Progress" />
     </group>
 
     <item android:title="Communicate">

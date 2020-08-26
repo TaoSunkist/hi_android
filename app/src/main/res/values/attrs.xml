@@ -8,5 +8,12 @@
         <attr name="metaButtonBarStyle" format="reference" />
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
-
+    <declare-styleable name="SquareProcessView">
+        <attr name="strokeColor" format="color|reference" />
+        <attr name="strokeWith" format="dimension|reference" />
+        <attr name="progressColor" format="color|reference" />
+        <attr name="textSize" format="dimension|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="currentPogress" format="integer" />
+    </declare-styleable>
 </resources>

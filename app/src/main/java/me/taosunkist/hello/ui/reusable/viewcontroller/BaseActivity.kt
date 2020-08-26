@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.lifecycle.LifecycleRegistry
 import me.taosunkist.hello.Dimens
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.reusable.views.ProgressDialogWrapper
@@ -18,6 +19,8 @@ open class BaseActivity : AppCompatActivity() {
 
 	private lateinit var progressDialog: ProgressDialogWrapper
 	private var disableBackButton: Boolean = false
+
+	private lateinit var lifecycleRegistry: LifecycleRegistry
 
 	val container: ViewGroup
 		get() = findViewById<FrameLayout>(R.id.activity_base_container_framelayout)

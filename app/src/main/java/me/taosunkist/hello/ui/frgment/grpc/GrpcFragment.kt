@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit
 class GrpcFragment : Fragment() {
 
 	companion object {
-		const val tag = "Grpc"
+		const val TAG = "Grpc"
 		const val grpcServerAddress = "127.0.0.1"
 		const val grpcServerPort = "50051"
 

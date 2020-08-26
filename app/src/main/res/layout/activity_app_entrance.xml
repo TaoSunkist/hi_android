@@ -5,8 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:fitsSystemWindows="true">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -14,26 +13,40 @@
         android:fitsSystemWindows="true"
         tools:context="me.taosunkist.hello.ui.AppEntranceActivity">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
+        <me.taosunkist.hello.ui.reusable.views.GenderAgeTextView
+            android:id="@+id/gender_age_text_view"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:layout_gravity="end"
+            android:layout_margin="100dp"
+            android:background="@drawable/bg_age_female"
+            android:drawableStart="@drawable/icon_girl"
+            android:drawablePadding="@dimen/margin_medium"
+            android:paddingStart="6dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <!--        <com.google.android.material.appbar.AppBarLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:theme="@style/AppTheme.AppBarOverlay">-->
 
-        </com.google.android.material.appbar.AppBarLayout>
+        <!--            <androidx.appcompat.widget.Toolbar-->
+        <!--                android:id="@+id/toolbar"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="?attr/actionBarSize"-->
+        <!--                android:background="?attr/colorPrimary"-->
+        <!--                app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+        <!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <FrameLayout
             android:id="@+id/content_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="?attr/actionBarSize"
             android:orientation="vertical"
+
             tools:context="me.taosunkist.hello.ui.AppEntranceActivity">
 
             <ProgressBar
@@ -53,14 +66,15 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/activity_main_nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/menu_app_entrance" />
+
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

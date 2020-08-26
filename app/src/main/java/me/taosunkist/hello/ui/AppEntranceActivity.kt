@@ -5,18 +5,20 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.ViewAnimationUtils
-import androidx.appcompat.app.ActionBarDrawerToggle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.controller.home.HomeActivity
 import me.taosunkist.hello.ui.frgment.colorfuldashboard.DashboardActivity
+import me.taosunkist.hello.ui.frgment.countdowntimer.squareprogressbar.CountdownTimeFragment
 import me.taosunkist.hello.ui.frgment.grpc.GrpcFragment
 import me.taosunkist.hello.ui.frgment.notification.ReminderFragment
 import me.taosunkist.hello.ui.frgment.watermark.WatermarkFragment
+import me.taosunkist.hello.ui.frgment.progress.SquareProgressBarFragment
+import me.taosunkist.hello.ui.reusable.views.GenderAgeTextView
 import kotlin.math.max
 
 /*Gradle execute generateDebugProto*/
@@ -29,15 +31,15 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 	}
 
 	private fun init() {
-		val toolbar = findViewById<Toolbar>(R.id.toolbar)
-		setSupportActionBar(toolbar)
+//		val toolbar = findViewById<Toolbar>(R.id.toolbar)
+//		setSupportActionBar(toolbar)
 
 		val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
 		val navigationView: NavigationView = findViewById(R.id.activity_main_nav_view)
-		val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-
-		drawer.addDrawerListener(toggle)
-		toggle.syncState()
+//		val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+//
+//		drawer.addDrawerListener(toggle)
+//		toggle.syncState()
 		navigationView.setNavigationItemSelectedListener(this)
 	}
 
@@ -49,6 +51,12 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 		} else {
 			super.onBackPressed()
 		}
+	}
+
+	override fun onResume() {
+		super.onResume()
+//		supportFragmentManager.beginTransaction().add(R.id.content_root, CountdownTimeFragment.newInstance()).addToBackStack(CountdownTimeFragment.TAG).commitAllowingStateLoss()
+		val genderAgeTextView  = findViewById<GenderAgeTextView>(R.id.gender_age_text_view)
 	}
 
 	override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -91,7 +99,10 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 				startActivity(Intent(this, HomeActivity::class.java))
 			}
 			R.id.nav_grpc -> {
-				supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.tag).commitAllowingStateLoss()
+				supportFragmentManager.beginTransaction().add(R.id.content_root, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.TAG).commitAllowingStateLoss()
+			}
+			R.id.nav_progress -> {
+				supportFragmentManager.beginTransaction().add(R.id.content_root, SquareProgressBarFragment.newInstance()).addToBackStack(SquareProgressBarFragment.TAG).commitAllowingStateLoss()
 			}
 		}
 
