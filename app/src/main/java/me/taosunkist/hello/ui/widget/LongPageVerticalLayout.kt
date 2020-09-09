@@ -1,10 +1,9 @@
-package me.taosunkist.hello.widget
+package me.taosunkist.hello.ui.widget
 
 import android.animation.ObjectAnimator
 import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
-import android.view.MotionEvent
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import me.taosunkist.hello.Dimens

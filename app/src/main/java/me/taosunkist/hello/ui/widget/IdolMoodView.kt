@@ -1,4 +1,4 @@
-package me.taosunkist.hello.widget
+package me.taosunkist.hello.ui.widget
 
 import android.animation.Animator
 import android.animation.ObjectAnimator

@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.uimodels
+package me.taosunkist.hello.model.ui
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
@@ -23,16 +23,16 @@ data class ImageUIModel(
 
         fun fake(): ImageUIModel {
             return ImageUIModel(
-                imageUrl = Debug.images.random(),
-                placeholder = R.drawable.placeholder_image
+                    imageUrl = Debug.images.random(),
+                    placeholder = R.drawable.placeholder_image
             )
         }
 
         fun fakeList(): List<ImageUIModel> {
             return (0..(5..10).random()).map {
                 ImageUIModel(
-                    imageUrl = Debug.images.random(),
-                    placeholder = R.drawable.placeholder_image
+                        imageUrl = Debug.images.random(),
+                        placeholder = R.drawable.placeholder_image
                 )
             }
         }
@@ -42,7 +42,7 @@ data class ImageUIModel(
          */
         fun placeholder(imageRes: Int): ImageUIModel {
             return ImageUIModel(
-                imageRes = imageRes
+                    imageRes = imageRes
             )
         }
 
@@ -51,10 +51,10 @@ data class ImageUIModel(
          */
         fun displayImage(imageUrl: String?): ImageUIModel {
             return ImageUIModel(
-                imageUrl = imageUrl,
-                placeholder = R.drawable.placeholder_user,
-                targetWidth = displayImageLength,
-                targetHeight = displayImageLength
+                    imageUrl = imageUrl,
+                    placeholder = R.drawable.placeholder_user,
+                    targetWidth = displayImageLength,
+                    targetHeight = displayImageLength
             )
         }
 
@@ -63,9 +63,9 @@ data class ImageUIModel(
          */
         fun feedThumbnail(imageUrl: String?): ImageUIModel {
             return ImageUIModel(
-                imageUrl = imageUrl,
-                placeholder = R.drawable.placeholder_image,
-                targetWidth = feedThumbnailMaximumWidth
+                    imageUrl = imageUrl,
+                    placeholder = R.drawable.placeholder_image,
+                    targetWidth = feedThumbnailMaximumWidth
             )
         }
 
@@ -74,9 +74,9 @@ data class ImageUIModel(
          */
         fun chatThumbnail(imageUrl: String?): ImageUIModel {
             return ImageUIModel(
-                imageUrl = imageUrl,
-                placeholder = R.drawable.placeholder_image,
-                targetWidth = chatThumbnailMaximumWidth
+                    imageUrl = imageUrl,
+                    placeholder = R.drawable.placeholder_image,
+                    targetWidth = chatThumbnailMaximumWidth
             )
         }
 
@@ -85,8 +85,8 @@ data class ImageUIModel(
          */
         fun full(imageUrl: String?): ImageUIModel {
             return ImageUIModel(
-                imageUrl = imageUrl,
-                placeholder = R.drawable.placeholder_image
+                    imageUrl = imageUrl,
+                    placeholder = R.drawable.placeholder_image
             )
         }
     }

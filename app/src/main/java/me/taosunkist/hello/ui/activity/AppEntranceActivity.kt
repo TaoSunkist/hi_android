@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui
+package me.taosunkist.hello.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,8 +11,12 @@ import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_app_entrance.view.*
+import kotlinx.android.synthetic.main.menu_app_entrance.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ActivityAppEntranceBinding
+import me.taosunkist.hello.model.ui.ImageUIModel
 import me.taosunkist.hello.ui.controller.home.HomeActivity
 import me.taosunkist.hello.ui.frgment.colorfuldashboard.DashboardActivity
 import me.taosunkist.hello.ui.frgment.grpc.GrpcFragment
@@ -28,13 +32,15 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_app_entrance)
+        Picasso.get().load(ImageUIModel.fake().imageUrl).into(
+                        binding.activityMainNavigationView.menuAppEntranceInclude.userHeadCirCleImageView)
 
         setSupportActionBar(binding.toolbar)
         ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close).apply {
             binding.drawerLayout.addDrawerListener(this)
             syncState()
         }
-        binding.activityMainNavView.setNavigationItemSelectedListener(this)
+        binding.activityMainNavigationView.setNavigationItemSelectedListener(this)
     }
 
     override fun onBackPressed() {
@@ -74,7 +80,6 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
         when (item.itemId) {
             R.id.nav_camera -> {
             }

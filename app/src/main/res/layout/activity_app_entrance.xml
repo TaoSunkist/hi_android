@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            tools:context="me.taosunkist.hello.ui.AppEntranceActivity">
+            tools:context="me.taosunkist.hello.ui.activity.AppEntranceActivity">
 
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
@@ -36,20 +36,22 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="?attr/actionBarSize">
 
-                <me.taosunkist.hello.widget.LongPageVerticalLayout
+                <me.taosunkist.hello.ui.widget.LongPageVerticalLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </FrameLayout>
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <com.google.android.material.navigation.NavigationView
-            android:id="@+id/activity_main_nav_view"
+            android:id="@+id/activity_main_navigation_view"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:fitsSystemWindows="true">
 
-            <include layout="@layout/menu_app_entrance" />
+            <include
+                android:id="@+id/menuAppEntranceInclude"
+                layout="@layout/menu_app_entrance" />
 
         </com.google.android.material.navigation.NavigationView>
 

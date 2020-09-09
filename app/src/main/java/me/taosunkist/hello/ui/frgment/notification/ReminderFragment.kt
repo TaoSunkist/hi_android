@@ -24,7 +24,7 @@ import com.flyco.tablayout.SegmentTabLayout
 import com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
 import com.google.gson.annotations.SerializedName
 import me.taosunkist.hello.R
-import me.taosunkist.hello.ui.AppEntranceActivity
+import me.taosunkist.hello.ui.activity.AppEntranceActivity
 import me.taosunkist.hello.utility.alarmmanager.AlarmManagerUtilities
 import java.text.SimpleDateFormat
 import java.util.*
