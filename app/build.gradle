@@ -45,6 +45,11 @@ android {
             }
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     configurations {
         all*.exclude group: 'com.google.guava', module: 'listenablefuture'
     }

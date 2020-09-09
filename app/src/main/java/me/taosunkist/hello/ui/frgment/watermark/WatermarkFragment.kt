@@ -39,7 +39,7 @@ class WatermarkFragment : Fragment() {
     private lateinit var viewModel: WatermarkViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.watermark_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_watermark, container, false)
     }
 
     val drawableResIds = listOf(R.drawable.bg_frontline_default, R.drawable.qq20191031, R.drawable.qq20191032, R.drawable.qq20191033)
