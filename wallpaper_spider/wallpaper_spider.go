@@ -1,1 +1,0 @@
-package wallpaper_spider

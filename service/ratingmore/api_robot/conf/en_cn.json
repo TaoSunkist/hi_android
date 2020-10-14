@@ -1,0 +1,62 @@
+[
+  {
+    "name": "account",
+    "en": "Account",
+    "cn": "普通地址"
+  },
+  {
+    "name": "contract",
+    "en": "Contract",
+    "cn": "合约地址"
+  },
+  {
+    "name": "Exchange & Fund Features",
+    "en": "Exchange Features",
+    "cn": "交易所特征地址"
+  },
+  {
+    "name": "Primary Market Investor",
+    "en": "Primary Market Investor",
+    "cn": "一级市场参与者"
+  },
+  {
+    "name": "Deposit Account",
+    "en": "Deposit Account",
+    "cn": "入金地址"
+  },
+  {
+    "name": "Pool features",
+    "en": "Mining Pool Features",
+    "cn": "矿池特征地址"
+  },
+  {
+    "name": "system_addr",
+    "en": "System Address",
+    "cn": "系统地址"
+  },
+  {
+    "name": "exchange",
+    "en": "Exchange",
+    "cn": "交易所"
+  },
+  {
+    "name": "Pools",
+    "en": "Pools",
+    "cn": "矿池"
+  },
+  {
+    "name": "Services/others",
+    "en": "Service",
+    "cn": "服务类"
+  },
+  {
+    "name": "Gambling",
+    "en": "Gambling",
+    "cn": "博彩"
+  },
+  {
+    "name": "Old/historic",
+    "en": "Old Wallet",
+    "cn": "钱包"
+  }
+]

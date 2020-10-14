@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<srv_cfg env="dev" debug="W">
+    <cfg env="prod" port="9010" pprof_port="">
+        <redis alias="redis" url="redis-server.com:6380" driver="redis"/>
+        <spk01_rds alias="redis" url="192.168.116.135:19000" driver="redis"/>
+        <postgres alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_btc password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_eth2 alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_eth password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_eth alias="psql" url="host=rm-t4nojimy449743ind.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg6 dbname=ym_data_eth password=Uh_32^=3-32fGH sslmode=disable" driver="postgres"/>
+        <ym_data_btc alias="psql" url="host=rm-pg-03.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg3 dbname=ym_data_btc password=Kc_2OKs232jio_op23 sslmode=disable" driver="postgres"/>
+        <ym_data_btc6 alias="psql" url="host=rm-pg-06.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg6 dbname=ym_data_btc password=Kc_2OKs232jio_op23 sslmode=disable" driver="postgres"/>
+        <ym_data_btc7 url="host=rm-pg-07.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg7 dbname=ym_data_btc password=Hm_32^23-32f8J sslmode=disable" driver="postgres" alias="psql"/>
+        <ym_data_ana url="host=datasource.com port=9700 user=postgres dbname=ym_data_ana password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+        <ym_data_btc22 alias="psql" url="host=172.21.221.22 port=9700 user=btc_dbuser dbname=ym_btc_data password=BtcDbAgensPgsql sslmode=disable" driver="postgres"/>
+        <postgres_thd_data url="host=datasource.com port=9700 user=postgres dbname=ym_data_thd password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+        <postgres_addr_data url="host=rm-t4n9t6jq55u5a0t40.pgsql.singapore.rds.aliyuncs.com port=3432 user=db_pg2 dbname=addr password=KL231ds232jio_^32 sslmode=disable" alias="psql" driver="postgres"/>
+        <eth_graph_db url="host=172.21.220.237 port=9700 user=postgres dbname=eth_graph_db password=postgres_ETH sslmode=disable" alias="psql" driver="postgres"/>
+        <mysql_sc_velk alias="mysql" driver="mysql" url="rmdbuser:gNJn4azk8jeK@tcp(rm-db-01.mysql.singapore.rds.aliyuncs.com:3306)/sc_velk"/>
+    </cfg>
+    <cfg env="sim" port="9011" pprof_port="9013">
+        <redis alias="redis" url="redis-server.com:6380" driver="redis"/>
+        <spk01_rds alias="redis" url="192.168.116.135:19000" driver="redis"/>
+        <postgres alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_btc password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_eth2 alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_eth password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_eth alias="psql" url="host=rm-t4nojimy449743ind.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg6 dbname=ym_data_eth password=Uh_32^=3-32fGH sslmode=disable" driver="postgres"/>
+        <ym_data_btc3 alias="psql" url="host=rm-pg-03.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg3 dbname=ym_data_btc password=Kc_2OKs232jio_op23 sslmode=disable" driver="postgres"/>
+        <ym_data_btc alias="psql" url="host=rm-t4n89l59cl69h53v7.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg8 dbname=ym_btc password=Kc_2OKs232jio_op23 sslmode=disable" driver="postgres"/>
+        <!--psql -h rm-t4n89l59cl69h53v7.pgsql.singapore.rds.aliyuncs.com -p 3433 "dbname=ym_data_btc user=db_pg8 password=Kc_2OKs232jio_op23"-->
+        <ym_data_btc6 alias="psql" url="host=rm-t4nojimy449743ind.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg6 dbname=ym_data_btc password=Uh_32^=3-32fGH sslmode=disable" driver="postgres"/>
+        <ym_data_btc7 url="host=rm-pg-07.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg7 dbname=ym_data_btc password=Hm_32^23-32f8J sslmode=disable" driver="postgres" alias="psql"/>
+        <ym_data_btc9 url="host=rm-pg-09.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg9 dbname=ym_data_btc password=23j01_2Lo31jk21 sslmode=disable" driver="postgres" alias="psql"/>
+        <!--psql -h rm-pg-07.pgsql.singapore.rds.aliyuncs.com -p 3433 "dbname=ym_data_btc  user=db_pg7 password=Hm_32^23-32f8J"-->
+        <ym_data_ana url="host=datasource.com port=9700 user=postgres dbname=ym_data_ana password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+        <ym_data_btc22 alias="psql" url="host=172.21.221.22 port=9700 user=btc_dbuser dbname=ym_btc_data password=BtcDbAgensPgsql sslmode=disable" driver="postgres"/>
+        <postgres_thd_data url="host=datasource.com port=9700 user=postgres dbname=ym_data_thd password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+        <postgres_addr_data url="host=rm-t4n9t6jq55u5a0t40.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg2 dbname=addr password=KL231ds232jio_^32 sslmode=disable" alias="psql" driver="postgres"/>
+        <!--<postgres_addr_data url="host=datasource.com port=9700 user=postgres dbname=ym_data_addr password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>-->
+        <eth_graph_db url="host=172.21.220.237 port=9700 user=postgres dbname=eth_graph_db password=postgres_ETH sslmode=disable" alias="psql" driver="postgres"/>
+        <mysql_sc_velk alias="mysql" driver="mysql" url="rmdbuser:gNJn4azk8jeK@tcp(rm-db-01.mysql.singapore.rds.aliyuncs.com:3306)/sc_velk"/>
+    </cfg>
+    <cfg env="dev" port="9011" pprof_port="9013">
+        <redis alias="redis" url="redis-server.com:6379" driver="redis"/>
+        <spk01_rds alias="redis" url="192.168.116.135:19000" driver="redis"/>
+        <ym_data_eth2 alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_eth password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_eth alias="psql" url="host=rm-t4nojimy449743ind4o.pgsql.singapore.rds.aliyuncs.com port=3432 user=db_pg6 dbname=ym_data_eth password=Uh_32^=3-32fGH sslmode=disable" driver="postgres"/>
+        <ym_data_btc6 url="host=datasource.com port=9700 user=postgres dbname=btc_data_test password=postgres_BTC sslmode=disable" driver="postgres" alias="psql"/>
+        <ym_data_btc7 url="host=datasource.com port=9700 user=postgres dbname=btc_data_test password=postgres_BTC sslmode=disable" driver="postgres" alias="psql"/>
+        <ym_data_btc url="host=datasource.com port=9700 user=postgres dbname=btc_data_test password=postgres_BTC sslmode=disable" driver="postgres" alias="psql"/>
+        <ym_data_ana url="host=datasource.com port=9700 user=postgres dbname=ym_data_ana password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+        <postgres alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_btc password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_btc22 alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_eth password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <postgres_thd_data url="host=datasource.com port=9700 user=postgres dbname=ym_data_thd password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+        <postgres_addr_data url="host=datasource.com port=9700 user=postgres dbname=ym_data_addr password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+        <postgres_eth_graph_db url="host=rm-t4n8444368a31ck8xeo.pgsql.singapore.rds.aliyuncs.com port=3433 user=db_pg3 dbname=ym_data_addr password=Uh^_32vn!=32jfd sslmode=disable" alias="psql" driver="postgres"/>
+        <eth_graph_db url="host=47.74.213.248 port=9700 user=postgres dbname=eth_graph_db password=postgres_ETH sslmode=disable" alias="psql" driver="postgres"/>
+        <mysql_sc_velk alias="mysql" driver="mysql" url="rmdbuser:gNJn4azk8jeK@tcp(rm-rds-01.mysql.singapore.rds.aliyuncs.com:4306)/sc_velk"/>
+    </cfg>
+</srv_cfg>
