@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "ntHEUG1Nc2/KzSWgFCQCZJUxLIo=",
+			"path": "ym_turkey/globals",
+			"revision": "01d83518e35d62dd367dc4111b3c5ae25295bb2c",
+			"revisionTime": "2018-10-11T02:44:47Z"
+		},
+		{
+			"checksumSHA1": "sEAdTjniR9qoiK5qAFZjj+bzK5E=",
+			"path": "ym_turkey/impl",
+			"revision": "01d83518e35d62dd367dc4111b3c5ae25295bb2c",
+			"revisionTime": "2018-10-11T02:44:47Z"
+		}
+	],
+	"rootPath": "hi_golang/service/ratingmore/api_robot"
+}
