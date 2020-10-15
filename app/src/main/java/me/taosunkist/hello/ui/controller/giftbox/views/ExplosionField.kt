@@ -12,7 +12,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
-import me.taosunkist.hello.Dimens
+import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.utility.ImageUtils
 import java.util.*
 

@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-import me.taosunkist.hello.Dimens;
+import me.taosunkist.hello.utility.Dimens;
 import me.taosunkist.hello.R;
 
 public class SquareProgressBarFragment extends Fragment {

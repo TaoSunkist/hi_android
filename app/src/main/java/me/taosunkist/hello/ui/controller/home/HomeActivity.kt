@@ -6,7 +6,7 @@ import androidx.core.app.ActivityCompat
 import me.taosunkist.hello.ui.reusable.viewcontroller.controller.NavigationController
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
-import me.taosunkist.hello.Dimens
+import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.HiApplication
 import me.taosunkist.hello.ui.reusable.viewcontroller.BaseActivity
 import me.taosunkist.hello.utility.MainThread

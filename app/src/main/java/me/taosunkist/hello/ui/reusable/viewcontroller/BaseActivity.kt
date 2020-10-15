@@ -7,10 +7,9 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
-import androidx.lifecycle.LifecycleRegistry
-import me.taosunkist.hello.Dimens
+import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.R
-import me.taosunkist.hello.ui.reusable.views.ProgressDialogWrapper
+import me.taosunkist.hello.ui.reusable.ProgressDialogWrapper
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -18,9 +17,8 @@ open class BaseActivity : AppCompatActivity() {
 		get() = R.layout.activity_base
 
 	private lateinit var progressDialog: ProgressDialogWrapper
-	private var disableBackButton: Boolean = false
 
-	private lateinit var lifecycleRegistry: LifecycleRegistry
+	private var disableBackButton: Boolean = false
 
 	val container: ViewGroup
 		get() = findViewById<FrameLayout>(R.id.activity_base_container_framelayout)
@@ -73,18 +71,6 @@ open class BaseActivity : AppCompatActivity() {
 		if (!controllerWindow.onBackPressed()) {
 			super.onBackPressed()
 		}
-	}
-
-	override fun onStart() {
-		super.onStart()
-//        FrontlineApplication.activeActivityCount
-//            .accept((FrontlineApplication.activeActivityCount.value ?: 0) + 1)
-	}
-
-	override fun onStop() {
-		super.onStop()
-//        FrontlineApplication.activeActivityCount
-//            .accept((FrontlineApplication.activeActivityCount.value ?: 1) - 1)
 	}
 
 	override fun startActivity(intent: Intent?) {

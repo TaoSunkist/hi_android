@@ -5,7 +5,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import io.reactivex.disposables.CompositeDisposable
-import me.taosunkist.hello.Dimens
+import me.taosunkist.hello.utility.Dimens
 
 abstract class BaseViewController : ViewController(), LifecycleOwner {
 

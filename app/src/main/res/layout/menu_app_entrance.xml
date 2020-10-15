@@ -8,7 +8,6 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-
         <me.taosunkist.hello.ui.widget.CircleImageView
             android:id="@+id/userHeadCirCleImageView"
             android:layout_width="@dimen/user_profile_large"
@@ -21,129 +20,15 @@
             android:id="@+id/message_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xxlarge"
             android:background="?attr/selectableItemBackground"
-            android:paddingTop="18dp"
             android:paddingBottom="18dp">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_xlarge"
-                android:drawablePadding="@dimen/margin_medium" />
+                android:text="gorilla-websocket" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_xlarge"
-                android:drawablePadding="@dimen/margin_medium"
-                android:text="unread_message_count_text_view" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="@dimen/margin_large"
-                android:src="@drawable/ic_gary_arrow_right" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/history_paired_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_xlarge"
-                android:drawablePadding="@dimen/margin_medium"
-                android:text="history_paired_container" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="@dimen/margin_large"
-                android:src="@drawable/ic_gary_arrow_right" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/purchase_diamond_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_xlarge"
-                android:drawablePadding="@dimen/margin_medium" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|end"
-                android:layout_marginEnd="24dp"
-                android:paddingStart="@dimen/margin_small"
-                android:paddingTop="@dimen/margin_xsmall"
-                android:paddingEnd="@dimen/margin_small"
-                android:paddingBottom="@dimen/margin_xsmall" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="@dimen/margin_large"
-                android:src="@drawable/ic_gary_arrow_right" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/privilege_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp"
-            android:visibility="gone">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_xlarge"
-                android:drawablePadding="9dp" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="@dimen/margin_large"
-                android:src="@drawable/ic_gary_arrow_right" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/setting_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:paddingTop="18dp"
-            android:paddingBottom="18dp">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_xlarge"
-                android:drawablePadding="@dimen/margin_medium" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="@dimen/margin_large"
-                android:src="@drawable/ic_gary_arrow_right" />
         </FrameLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

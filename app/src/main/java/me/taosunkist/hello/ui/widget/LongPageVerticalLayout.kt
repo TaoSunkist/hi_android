@@ -6,7 +6,7 @@ import android.graphics.Color
 import android.util.AttributeSet
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import me.taosunkist.hello.Dimens
+import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.utility.setFrame
 
 

@@ -4,7 +4,7 @@ import android.animation.ValueAnimator
 import android.graphics.*
 import android.view.View
 import android.view.animation.AccelerateInterpolator
-import me.taosunkist.hello.Dimens
+import me.taosunkist.hello.utility.Dimens
 import java.util.*
 
 class ExplosionAnimator(private val mContainer: View, bitmap: Bitmap, bound: Rect) : ValueAnimator() {

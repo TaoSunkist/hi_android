@@ -42,7 +42,7 @@ class WatermarkFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_watermark, container, false)
     }
 
-    val drawableResIds = listOf(R.drawable.bg_frontline_default, R.drawable.qq20191031, R.drawable.qq20191032, R.drawable.qq20191033)
+    val drawableResIds = listOf(R.drawable.bg_frontline_default, R.drawable.qq20191031, R.drawable.qq20191033)
     var drawableResIdsIndex: Int = 0
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

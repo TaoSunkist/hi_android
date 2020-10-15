@@ -2,7 +2,7 @@ package me.taosunkist.hello.model.ui
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-import me.taosunkist.hello.Dimens
+import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.R
 import me.taosunkist.hello.utility.Debug
 

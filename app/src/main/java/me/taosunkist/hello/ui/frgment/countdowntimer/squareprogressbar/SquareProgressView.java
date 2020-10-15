@@ -13,7 +13,7 @@ import android.view.View;
 
 import java.text.DecimalFormat;
 
-import me.taosunkist.hello.Dimens;
+import me.taosunkist.hello.utility.Dimens;
 
 public class SquareProgressView extends View {
 
