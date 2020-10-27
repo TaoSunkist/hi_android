@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data />
@@ -33,14 +34,31 @@
                 android:layout_height="match_parent"
                 android:padding="@dimen/margin_medium"
                 android:src="@drawable/selector_ic_score_electricity"
-                android:state_selected="true" />
+                android:state_selected="false" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <me.taosunkist.hello.ui.reusable.StackLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/send_login_message_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_xxlarge"
+                android:background="@drawable/bg_button_gradient"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </me.taosunkist.hello.ui.reusable.StackLayout>
 
         <me.taosunkist.hello.ui.reusable.LoggerRecyclerView
             android:id="@+id/logger_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

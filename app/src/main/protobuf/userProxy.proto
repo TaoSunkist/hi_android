@@ -1,26 +1,26 @@
 syntax = "proto3";
-
 package hilo;
 
+option go_package = "protocol/userProxy";
 option java_package = "me.taosunkist.hello.hilo";
 
+
 /* id = 1 */
-message login {
-  string token = 1;
+message Login {
+    string token = 1;
 }
 
 /* id = 2 */
-message loginRsp {
-  uint32 status = 1;
-  uint64 status2 = 10;
+message LoginRsp {
+    uint32 status = 1;
 }
 
 /* id = 3 */
-message heartBeat {
-  string token = 1;
+message HeartBeat {
+    string token = 1;
 }
 
 /* id = 4 */
-message heartBeatRsp {
-  uint32 status = 1;
+message HeartBeatRsp {
+    uint32 status = 1;
 }
