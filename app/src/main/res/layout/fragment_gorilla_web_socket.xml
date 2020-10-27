@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ws://gorilla.websocket.com/echo"
+                android:text="ws://192.168.1.180:8080/ws"
                 android:textColor="@android:color/black"
                 tools:ignore="HardcodedText" />
 

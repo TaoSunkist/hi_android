@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="me.taosunkist.hello">
 
-    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,16 +14,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".ui.jetpacknavigation.JetpackNavigationActivity" />
 
         <activity
             android:name=".ui.controller.home.HomeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_main_view_controller"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".ui.activity.AppEntranceActivity"
+            android:name=".ui.AppEntranceActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -34,7 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.frgment.colorfuldashboard.DashboardActivity" />
+        <activity android:name="me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity" />
     </application>
 
 </manifest>

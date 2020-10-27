@@ -29,13 +29,5 @@
             android:text="GiftBoxUI"
             android:textAllCaps="false" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/view_controller_livedataui_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_ripple_button_login"
-            android:text="LiveDataUI"
-            android:textAllCaps="false" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

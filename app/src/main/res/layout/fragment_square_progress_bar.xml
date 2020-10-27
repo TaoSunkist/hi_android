@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <me.taosunkist.hello.ui.frgment.progress.SquareProgressBar
+    <me.taosunkist.hello.ui.progress.SquareProgressBar
         android:id="@+id/subi2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

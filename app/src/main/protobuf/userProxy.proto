@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package hilo;
+
+option java_package = "me.taosunkist.hello.hilo";
+
+/* id = 1 */
+message login {
+  string token = 1;
+}
+
+/* id = 2 */
+message loginRsp {
+  uint32 status = 1;
+  uint64 status2 = 10;
+}
+
+/* id = 3 */
+message heartBeat {
+  string token = 1;
+}
+
+/* id = 4 */
+message heartBeatRsp {
+  uint32 status = 1;
+}

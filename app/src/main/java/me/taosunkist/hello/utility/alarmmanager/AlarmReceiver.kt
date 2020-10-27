@@ -15,7 +15,7 @@ import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import me.taosunkist.hello.R
-import me.taosunkist.hello.ui.activity.AppEntranceActivity
+import me.taosunkist.hello.ui.AppEntranceActivity
 
 class AlarmReceiver : BroadcastReceiver() {
 

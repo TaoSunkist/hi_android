@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        tools:context=".ui.frgment.countdowntimer.squareprogressbar.CountdownTimeFragment">
+        tools:context=".ui.squareprogressbar.CountdownTimeFragment">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
             android:layout_height="match_parent"
             android:background="@android:color/holo_blue_light">
 
-            <me.taosunkist.hello.ui.frgment.progress.SquareProgressBar
+            <me.taosunkist.hello.ui.progress.SquareProgressBar
                 android:id="@+id/squareProgressBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />

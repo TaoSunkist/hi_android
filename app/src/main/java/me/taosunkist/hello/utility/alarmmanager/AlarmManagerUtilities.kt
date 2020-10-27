@@ -5,8 +5,8 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import me.taosunkist.hello.ui.frgment.notification.OccasionType
-import me.taosunkist.hello.ui.frgment.notification.ReminderType
+import me.taosunkist.hello.ui.notification.OccasionType
+import me.taosunkist.hello.ui.notification.ReminderType
 import java.util.*
 
 object AlarmManagerUtilities {

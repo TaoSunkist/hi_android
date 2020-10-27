@@ -8,7 +8,6 @@ import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ViewControllerHomeBinding
 import me.taosunkist.hello.ui.controller.databinding.DatabindingViewController
 import me.taosunkist.hello.ui.controller.giftbox.GiftBoxViewController
-import me.taosunkist.hello.ui.controller.livedata.LiveDataViewController
 import me.taosunkist.hello.ui.reusable.viewcontroller.controller.BaseViewController
 
 class HomeViewController : BaseViewController() {
@@ -22,11 +21,9 @@ class HomeViewController : BaseViewController() {
 		return binding.also {
 			it.viewControllerDatabindinguiButton.setOnClickListener { launchDatabindingUI() }
 			it.viewControllerGiftboxuiButton.setOnClickListener { launchGiftBoxUI() }
-			it.viewControllerLivedatauiButton.setOnClickListener { launchLiveDataUI() }
 		}.root
 	}
 
-	private fun launchLiveDataUI() = present(viewController = LiveDataViewController(), animated = true)
 	private fun launchGiftBoxUI() = present(viewController = GiftBoxViewController(), animated = true)
 	private fun launchDatabindingUI() = present(viewController = DatabindingViewController(), animated = true)
 }
