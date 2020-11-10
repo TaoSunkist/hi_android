@@ -15,7 +15,7 @@
             android:id="@+id/make"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ripple_gradient_radius10dp"
+            android:background="@drawable/ripple_button_login_enable"
             android:text="生成水印视频"
             android:textColor="@android:color/white" />
 
@@ -23,7 +23,7 @@
             android:id="@+id/make2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ripple_gradient_radius10dp"
+            android:background="@drawable/ripple_button_login_enable"
             android:text="生成水印视频"
             android:textColor="@android:color/white" />
     </androidx.appcompat.widget.LinearLayoutCompat>

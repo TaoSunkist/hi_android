@@ -7,8 +7,14 @@ import com.tinder.scarlet.ws.Send
 import io.reactivex.Flowable
 import okhttp3.Response
 
-interface UserWSService {
+interface UserWebsocketor {
 
 	@Send
-	fun sendBytes(byteArray: ByteArray): Flowable<Boolean>
+	fun sendBytes(byteArray: ByteArray)
+
+	@Receive
+	fun observeWebSocketEvent(): Flowable<WebSocket.Event>
+
+	@Send
+	fun sendSubscribe()
 }

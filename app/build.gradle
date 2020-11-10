@@ -65,6 +65,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 allprojects {
     repositories {
@@ -98,8 +102,6 @@ protobuf {
             }
         }
     }
-    //将会在 "$projectDir/src/generated"这个目录中自动生成对应的java文件
-
 }
 
 dependencies {
@@ -176,12 +178,4 @@ repositories {
 configurations.all {
     resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
 }
-android {
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-}
+

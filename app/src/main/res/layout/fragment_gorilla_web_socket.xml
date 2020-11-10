@@ -32,26 +32,39 @@
                 android:id="@+id/connect_ws_host_image_view"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="@dimen/margin_medium"
+                android:paddingStart="@dimen/margin_xlarge"
+                android:paddingEnd="@dimen/margin_xlarge"
                 android:src="@drawable/selector_ic_score_electricity"
                 android:state_selected="false" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <me.taosunkist.hello.ui.reusable.StackLayout
+            android:id="@+id/feature_buttons_stack_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_medium">
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:spacing="@dimen/margin_small">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/send_login_message_button"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/margin_xxlarge"
-                android:background="@drawable/bg_button_gradient"
+                android:background="@drawable/selector_button_login"
+                android:enabled="false"
                 android:text="Login"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/send_heart_message_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_xxlarge"
+                android:background="@drawable/selector_button_login"
+                android:enabled="false"
+                android:text="Heart"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
         </me.taosunkist.hello.ui.reusable.StackLayout>
 
         <me.taosunkist.hello.ui.reusable.LoggerRecyclerView

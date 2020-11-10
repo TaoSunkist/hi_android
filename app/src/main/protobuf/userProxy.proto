@@ -4,23 +4,22 @@ package hilo;
 option go_package = "protocol/userProxy";
 option java_package = "me.taosunkist.hello.hilo";
 
-
 /* id = 1 */
 message Login {
-    string token = 1;
+  string token = 1;
 }
 
 /* id = 2 */
 message LoginRsp {
-    uint32 status = 1;
+  uint32 status = 1;
 }
 
 /* id = 3 */
 message HeartBeat {
-    string token = 1;
+  string token = 1;
 }
 
 /* id = 4 */
 message HeartBeatRsp {
-    uint32 status = 1;
+  uint32 status = 1;
 }

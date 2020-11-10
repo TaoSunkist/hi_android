@@ -17,7 +17,7 @@
             android:id="@+id/view_controller_databindingui_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_ripple_button_login"
+            android:background="@drawable/ripple_button_login_disable"
             android:text="DatabindingUI"
             android:textAllCaps="false" />
 
@@ -25,7 +25,7 @@
             android:id="@+id/view_controller_giftboxui_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_ripple_button_login"
+            android:background="@drawable/ripple_button_login_disable"
             android:text="GiftBoxUI"
             android:textAllCaps="false" />
 
