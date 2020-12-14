@@ -1,0 +1,226 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/configColorPureBlack</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@null</item>
+        <item name="actionBarSize">@dimen/actionBarSize</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:navigationBarColor">@color/configColorPureBlack</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="actionBarSize">@dimen/actionBarSize</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/configColorPureBlack</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:navigationBarColor">@color/configColorPureBlack</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <!--    <style name="Theme.Transparent" parent="android:Theme.Translucent.NoTitleBar">-->
+    <style name="Theme.Transparent" parent="AppTheme.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="ovalImageButtonStyle">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_width">@dimen/circle_button_default</item>
+        <item name="android:layout_height">@dimen/circle_button_default</item>
+    </style>
+    <!--    <item name="android:windowAnimationStyle">@style/OverlayActivityAnimations</item>-->
+    <style name="ActionBar_Title" parent="@android:style/TextAppearance.Holo.Large">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textDirection">anyRtl</item>
+        <item name="actionMenuTextAppearance">@style/ActionBar_Title</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="actionBarSize">@dimen/actionBarSize</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+    </style>
+
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="Button.Compat" parent="ButtonBase.Compat" />
+
+    <style name="ButtonBase.Compat" parent="@style/Widget.AppCompat.Button">
+        <!-- 取消 Button 字符默认大写的功能（会导致 Spannable 失效），默认值只影响 5.0 以上版本，但使用Compat包后，4.x 版本也会受到影响 -->
+        <!-- http://stackoverflow.com/questions/29007746/button-settext-with-spannable-dosent-work-for-android-5-0-lollipop -->
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="noBackgroundButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:padding">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="defaultToolbarStyle">
+
+    </style>
+
+    <style name="defaultGradientButtonStyle">
+        <item name="android:layout_height">@dimen/default_gradient_button_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@drawable/selector_login_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">@dimen/margin_xlarge</item>
+        <item name="android:paddingEnd">@dimen/margin_xlarge</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="defaultToolbarStyle.White" parent="defaultToolbarStyle">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="HomeMenuCellTitleStyle">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="HomeMenuCellSubtitleStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">end|center_vertical</item>
+    </style>
+
+    <!-- Standard animations for a full-screen window or activity. -->
+    <style name="OverlayActivityAnimations" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_slide_up</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_slide_down</item>
+    </style>
+
+    <!--  Overlay theme for dialog activity (dialog activity can prevent bottom activity
+            to be purged -->
+    <style name="OverlayTheme" parent="OverlayThemeBase" />
+
+    <style name="settingMenuItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:gravity">start</item>
+        <item name="android:background">@drawable/selector_menu_item</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:padding">@dimen/margin_xlarge</item>
+    </style>
+
+    <style name="OverlayThemeBase" parent="@style/Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/bg_transparent</item>
+        <item name="android:windowAnimationStyle">@style/OverlayActivityAnimations</item>
+    </style>
+
+    <style name="FullScreenOverlayTheme" parent="OverlayThemeBase">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="settingDivideLineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="paddingStart">@dimen/margin_xlarge</item>
+        <item name="paddingEnd">@dimen/margin_xlarge</item>
+        <item name="android:layout_marginStart">@dimen/margin_xlarge</item>
+        <item name="android:layout_marginEnd">@dimen/margin_xlarge</item>
+        <item name="android:background">#eff0f5</item>
+    </style>
+
+    <!-- Stroke Button Styles -->
+    <style name="gradientOvalImageButtonStyle" parent="ovalImageButtonStyle">
+        <item name="android:background">@drawable/ripple_gradient_oval</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="defaultStrokeButtonStyle">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:layout_height">@dimen/default_gradient_button_height</item>
+        <item name="android:background">@drawable/bg_button_stroke_rounded_50dp</item>
+        <item name="android:textColor">@color/configColorPureBlack</item>
+    </style>
+
+    <style name="defaultStrokeButtonStyle.White" parent="defaultStrokeButtonStyle">
+        <item name="android:background">@drawable/bg_button_stroke_login_off</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="defaultLoginButtonStyle.White" parent="defaultStrokeButtonStyle">
+        <item name="android:background">@drawable/bg_button_login_off</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="whiteOvalImageButtonStyle" parent="ovalImageButtonStyle">
+        <item name="android:background">@drawable/ripple_white_oval</item>
+        <item name="android:textColor">@color/configColorPureBlack</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="arrowGrayRotation">
+        <item name="android:rotation">0</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

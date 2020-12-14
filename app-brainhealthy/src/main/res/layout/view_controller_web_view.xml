@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/fragment_agreement_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+        </WebView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="0dp"
+            app:contentInsetStart="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back_image_view"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackground"
+                android:paddingStart="@dimen/margin_large"
+                android:paddingEnd="@dimen/margin_large"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_arrow_left" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </FrameLayout>
+</layout>

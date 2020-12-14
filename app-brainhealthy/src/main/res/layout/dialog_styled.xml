@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <LinearLayout
+        android:id="@+id/all_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_4_top_rounded_10dp_for_styled_dialog"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_xlarge">
+
+        <FrameLayout
+            android:id="@+id/dialog_styled_overall_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <FrameLayout
+                android:id="@+id/common_id_content_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xlarge">
+
+            </FrameLayout>
+        </FrameLayout>
+
+
+        <top.thsunkist.brainhealthy.ui.reusable.views.StackLayout
+            android:id="@+id/common_id_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:gravity="center"
+            app:orientation="horizontal"
+            app:spacing="@dimen/margin_xxlarge">
+        </top.thsunkist.brainhealthy.ui.reusable.views.StackLayout>
+    </LinearLayout>
+</layout>

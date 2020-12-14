@@ -1,5 +1,6 @@
 include ':app', ':materials',
-        ':app-hilo'
+        ':app-hilo',
+        ':app-brainhealthy'
 setBinding(new Binding([gradle: this]))
 //evaluate(new File(
 //        settingsDir,

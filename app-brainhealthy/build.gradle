@@ -1,0 +1,139 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "top.thsunkist.brainhealthy"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "Hilo_${variant.versionName}-${variant.versionCode}_${variant.flavorName}_${variant.buildType.name}_${releaseTime()}.apk"
+            }
+        }
+        
+    }
+    buildFeatures {
+        dataBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable true
+            buildConfigField "boolean", "ALLOW_SERVER_SWITCH", "false"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            jniDebuggable true
+            multiDexEnabled true
+            buildConfigField "boolean", "ALLOW_SERVER_SWITCH", "true"
+            debuggable true
+            crunchPngs false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+dependencies {
+
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+
+    implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.1'
+    /* kotlin support */
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.21"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.4.21"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+    implementation "androidx.core:core-ktx:1.3.2"
+    /* network request core */
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.okhttp3:mockwebserver:4.7.2'
+    /* json parse */
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    /* EventBus */
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    /* Image Loading/Processing */
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    /* https://github.com/LuckSiege/PictureSelector, A Picture Selector for Android platform. */
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.8'
+    /* https://github.com/Tencent/MMKV */
+    implementation 'com.tencent:mmkv-static:1.1.2'
+    /* Android Support libs */
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    /* androidx ui widget */
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    /* Lifecycles only (without ViewModel or LiveData) */
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:common-java8:1.1.1"
+    /* network request core */
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.okhttp3:mockwebserver:4.7.2'
+    /* json parse */
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    /* EventBus */
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    /* rxjava support */
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
+    /* https://github.com/JakeWharton/RxRelay */
+    implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.1'
+    /* generate fake data */
+    implementation 'com.github.moove-it:fakeit:v0.7'
+    /* Toast/SnackBar */
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+    /* status-bar basic dependencies */
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    /* kotlin-ext */
+    implementation 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'
+    implementation 'com.facebook.rebound:rebound:0.3.8'
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
+    implementation 'com.tencent.bugly:crashreport:2.4.0'
+
+    /* more fashion the SmartRefreshLayout https://github.com/scwang90/SmartRefreshLayout gank */
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'
+
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

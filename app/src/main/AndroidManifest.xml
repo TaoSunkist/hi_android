@@ -34,7 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity" />
     </application>
 
 </manifest>

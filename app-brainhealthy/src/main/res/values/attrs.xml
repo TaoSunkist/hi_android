@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <attr name="orientation">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CorneredImageView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FitRatioFrameLayout">
+        <attr name="fit_to" format="enum">
+            <enum name="width" value="0" />
+            <enum name="height" value="1" />
+        </attr>
+        <attr name="width_weight" format="integer|reference" />
+        <attr name="height_weight" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StackLayout">
+        <attr name="orientation" />
+
+        <attr name="gravity" format="enum">
+            <enum name="left_or_top" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right_or_bottom" value="2" />
+        </attr>
+        <attr name="childGravity" format="enum">
+            <enum name="left_or_top" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right_or_bottom" value="2" />
+        </attr>
+        <attr name="spacing" format="dimension" />
+    </declare-styleable>
+
+    <!-- Pager Indicator -->
+    <declare-styleable name="PageIndicator">
+        <attr name="selected_color" format="color|reference" />
+        <attr name="default_color" format="color|reference" />
+        <attr name="dot_size" format="dimension|reference" />
+        <attr name="dot_margin" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchView">
+        <attr name="hasShadow" format="boolean" />
+        <attr name="primaryColor" format="color" />
+        <attr name="primaryColorDark" format="color" />
+        <attr name="offColor" format="color" />
+        <attr name="offColorDark" format="color" />
+        <attr name="barColor" format="color" />
+        <attr name="bgColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="ratioAspect" format="float" />
+        <attr name="isOpened" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleGridLayout">
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="columnCount" format="integer" />
+        <attr name="showDivider" format="boolean" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="dividerColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout">
+        <attr name="oh_flow_layout_horizontal_margin" format="dimension|reference" />
+        <attr name="oh_flow_layout_vertical_margin" format="dimension|reference" />
+        <attr name="oh_flow_layout_vertical_align_type" format="enum">
+            <enum name="center" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="top" value="2" />
+        </attr>
+        <attr name="oh_flow_layout_horizontal_align_type" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LoopRotarySwitchView">
+        <attr name="orientation" />
+        <attr name="autoRotation" format="boolean" />
+        <attr name="r" format="dimension" />
+
+        <attr name="direction">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+
+    </declare-styleable>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="leftDrawable" format="reference|color" />
+        <attr name="rightDrawable" format="reference|color" />
+        <attr name="topDrawable" format="reference|color" />
+        <attr name="bottomDrawable" format="reference|color" />
+
+        <attr name="leftDrawableWidth" format="reference|dimension" />
+        <attr name="rightDrawableWidth" format="reference|dimension" />
+        <attr name="topDrawableWidth" format="reference|dimension" />
+        <attr name="bottomDrawableWidth" format="reference|dimension" />
+
+        <attr name="leftDrawableHeight" format="reference|dimension" />
+        <attr name="rightDrawableHeight" format="reference|dimension" />
+        <attr name="topDrawableHeight" format="reference|dimension" />
+        <attr name="bottomDrawableHeight" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewDrawableSize">
+        <attr name="compoundDrawableWidth" format="dimension" />
+        <attr name="compoundDrawableHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton" tools:ignore="ResourceName">
+        <attr name="kswThumbDrawable" format="reference" />
+        <attr name="kswThumbColor" format="color|reference" />
+        <attr name="kswThumbMargin" format="dimension|reference" />
+        <attr name="kswThumbMarginTop" format="dimension|reference" />
+        <attr name="kswThumbMarginBottom" format="dimension|reference" />
+        <attr name="kswThumbMarginLeft" format="dimension|reference" />
+        <attr name="kswThumbMarginRight" format="dimension|reference" />
+        <attr name="kswThumbWidth" format="dimension|reference" />
+        <attr name="kswThumbHeight" format="dimension|reference" />
+        <attr name="kswThumbRadius" format="dimension|reference" />
+        <attr name="kswBackRadius" format="dimension|reference" />
+        <attr name="kswBackDrawable" format="reference" />
+        <attr name="kswBackColor" format="color|reference" />
+        <attr name="kswFadeBack" format="boolean" />
+        <attr name="kswThumbRangeRatio" format="float" />
+        <attr name="kswAnimationDuration" format="integer" />
+        <attr name="kswTintColor" format="color|reference" />
+        <attr name="kswTextOn" format="string" />
+        <attr name="kswTextOff" format="string" />
+        <attr name="kswTextThumbInset" format="dimension" />
+        <attr name="kswTextExtra" format="dimension" />
+        <attr name="kswTextAdjust" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9036ff</color>
+    <color name="colorPrimaryDark">#9036ff</color>
+    <color name="colorDisabledPrimaryDark">#9753ED</color>
+
+
+    <color name="colorLightAccent">#B35Bff</color>
+    <color name="colorMaskLightAccent">#D050FF</color>
+    <color name="colorDisabledLightAccent">#CE93E4</color>
+
+    <color name="colorDarkAccent">#651AF1</color>
+    <color name="colorMaskDarkAccent">#7312FD</color>
+    <color name="colorDisabledAccent">#A673ED</color>
+
+    <color name="colorAccent">#9036ff</color>
+    <color name="colorMaskAccent">#A036ff</color>
+
+    <color name="color75Accent">#C09036ff</color>
+    <color name="color60Accent">#999036ff</color>
+    <color name="color50Accent">#809036ff</color>
+    <color name="color25Accent">#409036ff</color>
+    <color name="color15Accent">#269036ff</color>
+    <color name="color10Accent">#199036ff</color>
+
+    <color name="colorThemeForFacebook">#3b5998</color>
+    <color name="colorThemeForFacebookPressed">#6896F4</color>
+    <color name="colorThemeForWechat">#05A303</color>
+    <color name="colorThemeForWechatPressed">#68D868</color>
+    <color name="colorThemeForGoogle">#dd4b39</color>
+    <color name="colorThemeForGooglePressed">#EF8073</color>
+
+    <color name="colorError">#dd4b39</color>
+    <color name="colorOfRechargeDetails">#ff5c5c</color>
+
+    <color name="windowBackground">@android:color/background_light</color>
+    <color name="white">#FFFFFF</color>
+    <color name="textColor">#080808</color>
+    <color name="textColorPrimary">#333333</color>
+    <color name="textColorGray">#666666</color>
+    <color name="textColorLightGray">#999999</color>
+    <color name="textColorSendGiftNoticeTip">#ffd267</color>
+
+
+    <color name="cancelButtonStrokeColor">#dddddd</color>
+    <color name="backgroundColorGray">#eeeeee</color>
+    <color name="colorInputBoxBorder">#cccccc</color>
+    <color name="divideLineColorLightGray">#f5f5f5</color>
+
+    <color name="configColorPureBlack">#000000</color>
+    <color name="configColor75PureBlack">#C0000000</color>
+    <color name="configColor60PureBlack">#99000000</color>
+    <color name="configColor50PureBlack">#80000000</color>
+    <color name="configColor25PureBlack">#40000000</color>
+    <color name="configColor15PureBlack">#26000000</color>
+    <color name="configColor10PureBlack">#19000000</color>
+
+    <color name="configColor75White">#C0FFFFFF</color>
+    <color name="configColor50White">#80FFFFFF</color>
+    <color name="configColor25White">#40FFFFFF</color>
+    <color name="configColor15White">#26FFFFFF</color>
+    <color name="configColor10White">#19FFFFFF</color>
+
+    <color name="colorMenuDiamondTip">#ffbf42</color>
+    <color name="colorHomeTabText">#fffefe</color>
+    <color name="colorUnreadMessageTipBackground">#ff5273</color>
+    <color name="colorAgeMaleBackground">#56bff5</color>
+    <color name="colorAgeFemaleBackground">#fe63ac</color>
+    <color name="colorDiamondPrimary">#ff9a41</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="chat_room_dark_theme_color">#252525</color>
+
+</resources>

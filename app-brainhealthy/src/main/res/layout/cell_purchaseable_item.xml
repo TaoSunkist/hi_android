@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cell_purchaseable_item_imageview"
+            android:layout_width="55dp"
+            android:layout_height="70dp"
+            android:scaleType="centerInside" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cell_purchaseable_item_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            tools:text="Name" />
+
+        <top.thsunkist.brainhealthy.ui.reusable.views.StackLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/margin_small"
+            app:childGravity="left_or_top"
+            app:gravity="center"
+            app:orientation="horizontal"
+            app:spacing="@dimen/margin_small">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cell_purchaseable_item_tag_title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin_xsmall"
+                android:gravity="top|center"
+                android:textColor="@color/textColorGray"
+                android:textSize="10sp"
+                tools:text="1000"
+                tools:ignore="SmallSp" />
+        </top.thsunkist.brainhealthy.ui.reusable.views.StackLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <top.thsunkist.brainhealthy.ui.reusable.views.BorderedImageView
+        android:id="@+id/cell_purchaseable_item_select_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>
