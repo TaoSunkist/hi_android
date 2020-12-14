@@ -6,6 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.forEach
 import com.google.protobuf.GeneratedMessageV3
+import io.reactivex.Observable
+import io.reactivex.Scheduler
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxkotlin.addTo
+import io.reactivex.schedulers.Schedulers
 import me.taosunkist.hello.ProtobufferUtility
 import me.taosunkist.hello.databinding.FragmentGorillaWebSocketBinding
 import me.taosunkist.hello.hilo.UserProxy
@@ -15,13 +20,16 @@ import okio.ByteString
 import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
+import java.util.concurrent.TimeUnit
 import java.util.zip.CRC32
 
 
 class GorillaWebSocketFragment : BaseFragment() {
 
 	companion object {
+
 		private const val ARG_PARAM1 = "param1"
+
 		private const val ARG_PARAM2 = "param2"
 
 		fun newInstance(param1: String = "", param2: String = ""): GorillaWebSocketFragment {
@@ -42,7 +50,7 @@ class GorillaWebSocketFragment : BaseFragment() {
 
 	lateinit var request: Request
 
-	var mWebSocket: WebSocket? = null
+	var webSocket: WebSocket? = null
 
 	private lateinit var binding: FragmentGorillaWebSocketBinding
 
@@ -50,12 +58,12 @@ class GorillaWebSocketFragment : BaseFragment() {
 
 		override fun onOpen(webSocket: WebSocket, response: Response) {
 
-			mWebSocket = webSocket
+			this@GorillaWebSocketFragment.webSocket = webSocket
 			requireActivity().runOnUiThread {
 				binding.connectWsHostImageView.isSelected = true
 				binding.featureButtonsStackLayout.forEach { it.isEnabled = true }
-
 				binding.sendLoginMessageButton.visibility = View.VISIBLE
+
 				binding.sendLoginMessageButton.setOnClickListener { sendLoginMessageButtonPressed() }
 				binding.sendHeartMessageButton.setOnClickListener { sendHeartMessageButtonPressed() }
 
@@ -63,8 +71,11 @@ class GorillaWebSocketFragment : BaseFragment() {
 				binding.loggerRecyclerView.logI("client request header:" + response.request().headers())
 				binding.loggerRecyclerView.logI("client response header:" + response.headers())
 				binding.loggerRecyclerView.logI("client response:$response")
-				binding.loggerRecyclerView.logI("client $mWebSocket")
+				binding.loggerRecyclerView.logI("client ${this@GorillaWebSocketFragment.webSocket}")
 			}
+			Observable.interval(4500, TimeUnit.MILLISECONDS).observeOn(Schedulers.io()).subscribe {
+				webSocket.send(packet(UserProxy.HeartBeat.newBuilder().setToken(System.currentTimeMillis().toString()).build()))
+			}.addTo(compositeDisposable = CompositeDisposable())
 		}
 
 		override fun onMessage(webSocket: WebSocket?, text: String) {
@@ -111,40 +122,6 @@ class GorillaWebSocketFragment : BaseFragment() {
 		}
 	}
 
-	private fun unpacket(bytes: ByteString) {
-		val remotePacket = bytes.toByteArray()
-		printf("client recevied message: ${remotePacket.toList()},\nmessage-size: ${remotePacket.size}")
-		val dataPacket = remotePacket.sliceArray(IntRange(0, remotePacket.size - 5))
-		/* take checksum via remotePacket */
-		val checkSum = ProtobufferUtility.bytes2IntBig(remotePacket.sliceArray(IntRange(remotePacket.size - 4, remotePacket.size - 1)))
-
-		printf("client ${dataPacket.size}, ${remotePacket.size}")
-		val crC32 = CRC32()
-		crC32.update(dataPacket)
-		val clientCheckSum = crC32.value
-		printf("client to verify checkSum $checkSum-$clientCheckSum")
-
-		val byteBuffer = ByteBuffer.wrap(dataPacket)
-
-		val version = byteBuffer.short
-		printf("client version: $version", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
-		val msgType = byteBuffer.int
-		printf("client msgType: $msgType", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
-		val msgID = byteBuffer.long
-		printf("client msgID: $msgID", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
-		val timestamp = byteBuffer.long
-		printf("client timestamp: $timestamp", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
-		val dataLen = byteBuffer.int
-		printf("client dataLen: $dataLen", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
-		val data = ByteArray(dataLen)
-		byteBuffer.get(data)
-
-		if (msgType == 2) {
-			printf("client dataLen: ${UserProxy.LoginRsp.parseFrom(data)}")
-		} else if (msgType == 4) {
-			printf("client dataLen: ${UserProxy.HeartBeatRsp.parseFrom(data)}")
-		}
-	}
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
@@ -165,11 +142,51 @@ class GorillaWebSocketFragment : BaseFragment() {
 
 		binding.connectWsHostImageView.setOnClickListener { connectWsHostImageViewPressed() }
 		binding.loggerRecyclerView.logI("Default java endian: " + ByteOrder.nativeOrder().toString())
-
 		request = Request.Builder().get().url(binding.wesocketUrlEditText.text!!.toString()).build()
 	}
 
-	private fun packet(generatedMessageV3: GeneratedMessageV3): ByteArrayOutputStream {
+	private val crC32 = CRC32()
+
+	private fun unpacket(bytes: ByteString) {
+		val remotePacket = bytes.toByteArray()
+		printf("client recevied message: ${remotePacket.toList()},\nmessage-size: ${remotePacket.size}")
+		val dataPacket = remotePacket.sliceArray(IntRange(0, remotePacket.size - 5))
+		/* take checksum via remotePacket */
+		val checkSum = ProtobufferUtility.bytes2IntBig(remotePacket.sliceArray(IntRange(remotePacket.size - 4, remotePacket.size - 1)))
+
+		printf("client ${dataPacket.size}, ${remotePacket.size}")
+		crC32.apply { reset() }.update(dataPacket)
+		val clientCheckSum = crC32.value
+		printf("client to verify checkSum $checkSum-$clientCheckSum")
+
+		val byteBuffer = ByteBuffer.wrap(dataPacket)
+
+		val version = byteBuffer.short
+		printf("client version: $version", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
+		val msgType = byteBuffer.int
+		printf("client msgType: $msgType", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
+		val msgID = byteBuffer.long
+		printf("client msgID: $msgID", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
+		val timestamp = byteBuffer.long
+		printf("client timestamp: $timestamp", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
+		val dataLen = byteBuffer.int
+		printf("client dataLen: $dataLen", ", capacity: ${byteBuffer.capacity()}, position: ${byteBuffer.position()}")
+		val data = ByteArray(dataLen)
+		byteBuffer.get(data)
+
+		if (msgType == 2) {
+			val loginRsp = UserProxy.LoginRsp.parseFrom(data)
+			printf("client dataLen: $loginRsp")
+		} else if (msgType == 4) {
+			val heartBeatRsp = UserProxy.HeartBeatRsp.parseFrom(data)
+			printf("client status: $heartBeatRsp")
+		} else if (msgType == 100) {
+			val matchSuccess = UserProxy.MatchSuccess.parseFrom(data)
+			printf("client status: $matchSuccess")
+		}
+	}
+
+	private fun packet(generatedMessageV3: GeneratedMessageV3): ByteString? {
 
 		/* 2 uint16 */
 		val version: Short = 10
@@ -198,25 +215,25 @@ class GorillaWebSocketFragment : BaseFragment() {
 		badi.write(dataBytes)
 
 		val neededCrc32Sum = badi.toByteArray()
-		val crC32 = CRC32()
-		crC32.update(neededCrc32Sum)
+
+		crC32.apply { reset() }.update(neededCrc32Sum)
 		val checkSum = crC32.value
 
 		printf("client crc32: $checkSum")
 		badi.write(ProtobufferUtility.intToByteBig(checkSum.toInt()))
-		return badi
+		return ByteString.of(*badi.toByteArray())
 	}
 
 	private fun sendHeartMessageButtonPressed() {
 		val heartBeat = UserProxy.HeartBeat.newBuilder().setToken(System.currentTimeMillis().toString()).build()
-		val packet = packet(generatedMessageV3 = heartBeat)
-		printf("client sendHeartMessageButtonPressed result ${mWebSocket!!.send(ByteString.of(*packet.toByteArray()))}")
+		val packetResult = packet(generatedMessageV3 = heartBeat)
+		printf("client sendHeartMessageButtonPressed result ${webSocket!!.send(packetResult)}")
 	}
 
 	private fun sendLoginMessageButtonPressed() {
-		val login = UserProxy.Login.newBuilder().setToken(System.currentTimeMillis().toString()).build()
-		val badi = packet(generatedMessageV3 = login)
-		printf("client sendLoginMessageButtonPressed result ${mWebSocket!!.send(ByteString.of(*badi.toByteArray()))}")
+		val login = UserProxy.Login.newBuilder().setToken(System.currentTimeMillis().toString().repeat(100)).build()
+		val packetResult = packet(generatedMessageV3 = login)
+		printf("client sendLoginMessageButtonPressed result ${webSocket!!.send(packetResult)}")
 	}
 
 	private fun connectWsHostImageViewPressed() {
@@ -224,28 +241,8 @@ class GorillaWebSocketFragment : BaseFragment() {
 			okHttpClient.newWebSocket(request, webSocketListener)
 		} else {
 			binding.connectWsHostImageView.isSelected = false
-			mWebSocket?.cancel()
+			webSocket?.cancel()
 		}
-
-//		val scarlet = Scarlet.Builder()
-//			.webSocketFactory(okHttpClient.newWebSocketFactory("ws://192.168.1.180:8080/ws"))
-//			.addMessageAdapterFactory(ProtobufMessageAdapter.Factory())
-//			.build()
-//		printf("${badi.toByteArray().asList()}")
-//
-//		val userWSService = scarlet.create(UserWebsocketor::class.java)
-//		userWSService.observeWebSocketEvent()
-//			.filter { it is com.tinder.scarlet.WebSocket.Event.OnConnectionOpened<*> }
-//			.subscribe({
-//				printf("taohui ${it}")
-//				userWSService.sendSubscribe()
-//			}, { e ->
-//				printf("taohui $e")
-//			}).addTo(compositeDisposable = compositeDisposable)
-//
-//
-//		userWSService.sendBytes(badi.toByteArray())
-
 	}
 }
 

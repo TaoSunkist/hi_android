@@ -23,3 +23,12 @@ message HeartBeat {
 message HeartBeatRsp {
   uint32 status = 1;
 }
+
+/* id == 100 匹配结果通知 */
+message MatchSuccess {
+  string fromUserExtId = 1;
+  string toUserExtId = 2;
+  uint32 waitDuration = 3;
+  string token = 4;
+  string channelId = 5;
+}

@@ -11,10 +11,4 @@ interface UserWebsocketor {
 
 	@Send
 	fun sendBytes(byteArray: ByteArray)
-
-	@Receive
-	fun observeWebSocketEvent(): Flowable<WebSocket.Event>
-
-	@Send
-	fun sendSubscribe()
 }
