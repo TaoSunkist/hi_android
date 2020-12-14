@@ -6,8 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/hi_android-app.iml" filepath="$PROJECT_DIR$/app/hi_android-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/materials/hi_android-materials.iml" filepath="$PROJECT_DIR$/materials/hi_android-materials.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/hi_android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/hi_android.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flutter_module/.android/Flutter/hi_android.flutter.iml" filepath="$PROJECT_DIR$/.idea/modules/flutter_module/.android/Flutter/hi_android.flutter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flutter_module/hi_android.flutter_module.iml" filepath="$PROJECT_DIR$/.idea/modules/flutter_module/hi_android.flutter_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app-hilo/hi_android.app-hilo.iml" filepath="$PROJECT_DIR$/.idea/modules/app-hilo/hi_android.app-hilo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/materials/hi_android.materials.iml" filepath="$PROJECT_DIR$/.idea/modules/materials/hi_android.materials.iml" />
     </modules>
   </component>

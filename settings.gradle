@@ -1,8 +1,9 @@
-include ':app', ':materials'
+include ':app', ':materials',
+        ':app-hilo'
 setBinding(new Binding([gradle: this]))
-evaluate(new File(
-  settingsDir,
-  'flutter_module/.android/include_flutter.groovy'
-))
-
-include ':flutter_module'
+//evaluate(new File(
+//        settingsDir,
+//        'flutter_module/.android/include_flutter.groovy'
+//))
+//
+//include ':flutter_module'
