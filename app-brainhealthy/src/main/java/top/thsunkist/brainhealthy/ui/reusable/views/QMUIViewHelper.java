@@ -56,6 +56,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import top.thsunkist.brainhealthy.R;
+
 /**
  * @author cginechen
  * @date 2016-03-17
@@ -66,7 +68,7 @@ public class QMUIViewHelper {
     private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
 
 
-    private static final int[] APPCOMPAT_CHECK_ATTRS = {androidx.appcompat.R.attr.colorPrimary};
+    private static final int[] APPCOMPAT_CHECK_ATTRS = {R.attr.colorPrimary};
 
     public static void checkAppCompatTheme(Context context) {
         TypedArray a = context.obtainStyledAttributes(APPCOMPAT_CHECK_ATTRS);

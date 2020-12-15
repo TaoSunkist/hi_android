@@ -22,9 +22,9 @@ class VideoRequestHandler : RequestHandler() {
     override fun load(request: Request, networkPolicy: Int): Result? {
         val uri = request.uri
         val path = uri.path
-        if (!TextUtils.isEmpty(path)) {
-            val bm = ThumbnailUtils.createVideoThumbnail(path, MediaStore.Images.Thumbnails.MINI_KIND)
-            return Result(bm, Picasso.LoadedFrom.DISK)
+        if (TextUtils.isEmpty(path).not()) {
+            val bm = ThumbnailUtils.createVideoThumbnail(path!!, MediaStore.Images.Thumbnails.MINI_KIND)
+            return Result(bm!!, Picasso.LoadedFrom.DISK)
         }
         return null
     }
