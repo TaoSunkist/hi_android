@@ -1,0 +1,34 @@
+syntax = "proto3";
+package hilo;
+
+option go_package = "protocol/userProxy";
+option java_package = "me.taosunkist.hello.hilo";
+
+/* id = 1 */
+message Login {
+  string token = 1;
+}
+
+/* id = 2 */
+message LoginRsp {
+  uint32 status = 1;
+}
+
+/* id = 3 */
+message HeartBeat {
+  string token = 1;
+}
+
+/* id = 4 */
+message HeartBeatRsp {
+  uint32 status = 1;
+}
+
+/* id == 100 匹配结果通知 */
+message MatchSuccess {
+  string fromUserExtId = 1;
+  string toUserExtId = 2;
+  uint32 waitDuration = 3;
+  string token = 4;
+  string channelId = 5;
+}

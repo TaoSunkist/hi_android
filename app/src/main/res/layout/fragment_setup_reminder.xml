@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/margin_xxlarge"
+    android:paddingTop="@dimen/margin_xlarge"
+    android:paddingEnd="@dimen/margin_xxlarge">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_white_4_rounded_10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_large"
+            app:cardCornerRadius="@dimen/margin_large"
+            app:contentPadding="@dimen/margin_xlarge">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="168dp"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_medium">
+
+                <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                    android:id="@+id/view_controller_reminder_detail_single_date_and_time_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:picker_displayYears="false"
+                    app:picker_textSize="16sp"
+                    app:picker_visibleItemCount="7" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_white_4_rounded_10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_large"
+            app:cardCornerRadius="@dimen/margin_large"
+            app:contentPadding="@dimen/margin_xlarge">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="repeat" />
+
+            <com.flyco.tablayout.SegmentTabLayout
+                android:id="@+id/view_controller_reminder_detail_status_segment_tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                app:tl_bar_color="#F3EFFD"
+                app:tl_bar_stroke_width="2dp"
+                app:tl_divider_width="2dp"
+                app:tl_indicator_color="#E7DFFC"
+                app:tl_tab_space_equal="false"
+                app:tl_textBold="BOTH"
+                app:tl_textSelectColor="#855FEF"
+                app:tl_textUnselectColor="#D1C3F8" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_white_4_rounded_10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_large"
+            app:cardCornerRadius="@dimen/margin_large"
+            app:contentPadding="@dimen/margin_xlarge">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_controller_reminder_detail_switch_reminder_statu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/margin_xlarge"
+                    android:text="close" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/view_controller_reminder_detail_switch_reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/view_controller_reminder_detail_delete_image_button"
+            style="@style/whiteOvalImageButtonStyle"
+            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:src="@drawable/ic_trash_box_black" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/view_controller_reminder_detail_cancel_image_button"
+            style="@style/whiteOvalImageButtonStyle"
+            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:src="@drawable/ic_nav_delete_black" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/view_controller_reminder_detail_confirm_image_button"
+            style="@style/gradientOvalImageButtonStyle"
+            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:src="@drawable/ic_white_confirm" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/fragment_blank_send_notification_button"
+            style="@style/gradientOvalImageButtonStyle"
+            android:src="@drawable/baseline_notifications_none_white_24"
+            android:text="send notification" />
+    </LinearLayout>
+
+</LinearLayout>
