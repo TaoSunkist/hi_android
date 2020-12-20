@@ -16,6 +16,8 @@ import androidx.annotation.ColorInt;
 
 import me.taosunkist.hello.utility.Dimens;
 import me.taosunkist.hello.R;
+import top.thsunkist.library.ui.resuable.rectangleprogressbar.PercentStyle;
+import top.thsunkist.library.ui.resuable.rectangleprogressbar.SquareProgressView;
 
 /**
  * The basic {@link SquareProgressBar}. This class includes all the methods you need to modify your
@@ -135,7 +137,7 @@ public class SquareProgressBar extends RelativeLayout {
      *         the progress
      * @since 1.0.0
      */
-    public void setProgress(double progress) {
+    public void setProgress(float progress) {
         bar.setProgress(progress);
         if (opacity) {
             if (isFadingOnProgress) {
@@ -183,9 +185,11 @@ public class SquareProgressBar extends RelativeLayout {
     public void setColor(String colorString) {
         bar.setColor(Color.parseColor(colorString));
     }
+
     public void setColor(@ColorInt int colorInt) {
         bar.setColor(colorInt);
     }
+
     /**
      * This sets the colour of the {@link SquareProgressBar} with a RGB colour.
      *
@@ -501,7 +505,7 @@ public class SquareProgressBar extends RelativeLayout {
      * @since 1.6.2
      */
     public void setProgress(int progress) {
-        setProgress((double) progress);
+        setProgress((float) progress);
     }
 
     /**

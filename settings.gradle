@@ -1,3 +1,4 @@
+include ':library'
 include ':app', ':materials',
         ':app-hilo',
         ':app-brainhealthy'

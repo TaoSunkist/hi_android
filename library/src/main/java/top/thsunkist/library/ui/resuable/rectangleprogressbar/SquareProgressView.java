@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.squareprogressbar;
+package top.thsunkist.library.ui.resuable.rectangleprogressbar;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -13,7 +13,8 @@ import android.view.View;
 
 import java.text.DecimalFormat;
 
-import me.taosunkist.hello.utility.Dimens;
+import top.thsunkist.library.utilities.Dimens;
+
 
 public class SquareProgressView extends View {
 

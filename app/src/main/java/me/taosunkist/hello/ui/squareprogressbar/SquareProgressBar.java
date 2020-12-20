@@ -16,11 +16,13 @@ import androidx.annotation.ColorInt;
 
 import me.taosunkist.hello.utility.Dimens;
 import me.taosunkist.hello.R;
+import top.thsunkist.library.ui.resuable.rectangleprogressbar.PercentStyle;
+import top.thsunkist.library.ui.resuable.rectangleprogressbar.SquareProgressView;
 
 public class SquareProgressBar extends RelativeLayout {
 
     private ImageView imageView;
-    private final SquareProgressView bar;
+    private SquareProgressView bar;
     private boolean opacity = false;
     private boolean greyscale;
     private boolean isFadingOnProgress = false;
@@ -28,34 +30,30 @@ public class SquareProgressBar extends RelativeLayout {
 
     public SquareProgressBar(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.view_video_calling_counting_progressbar, this, true);
-        bar = findViewById(R.id.squareProgressBar1);
-        imageView = findViewById(R.id.imageView1);
-        bar.bringToFront();
+        initialize(context, R.id.squareProgressBar1);
     }
 
     public SquareProgressBar(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.view_video_calling_counting_progressbar, this, true);
-        bar = findViewById(R.id.squareProgressBar1);
-        imageView = findViewById(R.id.imageView1);
-        bar.bringToFront();
+        initialize(context, R.id.squareProgressBar1);
     }
 
     public SquareProgressBar(Context context) {
         super(context);
-        LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.view_video_calling_counting_progressbar, this, true);
-        bar = findViewById(R.id.squareProgressBar1);
-        imageView = findViewById(R.id.imageView1);
-        bar.bringToFront();
+        initialize(context, R.id.squareProgressBar1);
     }
 
     public void setImage(int image) {
         imageView.setImageResource(image);
 
+    }
+
+    private void initialize(Context context, int p) {
+        LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mInflater.inflate(R.layout.view_video_calling_counting_progressbar, this, true);
+        bar = findViewById(p);
+        imageView = findViewById(R.id.imageView1);
+        bar.bringToFront();
     }
 
     public void setImageDrawable(Drawable imageDrawable) {

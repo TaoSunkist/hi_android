@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.squareprogressbar
+package top.thsunkist.library.ui.resuable.rectangleprogressbar
 
 import android.graphics.Color
 import android.graphics.Paint.Align

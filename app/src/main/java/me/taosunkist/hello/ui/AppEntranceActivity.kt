@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.ViewAnimationUtils
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
@@ -25,7 +26,7 @@ import me.taosunkist.hello.ui.progress.SquareProgressBarFragment
 import me.taosunkist.hello.ui.reusable.viewcontroller.BaseActivity
 import kotlin.math.max
 
-class AppEntranceActivity : BaseActivity()  {
+class AppEntranceActivity : AppCompatActivity()  {
 
 	lateinit var binding: ActivityAppEntranceBinding
 
@@ -54,10 +55,11 @@ class AppEntranceActivity : BaseActivity()  {
 	override fun onResume() {
 		super.onResume()
 		/* can't use R.java file the resource id, otherwise short resource id of unintuitive */
-		supportFragmentManager.beginTransaction()
-			.add(binding.contentRoot.id, GorillaWebSocketFragment.newInstance(), GorillaWebSocketFragment::class.java.simpleName)
-			.addToBackStack(GorillaWebSocketFragment::class.java.simpleName)
-			.commit()
+//		supportFragmentManager.beginTransaction()
+//			.add(binding.contentRoot.id, GorillaWebSocketFragment.newInstance(), GorillaWebSocketFragment::class.java.simpleName)
+//			.addToBackStack(GorillaWebSocketFragment::class.java.simpleName)
+//			.commit()
+		supportFragmentManager.beginTransaction().add(binding.contentRoot.id, SquareProgressBarFragment.newInstance()).addToBackStack(SquareProgressBarFragment.TAG).commitAllowingStateLoss()
 	}
 
 	override fun onCreateOptionsMenu(menu: Menu): Boolean {

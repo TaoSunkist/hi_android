@@ -82,7 +82,7 @@ class CountdownTimeFragment : Fragment() {
 				millisInFuture = it.currentCountDownValue + totalDuration.toInt() * 1000,
 				countDownInterval = countDownInterval.toLong()
 			)
-			binding.squareProgressBar.progress = 0.0
+			binding.squareProgressBar.setProgress(0.0f)
 			currentCountDownValue?.let {
 				countDownTimer?.cancel()
 				countDownTimer = null
@@ -103,12 +103,12 @@ data class CountDownTimerPreloadModel(
 
 class ProgressCountDownTimer(val preloadModel: CountDownTimerPreloadModel, val squareProgressBar: SquareProgressBar) : CountDownTimer(preloadModel.millisInFuture, preloadModel.countDownInterval) {
 	override fun onFinish() {
-		squareProgressBar.progress = 0.0
+		squareProgressBar.setProgress(0.0f)
 	}
 
 	override fun onTick(millisUntilFinished: Long) {
 		preloadModel.currentCountDownValue = millisUntilFinished
-		squareProgressBar.progress = millisUntilFinished / preloadModel.total * 100
+		squareProgressBar.setProgress((millisUntilFinished / preloadModel.total * 100f).toFloat())
 		printf(TAG, millisUntilFinished, " ${millisUntilFinished / preloadModel.total * 100}")
 	}
 }
