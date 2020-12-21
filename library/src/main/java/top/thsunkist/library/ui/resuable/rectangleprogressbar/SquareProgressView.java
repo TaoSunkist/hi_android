@@ -11,6 +11,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.ColorInt;
+
 import java.text.DecimalFormat;
 
 import top.thsunkist.library.utilities.Dimens;
@@ -83,7 +85,6 @@ public class SquareProgressView extends View {
         strokewidth = Dimens.INSTANCE.dpToPx((int) widthInDp);
         int cW = getWidth();
         int cH = getHeight();
-        Log.i("taohui", "" + cW + "-" + cH + ", " + Dimens.INSTANCE.getScreenWidth() + "-" + Dimens.INSTANCE.getScreenHeight());
         float scope = (2 * cW) + (2 * cH) - (4 * strokewidth);
         float hSw = strokewidth / 2;
 
@@ -202,6 +203,7 @@ public class SquareProgressView extends View {
         outlinePath.lineTo(getWidth(), getHeight());
         outlinePath.lineTo(0, getHeight());
         outlinePath.lineTo(0, 0);
+        outlinePaint.setStyle(Style.FILL);
         canvas.drawPath(outlinePath, outlinePaint);
     }
 
@@ -395,5 +397,9 @@ public class SquareProgressView extends View {
 
     public enum Place {
         TOP, RIGHT, BOTTOM, LEFT
+    }
+
+    public void setProgressBarColor(@ColorInt int color) {
+        this.progressBarPaint.setColor(color);
     }
 }

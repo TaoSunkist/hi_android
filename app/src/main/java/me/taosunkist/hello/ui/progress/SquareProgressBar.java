@@ -50,7 +50,7 @@ public class SquareProgressBar extends RelativeLayout {
         super(context, attrs, defStyle);
         LayoutInflater mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.progressbarview, this, true);
+        mInflater.inflate(R.layout.view_square_progress_bar, this, true);
         bar = (SquareProgressView) findViewById(R.id.squareProgressBar1);
         imageView = (ImageView) findViewById(R.id.imageView1);
         bar.bringToFront();
@@ -69,7 +69,7 @@ public class SquareProgressBar extends RelativeLayout {
         super(context, attrs);
         LayoutInflater mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.progressbarview, this, true);
+        mInflater.inflate(R.layout.view_square_progress_bar, this, true);
         bar = (SquareProgressView) findViewById(R.id.squareProgressBar1);
         imageView = (ImageView) findViewById(R.id.imageView1);
         bar.bringToFront();
@@ -86,7 +86,7 @@ public class SquareProgressBar extends RelativeLayout {
         super(context);
         LayoutInflater mInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.progressbarview, this, true);
+        mInflater.inflate(R.layout.view_square_progress_bar, this, true);
         bar = (SquareProgressView) findViewById(R.id.squareProgressBar1);
         imageView = (ImageView) findViewById(R.id.imageView1);
         bar.bringToFront();

@@ -50,7 +50,7 @@ public class SquareProgressBar extends RelativeLayout {
 
     private void initialize(Context context, int p) {
         LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInflater.inflate(R.layout.view_video_calling_counting_progressbar, this, true);
+        mInflater.inflate(R.layout.view_square_progress_bar, this, true);
         bar = findViewById(p);
         imageView = findViewById(R.id.imageView1);
         bar.bringToFront();
