@@ -17,11 +17,15 @@
             android:id="@+id/view_controller_databindingui_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="?android:attr/borderlessButtonStyle"
+
             android:background="@drawable/ripple_button_login_disable"
             android:text="DatabindingUI"
             android:textAllCaps="false" />
 
         <androidx.appcompat.widget.AppCompatButton
+            style="?android:attr/borderlessButtonStyle"
+
             android:id="@+id/view_controller_giftboxui_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,76 +1,106 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout>
 
-    <me.taosunkist.hello.ui.progress.SquareProgressBar
-        android:id="@+id/subi2"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="progress"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            <me.taosunkist.hello.ui.reusable.LineView
+                android:id="@+id/line_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center" />
 
-        <SeekBar
-            android:id="@+id/progressSeekBar"
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <me.taosunkist.hello.ui.progress.SquareProgressBar
+            android:id="@+id/subi2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/progressDisplay"
-            android:layout_toRightOf="@+id/textView1"
-            android:max="100"
-            android:progress="25" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/progressDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="progress"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/margin_xxlarge"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+            <SeekBar
+                android:id="@+id/progressSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/progressDisplay"
+                android:layout_toRightOf="@+id/textView1"
+                android:max="100"
+                android:progress="25" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/progressDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textView1"
-            android:layout_alignLeft="@+id/textView1"
-            android:layout_alignTop="@+id/widthSeekBar"
-            android:layout_alignRight="@+id/textView1"
-            android:gravity="center_vertical"
-            android:text="width"
+            android:layout_alignParentRight="true"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <SeekBar
-            android:id="@+id/widthSeekBar"
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/progressSeekBar"
-            android:max="20"
-            android:progress="8" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_xxlarge"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView1"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_alignTop="@+id/widthSeekBar"
+                android:layout_alignRight="@+id/textView1"
+                android:gravity="center_vertical"
+                android:text="width"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <SeekBar
+                android:id="@+id/widthSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progressSeekBar"
+                android:max="20"
+                android:progress="8" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/get_external_cache_dir_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="getExternalCacheDir"
+            android:visibility="gone" />
+
+        <me.taosunkist.hello.ui.reusable.GuideTipeLineView
+            android:id="@+id/guide_tip_line_view"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:background="@color/transparent" />
+
+    </RelativeLayout>
+</layout>

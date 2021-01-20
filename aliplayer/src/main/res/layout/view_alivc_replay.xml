@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_button_gradient"
+        android:drawableStart="@drawable/ic_rotating_arrow_left_white"
+        android:drawablePadding="@dimen/margin_large"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_xlarge"
+        android:paddingTop="@dimen/margin_large"
+        android:paddingEnd="@dimen/margin_xxlarge"
+        android:paddingBottom="@dimen/margin_large"
+        android:text="重播"
+        android:textColor="@android:color/white" />
+</LinearLayout>

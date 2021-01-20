@@ -160,19 +160,21 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
 //    implementation 'com.google.protobuf:protobuf-java:3.11.0'
 //    implementation 'com.google.protobuf:protobuf-javalite:3.12.0'
+    implementation 'com.tencent:mmkv-static:1.1.2'
 
     /* A Retrofit inspired WebSocket client for Kotlin, Java, and Android.
        https://github.com/Tinder/Scarlet */
     implementation 'com.tinder.scarlet:scarlet:0.1.11'
     implementation 'com.tinder.scarlet:websocket-okhttp:0.1.11'
     implementation 'com.tinder.scarlet:message-adapter-protobuf:0.1.11'
-    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
-    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-16'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'
 
     /* https://github.com/mxn21/FlowingDrawer */
     implementation 'com.mxn.soul:flowingdrawer-core:2.1.0'
     implementation 'com.nineoldandroids:library:2.4.0'
-
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
 }
 
 repositories {

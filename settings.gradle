@@ -1,6 +1,7 @@
+include ':aliplayer'
 include ':library'
-include ':app', ':materials',
-        ':app-hilo',
+include ':app',
+        ':materials',
         ':app-brainhealthy'
 setBinding(new Binding([gradle: this]))
 //evaluate(new File(
