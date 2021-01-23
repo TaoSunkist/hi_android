@@ -183,6 +183,7 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
 
         var x = 0f
         var y = 0f
+        /** 初中数学知识 */
         x = (mDashWidth / 2 + mDashWidth / 2 * cos(135 * Math.PI / 180)).toFloat()
         y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(135 * Math.PI / 180)).toFloat()
         canvas.drawText(minScores.toString(), x - mTickFont!!.width + mTickFont!!.width / 2, y - mTickFont!!.height, mTickFontPen!!)
