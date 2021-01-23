@@ -17,7 +17,7 @@
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".ui.jetpacknavigation.JetpackNavigationActivity" />
+        <activity android:name=".ui.jetpacknavigation.FragmentsNavigationActivity" />
 
         <activity
                 android:name=".ui.controller.home.HomeActivity"

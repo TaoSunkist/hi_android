@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import me.taosunkist.hello.R
 
-class JetpackNavigationActivity : AppCompatActivity() {
+class FragmentsNavigationActivity : AppCompatActivity() {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
