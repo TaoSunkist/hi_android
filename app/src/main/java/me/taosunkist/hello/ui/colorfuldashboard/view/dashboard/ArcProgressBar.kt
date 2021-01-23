@@ -10,21 +10,25 @@ import android.util.AttributeSet
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
-
 import me.taosunkist.hello.R
 
 class ArcProgressBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View(context, attrs, defStyleAttr) {
 
     /* 弧形进度的区域 */
     private var innerArcBarRectF: RectF? = null
+
     /* 起点角度 */
     private var startAngel: Int = 0
+
     /* 终点角度 */
     private var endAngel: Int = 0
+
     /* 弧形条的傻笔 */
     private var arcBarPen: Paint? = null
+
     /* 弧形进度的宽度 */
     private var strokeWidth: Int = 0
+
     /* 最大进度值 */
     private var allSize: Float = 0.toFloat()
     private var centerFontPen: Paint? = null
@@ -41,6 +45,7 @@ class ArcProgressBar @JvmOverloads constructor(context: Context, attrs: Attribut
 
     /* 进度值 */
     private var progressValue = 0f
+
     /* 进度角度 */
     private var progressSweep: Int = 0
     private var progressMaxValue = 100
@@ -90,7 +95,7 @@ class ArcProgressBar @JvmOverloads constructor(context: Context, attrs: Attribut
     /**
      * 装载参数
      */
-    fun setupParams() {
+    private fun setupParams() {
         this.innerArcBarRectF = RectF()
         this.arcBarPen = Paint(Paint.ANTI_ALIAS_FLAG)
         centerFontPen = Paint(Paint.ANTI_ALIAS_FLAG)

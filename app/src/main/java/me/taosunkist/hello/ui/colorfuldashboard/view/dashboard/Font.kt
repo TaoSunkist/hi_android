@@ -44,12 +44,4 @@ class Font {
     fun setContent(content: String) {
         this.content = content
     }
-
-    /**
-     * 清除属性
-     */
-    fun reset() {
-        this.width = 0
-        this.height = 0
-    }
 }
