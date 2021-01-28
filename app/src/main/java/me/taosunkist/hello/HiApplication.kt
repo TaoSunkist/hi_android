@@ -5,7 +5,6 @@ import android.os.Handler
 import android.os.Looper
 import androidx.multidex.MultiDexApplication
 import com.google.gson.Gson
-import com.jakewharton.rxrelay2.BehaviorRelay
 import com.mooveit.library.Fakeit
 import dagger.hilt.android.HiltAndroidApp
 import io.reactivex.disposables.CompositeDisposable

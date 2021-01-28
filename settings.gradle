@@ -1,5 +1,6 @@
+include ':lib-mpchart'
 include ':library'
 include ':app',
-        ':materials',
-        ':app-brainhealthy'
+        ':app-brainhealthy',
+        ':materials'
 setBinding(new Binding([gradle: this]))

@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentCountdownTimeBinding
-import me.taosunkist.hello.ui.squareprogressbar.CountdownTimeFragment.Companion.TAG
 import me.taosunkist.hello.ui.progress.SquareProgressBar
+import me.taosunkist.hello.ui.squareprogressbar.CountdownTimeFragment.Companion.TAG
 import me.taosunkist.hello.utility.printf
 
 /**

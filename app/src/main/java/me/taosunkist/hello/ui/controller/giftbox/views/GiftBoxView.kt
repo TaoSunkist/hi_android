@@ -15,8 +15,8 @@ import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import com.jakewharton.rxrelay2.PublishRelay
-import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.R
+import me.taosunkist.hello.utility.Dimens
 import java.util.concurrent.atomic.AtomicBoolean
 
 interface AnimatorListener : Animator.AnimatorListener {

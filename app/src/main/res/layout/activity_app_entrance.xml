@@ -3,103 +3,53 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
 
-        <com.mxn.soul.flowingdrawer_core.FlowingDrawer
-                android:id="@+id/drawerlayout"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:edMenuBackground="#33FFFFFF"
-                app:edMenuSize="260dp"
-                app:edPosition="1">
+                tools:context="me.taosunkist.hello.ui.AppEntranceActivity">
 
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <FrameLayout
+                    android:id="@+id/content_root"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
-                    tools:context="me.taosunkist.hello.ui.AppEntranceActivity">
+                    android:layout_marginTop="?attr/actionBarSize">
 
-                <androidx.appcompat.widget.Toolbar
-                        android:id="@+id/toolbar"
-                        android:layout_width="match_parent"
-                        android:layout_height="?attr/actionBarSize"
-                        android:background="?attr/colorPrimary"
-                        app:layout_scrollFlags="scroll|enterAlways"
-                        app:popupTheme="@style/AppTheme.PopupOverlay" />
+                <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="@dimen/margin_xxxlarge" />
+            </FrameLayout>
 
-                <FrameLayout
-                        android:id="@+id/content_root"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="?attr/actionBarSize">
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-                    <androidx.appcompat.widget.AppCompatButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom|center_horizontal"
-                            android:layout_marginBottom="@dimen/margin_xxxlarge" />
-                </FrameLayout>
+        <com.google.android.material.navigation.NavigationView
+                android:id="@+id/activity_main_navigation_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start">
 
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <include
+                    android:id="@+id/menuAppEntranceInclude"
+                    layout="@layout/menu_app_entrance" />
 
-            <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
-                    android:id="@+id/menu_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/white" />
-        </com.mxn.soul.flowingdrawer_core.FlowingDrawer>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    <!--    <androidx.drawerlayout.widget.DrawerLayout-->
-    <!--        android:id="@+id/drawer_layout"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:fitsSystemWindows="true">-->
+        </com.google.android.material.navigation.NavigationView>
 
-    <!--        <androidx.coordinatorlayout.widget.CoordinatorLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:fitsSystemWindows="true"-->
-    <!--            tools:context="me.taosunkist.hello.ui.AppEntranceActivity">-->
-
-    <!--            <androidx.appcompat.widget.Toolbar-->
-    <!--                android:id="@+id/toolbar"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="?attr/actionBarSize"-->
-    <!--                android:background="?attr/colorPrimary"-->
-    <!--                app:layout_scrollFlags="scroll|enterAlways"-->
-    <!--                app:popupTheme="@style/AppTheme.PopupOverlay" />-->
-
-    <!--            <FrameLayout-->
-    <!--                android:id="@+id/content_root"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="match_parent"-->
-    <!--                android:layout_marginTop="?attr/actionBarSize">-->
-
-    <!--                <androidx.appcompat.widget.AppCompatButton-->
-    <!--                    android:layout_width="wrap_content"-->
-    <!--                    android:layout_height="wrap_content"-->
-    <!--                    android:layout_gravity="bottom|center_horizontal"-->
-    <!--                    android:layout_marginBottom="@dimen/margin_xxxlarge" />-->
-    <!--            </FrameLayout>-->
-
-    <!--        </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
-
-    <!--        <com.google.android.material.navigation.NavigationView-->
-    <!--            android:id="@+id/activity_main_navigation_view"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:layout_gravity="start"-->
-    <!--            android:fitsSystemWindows="true">-->
-
-    <!--            <include-->
-    <!--                android:id="@+id/menuAppEntranceInclude"-->
-    <!--                layout="@layout/menu_app_entrance" />-->
-
-    <!--        </com.google.android.material.navigation.NavigationView>-->
-
-    <!--    </androidx.drawerlayout.widget.DrawerLayout>-->
+    </androidx.drawerlayout.widget.DrawerLayout>
 
     <data />
 </layout>

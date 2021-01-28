@@ -1,7 +1,7 @@
 package me.taosunkist.hello.ui.jetpacknavigation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import me.taosunkist.hello.R
 
 class FragmentsNavigationActivity : AppCompatActivity() {

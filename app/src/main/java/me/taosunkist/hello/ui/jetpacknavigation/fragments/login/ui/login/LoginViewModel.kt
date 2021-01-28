@@ -1,9 +1,9 @@
 package me.taosunkist.hello.ui.jetpacknavigation.fragments.login.ui.login
 
+import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.util.Patterns
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.jetpacknavigation.fragments.login.data.LoginRepository
 import me.taosunkist.hello.ui.jetpacknavigation.fragments.login.data.Result

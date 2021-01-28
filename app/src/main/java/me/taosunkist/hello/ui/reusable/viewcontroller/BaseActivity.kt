@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
-import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.reusable.ProgressDialogWrapper
+import me.taosunkist.hello.utility.Dimens
 
 open class BaseActivity : AppCompatActivity() {
 

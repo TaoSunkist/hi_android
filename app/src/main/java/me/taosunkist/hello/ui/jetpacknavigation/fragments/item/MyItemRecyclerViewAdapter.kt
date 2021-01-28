@@ -1,12 +1,11 @@
 package me.taosunkist.hello.ui.jetpacknavigation.fragments.item
 
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import me.taosunkist.hello.R
-
 import me.taosunkist.hello.ui.jetpacknavigation.fragments.item.dummy.DummyContent.DummyItem
 
 /**

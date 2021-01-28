@@ -7,7 +7,6 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
 import me.taosunkist.hello.utility.Dimens
-import me.taosunkist.hello.utility.printf
 
 class GuideTipeLineView : View {
 

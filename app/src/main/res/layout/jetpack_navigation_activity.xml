@@ -12,6 +12,6 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:enterAnim="@anim/anim_slide_down"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/mobile_navigation" />
 
 </FrameLayout>

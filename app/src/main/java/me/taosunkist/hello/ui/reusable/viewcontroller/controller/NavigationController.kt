@@ -4,7 +4,6 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import me.taosunkist.hello.ui.reusable.viewcontroller.controller.ViewController
 import me.taosunkist.hello.ui.reusable.viewcontroller.host.ControllerHost
 
 open class NavigationController(root: ViewController) : ViewController() {

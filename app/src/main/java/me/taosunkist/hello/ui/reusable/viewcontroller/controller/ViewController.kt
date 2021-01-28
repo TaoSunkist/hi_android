@@ -6,8 +6,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import me.taosunkist.hello.ui.reusable.viewcontroller.presentation.PresentationStyle
 import me.taosunkist.hello.ui.reusable.viewcontroller.BaseActivity
+import me.taosunkist.hello.ui.reusable.viewcontroller.presentation.PresentationStyle
 import me.taosunkist.hello.utility.annotation.ViewRes
 import me.taosunkist.hello.utility.weak
 import kotlin.reflect.KMutableProperty

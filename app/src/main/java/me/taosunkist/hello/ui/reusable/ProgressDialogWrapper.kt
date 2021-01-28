@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
-import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.reusable.viewcontroller.animation.AnimationEndListener
+import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.utility.makeExactlyMeasure
 
 private const val animationDuration = 200L

@@ -3,12 +3,12 @@ package me.taosunkist.hello.ui.controller.home
 import android.content.Intent
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
-import me.taosunkist.hello.ui.reusable.viewcontroller.controller.NavigationController
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
-import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.HiApplication
 import me.taosunkist.hello.ui.reusable.viewcontroller.BaseActivity
+import me.taosunkist.hello.ui.reusable.viewcontroller.controller.NavigationController
+import me.taosunkist.hello.utility.Dimens
 import me.taosunkist.hello.utility.MainThread
 import me.taosunkist.hello.utility.PermissionGranter
 import me.taosunkist.hello.utility.weak
