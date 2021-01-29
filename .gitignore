@@ -280,7 +280,18 @@ flutter_module/.ios/
 .flutter-plugins
 flutter_module/.flutter-plugins-dependencies
 
+app-brainhealthy/*
+./app-brainhealthy/*
+./app-brainhealthy
+
 app-brainhealthy/build/
 app-brainhealthy/.git/
 /app/build/
 /build/
+
+app-wallpaper
+./app-wallpaper/*
+app-wallpaper/build/
+app-wallpaper/.git/
+app-wallpaper/app/build/
+./app-wallpaper/build/

@@ -8,13 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import me.taosunkist.hello.R
 
-class MainFragment : NavHostFragment() {
+class Main2Fragment : NavHostFragment() {
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_main2, container, false)
     }
 }

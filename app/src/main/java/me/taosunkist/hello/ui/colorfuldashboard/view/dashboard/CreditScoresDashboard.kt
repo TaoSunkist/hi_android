@@ -20,22 +20,27 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
      * 渐变色扇形条的旋转区域
      */
     private var gradientScallopBarMatrix: Matrix? = null
+
     /**
      * 仪表盘的全宽
      */
     private var mDashWidth: Float = 0.toFloat()
+
     /**
      * 仪表盘的全高
      */
     private var mDashHeight: Float = 0.toFloat()
+
     /**
      * 外部扇形条的颜色
      */
     private var outerArcProgressBarRectF: RectF? = null
+
     /**
      * 外部灰色背景弧形进度条的画笔
      */
     private var mOuterArcProgressBarPen: Paint? = null
+
     /**
      * 渐变色的绘制笔
      */
@@ -142,7 +147,7 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
         this.mSweepGradient!!.setLocalMatrix(this.gradientScallopBarMatrix)
 
         this.mOuterArcProgressBarPen!!.style = Paint.Style.STROKE
-        this.mOuterArcProgressBarPen!!.color = Color.rgb(33, 99, 0xff)
+        this.mOuterArcProgressBarPen!!.color = Color.GRAY
         mOuterArcProgressBarPen!!.strokeWidth = mOuterBarStrokeWidth
         this.mTickFontPen!!.textSize = tickFontSize
         this.mTickFontPen!!.color = tickFontColor
@@ -183,7 +188,7 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
 
         var x = 0f
         var y = 0f
-        /** 初中数学知识 */
+
         x = (mDashWidth / 2 + mDashWidth / 2 * cos(135 * Math.PI / 180)).toFloat()
         y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(135 * Math.PI / 180)).toFloat()
         canvas.drawText(minScores.toString(), x - mTickFont!!.width + mTickFont!!.width / 2, y - mTickFont!!.height, mTickFontPen!!)
@@ -226,6 +231,7 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
     companion object {
         /* 起点角度 */
         private val ANGLE_START = 135
+
         /* 终点角度 */
         private val ANGLE_END = 270
     }

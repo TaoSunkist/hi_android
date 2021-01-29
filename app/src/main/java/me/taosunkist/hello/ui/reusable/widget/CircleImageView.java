@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.widget;
+package me.taosunkist.hello.ui.reusable.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

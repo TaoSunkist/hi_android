@@ -81,19 +81,12 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 
 	override fun onNavigationItemSelected(item: MenuItem): Boolean {
 		when (item.itemId) {
-			R.id.nav_camera -> {
+			R.id.nav_main -> {
+			}
+			R.id.nav_main2 -> {
 			}
 			R.id.nav_share -> {
 				supportFragmentManager.beginTransaction().add(binding.contentRoot.id, ReminderFragment.newInstance()).addToBackStack(ReminderFragment.TAG).commitAllowingStateLoss()
-			}
-			R.id.nav_tatame_battery -> {
-				startActivity(Intent(this, HomeActivity::class.java))
-			}
-			R.id.nav_grpc -> {
-				supportFragmentManager.beginTransaction().add(binding.contentRoot.id, GrpcFragment.newInstance()).addToBackStack(GrpcFragment.TAG).commitAllowingStateLoss()
-			}
-			R.id.nav_progress -> {
-				supportFragmentManager.beginTransaction().add(binding.contentRoot.id, SquareProgressBarFragment.newInstance()).addToBackStack(SquareProgressBarFragment.TAG).commitAllowingStateLoss()
 			}
 		}
 

@@ -10,6 +10,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
+import kotlinx.android.synthetic.main.fragment_item.view.*
 import me.taosunkist.hello.R
 
 class ArcProgressBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View(context, attrs, defStyleAttr) {
@@ -111,8 +112,8 @@ class ArcProgressBar @JvmOverloads constructor(context: Context, attrs: Attribut
         bottomFont = Font()
         //测试数据
         centerFont!!.setContent(0.toString())
-        belowFont!!.setContent("获取中")
-        bottomFont!!.setContent("获取中")
+        belowFont!!.setContent("Score")
+        bottomFont!!.setContent("Dashboard")
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -146,6 +147,7 @@ class ArcProgressBar @JvmOverloads constructor(context: Context, attrs: Attribut
     }
 
     fun setProgress(progress: Int) {
+        centerFont?.setContent(progress.toString())
         this.progressValue = progress.toFloat()
         val ratio = progressValue / progressMaxValue
         progressSweep = (ratio * endAngel).toInt()

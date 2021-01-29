@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.LongPageVerticalFragment">
 
-    <me.taosunkist.hello.ui.widget.LongPageVerticalLayout
+    <me.taosunkist.hello.ui.reusable.widget.LongPageVerticalLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

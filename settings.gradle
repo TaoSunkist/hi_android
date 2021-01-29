@@ -1,3 +1,4 @@
+include ':app-wallpaper'
 include ':lib-mpchart'
 include ':library'
 include ':app',
