@@ -2,7 +2,7 @@
 ============================
 ScreenShot
 
-ColourDashBoardActivity
+DashboardFragment
 弧形的刻度仪表盘，带进度条，Dashboard<br/>
 ![image](https://github.com/TaoSunkist/hi_android/blob/master/app/src/main/res/raw/dashboardactivity.gif)
 
