@@ -24,12 +24,12 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
     /**
      * 仪表盘的全宽
      */
-    private var mDashWidth: Float = 0.toFloat()
+    private var dashboardWidth: Float = 0.toFloat()
 
     /**
      * 仪表盘的全高
      */
-    private var mDashHeight: Float = 0.toFloat()
+    private var dashboardHeight: Float = 0.toFloat()
 
     /**
      * 外部扇形条的颜色
@@ -39,29 +39,29 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
     /**
      * 外部灰色背景弧形进度条的画笔
      */
-    private var mOuterArcProgressBarPen: Paint? = null
+    private var outerArcProgressBarPen: Paint? = null
 
     /**
      * 渐变色的绘制笔
      */
-    private var mGradientScallopBarPen: Paint? = null
+    private var gradientScallopBarPen: Paint? = null
 
     private val mColors = intArrayOf(-0x593ff, -0xa5fcf, -0x683cb3, -0xae4894, -0x613bb7, -0x5038bf)
     private var mSweepGradient: SweepGradient? = null
     private var mInnerAcrProgressBarAllSize: Float = 0.toFloat()
     private var mTickMarginBottom: Float = 0.toFloat()
-    private var mTickHeight: Float = 0.toFloat()
-    private var mTickWidth: Float = 0.toFloat()
-    private var mTickFontPen: Paint? = null
+    private var tickHeight: Float = 0.toFloat()
+    private var tickWidth: Float = 0.toFloat()
+    private var tickFontPen: Paint? = null
     private var mOuterBarStrokeWidth: Float = 0.toFloat()
     private var tickFontSize: Float = 0.toFloat()
-    private var mTickFontMargin: Float = 0.toFloat()
-    private var mTickFont: Font? = null
+    private var tickFontMargin: Float = 0.toFloat()
+    private var tickFont: Font? = null
     private var gradientScallopBarRectF: RectF? = null
     private var progressSweep: Float = 0.toFloat()
     private var tickFontColor: Int = 0
 
-    private var mTickRectF: RectF? = null
+    private var tickRectF: RectF? = null
 
     /**
      * 信用分的最大值，默认300-900
@@ -82,12 +82,12 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
 
 
     private fun setupParams() {
-        this.mGradientScallopBarPen = Paint(Paint.ANTI_ALIAS_FLAG)
-        this.mOuterArcProgressBarPen = Paint(Paint.ANTI_ALIAS_FLAG)
-        this.mTickFontPen = Paint(Paint.ANTI_ALIAS_FLAG)
-        this.mTickFont = Font()
+        this.gradientScallopBarPen = Paint(Paint.ANTI_ALIAS_FLAG)
+        this.outerArcProgressBarPen = Paint(Paint.ANTI_ALIAS_FLAG)
+        this.tickFontPen = Paint(Paint.ANTI_ALIAS_FLAG)
+        this.tickFont = Font()
         this.outerArcProgressBarRectF = RectF()
-        this.mTickRectF = RectF()
+        this.tickRectF = RectF()
         this.gradientScallopBarRectF = RectF()
         this.gradientScallopBarMatrix = Matrix()
 
@@ -103,9 +103,9 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
     private fun parseStyleable(context: Context, attrs: AttributeSet) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.credit_scores_dashboard)
 
-        mTickHeight = typedArray.getDimension(R.styleable.credit_scores_dashboard_tick_height, 0f)
-        mTickWidth = typedArray.getDimension(R.styleable.credit_scores_dashboard_tick_width, 0f)
-        mTickFontMargin = typedArray.getDimension(R.styleable.credit_scores_dashboard_tick_font_margin, 0f)
+        tickHeight = typedArray.getDimension(R.styleable.credit_scores_dashboard_tick_height, 0f)
+        tickWidth = typedArray.getDimension(R.styleable.credit_scores_dashboard_tick_width, 0f)
+        tickFontMargin = typedArray.getDimension(R.styleable.credit_scores_dashboard_tick_font_margin, 0f)
         tickFontSize = typedArray.getDimension(R.styleable.credit_scores_dashboard_tick_font_size, 0f)
         //获得刻度的上下距离
         mTickMarginBottom = typedArray.getDimension(R.styleable.credit_scores_dashboard_tick_margin_bottom, 0f)
@@ -115,73 +115,78 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
         //通过内部的弧形进度控制外部刻度的大小，计算规则为：内部弧形滚动Bar的Size+tick的Size+刻度间距
         typedArray.recycle()
         //全宽=内部扇形进度条的宽度+刻度的高度+刻度的顶部间距+刻度的底部间距+30dp
-        mTickFont!!.width = FontUtil.measureFontSize(tickFontSize, maxScores.toString(), true)
-        mTickFont!!.height = FontUtil.measureFontSize(tickFontSize, maxScores.toString(), false)
-        this.mDashWidth = (mInnerAcrProgressBarAllSize
+        tickFont!!.width = FontUtil.measureFontSize(tickFontSize, maxScores.toString(), true)
+        tickFont!!.height = FontUtil.measureFontSize(tickFontSize, maxScores.toString(), false)
+        this.dashboardWidth = (mInnerAcrProgressBarAllSize
                 + mTickMarginBottom * 2
-                + mTickHeight * 2
-                + mTickFontMargin * 2
-                + (mTickFont!!.width * 2).toFloat())
+                + tickHeight * 2
+                + tickFontMargin * 2
+                + (tickFont!!.width * 2).toFloat())
 
-        mDashHeight = mDashWidth
-        this.mOuterBarStrokeWidth = mTickHeight + mTickMarginBottom + mTickMarginBottom / 2
+        dashboardHeight = dashboardWidth
+        this.mOuterBarStrokeWidth = tickHeight + mTickMarginBottom + mTickMarginBottom / 2
         //刻度的上下边距和高宽
-        mTickRectF!!.left = mDashWidth / 2 - mTickWidth
-        mTickRectF!!.right = mDashWidth / 2 + mTickWidth
-        mTickRectF!!.top = mTickFont!!.width + mTickFontMargin
-        mTickRectF!!.bottom = mTickRectF!!.top + mTickHeight
+        tickRectF!!.left = dashboardWidth / 2 - tickWidth
+        tickRectF!!.right = dashboardWidth / 2 + tickWidth
+        tickRectF!!.top = tickFont!!.width + tickFontMargin
+        tickRectF!!.bottom = tickRectF!!.top + tickHeight
 
         //计算隐藏的Bar的区域
         this.outerArcProgressBarRectF!!.set(
-                mTickFont!!.width.toFloat() + mTickFontMargin + mTickMarginBottom, mTickFont!!.width.toFloat() + mTickFontMargin + mTickMarginBottom, mDashWidth - mTickFont!!.width.toFloat() - mTickFontMargin - mTickMarginBottom, mDashHeight - mTickFont!!.width.toFloat() - mTickFontMargin - mTickMarginBottom
+                tickFont!!.width.toFloat() + tickFontMargin + mTickMarginBottom, tickFont!!.width.toFloat() + tickFontMargin + mTickMarginBottom, dashboardWidth - tickFont!!.width.toFloat() - tickFontMargin - mTickMarginBottom, dashboardHeight - tickFont!!.width.toFloat() - tickFontMargin - mTickMarginBottom
         )
 
         this.gradientScallopBarRectF!!.set(
-                mTickFont!!.width.toFloat(), mTickFont!!.width.toFloat(), mDashWidth - mTickFont!!.width, mDashWidth - mTickFont!!.width)
+                tickFont!!.width.toFloat(), tickFont!!.width.toFloat(), dashboardWidth - tickFont!!.width, dashboardWidth - tickFont!!.width)
 
         this.mSweepGradient = SweepGradient(
-                this.mDashWidth / 2, this.mDashWidth / 2, mColors, null)
+                this.dashboardWidth / 2, this.dashboardWidth / 2, mColors, null)
 
-        this.gradientScallopBarMatrix!!.setRotate(127f, this.mDashWidth / 2, this.mDashWidth / 2)
+        this.gradientScallopBarMatrix!!.setRotate(127f, this.dashboardWidth / 2, this.dashboardWidth / 2)
 
         this.mSweepGradient!!.setLocalMatrix(this.gradientScallopBarMatrix)
 
-        this.mOuterArcProgressBarPen!!.style = Paint.Style.STROKE
-        this.mOuterArcProgressBarPen!!.color = Color.GRAY
-        mOuterArcProgressBarPen!!.strokeWidth = mOuterBarStrokeWidth
-        this.mTickFontPen!!.textSize = tickFontSize
-        this.mTickFontPen!!.color = tickFontColor
-        this.mGradientScallopBarPen!!.shader = this.mSweepGradient
+        this.outerArcProgressBarPen!!.style = Paint.Style.STROKE
+        this.outerArcProgressBarPen!!.color = Color.GRAY
+        this.outerArcProgressBarPen!!.strokeWidth = mOuterBarStrokeWidth
+
+        this.tickFontPen!!.textSize = tickFontSize
+        this.tickFontPen!!.color = tickFontColor
+        this.gradientScallopBarPen!!.shader = this.mSweepGradient
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         setMeasuredDimension(
-                this.mDashWidth.toInt(), this.mDashHeight.toInt())
+                this.dashboardWidth.toInt(), this.dashboardHeight.toInt())
     }
 
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        //是否已经设置渐变色背景色
-        canvas.drawArc(this.gradientScallopBarRectF!!, ANGLE_START.toFloat(), ANGLE_END.toFloat(), false, this.mGradientScallopBarPen!!)
-        canvas.drawArc(outerArcProgressBarRectF!!, ANGLE_START - 2 + progressSweep, ANGLE_END + 4 - progressSweep, false, mOuterArcProgressBarPen!!)
+
+        /* 设置渐变色背景色 */
+        outerArcProgressBarPen?.color = gradientScallopBarPen?.color ?: Color.BLACK
+        canvas.drawArc(this.gradientScallopBarRectF!!, ANGLE_START.toFloat(), ANGLE_END.toFloat(), false, this.gradientScallopBarPen!!)
+        canvas.drawArc(outerArcProgressBarRectF!!, ANGLE_START - 2 + progressSweep, ANGLE_END + 4 - progressSweep, false, outerArcProgressBarPen!!)
+
         val atomicBoolean = AtomicBoolean(true)
         val atomicInteger = AtomicInteger(9)
+
         canvas.save()
         for (i in 0..30) {
             if (i < 15) {
                 atomicInteger.addAndGet(9)
-                canvas.rotate(-9f, mDashWidth / 2, mDashHeight / 2)
+                canvas.rotate(-9f, dashboardWidth / 2, dashboardHeight / 2)
             } else {
                 if (atomicBoolean.getAndSet(false)) {
-                    canvas.rotate((atomicInteger.get() - 9).toFloat(), mDashWidth / 2, mDashHeight / 2)
+                    canvas.rotate((atomicInteger.get() - 9).toFloat(), dashboardWidth / 2, dashboardHeight / 2)
                 } else {
-                    canvas.rotate(9f, mDashWidth / 2, mDashHeight / 2)
+                    canvas.rotate(9f, dashboardWidth / 2, dashboardHeight / 2)
                 }
             }
-            canvas.clipRect(0f, 0f, mDashWidth, mDashHeight)
-            canvas.clipRect(mTickRectF!!, Region.Op.DIFFERENCE)
+            canvas.clipRect(0f, 0f, dashboardWidth, dashboardHeight)
+            canvas.clipRect(tickRectF!!, Region.Op.DIFFERENCE)
         }
         canvas.drawColor(Color.WHITE)
         canvas.restore()
@@ -189,38 +194,33 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
         var x = 0f
         var y = 0f
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * cos(135 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * Math.sin(135 * Math.PI / 180)).toFloat()
-        canvas.drawText(minScores.toString(), x - mTickFont!!.width + mTickFont!!.width / 2, y - mTickFont!!.height, mTickFontPen!!)
+        x = (dashboardWidth / 2 + dashboardWidth / 2 * cos(135 * Math.PI / 180)).toFloat()
+        y = (dashboardWidth / 2 + dashboardWidth / 2 * Math.sin(135 * Math.PI / 180)).toFloat()
+        canvas.drawText(minScores.toString(), x - tickFont!!.width + tickFont!!.width / 2, y - tickFont!!.height, tickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * cos(189 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * sin(189 * Math.PI / 180)).toFloat()
-        canvas.drawText(if (scoresRange.size != 0) scoresRange[0] else "", x, y, mTickFontPen!!)
+        x = (dashboardWidth / 2 + dashboardWidth / 2 * cos(189 * Math.PI / 180)).toFloat()
+        y = (dashboardWidth / 2 + dashboardWidth / 2 * sin(189 * Math.PI / 180)).toFloat()
+        canvas.drawText(if (scoresRange.size != 0) scoresRange[0] else "", x, y, tickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * cos(234 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * sin(234 * Math.PI / 180)).toFloat()
-        canvas.drawText(if (scoresRange.size != 0) scoresRange[1] else "", x, y, mTickFontPen!!)
+        x = (dashboardWidth / 2 + dashboardWidth / 2 * cos(234 * Math.PI / 180)).toFloat()
+        y = (dashboardWidth / 2 + dashboardWidth / 2 * sin(234 * Math.PI / 180)).toFloat()
+        canvas.drawText(if (scoresRange.size != 0) scoresRange[1] else "", x, y, tickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * cos(306 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * sin(306 * Math.PI / 180)).toFloat()
-        canvas.drawText(if (scoresRange.size != 0) scoresRange[2] else "", x - mTickFont!!.width, y, mTickFontPen!!)
+        x = (dashboardWidth / 2 + dashboardWidth / 2 * cos(306 * Math.PI / 180)).toFloat()
+        y = (dashboardWidth / 2 + dashboardWidth / 2 * sin(306 * Math.PI / 180)).toFloat()
+        canvas.drawText(if (scoresRange.size != 0) scoresRange[2] else "", x - tickFont!!.width, y, tickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * cos(351 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * sin(351 * Math.PI / 180)).toFloat()
-        canvas.drawText(if (scoresRange.size != 0) scoresRange[3] else "", x - mTickFont!!.width, y, mTickFontPen!!)
+        x = (dashboardWidth / 2 + dashboardWidth / 2 * cos(351 * Math.PI / 180)).toFloat()
+        y = (dashboardWidth / 2 + dashboardWidth / 2 * sin(351 * Math.PI / 180)).toFloat()
+        canvas.drawText(if (scoresRange.size != 0) scoresRange[3] else "", x - tickFont!!.width, y, tickFontPen!!)
 
-        x = (mDashWidth / 2 + mDashWidth / 2 * cos(405 * Math.PI / 180)).toFloat()
-        y = (mDashWidth / 2 + mDashWidth / 2 * sin(405 * Math.PI / 180)).toFloat()
-        canvas.drawText(maxScores.toString(), x - mTickFont!!.width + mTickFont!!.width / 2, y - mTickFont!!.height, mTickFontPen!!)
+        x = (dashboardWidth / 2 + dashboardWidth / 2 * cos(405 * Math.PI / 180)).toFloat()
+        y = (dashboardWidth / 2 + dashboardWidth / 2 * sin(405 * Math.PI / 180)).toFloat()
+        canvas.drawText(maxScores.toString(), x - tickFont!!.width + tickFont!!.width / 2, y - tickFont!!.height, tickFontPen!!)
     }
 
     fun setProgressValue(progressValue: Float, progressMaxValue: Float) {
         this.progressSweep = progressValue / progressMaxValue * (ANGLE_END + 4)
-        invalidate()
-    }
-
-    fun setProgress(progress: Int) {
-        this.mProgress = progress
         invalidate()
     }
 

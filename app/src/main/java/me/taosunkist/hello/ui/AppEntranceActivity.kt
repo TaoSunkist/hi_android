@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.ViewAnimationUtils
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -13,9 +12,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ActivityAppEntranceBinding
-import me.taosunkist.hello.ui.colorfuldashboard.DashboardActivity
-import me.taosunkist.hello.ui.controller.home.HomeActivity
-import me.taosunkist.hello.ui.grpc.GrpcFragment
 import me.taosunkist.hello.ui.notification.ReminderFragment
 import me.taosunkist.hello.ui.progress.SquareProgressBarFragment
 import me.taosunkist.hello.ui.watermark.WatermarkFragment
@@ -63,18 +59,6 @@ class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 				.addToBackStack(WatermarkFragment.tag).commitAllowingStateLoss()
 			return true
 		} else if (id == R.id.action_dashboard) {
-			startActivity(Intent(this, DashboardActivity::class.java))
-			val actionView = item.actionView
-			if (actionView != null) {
-				val actionViewCenterX = (actionView.left + actionView.right) / 2
-				val actionHeightCenterY = (actionView.top + actionView.bottom) / 2
-				val radius = max(actionView.width, actionView.height)
-				var animator: android.animation.Animator? = null
-				if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-					animator = ViewAnimationUtils.createCircularReveal(actionView, actionViewCenterX, actionHeightCenterY, 0f, radius.toFloat())
-				}
-				animator!!.start()
-			}
 		}
 		return super.onOptionsItemSelected(item)
 	}
