@@ -14,15 +14,14 @@ object FontUtil {
      * @param str
      * @return
      */
-    fun measureFontSize(fontSize: Float, str: String, isWidth: Boolean): Int {
+    fun measureFontSize(fontSize: Float, str: String): Pair<Int, Int> {
         val pen = Paint()
-        pen.textSize = fontSize
         if (TextUtils.isEmpty(str)) {
-            return 0
+            return Pair(0, 0)
         }
         pen.textSize = fontSize
         val rect = Rect()
         pen.getTextBounds(str, 0, str.length, rect)
-        return if (isWidth) rect.width() else rect.height()
+        return Pair(rect.width(), rect.height())
     }
 }

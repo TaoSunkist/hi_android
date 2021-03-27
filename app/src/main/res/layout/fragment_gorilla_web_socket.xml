@@ -44,7 +44,7 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <me.taosunkist.hello.ui.reusable.StackLayout
+            <top.thsunkist.tatame.ui.reusable.StackLayout
                 android:id="@+id/feature_buttons_stack_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,9 +70,9 @@
                     android:text="Heart"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
-            </me.taosunkist.hello.ui.reusable.StackLayout>
+            </top.thsunkist.tatame.ui.reusable.StackLayout>
 
-            <me.taosunkist.hello.ui.reusable.LoggerRecyclerView
+            <top.thsunkist.tatame.ui.reusable.LoggerRecyclerView
                 android:id="@+id/logger_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

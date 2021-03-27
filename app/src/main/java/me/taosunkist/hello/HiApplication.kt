@@ -8,7 +8,7 @@ import com.google.gson.Gson
 import com.mooveit.library.Fakeit
 import dagger.hilt.android.HiltAndroidApp
 import io.reactivex.disposables.CompositeDisposable
-import me.taosunkist.hello.utility.weak
+import top.thsunkist.tatame.utilities.weak
 
 /**
  * Created by sunkist on 2019-07-27

@@ -1,7 +1,6 @@
-include ':app-wallpaper'
+include ':app-tatame'
 include ':lib-mpchart'
 include ':library'
 include ':app',
-        ':app-brainhealthy',
         ':materials'
 setBinding(new Binding([gradle: this]))

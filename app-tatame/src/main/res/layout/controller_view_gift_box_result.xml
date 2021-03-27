@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="uiModel"
+            type="top.thsunkist.tatame.ui.giftbox.model.OpenBoxResultUIModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_box_result"
+            android:paddingTop="@dimen/margin_xxlarge"
+            android:paddingBottom="@dimen/margin_xxxlarge">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/controller_view_gift_box_result_diamond_halo_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_box_result_light" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_box_result_border" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/controller_view_gift_box_result_diamond_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_large"
+                android:src="@drawable/ic_purchase_diamond2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/aaaa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="恭喜您!"
+                    android:textColor="@color/white"
+                    android:textSize="21dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/controller_view_gift_box_result_prize_describe_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:text="@string/controller_view_gift_box_result_prize_describe_text_view"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/controller_view_gift_box_result_prize_take_prize_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:background="@drawable/bg_button_gradient"
+            android:paddingLeft="@dimen/margin_xxlarge"
+            android:paddingTop="@dimen/margin_large"
+            android:paddingRight="@dimen/margin_xxlarge"
+            android:paddingBottom="@dimen/margin_large"
+            android:text="领取奖励"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="uiModel"
+            type="top.thsunkist.tatame.ui.giftbox.GiftBoxUIModel" />
+    </data>
+
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        android:id="@+id/view_controller_gift_box_circularrevealframelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <top.thsunkist.tatame.ui.giftbox.views.GiftBoxView
+            android:id="@+id/view_controller_gift_box_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_xxxlarge" />
+
+    </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+</layout>

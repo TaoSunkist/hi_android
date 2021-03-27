@@ -115,8 +115,8 @@ class CreditScoresDashboard @JvmOverloads constructor(context: Context, attrs: A
         //通过内部的弧形进度控制外部刻度的大小，计算规则为：内部弧形滚动Bar的Size+tick的Size+刻度间距
         typedArray.recycle()
         //全宽=内部扇形进度条的宽度+刻度的高度+刻度的顶部间距+刻度的底部间距+30dp
-        tickFont!!.width = FontUtil.measureFontSize(tickFontSize, maxScores.toString(), true)
-        tickFont!!.height = FontUtil.measureFontSize(tickFontSize, maxScores.toString(), false)
+        tickFont!!.width = FontUtil.measureFontSize(tickFontSize, maxScores.toString()).first
+        tickFont!!.height = FontUtil.measureFontSize(tickFontSize, maxScores.toString()).second
         this.dashboardWidth = (mInnerAcrProgressBarAllSize
                 + mTickMarginBottom * 2
                 + tickHeight * 2

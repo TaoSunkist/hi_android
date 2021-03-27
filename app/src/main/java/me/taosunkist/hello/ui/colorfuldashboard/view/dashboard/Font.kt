@@ -8,13 +8,14 @@ import android.text.TextUtils
 class Font {
 
     private lateinit var content: String
+
     var fontSize: Float = 0.toFloat()
         set(fontSize) {
             if (TextUtils.isEmpty(content)) {
                 content = ""
             } else {
-                width = FontUtil.measureFontSize(fontSize, content, true)
-                height = FontUtil.measureFontSize(fontSize, content, false)
+                width = FontUtil.measureFontSize(fontSize, content).first
+                height = FontUtil.measureFontSize(fontSize, content).second
             }
             field = fontSize
         }
@@ -27,6 +28,7 @@ class Font {
      * @return
      */
     var width: Int = 0
+
     /**
      * 只有在设置了FontSize之后才能获得真正的height
      * (See[.setFontSize])
