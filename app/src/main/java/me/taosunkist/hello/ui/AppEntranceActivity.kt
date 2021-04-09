@@ -1,6 +1,5 @@
 package me.taosunkist.hello.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -13,9 +12,8 @@ import com.google.android.material.navigation.NavigationView
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ActivityAppEntranceBinding
 import me.taosunkist.hello.ui.notification.ReminderFragment
-import me.taosunkist.hello.ui.progress.SquareProgressBarFragment
+import me.taosunkist.hello.ui.squareprogress.SquareProgressBarFragment
 import me.taosunkist.hello.ui.watermark.WatermarkFragment
-import kotlin.math.max
 
 class AppEntranceActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 

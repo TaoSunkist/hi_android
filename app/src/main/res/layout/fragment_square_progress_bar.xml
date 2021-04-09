@@ -17,7 +17,7 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <me.taosunkist.hello.ui.progress.SquareProgressBar
+        <me.taosunkist.hello.ui.squareprogress.SquareProgressBar
                 android:id="@+id/subi2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

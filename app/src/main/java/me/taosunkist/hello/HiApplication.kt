@@ -15,17 +15,21 @@ import top.thsunkist.tatame.utilities.weak
  */
 @HiltAndroidApp
 class HiApplication : MultiDexApplication() {
-	override fun onCreate() {
-		super.onCreate()
-		Fakeit.init()
-	}
 
-	companion object {
-		private val TAG = HiApplication::class.java.name
-		val GSON = Gson()
-		val MAIN_HANDLER = Handler(Looper.getMainLooper())
-		var CONTEXT: Context? by weak()
+    companion object {
+        private val TAG = HiApplication::class.java.name
 
-		var appCompositeDisposable = CompositeDisposable()
-	}
+        val GSON = Gson()
+
+        val MAIN_HANDLER = Handler(Looper.getMainLooper())
+
+        var CONTEXT: Context? by weak()
+
+        var appCompositeDisposable = CompositeDisposable()
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        Fakeit.init()
+    }
 }

@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.progress;
+package me.taosunkist.hello.ui.squareprogress;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -33,7 +33,7 @@ public class SquareProgressBar extends RelativeLayout {
     private boolean opacity = false;
     private boolean greyscale;
     private boolean isFadingOnProgress = false;
-    private boolean roundedCorners = false;
+    private final boolean roundedCorners = false;
 
     /**
      * New SquareProgressBar.

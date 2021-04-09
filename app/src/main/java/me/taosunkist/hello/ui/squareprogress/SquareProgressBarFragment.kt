@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.progress
+package me.taosunkist.hello.ui.squareprogress
 
 import android.graphics.Color
 import android.os.Bundle
@@ -10,26 +10,23 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.tencent.mmkv.MMKV
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.rxkotlin.addTo
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentSquareProgressBarBinding
-import me.taosunkist.hello.utility.printf
 import top.thsunkist.tatame.ui.reusable.GuideTipeLineView
 import top.thsunkist.tatame.utilities.Dimens.marginSmall
 import java.util.*
-import java.util.concurrent.TimeUnit
 
 class SquareProgressBarFragment : Fragment() {
+
     lateinit var squareProgressBar: SquareProgressBar
+
     lateinit var progressSeekBar: SeekBar
+
     lateinit var widthSeekBar: SeekBar
+
     private val currentProcess = 0
 
     init {
-
     }
 
     lateinit var binding: FragmentSquareProgressBarBinding
@@ -44,11 +41,7 @@ class SquareProgressBarFragment : Fragment() {
 
         val view = binding.root
         Log.i(TAG, requireContext().cacheDir.absolutePath)
-        MMKV.initialize(requireContext().cacheDir.absolutePath)
-        binding.getExternalCacheDirButton.setOnClickListener { v: View? ->
-            Log.i(TAG, "" + MMKV.defaultMMKV().putString("taohui", "sillyb").commit())
-            Log.i(TAG, "" + MMKV.defaultMMKV().getString("taohui", "sillyb"))
-        }
+
         view.setBackgroundColor(Color.GRAY)
         val progressView = view
                 .findViewById<View>(R.id.progressDisplay) as TextView
