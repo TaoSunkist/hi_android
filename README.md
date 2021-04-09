@@ -11,5 +11,4 @@ DashboardFragment
 ![image](https://github.com/TaoSunkist/hi_android/blob/master/app/src/main/res/raw/giftboxviewcontroller.gif)
 
 扩散雷达动画的动画效果GiftBoxView
-基于https://github.com/tyrantgit/ExplosionField<br/>
 ![image](https://github.com/TaoSunkist/hi_android/blob/master/app/src/main/res/raw/radar_view.gif)
