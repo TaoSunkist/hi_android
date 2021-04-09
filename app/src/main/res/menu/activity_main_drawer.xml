@@ -15,7 +15,17 @@
                 android:id="@+id/nav_dashboard"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="Dashboard" />
+
     </group>
+
+    <item android:title="Widget">
+        <menu>
+            <item
+                    android:id="@+id/nav_radar_view"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="RadarView" />
+        </menu>
+    </item>
 
     <item android:title="Communicate">
         <menu>

@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration.Builder(
                 R.id.nav_main,
                 R.id.nav_main2,
-                R.id.nav_dashboard
+                R.id.nav_dashboard,
+                R.id.nav_radar_view
         ).setOpenableLayout(binding.drawerLayout).build()
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)

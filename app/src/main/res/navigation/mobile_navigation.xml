@@ -26,4 +26,10 @@
             android:name="me.taosunkist.hello.ui.colorfuldashboard.DashboardFragment"
             android:label="Dashboard"
             tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+            android:id="@+id/nav_radar_view"
+            android:name="me.taosunkist.hello.ui.radarview.RadarViewFragment"
+            android:label="RadarView"
+            tools:layout="@layout/fragment_radar_view" />
 </navigation>
