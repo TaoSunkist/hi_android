@@ -3,7 +3,7 @@
 
     <data />
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
@@ -15,5 +15,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <me.taosunkist.hello.ui.radarview.ripplecircle.DiffuseView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:diffuse_color="@color/colorAccent"
+                app:diffuse_coreColor="@color/colorPrimaryDark"
+                app:diffuse_coreImage="@android:drawable/ic_menu_search"
+                app:diffuse_coreRadius="100"
+                app:diffuse_maxWidth="300"
+                app:diffuse_speed="5"
+                app:diffuse_width="3" />
+
+        <me.taosunkist.hello.ui.radarview.WhewView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        <me.taosunkist.hello.ui.radarview.ripplecircle.WaterRippleView
+                android:id="@+id/ripple_circle_diffuse_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+    </FrameLayout>
 </layout>

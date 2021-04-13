@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import me.taosunkist.hello.HiApplication
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentRadarViewBinding
+import top.thsunkist.library.utilities.Dimens
 
 private const val ARG_PARAM1 = "param1"
 
@@ -55,17 +56,18 @@ class RadarViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        (context?.applicationContext as HiApplication).refWatcher.watch(binding.radarView)
+        /*(context?.applicationContext as HiApplication).refWatcher.watch(binding.rippleCircleDiffuseView)*/
     }
 
     override fun onResume() {
         super.onResume()
-        binding.radarView.startLoadingAnimation()
+        view?.setOnClickListener { binding.rippleCircleDiffuseView.setFillWaveSourceShapeRadius(Dimens.dpToPx(15).toFloat()) }
+        /*binding.radarView.startLoadingAnimation()*/
     }
 
     override fun onPause() {
         super.onPause()
-        binding.radarView.stopAnimation()
+        /*binding.rippleCircleDiffuseView.stop()*/
+        /*binding.radarView.stopAnimation()*/
     }
 }
