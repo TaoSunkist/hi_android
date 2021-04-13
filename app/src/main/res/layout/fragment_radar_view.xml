@@ -10,12 +10,13 @@
             android:layout_height="match_parent"
             tools:context=".ui.radarview.RadarViewFragment">
 
-        <me.taosunkist.hello.ui.radarview.RadarView
+        <me.taosunkist.hello.ui.radarview.widget.RadarView
                 android:id="@+id/radar_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-        <me.taosunkist.hello.ui.radarview.ripplecircle.DiffuseView
+        <me.taosunkist.hello.ui.radarview.widget.DiffuseView
+                android:id="@+id/ripple_circle_diffuse_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="gone"
@@ -27,15 +28,16 @@
                 app:diffuse_speed="5"
                 app:diffuse_width="3" />
 
-        <me.taosunkist.hello.ui.radarview.WhewView
+        <me.taosunkist.hello.ui.radarview.widget.WhewView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:visibility="gone" />
 
-        <me.taosunkist.hello.ui.radarview.ripplecircle.WaterRippleView
-                android:id="@+id/ripple_circle_diffuse_view"
+        <me.taosunkist.hello.ui.radarview.widget.WaterRippleView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
     </FrameLayout>
 </layout>

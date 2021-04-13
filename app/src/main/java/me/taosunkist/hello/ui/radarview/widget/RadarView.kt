@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.radarview
+package me.taosunkist.hello.ui.radarview.widget
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -6,7 +6,6 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
-import android.view.animation.LinearInterpolator
 import androidx.core.content.res.ResourcesCompat.getColor
 import me.taosunkist.hello.R
 import me.taosunkist.hello.utility.printf

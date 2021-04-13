@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.radarview.ripplecircle;
+package me.taosunkist.hello.ui.radarview.widget;
 
 
 import android.content.Context;
