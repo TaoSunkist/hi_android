@@ -19,7 +19,7 @@ import top.thsunkist.tatame.utilities.weak
 @HiltAndroidApp
 class HiApplication : MultiDexApplication() {
 
-    private lateinit var refWatcher: RefWatcher
+    lateinit var refWatcher: RefWatcher
 
     companion object {
         private val TAG = HiApplication::class.java.name

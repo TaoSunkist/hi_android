@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import me.taosunkist.hello.HiApplication
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentRadarViewBinding
 
@@ -54,6 +55,8 @@ class RadarViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (context?.applicationContext as HiApplication).refWatcher.watch(binding.radarView)
     }
 
     override fun onResume() {

@@ -70,10 +70,6 @@ class RadarView constructor(context: Context, attrs: AttributeSet) : View(contex
                 radiusTemp = photoRadius + radius * (f / 400)
                 gradientAlpha = 255 - 255 * (f / 400)
             }
-            if (f >= 300) {
-                radiusTemp = photoRadius + radius * (f / 400)
-                gradientAlpha = 255 - 255 * (f / 400)
-            }
             if (f >= 200) {
                 radiusDisTemp = photoRadius + radiusDis * (f - 200) / 400
                 alphaDis = 255 - 255 * (f - 200) / 400
@@ -141,6 +137,7 @@ class RadarView constructor(context: Context, attrs: AttributeSet) : View(contex
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
+        stopAnimation()
         printf("$TAG onDetachedFromWindow")
     }
 }
