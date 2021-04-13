@@ -54,6 +54,15 @@ class RadarViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun onResume() {
+        super.onResume()
         binding.radarView.startLoadingAnimation()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        binding.radarView.stopAnimation()
     }
 }

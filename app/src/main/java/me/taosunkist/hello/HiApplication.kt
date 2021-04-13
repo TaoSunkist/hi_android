@@ -6,15 +6,20 @@ import android.os.Looper
 import androidx.multidex.MultiDexApplication
 import com.google.gson.Gson
 import com.mooveit.library.Fakeit
+import com.squareup.leakcanary.LeakCanary
+import com.squareup.leakcanary.RefWatcher
 import dagger.hilt.android.HiltAndroidApp
 import io.reactivex.disposables.CompositeDisposable
 import top.thsunkist.tatame.utilities.weak
+
 
 /**
  * Created by sunkist on 2019-07-27
  */
 @HiltAndroidApp
 class HiApplication : MultiDexApplication() {
+
+    private lateinit var refWatcher: RefWatcher
 
     companion object {
         private val TAG = HiApplication::class.java.name
@@ -31,5 +36,14 @@ class HiApplication : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         Fakeit.init()
+
+        setupLeakCanary()
+    }
+
+    private fun setupLeakCanary() {
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            return
+        }
+        refWatcher = LeakCanary.install(this)
     }
 }

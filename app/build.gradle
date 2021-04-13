@@ -30,7 +30,7 @@ android {
     sourceSets {
         main {
             proto {
-                // In addition to the default 'src/main/proto'
+                /* In addition to the default 'src/main/proto' */
                 srcDir 'src/main/protobuf'
                 srcDir 'src/main/protocolbuffers'
                 // In addition to the default '**/*.proto' (use with caution).
@@ -128,14 +128,14 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'androidx.annotation:annotation:1.2.0'
 
-    /** official fragment navigation */
+    /* official fragment navigation */
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
     implementation 'io.grpc:grpc-okhttp:1.33.0'
     implementation 'io.grpc:grpc-stub:1.33.0'
 
-    /** RxJava  */
+    /* RxJava  */
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
 
@@ -167,7 +167,7 @@ dependencies {
     /*implementation 'com.google.protobuf:protobuf-javalite:3.12.0'*/
     /*implementation 'io.grpc:grpc-protobuf-lite:1.33.0'*/
 
-    /** ------------------- Cache ------------------------- */
+    /* ------------------- Cache ------------------------- */
     implementation 'com.tencent:mmkv-static:1.2.7'
 
     /* A Retrofit inspired WebSocket client for Kotlin, Java, and Android. https://github.com/Tinder/Scarlet */
@@ -178,13 +178,13 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'
 
-    /** https://github.com/mxn21/FlowingDrawer */
+    /* https://github.com/mxn21/FlowingDrawer */
     implementation 'com.mxn.soul:flowingdrawer-core:2.1.0'
     implementation 'com.nineoldandroids:library:2.4.0'
 
-    /** https://github.com/square/leakcanary */
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7.0'
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:2.7.0'
+    /* https://github.com/square/leakcanary */
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
     /*implementation 'androidx.legacy:legacy-support-v4:1.0.0'*/
 }
