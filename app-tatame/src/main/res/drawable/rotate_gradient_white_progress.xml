@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rotate xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fromDegrees="0"
-    android:pivotX="50%"
-    android:pivotY="50%"
-    android:toDegrees="1080">
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="1080">
 
     <shape
-        android:innerRadiusRatio="2"
-        android:shape="ring"
-        android:thicknessRatio="150"
-        android:useLevel="false">
+            android:innerRadiusRatio="3"
+            android:shape="ring"
+            android:thicknessRatio="80"
+            android:useLevel="false">
 
         <size
-            android:width="76dip"
-            android:height="76dip" />
+                android:width="76dip"
+                android:height="76dip" />
+
+        <corners android:radius="100dp" />
 
         <gradient
-            android:angle="0"
-            android:centerColor="#02FFFFFF"
-            android:endColor="#AAFFFFFF"
-            android:startColor="#00FFFFFF"
-            android:type="sweep"
-            android:useLevel="false" />
+                android:angle="0"
+                android:centerColor="@color/errorTextColor"
+                android:endColor="@color/colorPrimary"
+                android:startColor="@color/transparent"
+                android:type="sweep"
+                android:useLevel="false" />
     </shape>
 </rotate>

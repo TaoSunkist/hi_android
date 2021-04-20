@@ -1,5 +1,4 @@
 include ':app-tatame'
-include ':lib-mpchart'
 include ':library'
 include ':app',
         ':materials'

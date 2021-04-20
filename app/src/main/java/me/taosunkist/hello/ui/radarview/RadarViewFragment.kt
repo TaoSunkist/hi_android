@@ -1,15 +1,12 @@
 package me.taosunkist.hello.ui.radarview
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import me.taosunkist.hello.HiApplication
-import me.taosunkist.hello.R
+import androidx.fragment.app.Fragment
 import me.taosunkist.hello.databinding.FragmentRadarViewBinding
-import top.thsunkist.library.utilities.Dimens
 
 private const val ARG_PARAM1 = "param1"
 
@@ -61,7 +58,14 @@ class RadarViewFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        view?.setOnClickListener { binding.rippleCircleDiffuseView.setFillWaveSourceShapeRadius(Dimens.dpToPx(15).toFloat()) }
+        view?.setOnClickListener {
+            if (binding.rippleCircleDiffuseView.isRippleAnimationRunning.not()) {
+                binding.rippleCircleDiffuseView.start()
+            } else {
+                binding.rippleCircleDiffuseView.switchMode()
+            }
+        }
+        /*view?.setOnClickListener { binding.rippleCircleDiffuseView.setFillWaveSourceShapeRadius(Dimens.dpToPx(15).toFloat()) }*/
         /*binding.radarView.startLoadingAnimation()*/
     }
 

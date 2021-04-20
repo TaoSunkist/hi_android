@@ -15,29 +15,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-        <me.taosunkist.hello.ui.radarview.widget.DiffuseView
+        <me.taosunkist.hello.ui.radarview.widget.RippleBackground
                 android:id="@+id/ripple_circle_diffuse_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone"
-                app:diffuse_color="@color/colorAccent"
-                app:diffuse_coreColor="@color/colorPrimaryDark"
-                app:diffuse_coreImage="@android:drawable/ic_menu_search"
-                app:diffuse_coreRadius="100"
-                app:diffuse_maxWidth="300"
-                app:diffuse_speed="5"
-                app:diffuse_width="3" />
-
-        <me.taosunkist.hello.ui.radarview.widget.WhewView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:visibility="gone" />
+                app:rb_color="@color/colorPrimary"
+                app:rb_duration="2000"
+                app:rb_radius="32dp"
+                app:rb_rippleAmount="3"
+                app:rb_scale="1.6"
+                app:rb_strokeWidth="5dp" />
 
-        <me.taosunkist.hello.ui.radarview.widget.WaterRippleView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="gone" />
+        <ProgressBar
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/rotate_gradient_white_progress" />
 
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:max="100"
+                android:progress="20"
+                app:indicatorColor="@color/colorPrimary"
+                app:trackColor="@color/bgGrayLight"
+                app:trackCornerRadius="8dp" />
     </FrameLayout>
 </layout>
