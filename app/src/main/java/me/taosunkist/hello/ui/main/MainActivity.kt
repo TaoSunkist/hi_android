@@ -7,6 +7,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ActivityMainBinding
 
@@ -33,6 +35,16 @@ class MainActivity : AppCompatActivity() {
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(binding.navView, navController)
+
+        binding.navView.getHeaderView(0).avatar_image_button.setOnClickListener {
+            if (it.tag == null) {
+                it.tag = ""
+                binding.navView.getHeaderView(0).rotate_animation_view.setBackgroundResource(R.drawable.ic_searching_matching_float)
+            } else {
+                it.tag = null
+                binding.navView.getHeaderView(0).rotate_animation_view.setBackgroundResource(R.drawable.ic_matching_matching_float)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
