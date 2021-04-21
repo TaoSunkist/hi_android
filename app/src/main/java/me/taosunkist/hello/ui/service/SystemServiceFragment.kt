@@ -1,6 +1,5 @@
 package me.taosunkist.hello.ui.service
 
-import android.content.Context
 import android.net.*
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +10,6 @@ import me.taosunkist.hello.databinding.SystemServiceFragmentBinding
 import me.taosunkist.hello.ui.BaseFragment
 import me.taosunkist.hello.utility.initConnectivityManager
 import me.taosunkist.hello.utility.registerNetworkCallback
-import top.thsunkist.tatame.utilities.weak
 
 class SystemServiceFragment : BaseFragment() {
 
@@ -23,7 +21,7 @@ class SystemServiceFragment : BaseFragment() {
 
     private lateinit var networkCallback: ConnectivityManager.NetworkCallback
 
-    private var connectivityManager: ConnectivityManager? by weak()
+    private lateinit var connectivityManager: ConnectivityManager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             SystemServiceFragmentBinding.inflate(inflater, container, false).root
@@ -41,6 +39,6 @@ class SystemServiceFragment : BaseFragment() {
     override fun onDestroy() {
         super.onDestroy()
 
-        connectivityManager?.unregisterNetworkCallback(networkCallback)
+        connectivityManager.unregisterNetworkCallback(networkCallback)
     }
 }
