@@ -1,7 +1,6 @@
 package me.taosunkist.hello.ui.service
 
 import android.content.Context
-import android.content.IntentFilter
 import android.net.*
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +9,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import me.taosunkist.hello.databinding.SystemServiceFragmentBinding
 import me.taosunkist.hello.ui.BaseFragment
-import top.thsunkist.tatame.utilities.printf
+import me.taosunkist.hello.utility.initConnectivityManager
+import me.taosunkist.hello.utility.registerNetworkCallback
+import top.thsunkist.tatame.utilities.weak
 
 class SystemServiceFragment : BaseFragment() {
 
@@ -20,7 +21,9 @@ class SystemServiceFragment : BaseFragment() {
 
     private lateinit var viewModel: ViewModel
 
-    private lateinit var connectivityManager: ConnectivityManager
+    private lateinit var networkCallback: ConnectivityManager.NetworkCallback
+
+    private var connectivityManager: ConnectivityManager? by weak()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             SystemServiceFragmentBinding.inflate(inflater, container, false).root
@@ -30,24 +33,14 @@ class SystemServiceFragment : BaseFragment() {
 
         viewModel = ViewModelProvider(this).get(ViewModel::class.java)
 
-        printf("taohui", tag)
+        connectivityManager = initConnectivityManager(requireContext())
 
-        connectivityManager = requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            connectivityManager.registerDefaultNetworkCallback(networkCallback)
-        } else {
-            connectivityManager.registerNetworkCallback(with(NetworkRequest.Builder()) {
-                addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
-                addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR)
-                addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
-                build()
-            }, networkCallback)
-        }
+        networkCallback = registerNetworkCallback()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        connectivityManager.unregisterNetworkCallback(networkCallback)
+
+        connectivityManager?.unregisterNetworkCallback(networkCallback)
     }
 }
