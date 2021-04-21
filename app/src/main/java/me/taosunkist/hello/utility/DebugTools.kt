@@ -1,16 +1,27 @@
 package me.taosunkist.hello.utility
 
-import android.R
 import android.graphics.Color
 import android.util.Log
+import me.taosunkist.hello.HiApplication
+import me.taosunkist.hello.R
 import java.util.ArrayList
 
-fun printf(vararg args: Any) {
-    Log.d("hi_android", args.joinToString(" "))
+fun printf(vararg args: Any?) {
+//    if (BuildConfig.DEBUG) {
+    Log.d("hello-android", args.joinToString(" "))
+//    }
 }
 
-fun printfNetwork(vararg args: Any) {
-    Log.d("hi_android", args.joinToString(" "))
+fun printfE(vararg args: Any?) {
+//    if (BuildConfig.DEBUG) {
+    Log.e("hello-android", args.joinToString(" "))
+//    }
+}
+
+fun printfNetwork(vararg args: Any?) {
+//    if (BuildConfig.DEBUG) {
+    Log.d("hello-android", args.joinToString(" "))
+//    }
 }
 
 class Debug {
@@ -31,9 +42,27 @@ class Debug {
                 "https://cdn.pixabay.com/photo/2014/12/08/11/49/love-560783_1280.jpg",
                 "https://cdn.pixabay.com/photo/2016/06/14/14/09/skeleton-1456627_1280.png",
                 "https://cdn.pixabay.com/photo/2016/10/19/02/21/moon-1751987_1280.png",
-                "https://cdn.pixabay.com/photo/2016/07/02/12/21/eclipse-1492818_1280.jpg"
+                "https://cdn.pixabay.com/photo/2016/07/02/12/21/eclipse-1492818_1280.jpg",
+                "http://photocdn.sohu.com/20111115/Img325612940.jpg",
+                "http://img3.cache.netease.com/photo/0031/2016-05-06/BMBHD1O56LRJ0031.jpg",
+                "http://i.gongxiao8.com/uploads/i_1_1027848948x2494305301_26.jpg",
+                "http://img.wxcha.com/file/201901/10/56f2ece12e.jpg",
+                "http://img.wxcha.com/file/201812/21/89d683ab85.jpg",
+                "http://img.wxcha.com/file/201807/18/e605ec3f55.jpg",
+                "http://img.wxcha.com/file/201809/30/b8293c6a8a.jpg",
+                "http://img.wxcha.com/file/201812/11/93bcbfd5f3.jpg",
+                "http://img4.imgtn.bdimg.com/it/u=3175508956,2902264390&fm=26&gp=0.jpg",
+                "http://img0.imgtn.bdimg.com/it/u=1560417182,3068121638&fm=26&gp=0.jpg",
+                "http://img5.imgtn.bdimg.com/it/u=1647889927,4015832972&fm=26&gp=0.jpg",
+                "http://img0.imgtn.bdimg.com/it/u=1330428072,249467376&fm=26&gp=0.jpg",
+                "http://img3.imgtn.bdimg.com/it/u=1483331499,286472910&fm=26&gp=0.jpg",
+                "http://img.wxcha.com/file/201812/11/93bcbfd5f3.jpg",
+                "http://img3.imgtn.bdimg.com/it/u=3722249721,1705042876&fm=26&gp=0.jpg",
+                "http://pic.962.net/up/2017-10/20171026113429875970.jpg",
+                "http://wx3.sinaimg.cn/large/994b6f2egy1fr2kio27mij20j80iuwfe.jpg"
         )
-        val medias = listOf("")
+        val medias = listOf("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3")
+
 
         var colors = ArrayList<Int>().apply {
             add(Color.parseColor("#FFA54F"))

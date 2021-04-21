@@ -7,11 +7,6 @@
                 android:icon="@drawable/ic_camera_gallery"
                 android:title="Main" />
         <item
-                android:id="@+id/nav_main2"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="Main2" />
-
-        <item
                 android:id="@+id/nav_dashboard"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="Dashboard" />
@@ -24,6 +19,11 @@
                     android:id="@+id/nav_radar_view"
                     android:icon="@drawable/ic_menu_gallery"
                     android:title="RadarView" />
+
+            <item
+                    android:id="@+id/nav_system_service"
+                    android:icon="@drawable/ic_baseline_settings_system_daydream_24"
+                    android:title="System Service" />
         </menu>
     </item>
 
