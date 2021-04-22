@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat.getDrawable
 import es.dmoral.toasty.Toasty
 import me.taosunkist.hello.R
 
+@SuppressWarnings("unused")
 object ToastyExt {
 
 

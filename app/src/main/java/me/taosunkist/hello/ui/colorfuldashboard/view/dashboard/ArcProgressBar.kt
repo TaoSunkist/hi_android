@@ -10,7 +10,6 @@ import android.util.AttributeSet
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
-import kotlinx.android.synthetic.main.fragment_item.view.*
 import me.taosunkist.hello.R
 
 class ArcProgressBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View(context, attrs, defStyleAttr) {

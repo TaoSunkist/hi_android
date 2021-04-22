@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui
+package me.taosunkist.hello.ui.websocket
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,6 +16,7 @@ import me.taosunkist.hello.ProtobufferUtility
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentGorillaWebSocketBinding
 import me.taosunkist.hello.hilo.UserProxy
+import me.taosunkist.hello.ui.BaseFragment
 import me.taosunkist.hello.utility.printf
 import okhttp3.*
 import okio.ByteString

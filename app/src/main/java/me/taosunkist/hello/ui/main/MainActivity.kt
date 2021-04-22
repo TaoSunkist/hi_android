@@ -67,13 +67,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.bottom_menu_item_first->{
+        when (item.itemId) {
+            R.id.bottom_menu_item_first -> {
             }
-            R.id.bottom_menu_item_second->{
-
-            }
-            R.id.bottom_menu_item_thrid->{
+            R.id.bottom_menu_item_second -> {
 
             }
         }

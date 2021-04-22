@@ -9,7 +9,7 @@ import io.reactivex.disposables.CompositeDisposable
 
 abstract class BaseFragment : Fragment() {
 
-	val compositeDisposable = CompositeDisposable()
+	private val compositeDisposable = CompositeDisposable()
 
 	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 		return super.onCreateView(inflater, container, savedInstanceState)

@@ -14,6 +14,7 @@ import android.view.animation.BounceInterpolator
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.app.ComponentActivity
 import com.jakewharton.rxrelay2.PublishRelay
 import top.thsunkist.tatame.R
 import top.thsunkist.tatame.ui.reusable.controller.giftbox.views.ExplosionField
@@ -126,7 +127,7 @@ class GiftBoxView : FrameLayout {
     }
 
 
-    fun playOpenBoxAnimation(activity: AppCompatActivity) {
+    fun playOpenBoxAnimation(activity: ComponentActivity) {
         if (isAnimationRunning.getAndSet(true)) return
 
         boxLidImageView.translationZ = 1f
