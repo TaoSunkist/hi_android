@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_menu_item_first"
+        android:icon="@android:drawable/btn_plus"
+        android:title="@string/first" />
+    <item
+        android:id="@+id/bottom_menu_item_second"
+        android:icon="@android:drawable/btn_plus"
+        android:title="@string/second" />
+    <item
+        android:id="@+id/bottom_menu_item_thrid"
+        android:icon="@android:drawable/btn_plus"
+        android:title="@string/third" />
+</menu>
