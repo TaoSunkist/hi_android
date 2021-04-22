@@ -15,9 +15,9 @@ import android.widget.RelativeLayout;
 import androidx.annotation.ColorInt;
 
 import me.taosunkist.hello.R;
-import top.thsunkist.library.ui.resuable.rectangleprogressbar.PercentStyle;
-import top.thsunkist.library.ui.resuable.rectangleprogressbar.SquareProgressView;
-import top.thsunkist.library.utilities.Dimens;
+import me.taosunkist.hello.ui.reusable.PercentStyle;
+import me.taosunkist.hello.ui.reusable.SquareProgressView;
+import me.taosunkist.hello.utility.Dimens;
 
 /**
  * The basic {@link SquareProgressBar}. This class includes all the methods you need to modify your

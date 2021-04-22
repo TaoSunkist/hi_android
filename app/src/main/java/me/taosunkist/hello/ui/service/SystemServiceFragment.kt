@@ -23,8 +23,11 @@ class SystemServiceFragment : BaseFragment() {
 
     private lateinit var connectivityManager: ConnectivityManager
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
-            SystemServiceFragmentBinding.inflate(inflater, container, false).root
+    override fun onCreateView(
+      inflater: LayoutInflater,
+      container: ViewGroup?,
+      savedInstanceState: Bundle?,
+    ): View = SystemServiceFragmentBinding.inflate(inflater, container, false).root
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

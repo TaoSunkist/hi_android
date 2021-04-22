@@ -194,8 +194,6 @@ class GorillaWebSocketFragment : BaseFragment() {
 			val heartBeatRsp = UserProxy.HeartBeatRsp.parseFrom(data)
 			printf("client status: $heartBeatRsp")
 		} else if (msgType == 100) {
-			val matchSuccess = UserProxy.MatchSuccess.parseFrom(data)
-			printf("client status: $matchSuccess")
 		}
 	}
 

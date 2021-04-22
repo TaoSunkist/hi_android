@@ -1,5 +1,4 @@
 include ':app-tatame'
-include ':library'
 include ':app',
         ':materials'
 setBinding(new Binding([gradle: this]))

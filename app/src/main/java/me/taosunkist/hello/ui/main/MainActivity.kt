@@ -23,14 +23,15 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setSupportActionBar(binding.toolbar)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
         appBarConfiguration = AppBarConfiguration.Builder(
-                R.id.nav_main,
-                R.id.nav_main2,
-                R.id.nav_dashboard,
-                R.id.nav_radar_view
+          R.id.nav_main,
+          R.id.nav_main2,
+          R.id.nav_dashboard,
+          R.id.nav_radar_view
         ).setOpenableLayout(binding.drawerLayout).build()
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
@@ -39,10 +40,14 @@ class MainActivity : AppCompatActivity() {
         binding.navView.getHeaderView(0).avatar_image_button.setOnClickListener {
             if (it.tag == null) {
                 it.tag = ""
-                binding.navView.getHeaderView(0).rotate_animation_view.setBackgroundResource(R.drawable.ic_searching_matching_float)
+                binding.navView.getHeaderView(0).rotate_animation_view.setBackgroundResource(
+                  R.drawable.ic_searching_matching_float
+                )
             } else {
                 it.tag = null
-                binding.navView.getHeaderView(0).rotate_animation_view.setBackgroundResource(R.drawable.ic_matching_matching_float)
+                binding.navView.getHeaderView(0).rotate_animation_view.setBackgroundResource(
+                  R.drawable.ic_matching_matching_float
+                )
             }
         }
     }
@@ -53,9 +58,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val mainFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val mainFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = mainFragment.navController
-        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp()
+        return NavigationUI.navigateUp(
+          navController, appBarConfiguration
+        ) || super.onSupportNavigateUp()
     }
-
 }

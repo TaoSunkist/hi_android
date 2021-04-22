@@ -30,13 +30,7 @@ android {
     sourceSets {
         main {
             proto {
-                /* In addition to the default 'src/main/proto' */
                 srcDir 'src/main/protobuf'
-                srcDir 'src/main/protocolbuffers'
-                // In addition to the default '**/*.proto' (use with caution).
-                // Using an extension other than 'proto' is NOT recommended,
-                // because when proto files are published along with class files, we can
-                // only tell the type of a file from its extension.
                 include '**/*.protodevel'
             }
 
@@ -76,25 +70,12 @@ allprojects {
 
 
 protobuf {
-
+    generatedFilesBaseDir = "$projectDir/src/main/generated"
     protoc { artifact = 'com.google.protobuf:protoc:3.6.1' }
-//    protoc { path = '/Users/taohui/DevStation/opt/protobuf/protoc-3.11.4-osx-x86_64/bin/protoc' }
-//    plugins {
-//        java {
-//            artifact = 'com.google.protobuf:protoc-gen-java:3.0.0'
-//        }
-//    }
-
     generateProtoTasks {
         all().each { task ->
-            task.builtins {
-                // In most cases you don't need the full Java output
-                // if you use the lite output.
-                remove java
-            }
-            task.plugins {
-                java {}
-            }
+            task.builtins { remove java }
+            task.plugins { java {} }
         }
     }
 }
@@ -103,7 +84,6 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     /* 素材依赖 */
     implementation project(path: ':materials')
-    implementation project(path: ':library')
     implementation project(path: ':app-tatame')
 
     implementation 'junit:junit:4.13.1'
@@ -119,7 +99,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.viewpager:viewpager:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.0-rc01'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
     implementation 'androidx.multidex:multidex:2.0.1'
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
@@ -132,8 +112,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
-    implementation 'io.grpc:grpc-okhttp:1.33.0'
-    implementation 'io.grpc:grpc-stub:1.33.0'
+    implementation 'io.grpc:grpc-okhttp:1.36.0'
+    implementation 'io.grpc:grpc-stub:1.36.0'
 
     /* RxJava  */
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
@@ -163,9 +143,9 @@ dependencies {
 
     kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
 
-    implementation 'com.google.protobuf:protobuf-java:3.11.0'
+    implementation 'com.google.protobuf:protobuf-java:3.12.0'
     /*implementation 'com.google.protobuf:protobuf-javalite:3.12.0'*/
-    /*implementation 'io.grpc:grpc-protobuf-lite:1.33.0'*/
+    implementation 'io.grpc:grpc-protobuf:1.33.0'
 
     /* ------------------- Cache ------------------------- */
     implementation 'com.tencent:mmkv-static:1.2.7'
@@ -195,7 +175,7 @@ repositories {
         dirs 'libs'
     }
 }
-configurations.all {
+/*configurations.all {
     resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
-}
+}*/
 

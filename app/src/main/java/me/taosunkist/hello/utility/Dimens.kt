@@ -1,4 +1,4 @@
-package top.thsunkist.library.utilities
+package me.taosunkist.hello.utility
 
 import android.content.res.Resources
 import android.graphics.Rect
