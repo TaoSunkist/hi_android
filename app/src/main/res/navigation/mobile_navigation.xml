@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/mobile_navigation"
-        app:startDestination="@id/nav_main">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_main">
 
     <fragment
-            android:id="@+id/nav_main"
-            android:name="me.taosunkist.hello.ui.main.MainFragment"
-            android:label="menu_home"
-            tools:layout="@layout/fragment_main">
+        android:id="@+id/nav_main"
+        android:name="me.taosunkist.hello.ui.main.MainFragment"
+        android:label="menu_home"
+        tools:layout="@layout/fragment_main">
         <action
-                android:id="@+id/action_nav_main_to_nav_main2"
-                app:destination="@id/nav_main2" />
+            android:id="@+id/action_nav_main_to_nav_main2"
+            app:destination="@id/nav_main" />
     </fragment>
 
     <fragment
-            android:id="@+id/nav_main2"
-            android:name="me.taosunkist.hello.ui.main.Main2Fragment"
-            android:label="menu_home2"
-            tools:layout="@layout/fragment_main2" />
+        android:id="@+id/nav_dashboard"
+        android:name="me.taosunkist.hello.ui.colorfuldashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-            android:id="@+id/nav_dashboard"
-            android:name="me.taosunkist.hello.ui.colorfuldashboard.DashboardFragment"
-            android:label="Dashboard"
-            tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/nav_radar_view"
+        android:name="me.taosunkist.hello.ui.radarview.RadarViewFragment"
+        android:label="RadarView"
+        tools:layout="@layout/fragment_radar_view" />
 
     <fragment
-            android:id="@+id/nav_radar_view"
-            android:name="me.taosunkist.hello.ui.radarview.RadarViewFragment"
-            android:label="RadarView"
-            tools:layout="@layout/fragment_radar_view" />
-
-    <fragment
-            android:id="@+id/nav_system_service"
-            android:name="me.taosunkist.hello.ui.service.SystemServiceFragment"
-            android:label="System Service"
-            tools:layout="@layout/system_service_fragment" />
+        android:id="@+id/nav_system_service"
+        android:name="me.taosunkist.hello.ui.service.SystemServiceFragment"
+        android:label="System Service"
+        tools:layout="@layout/system_service_fragment" />
 </navigation>

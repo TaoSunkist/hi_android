@@ -1,13 +1,11 @@
 package me.taosunkist.hello.ui.colorfuldashboard
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.navigation.fragment.NavHostFragment
-import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentDashboardBinding
 
 class DashboardFragment : NavHostFragment() {
@@ -24,6 +22,7 @@ class DashboardFragment : NavHostFragment() {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 binding.arcProgressBar.setProgress(progress)
                 binding.creditScoresDashboard.setProgressValue(progress.toFloat(), seekBar.max.toFloat())
+                binding.squareProgressView.setProgress(progress.toFloat())
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}

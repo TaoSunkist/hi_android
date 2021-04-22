@@ -109,8 +109,15 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.2.0'
 
     /* official fragment navigation */
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    def nav_version = "2.3.5"
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
     implementation 'io.grpc:grpc-okhttp:1.36.0'
     implementation 'io.grpc:grpc-stub:1.36.0'

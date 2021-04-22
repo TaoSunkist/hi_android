@@ -53,7 +53,7 @@ class SquareProgressBarFragment : Fragment() {
         squareProgressBar.setRoundedCorners(true, marginSmall.toFloat())
         squareProgressBar.setProgress(32)
         squareProgressBar.width = 8
-        squareProgressBar.setOnClickListener(View.OnClickListener { view1: View? ->
+        squareProgressBar.setOnClickListener { view1: View? ->
             val random = Random()
 
             // random progress
@@ -61,12 +61,12 @@ class SquareProgressBarFragment : Fragment() {
 
             // random width
             val randWidth = random.nextInt(17) + 4
-            widthSeekBar!!.progress = randWidth
+            widthSeekBar.progress = randWidth
             squareProgressBar.setWidth(randWidth)
 
             // random colour
             squareProgressBar.setColorRGB(random.nextInt(256), random.nextInt(256), random.nextInt(256))
-        })
+        }
         progressSeekBar = view
                 .findViewById<View>(R.id.progressSeekBar) as SeekBar
         progressSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -78,8 +78,7 @@ class SquareProgressBarFragment : Fragment() {
                 // nothing to do
             }
 
-            override fun onProgressChanged(seekBar: SeekBar,
-                                           progress: Int, fromUser: Boolean) {
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 setProgressBarProgress(progress, progressView)
             }
         })
