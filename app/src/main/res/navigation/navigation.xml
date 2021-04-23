@@ -9,7 +9,13 @@
         android:id="@+id/navMain"
         android:name="me.taosunkist.hello.ui.main.MainFragment"
         android:label="menu_home"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_in_main_drawer_layout_head_view_avatar_image_view_pressed"
+            app:destination="@id/navProfile" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navDashboard"
@@ -21,7 +27,12 @@
         android:id="@+id/navRadarView"
         android:name="me.taosunkist.hello.ui.radarview.RadarViewFragment"
         android:label="RadarView"
-        tools:layout="@layout/fragment_radar_view" />
+        tools:layout="@layout/fragment_radar_view">
+
+        <action
+            android:id="@+id/action_in_main_drawer_layout_menu_radar_item_pressed"
+            app:destination="@id/navRadarView" />
+    </fragment>
 
     <fragment
         android:id="@+id/navSystemService"
@@ -34,6 +45,5 @@
         android:name="me.taosunkist.hello.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
-
 
 </navigation>
