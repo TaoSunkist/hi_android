@@ -3,33 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/nav_main">
+    app:startDestination="@id/navMain">
 
     <fragment
-        android:id="@+id/nav_main"
+        android:id="@+id/navMain"
         android:name="me.taosunkist.hello.ui.main.MainFragment"
         android:label="menu_home"
-        tools:layout="@layout/fragment_main">
-        <action
-            android:id="@+id/action_nav_main_to_nav_main2"
-            app:destination="@id/nav_main" />
-    </fragment>
+        tools:layout="@layout/fragment_main" />
 
     <fragment
-        android:id="@+id/nav_dashboard"
+        android:id="@+id/navDashboard"
         android:name="me.taosunkist.hello.ui.colorfuldashboard.DashboardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/nav_radar_view"
+        android:id="@+id/navRadarView"
         android:name="me.taosunkist.hello.ui.radarview.RadarViewFragment"
         android:label="RadarView"
         tools:layout="@layout/fragment_radar_view" />
 
     <fragment
-        android:id="@+id/nav_system_service"
+        android:id="@+id/navSystemService"
         android:name="me.taosunkist.hello.ui.service.SystemServiceFragment"
         android:label="System Service"
         tools:layout="@layout/system_service_fragment" />
+
+    <fragment
+        android:id="@+id/navProfile"
+        android:name="me.taosunkist.hello.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+
 </navigation>

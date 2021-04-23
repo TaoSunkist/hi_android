@@ -4,4 +4,6 @@
     <string name="first">First</string>
     <string name="second">Second</string>
     <string name="third">Third</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

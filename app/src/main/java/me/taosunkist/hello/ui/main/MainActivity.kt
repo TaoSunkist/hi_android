@@ -5,14 +5,22 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.NavigatorProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ActivityMainBinding
+import me.taosunkist.hello.ui.profile.ProfileFragment
+import me.taosunkist.hello.utility.ToastyExt
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -25,34 +33,32 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setSupportActionBar(binding.toolbar)
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
         appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.nav_main,
-            R.id.nav_dashboard,
-            R.id.nav_radar_view
+            R.id.navMain,
+            R.id.navDashboard,
+            R.id.navRadarView,
         ).setOpenableLayout(binding.drawerLayout).build()
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
-        NavigationUI.setupWithNavController(binding.navView, navController)
+        NavigationUI.setupWithNavController(binding.navigationView, navController)
 
-        binding.navView.getHeaderView(0).avatar_image_button.setOnClickListener {
+        binding.navigationView.getHeaderView(0).avatarImageButton.setOnClickListener {
             if (it.tag == null) {
                 it.tag = ""
-                binding.navView.getHeaderView(0).rotate_animation_view.setBackgroundResource(
+                binding.navigationView.getHeaderView(0).rotateAnimationView.setBackgroundResource(
                     R.drawable.ic_searching_matching_float
                 )
             } else {
                 it.tag = null
-                binding.navView.getHeaderView(0).rotate_animation_view.setBackgroundResource(
+                binding.navigationView.getHeaderView(0).rotateAnimationView.setBackgroundResource(
                     R.drawable.ic_matching_matching_float
                 )
             }
+            navHostFragment.findNavController().navigate(R.id.navProfile)
         }
-
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
