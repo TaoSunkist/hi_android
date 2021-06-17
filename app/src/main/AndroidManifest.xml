@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="me.taosunkist.hello">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".HiApplication"
         android:allowBackup="false"
@@ -27,11 +33,4 @@
         </activity>
 
     </application>
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="android.permission.VIBRATE" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
 </manifest>

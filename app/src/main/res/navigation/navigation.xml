@@ -15,6 +15,9 @@
             android:id="@+id/action_in_main_drawer_layout_head_view_avatar_image_view_pressed"
             app:destination="@id/navProfile" />
 
+        <action
+            android:id="@+id/action_in_main_drawer_layout_menu_radar_item_pressed"
+            app:destination="@id/navRadarView" />
     </fragment>
 
     <fragment
@@ -27,12 +30,7 @@
         android:id="@+id/navRadarView"
         android:name="me.taosunkist.hello.ui.radarview.RadarViewFragment"
         android:label="RadarView"
-        tools:layout="@layout/fragment_radar_view">
-
-        <action
-            android:id="@+id/action_in_main_drawer_layout_menu_radar_item_pressed"
-            app:destination="@id/navRadarView" />
-    </fragment>
+        tools:layout="@layout/fragment_radar_view" />
 
     <fragment
         android:id="@+id/navSystemService"

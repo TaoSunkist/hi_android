@@ -1,6 +1,5 @@
 package me.taosunkist.hello.ui.main
 
-import android.R.id.toggle
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
@@ -8,14 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.fragment_main.view.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentMainBinding
@@ -28,31 +25,29 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
     lateinit var appBarConfiguration: AppBarConfiguration
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?,
-    ): View = FragmentMainBinding.inflate(inflater, container, false).apply {
-        binding = this
-    }.root
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
+        FragmentMainBinding.inflate(inflater, container, false).apply { binding = this }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         NavigationUI.setupWithNavController(binding.navigationView, navController)
 
-        appBarConfiguration = AppBarConfiguration.Builder(
+        /*appBarConfiguration = AppBarConfiguration.Builder(
             R.id.navMain,
             R.id.navDashboard,
             R.id.navRadarView,
         ).setFallbackOnNavigateUpListener(
             this
-        ).setOpenableLayout(binding.drawerLayout).build()
+        ).setOpenableLayout(binding.drawerLayout).build()*/
 
         binding.drawerLayout.addDrawerListener(
             ActionBarDrawerToggle(requireActivity(),
                 binding.drawerLayout,
                 binding.toolbar,
                 R.string.navigation_drawer_open,
-                R.string.navigation_drawer_close).apply {
+                R.string.navigation_drawer_close
+            ).apply {
                 syncState()
             }
         )
@@ -74,20 +69,17 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
     }
 
     override fun onNavigateUp(): Boolean {
-        val navController = navController
         return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        ToastyExt.normal(requireContext(), item.title.toString())?.show()
+        when (item.itemId) {
+            R.id.nav_radar_view -> {
+                ToastyExt.normal(requireContext(), item.title.toString())?.show()
+                binding.root.findNavController().navigate(R.id.action_in_main_drawer_layout_menu_radar_item_pressed)
+            }
+        }
         return true
     }
-
 }
 
-class MainViewHolder(itemTextView: AppCompatTextView) : RecyclerView.ViewHolder(itemTextView) {
-
-    fun bind() {
-
-    }
-}

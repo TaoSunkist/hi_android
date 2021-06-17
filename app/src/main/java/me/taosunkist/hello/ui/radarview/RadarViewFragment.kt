@@ -23,12 +23,12 @@ class RadarViewFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-                RadarViewFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
-                    }
+            RadarViewFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
                 }
+            }
     }
 
     private lateinit var binding: FragmentRadarViewBinding
@@ -53,7 +53,6 @@ class RadarViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /*(context?.applicationContext as HiApplication).refWatcher.watch(binding.rippleCircleDiffuseView)*/
     }
 
     override fun onResume() {
@@ -65,13 +64,13 @@ class RadarViewFragment : Fragment() {
                 binding.rippleCircleDiffuseView.switchMode()
             }
         }
-        /*view?.setOnClickListener { binding.rippleCircleDiffuseView.setFillWaveSourceShapeRadius(Dimens.dpToPx(15).toFloat()) }*/
-        /*binding.radarView.startLoadingAnimation()*/
+        view?.setOnClickListener { binding.rippleCircleDiffuseView.setFillWaveSourceShapeRadius(Dimens.dpToPx(15).toFloat()) }
+        binding.radarView.startLoadingAnimation()
     }
 
     override fun onPause() {
         super.onPause()
-        /*binding.rippleCircleDiffuseView.stop()*/
-        /*binding.radarView.stopAnimation()*/
+        binding.rippleCircleDiffuseView.stop()
+        binding.radarView.stopAnimation()
     }
 }

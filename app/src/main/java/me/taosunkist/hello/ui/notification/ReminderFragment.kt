@@ -24,7 +24,7 @@ import com.flyco.tablayout.SegmentTabLayout
 import com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
 import com.google.gson.annotations.SerializedName
 import me.taosunkist.hello.R
-import me.taosunkist.hello.ui.AppEntranceActivity
+import me.taosunkist.hello.ui.main.MainActivity
 import me.taosunkist.hello.utility.alarmmanager.AlarmManagerUtilities
 import java.text.SimpleDateFormat
 import java.util.*
@@ -193,7 +193,7 @@ class ReminderFragment : Fragment() {
 
 	private fun makeMoodIntent(context: Context, moodId: Int): PendingIntent {
 		return PendingIntent.getActivity(context, 0,
-			Intent(context, AppEntranceActivity::class.java).putExtra("", moodId),
+			Intent(context, MainActivity::class.java).putExtra("", moodId),
 			PendingIntent.FLAG_UPDATE_CURRENT)
 	}
 }

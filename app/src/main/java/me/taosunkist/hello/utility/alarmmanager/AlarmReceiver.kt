@@ -15,7 +15,7 @@ import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import me.taosunkist.hello.R
-import me.taosunkist.hello.ui.AppEntranceActivity
+import me.taosunkist.hello.ui.main.MainActivity
 
 class AlarmReceiver : BroadcastReceiver() {
 
@@ -33,7 +33,7 @@ class AlarmReceiver : BroadcastReceiver() {
             val notificationManagerCompat = NotificationManagerCompat.from(context)
             val notificationCompatBuilder = NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
             val pendingIntent = PendingIntent.getActivity(context, id,
-                    Intent(context, AppEntranceActivity::class.java)
+                    Intent(context, MainActivity::class.java)
                             .putExtra(TAG, R.mipmap.ic_launcher)
                             .putExtra("title", title)
                             .putExtra("timeInMillis", timeInMillis)
@@ -88,7 +88,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
 
-        val id = intent.getIntExtra("id", R.layout.activity_app_entrance)
+        val id = intent.getIntExtra("id", R.layout.activity_main)
         val title = intent.getStringExtra("title")
         val tips = intent.getStringExtra("tips")
         val intervalMillis = intent.getLongExtra("intervalMillis", 0)
