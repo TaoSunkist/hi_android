@@ -64,7 +64,7 @@ class RadarViewFragment : Fragment() {
                 binding.rippleCircleDiffuseView.switchMode()
             }
         }
-        view?.setOnClickListener { binding.rippleCircleDiffuseView.setFillWaveSourceShapeRadius(Dimens.dpToPx(15).toFloat()) }
+        /*view?.setOnClickListener { binding.rippleCircleDiffuseView.setFillWaveSourceShapeRadius(Dimens.dpToPx(15).toFloat()) }*/
         binding.radarView.startLoadingAnimation()
     }
 

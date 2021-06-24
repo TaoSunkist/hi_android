@@ -2,7 +2,6 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
     app:startDestination="@id/navMain">
 
     <fragment
@@ -17,7 +16,8 @@
 
         <action
             android:id="@+id/action_in_main_drawer_layout_menu_radar_item_pressed"
-            app:destination="@id/navRadarView" />
+            app:destination="@id/radar_view_fragment" />
+
     </fragment>
 
     <fragment
@@ -27,16 +27,10 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navRadarView"
+        android:id="@+id/radar_view_fragment"
         android:name="me.taosunkist.hello.ui.radarview.RadarViewFragment"
         android:label="RadarView"
         tools:layout="@layout/fragment_radar_view" />
-
-    <fragment
-        android:id="@+id/navSystemService"
-        android:name="me.taosunkist.hello.ui.service.SystemServiceFragment"
-        android:label="System Service"
-        tools:layout="@layout/system_service_fragment" />
 
     <fragment
         android:id="@+id/navProfile"

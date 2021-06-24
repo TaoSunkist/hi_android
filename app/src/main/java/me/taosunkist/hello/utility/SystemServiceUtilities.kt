@@ -10,7 +10,6 @@ import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import androidx.core.content.ContextCompat
-import me.taosunkist.hello.ui.service.networkCallback
 
 var vibrator: Vibrator? = null
 
@@ -31,6 +30,10 @@ fun vibrator(context: Context, rate: Long = 500L) {
 }
 
 private var connectivityManager: ConnectivityManager? = null
+
+val networkCallback = object: ConnectivityManager.NetworkCallback(){
+
+}
 
 fun initConnectivityManager(context: Context): ConnectivityManager {
     if (connectivityManager == null) {

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -76,7 +77,8 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
         when (item.itemId) {
             R.id.nav_radar_view -> {
                 ToastyExt.normal(requireContext(), item.title.toString())?.show()
-                binding.root.findNavController().navigate(R.id.action_in_main_drawer_layout_menu_radar_item_pressed)
+                val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuRadarItemPressed()
+                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
         }
         return true

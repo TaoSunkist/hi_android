@@ -12,10 +12,6 @@ import dagger.hilt.android.HiltAndroidApp
 import io.reactivex.disposables.CompositeDisposable
 import top.thsunkist.tatame.utilities.weak
 
-
-/**
- * Created by sunkist on 2019-07-27
- */
 @HiltAndroidApp
 class HiApplication : MultiDexApplication() {
 

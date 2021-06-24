@@ -1,20 +1,14 @@
 package me.taosunkist.hello.utility
 
-import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
-import android.net.NetworkRequest
 import android.net.Uri
 import android.os.*
 import android.provider.Settings
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import me.taosunkist.hello.ui.service.networkCallback
 
 fun View.dismissKeyboard() {
     val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
