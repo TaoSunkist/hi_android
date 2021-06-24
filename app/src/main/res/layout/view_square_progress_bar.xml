@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="180dp">
 
-    <top.thsunkist.library.ui.resuable.rectangleprogressbar.SquareProgressView
+    <me.taosunkist.hello.ui.reusable.suqareprogress.SquareProgressView
         android:id="@+id/squareProgressBar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

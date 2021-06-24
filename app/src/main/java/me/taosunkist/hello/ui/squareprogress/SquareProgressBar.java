@@ -15,8 +15,8 @@ import android.widget.RelativeLayout;
 import androidx.annotation.ColorInt;
 
 import me.taosunkist.hello.R;
-import me.taosunkist.hello.ui.reusable.PercentStyle;
-import me.taosunkist.hello.ui.reusable.SquareProgressView;
+import me.taosunkist.hello.ui.reusable.suqareprogress.PercentStyle;
+import me.taosunkist.hello.ui.reusable.suqareprogress.SquareProgressView;
 import me.taosunkist.hello.utility.Dimens;
 
 /**

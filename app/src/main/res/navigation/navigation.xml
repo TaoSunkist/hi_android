@@ -38,4 +38,10 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 
+    <fragment
+        android:id="@+id/navBrowser"
+        android:name="me.taosunkist.hello.ui.browser.BrowserFragment"
+        android:label="fragment_browser"
+        tools:layout="@layout/fragment_browser" />
+
 </navigation>
