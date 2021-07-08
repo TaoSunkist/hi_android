@@ -16,7 +16,11 @@
 
         <action
             android:id="@+id/action_in_main_drawer_layout_menu_radar_item_pressed"
-            app:destination="@id/radar_view_fragment" />
+            app:destination="@id/radar_view_fragment"
+            app:enterAnim="@anim/anim_left_in"
+            app:exitAnim="@anim/anim_right_out"
+            app:popEnterAnim="@anim/anim_right_in"
+            app:popExitAnim="@anim/anim_left_out" />
 
     </fragment>
 

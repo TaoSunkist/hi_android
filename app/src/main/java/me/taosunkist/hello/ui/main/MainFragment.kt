@@ -76,7 +76,6 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_radar_view -> {
-                ToastyExt.normal(requireContext(), item.title.toString())?.show()
                 val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuRadarItemPressed()
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
