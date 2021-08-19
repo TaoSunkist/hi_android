@@ -40,4 +40,13 @@
         </menu>
     </item>
 
+    <item android:title="Animation">
+        <menu>
+            <item
+                android:id="@+id/nav_animation"
+                android:icon="@drawable/ic_baseline_settings_system_daydream_24"
+                android:title="Animations" />
+        </menu>
+    </item>
+
 </menu>

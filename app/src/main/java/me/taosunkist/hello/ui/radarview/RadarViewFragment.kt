@@ -5,8 +5,12 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.postDelayed
 import androidx.fragment.app.Fragment
+import leakcanary.AppWatcher
+import me.taosunkist.hello.HiApplication
 import me.taosunkist.hello.databinding.FragmentRadarViewBinding
+import me.taosunkist.hello.utility.printf
 
 private const val ARG_PARAM1 = "param1"
 
@@ -72,5 +76,13 @@ class RadarViewFragment : Fragment() {
         super.onPause()
         binding.rippleCircleDiffuseView.stop()
         binding.radarView.stopAnimation()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        AppWatcher.objectWatcher.expectWeaklyReachable(binding.radarView, "View was detached")
+        HiApplication.MAIN_HANDLER.postDelayed({
+            printf("taohui", binding.radarView)
+        }, 3000)
     }
 }

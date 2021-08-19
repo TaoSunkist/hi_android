@@ -10,6 +10,7 @@ import com.squareup.leakcanary.LeakCanary
 import com.squareup.leakcanary.RefWatcher
 import dagger.hilt.android.HiltAndroidApp
 import io.reactivex.disposables.CompositeDisposable
+import leakcanary.AppWatcher
 import top.thsunkist.tatame.utilities.weak
 
 @HiltAndroidApp

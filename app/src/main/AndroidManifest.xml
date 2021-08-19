@@ -4,14 +4,11 @@
     package="me.taosunkist.hello">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".HiApplication"
-        android:allowBackup="false"
         android:fullBackupContent="@xml/backup_descriptor"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +17,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".ui.test.TestActivity"></activity>
         <activity
             android:name=".ui.main.MainActivity"
             android:label="@string/title_activity_main"
@@ -31,6 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
+
 </manifest>

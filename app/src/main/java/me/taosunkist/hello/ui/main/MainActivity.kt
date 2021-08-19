@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ActivityMainBinding
+import me.taosunkist.hello.utility.printf
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,5 +15,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        printf("taohui","MainActivity onCreate")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        printf("taohui","MainActivity onDestroy")
     }
 }

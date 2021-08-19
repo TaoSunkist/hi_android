@@ -176,6 +176,8 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
     /*implementation 'androidx.legacy:legacy-support-v4:1.0.0'*/
+    implementation "net.aestron.rtc:aestron-audio:1.7.0.6"
+
 }
 
 repositories {

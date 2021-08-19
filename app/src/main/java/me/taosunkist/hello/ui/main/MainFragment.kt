@@ -1,23 +1,21 @@
 package me.taosunkist.hello.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentMainBinding
-import me.taosunkist.hello.utility.ToastyExt
+import me.taosunkist.hello.ui.test.TestActivity
 
 
 class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener, NavigationView.OnNavigationItemSelectedListener {
@@ -78,6 +76,11 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
             R.id.nav_radar_view -> {
                 val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuRadarItemPressed()
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
+            }
+            R.id.nav_animation -> {
+                startActivity(Intent(context,TestActivity::class.java))
+                /*val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuAnimationsItemPressed()
+                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)*/
             }
         }
         return true
