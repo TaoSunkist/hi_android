@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <Button
+        android:id="@+id/btn_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/btn_mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_switch"
+        android:text="ColorMode" />
+
+    <me.taosunkist.hello.ui.shakemusicbar.ShakeMusicBarView
+        android:id="@+id/shake_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/btn_switch"
+        android:orientation="horizontal"
+        custom:barColor="@android:color/darker_gray"
+        custom:barCount="3"
+        custom:barInvsInPx="3"
+        custom:barVelocity="150" />
+
+    <me.taosunkist.hello.ui.shakemusicbar.ShakeMusicBarView
+        android:id="@+id/shake_small_view"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_below="@id/shake_view"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        custom:barColor="@android:color/holo_orange_light"
+        custom:barCount="3"
+        custom:barInvsInPx="1"
+        custom:barVelocity="30" />
+
+    <LinearLayout
+        android:id="@+id/panel_velocity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shake_small_view"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textview_velocity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="Velocity:%d"
+            android:text="Velocity" />
+
+        <SeekBar
+            android:id="@+id/bar_velocity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panel_bar_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/panel_velocity"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textview_barcounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="BarCount:%d" />
+
+        <SeekBar
+            android:id="@+id/bar_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/panel_bar_count"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textview_barinvs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="BarIntervals:%d"
+            android:text="BarIntervals" />
+
+        <SeekBar
+            android:id="@+id/bar_intervals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

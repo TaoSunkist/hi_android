@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.widget.Toast
 import androidx.core.content.ContextCompat.getColor
 import androidx.core.content.ContextCompat.getDrawable
+import androidx.fragment.app.Fragment
 import es.dmoral.toasty.Toasty
 import me.taosunkist.hello.R
 
@@ -47,6 +48,22 @@ object ToastyExt {
     @SuppressWarnings("unused")
     fun error(context: Context?, content: String, showIcon: Boolean = false): Toast? {
         return context?.let {
+            Toasty.custom(
+                it,
+                content,
+                getDrawable(it, R.drawable.ic_clear_white_24dp),
+                getColor(it, R.color.colorPrimary),
+                Color.WHITE,
+                Toast.LENGTH_SHORT,
+                showIcon,
+                false
+            )
+        }
+    }
+
+    @SuppressWarnings("unused")
+    fun error(context: Fragment?, content: String, showIcon: Boolean = false): Toast? {
+        return context?.activity?.let {
             Toasty.custom(
                 it,
                 content,

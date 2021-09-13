@@ -15,11 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        printf("taohui","MainActivity onCreate")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        printf("taohui","MainActivity onDestroy")
     }
 }

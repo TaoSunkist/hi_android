@@ -3,3 +3,6 @@ include ':app',
         ':materials'
 
 setBinding(new Binding([gradle: this]))
+include ':datetimepicker'
+include ':myapplication'
+include ':appkit'

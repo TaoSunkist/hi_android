@@ -99,4 +99,18 @@
         <attr name="fullscreenBackgroundColor" format="color" />
         <attr name="fullscreenTextColor" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="ShakeMusicBarView">
+        <attr name="barCount" format="reference|integer"></attr>
+        <attr name="barInvsInPx" format="reference|integer"></attr>
+        <attr name="barVelocity" format="reference|integer"></attr>
+        <attr name="barColor" format="reference|color"></attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="asia.ivity.android.marqueeview.MarqueeView">
+        <attr name="speed" format="integer"/>
+        <attr name="pause" format="integer"/>
+        <attr name="autoStart" format="boolean"/>
+    </declare-styleable>
 </resources>
