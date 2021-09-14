@@ -2,7 +2,6 @@ include ':app-tatame'
 include ':app',
         ':materials'
 
-setBinding(new Binding([gradle: this]))
-include ':datetimepicker'
+//new Binding([gradle: this]))
 include ':myapplication'
 include ':appkit'
