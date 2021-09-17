@@ -1,5 +1,6 @@
 package me.taosunkist.hello.ui.testrecyclerview.placeholder
 
+import com.mooveit.library.Fakeit
 import java.util.ArrayList
 import java.util.HashMap
 
@@ -14,44 +15,40 @@ object PlaceholderContent {
     /**
      * An array of sample (placeholder) items.
      */
-    val ITEMS: MutableList<PlaceholderItem> = ArrayList()
+    val ITEM_UI_MODELS: MutableList<PlaceholderItemUIModel> = ArrayList()
 
     /**
      * A map of sample (placeholder) items, by ID.
      */
-    val ITEM_MAP: MutableMap<String, PlaceholderItem> = HashMap()
+    private val ITEM_UI_MODEL_MAP: MutableMap<Long, PlaceholderItemUIModel> = HashMap()
 
-    private val COUNT = 25
+    private const val COUNT = 25
 
     init {
         // Add some sample items.
         for (i in 1..COUNT) {
-            addItem(createPlaceholderItem(i))
+            addItem(PlaceholderItemUIModel.fake())
         }
     }
 
-    private fun addItem(item: PlaceholderItem) {
-        ITEMS.add(item)
-        ITEM_MAP.put(item.id, item)
-    }
-
-    private fun createPlaceholderItem(position: Int): PlaceholderItem {
-        return PlaceholderItem(position.toString(), "Item " + position, makeDetails(position))
-    }
-
-    private fun makeDetails(position: Int): String {
-        val builder = StringBuilder()
-        builder.append("Details about Item: ").append(position)
-        for (i in 0..position - 1) {
-            builder.append("\nMore details information here.")
-        }
-        return builder.toString()
+    private fun addItem(itemUIModel: PlaceholderItemUIModel) {
+        ITEM_UI_MODELS.add(itemUIModel)
+        ITEM_UI_MODEL_MAP[itemUIModel.id] = itemUIModel
     }
 
     /**
      * A placeholder item representing a piece of content.
      */
-    data class PlaceholderItem(val id: String, val content: String, val details: String) {
-        override fun toString(): String = content
+    data class PlaceholderItemUIModel(val id: Long, val title: String, val author: String) {
+
+        companion object {
+
+            fun fake(): PlaceholderItemUIModel {
+                val book = Fakeit.book()
+                return PlaceholderItemUIModel(id = System.nanoTime(), title = book.title(), author = book.author())
+            }
+        }
+
+        override fun toString(): String = title
     }
 }

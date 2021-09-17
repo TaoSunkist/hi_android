@@ -11,9 +11,6 @@ import android.view.ViewGroup
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.testrecyclerview.placeholder.PlaceholderContent
 
-/**
- * A fragment representing a list of Items.
- */
 class TestRecyclerViewFragment : Fragment() {
 
     private var columnCount = 1
@@ -32,14 +29,13 @@ class TestRecyclerViewFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_test_recycler_view_list, container, false)
 
-        // Set the adapter
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = when {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = TestRecyclerViewAdapter(PlaceholderContent.ITEMS)
+                adapter = TestRecyclerViewAdapter(PlaceholderContent.ITEM_UI_MODELS)
             }
         }
         return view
@@ -47,10 +43,8 @@ class TestRecyclerViewFragment : Fragment() {
 
     companion object {
 
-        // TODO: Customize parameter argument names
         const val ARG_COLUMN_COUNT = "column-count"
 
-        // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
             TestRecyclerViewFragment().apply {
