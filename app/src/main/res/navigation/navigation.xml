@@ -31,7 +31,7 @@
             app:popExitAnim="@anim/anim_left_out" />
 
         <action
-            android:id="@+id/action_in_main_drawer_layout_menu_test_recycler_view_item_pressed"
+            android:id="@+id/toNavTestRecyclerViewList"
             app:destination="@id/navTestRecyclerView"
             app:enterAnim="@anim/anim_left_in"
             app:exitAnim="@anim/anim_right_out"
@@ -73,5 +73,7 @@
     <fragment
         android:id="@+id/navTestRecyclerView"
         android:name="me.taosunkist.hello.ui.testrecyclerview.TestRecyclerViewFragment"
+        android:label="TestRecyclerViewFragment"
         tools:layout="@layout/fragment_test_recycler_view_list" />
+
 </navigation>

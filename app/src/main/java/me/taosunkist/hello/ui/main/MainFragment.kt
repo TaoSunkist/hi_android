@@ -1,6 +1,5 @@
 package me.taosunkist.hello.ui.main
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
@@ -16,11 +15,7 @@ import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentMainBinding
-import me.taosunkist.hello.ui.BarrageActivity
-import me.taosunkist.hello.ui.shakemusicbar.ShakeMusicBarActivity
-import me.taosunkist.hello.ui.test.TestActivity
 import me.taosunkist.hello.utility.ToastyExt
-
 
 class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener, NavigationView.OnNavigationItemSelectedListener,
     Toolbar.OnMenuItemClickListener {
@@ -84,6 +79,10 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
                 val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuRadarItemPressed()
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
+            R.id.nav_test_recycler_view -> {
+                val direction = MainFragmentDirections.toNavTestRecyclerViewList()
+                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
+            }
             R.id.nav_animation -> {
 //                startActivity(Intent(context, TestActivity::class.java))
                 /*val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuAnimationsItemPressed()
@@ -95,7 +94,6 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
     override fun onMenuItemClick(item: MenuItem): Boolean {
         ToastyExt.error(this, "" + item.itemId)
-        startActivity(Intent(context, BarrageActivity::class.java))
         return true
     }
 }

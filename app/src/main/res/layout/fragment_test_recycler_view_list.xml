@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="me.taosunkist.hello.ui.recycerview.TestRecyclerViewFragment"
+    android:name="me.taosunkist.hello.ui.testrecyclerview.TestRecyclerViewFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
     tools:context=".ui.testrecyclerview.TestRecyclerViewFragment"
-    tools:listitem="@layout/fragment_test_recycler_view" />
+    tools:listitem="@layout/fragment_item_test_recycler_view_list" />
