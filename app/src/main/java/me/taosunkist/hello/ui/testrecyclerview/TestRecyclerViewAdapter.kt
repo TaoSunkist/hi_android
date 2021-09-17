@@ -7,6 +7,7 @@ import android.widget.TextView
 import me.taosunkist.hello.databinding.FragmentItemTestRecyclerViewListBinding
 
 import me.taosunkist.hello.ui.testrecyclerview.placeholder.PlaceholderContent.PlaceholderItemUIModel
+import me.taosunkist.hello.utility.printf
 
 /**
  * [RecyclerView.Adapter] that can display a [PlaceholderItemUIModel].
@@ -25,6 +26,8 @@ class TestRecyclerViewAdapter(
         val itemUIModel = itemUIModels[position]
         holder.idView.text = itemUIModel.title
         holder.contentView.text = itemUIModel.author
+
+        printf("taohui ${holder.itemId} $position")
     }
 
     override fun getItemCount(): Int = itemUIModels.size
@@ -39,5 +42,4 @@ class TestRecyclerViewAdapter(
             return super.toString() + " '" + contentView.text + "'"
         }
     }
-
 }

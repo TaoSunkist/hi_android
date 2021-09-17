@@ -1,17 +1,22 @@
 package me.taosunkist.hello.ui.testrecyclerview
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import me.taosunkist.hello.R
+import me.taosunkist.hello.databinding.FragmentTestRecyclerViewListBinding
+import me.taosunkist.hello.ui.BaseFragment
 import me.taosunkist.hello.ui.testrecyclerview.placeholder.PlaceholderContent
+import me.taosunkist.hello.utility.printf
 
-class TestRecyclerViewFragment : Fragment() {
+class TestRecyclerViewFragment : BaseFragment() {
+
+    private var _binding: FragmentTestRecyclerViewListBinding? = null
+
+    private val binding: FragmentTestRecyclerViewListBinding
+        get() = _binding!!
 
     private var columnCount = 1
 
@@ -23,22 +28,26 @@ class TestRecyclerViewFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_test_recycler_view_list, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        return FragmentTestRecyclerViewListBinding.inflate(inflater, container, false).also { _binding = it }.root
+    }
 
-        if (view is RecyclerView) {
-            with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
-                adapter = TestRecyclerViewAdapter(PlaceholderContent.ITEM_UI_MODELS)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        with(binding.testRecyclerView) {
+            layoutManager = when {
+                columnCount <= 1 -> LinearLayoutManager(context)
+                else -> GridLayoutManager(context, columnCount)
+            }
+            adapter = TestRecyclerViewAdapter(PlaceholderContent.ITEM_UI_MODELS)
+
+            binding.refreshListButton.setOnClickListener {
+                printf("taohui notifyItemRangeChanged(${0}, ${adapter?.itemCount ?: 0})")
+                adapter?.notifyItemRangeChanged(0, adapter?.itemCount ?: 0)
+                /*adapter?.notifyDataSetChanged()*/
             }
         }
-        return view
     }
 
     companion object {
