@@ -1,12 +1,17 @@
 package me.taosunkist.hello.ui.main
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ImageSpan
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -57,6 +62,18 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
         binding.navigationView.getHeaderView(0).avatarImageButton.setOnClickListener { avatarImageButtonPressed(it) }
 
         binding.recyclerView.adapter = MainListAdapter()
+
+        val normalText = "normal normal~"
+        val imageButtonText = "button"
+
+
+        val span: Spannable = SpannableString("Foo  imageplace Bar!")
+        val android = requireContext()!!.resources.getDrawable(R.drawable.bg_room_task_complete_details)
+        android.setBounds(0, 0, 32, 32)
+        val image: ImageSpan = ImageSpan(android, ImageSpan.ALIGN_BASELINE)
+        span.setSpan(image, 3, 4, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
+        binding.imageSpanTextView.text = span
+
     }
 
     private fun avatarImageButtonPressed(it: View) {
@@ -80,13 +97,8 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
             R.id.nav_test_recycler_view -> {
-                val direction = MainFragmentDirections.toNavTestRecyclerViewList()
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
             R.id.nav_animation -> {
-//                startActivity(Intent(context, TestActivity::class.java))
-                /*val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuAnimationsItemPressed()
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)*/
             }
         }
         return true

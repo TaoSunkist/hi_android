@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="id_item_position" type="id" />
+    <item name="id_item_object" type="id" />
+
+    <item name="home_menu_message" type="id" />
+    <item name="home_menu_history" type="id" />
+    <item name="home_menu_diamond" type="id" />
+    <item name="home_menu_vip" type="id" />
+    <item name="home_menu_share_friends" type="id" />
+    <item name="home_menu_setting" type="id" />
+
+    <item name="composite_notices_like_cell" type="id" />
+    <item name="composite_notices_history_cell" type="id" />
+    <item name="composite_notices_visitors_cell" type="id" />
+    <item name="composite_notices_message_cell" type="id" />
+
+    <item name="view_layout_info_tag_key" type="id" />
+</resources>

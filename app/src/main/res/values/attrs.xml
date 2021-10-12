@@ -113,4 +113,8 @@
         <attr name="pause" format="integer"/>
         <attr name="autoStart" format="boolean"/>
     </declare-styleable>
+    <declare-styleable name="CorneredImageView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="fill_color" format="color" />
+    </declare-styleable>
 </resources>

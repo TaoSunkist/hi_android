@@ -61,4 +61,7 @@
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
+    <style name="arrowGrayRotation">
+        <item name="android:rotation">0</item>
+    </style>
 </resources>

@@ -11,7 +11,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.2'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.13'
         classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.1'
         /* https://developer.android.com/training/dependency-injection/hilt-android */

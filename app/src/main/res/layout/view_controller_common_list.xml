@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="0dp"
+                app:contentInsetStart="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/back_image_view"
+                    style="@style/arrowGrayRotation"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingStart="@dimen/margin_large"
+                    android:paddingEnd="@dimen/margin_large"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_arrow_left" />
+
+                <TextView
+                    android:id="@+id/toolbar_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="title"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/common_id_swipe_refresh_layout"
+                android:layout_width="match_parent"
+                app:srlHeaderTranslationViewId="@id/container"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent">
+
+                <FrameLayout
+                    android:id="@+id/common_id_content_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/common_id_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/cell_common" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/empty_tip_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:alpha="0"
+                        android:drawableTop="@drawable/icon_empty_tip"
+                        android:gravity="center_horizontal"
+                        android:text="@string/empty" />
+                </FrameLayout>
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>
