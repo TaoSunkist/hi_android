@@ -30,6 +30,13 @@
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
 
+        <action
+            android:id="@+id/action2NavMultiListFragment"
+            app:destination="@id/navMultiListFragment"
+            app:enterAnim="@anim/anim_left_in"
+            app:exitAnim="@anim/anim_right_out"
+            app:popEnterAnim="@anim/anim_right_in"
+            app:popExitAnim="@anim/anim_left_out" />
 
     </fragment>
 
@@ -62,5 +69,12 @@
         android:name="me.taosunkist.hello.ui.zoomoutanimation.ZoomOutAnimationFragment"
         android:label="ZoomoutAnimationFragment"
         tools:layout="@layout/fragment_browser" />
+
+
+    <fragment
+        android:id="@+id/navMultiListFragment"
+        android:name="me.taosunkist.hello.ui.list.multilist.MultiListFragment"
+        android:label="MultiListFragment"
+        tools:layout="@layout/fragment_multi_list" />
 
 </navigation>

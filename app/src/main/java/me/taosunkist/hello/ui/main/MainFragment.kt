@@ -97,6 +97,8 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
             R.id.nav_test_recycler_view -> {
+                val direction = MainFragmentDirections.action2NavMultiListFragment()
+                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
             R.id.nav_animation -> {
             }
