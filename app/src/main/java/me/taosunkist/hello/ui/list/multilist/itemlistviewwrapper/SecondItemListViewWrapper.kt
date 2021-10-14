@@ -7,16 +7,13 @@ import io.reactivex.rxkotlin.addTo
 import me.taosunkist.hello.R
 import me.taosunkist.hello.data.net.AppService
 import me.taosunkist.hello.databinding.CellCommonBinding
-import me.taosunkist.hello.ui.list.multilist.ConversationCellUIModel
-import me.taosunkist.hello.ui.list.multilist.itemlistviewwrapper.viewholder.SecondViewHolder
+import me.taosunkist.hello.ui.list.multilist.CelllUIModel
 import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.ItemListViewWrapper
 import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.ViewHolder
+import top.thsunkist.tatame.utilities.bind
 import top.thsunkist.tatame.utilities.observeOnMainThread
 
-/**
- * 首页im消息相关的ListVie封装类
- */
-class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<ConversationCellUIModel>(view = view) {
+class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<CelllUIModel>(view = view) {
 
     val positionUIDMap = hashMapOf<String, Int>()
 
@@ -32,7 +29,7 @@ class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<ConversationCe
     )
 
     //绑定 item holder
-    override fun doBindItemViewHolder(holder: ViewHolder, item: ConversationCellUIModel, position: Int) {
+    override fun doBindItemViewHolder(holder: ViewHolder, item: CelllUIModel, position: Int) {
         holder.itemView.setTag(R.id.id_item_position, position)
         (holder as SecondViewHolder).bind(item)
     }
@@ -49,7 +46,7 @@ class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<ConversationCe
                 (items as ArrayList).clear()
             }
             it.list.mapIndexed { _, conversationItem ->
-                ConversationCellUIModel.init(conversationItem = conversationItem)
+                CelllUIModel.init(conversationItem = conversationItem)
             }
         }.observeOnMainThread(onSuccess = { conversationCellUIModels ->
 
@@ -77,11 +74,25 @@ class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<ConversationCe
     }
 
     //点击事件
-    override fun onListOnItemSelected(item: ConversationCellUIModel, position: Int) {
+    override fun onListOnItemSelected(item: CelllUIModel, position: Int) {
     }
 
     //长按点击事件
-    override fun onLongListOnItemSelected(item: ConversationCellUIModel, position: Int) {
+    override fun onLongListOnItemSelected(item: CelllUIModel, position: Int) {
     }
 }
 
+
+
+class SecondViewHolder(val binding: CellCommonBinding) : ViewHolder(binding.root) {
+
+    companion object {
+    }
+
+    fun bind(
+        cellUIModel: CelllUIModel,
+    ) {
+        binding.iconCircleImageView.bind(cellUIModel.imageUIModel)
+        binding.titleTextView.text = cellUIModel.nickname
+    }
+}

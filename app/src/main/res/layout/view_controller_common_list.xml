@@ -51,9 +51,9 @@
             <com.scwang.smartrefresh.layout.SmartRefreshLayout
                 android:id="@+id/common_id_swipe_refresh_layout"
                 android:layout_width="match_parent"
-                app:srlHeaderTranslationViewId="@id/container"
                 android:layout_height="match_parent"
-                android:background="@android:color/transparent">
+                android:background="@android:color/transparent"
+                app:srlHeaderTranslationViewId="@id/container">
 
                 <FrameLayout
                     android:id="@+id/common_id_content_container"
@@ -75,9 +75,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:alpha="0"
-                        android:drawableTop="@drawable/icon_empty_tip"
+                        android:drawableTop="@drawable/lucky_box_empty"
                         android:gravity="center_horizontal"
-                        android:text="@string/empty" />
+                        android:text="@android:string/emptyPhoneNumber" />
                 </FrameLayout>
 
             </com.scwang.smartrefresh.layout.SmartRefreshLayout>

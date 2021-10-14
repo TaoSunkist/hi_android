@@ -5,6 +5,7 @@ import me.taosunkist.hello.utility.Debug
 import top.thsunkist.tatame.model.ui.ImageUIModel
 
 data class MultiListItem(
+    val uid: Long,
     val avatarUrl: String,
     val name: String,
 ) {
@@ -16,6 +17,7 @@ data class MultiListItem(
 
         fun fake(): MultiListItem {
             return MultiListItem(
+                uid = System.nanoTime(),
                 avatarUrl = Debug.images.random(),
                 name = Fakeit.book().author(),
             )
