@@ -9,6 +9,7 @@ import com.mooveit.library.Fakeit
 import me.taosunkist.hello.databinding.FragmentMultiListBinding
 import me.taosunkist.hello.ui.list.multilist.itemlistviewwrapper.FirstListViewWrapper
 import me.taosunkist.hello.ui.list.multilist.itemlistviewwrapper.SecondItemListViewWrapper
+import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.ItemListViewWrapperDelegate
 import top.thsunkist.tatame.model.ui.ImageUIModel
 
 data class MultiListUIModel(val imageUIModel: ImageUIModel, val nickname: String) {
@@ -20,7 +21,7 @@ data class MultiListUIModel(val imageUIModel: ImageUIModel, val nickname: String
     }
 }
 
-class MultiListFragment : Fragment() {
+class MultiListFragment : Fragment(), ItemListViewWrapperDelegate<CelllUIModel> {
 
     companion object {
 
@@ -46,8 +47,14 @@ class MultiListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        secondItemListViewWrapper = SecondItemListViewWrapper(view).apply {}
+        secondItemListViewWrapper = SecondItemListViewWrapper(view).apply {
+            delegate = this@MultiListFragment
+        }
         firstItemListViewWrapper = FirstListViewWrapper(binding.likeEachOthersContainer).apply {}
+
+    }
+
+    override fun listViewControllerOnItemSelected(item: CelllUIModel, position: Int, clickTag: String?) {
 
     }
 }

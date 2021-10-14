@@ -36,7 +36,7 @@ class FirstListViewWrapper(val view: View) : ItemListViewWrapper<CelllUIModel>(v
             } else {
                 view.visibility = View.VISIBLE
             }
-            fillInItemsByPageIndex(it, page)
+            addItems(it, page)
         }, onError = {
         }, onTerminate = {
         }).addTo(compositeDisposable = compositeDisposable)

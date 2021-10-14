@@ -416,7 +416,7 @@ abstract class ItemListViewWrapper<T>(private val view: View) : ItemListCallback
     /**
      * Append given items list at the end.在末尾附加给定的项目列表
      */
-    fun fillInItemsByPageIndex(items: List<T>, page: Int) {
+    fun addItems(items: List<T>, page: Int) {
         var nextPage = page + 1
         if (items.size < pageSize) {
             nextPage = PAGE_NO_MORE

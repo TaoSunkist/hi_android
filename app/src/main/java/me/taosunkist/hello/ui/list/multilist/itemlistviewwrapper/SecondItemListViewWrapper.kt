@@ -15,8 +15,6 @@ import top.thsunkist.tatame.utilities.observeOnMainThread
 
 class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<CelllUIModel>(view = view) {
 
-    val positionUIDMap = hashMapOf<String, Int>()
-
     override var pageSize: Int = 20
 
     //创建item holder
@@ -40,28 +38,9 @@ class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<CelllUIModel>(
             pageSize = pageSize,
             pageIndex = pageIndex,
         ).map {
-
-            if (pageIndex == 1) {
-                positionUIDMap.clear()
-                (items as ArrayList).clear()
-            }
-            it.list.mapIndexed { _, conversationItem ->
-                CelllUIModel.init(conversationItem = conversationItem)
-            }
-        }.observeOnMainThread(onSuccess = { conversationCellUIModels ->
-
-            var nextPage = pageIndex + 1
-            val messageCount = conversationCellUIModels.size
-            if (messageCount < pageSize) {
-                nextPage = PAGE_NO_MORE
-            }
-
-
-            items?.toMutableList()?.let {
-                clearItems()
-                it.addAll(it)
-                setItems(items = it, nextPage = nextPage)
-            }
+            it.list.map { CelllUIModel.init(conversationItem = it) }
+        }.observeOnMainThread(onSuccess = {
+            addItems(it, pageIndex)
         }, onError = {
         }, onTerminate = {
             swipeToRefreshView.finishRefresh()
@@ -81,7 +60,6 @@ class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<CelllUIModel>(
     override fun onLongListOnItemSelected(item: CelllUIModel, position: Int) {
     }
 }
-
 
 
 class SecondViewHolder(val binding: CellCommonBinding) : ViewHolder(binding.root) {
