@@ -64,12 +64,7 @@ class SecondItemListViewWrapper(view: View) : ItemListViewWrapper<CelllUIModel>(
 
 class SecondViewHolder(val binding: CellCommonBinding) : ViewHolder(binding.root) {
 
-    companion object {
-    }
-
-    fun bind(
-        cellUIModel: CelllUIModel,
-    ) {
+    fun bind(cellUIModel: CelllUIModel) {
         binding.iconCircleImageView.bind(cellUIModel.imageUIModel)
         binding.titleTextView.text = cellUIModel.nickname
     }
