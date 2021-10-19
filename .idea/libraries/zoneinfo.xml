@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zoneinfo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/example/study/book/the_go_programing_language/zoneinfo/zoneinfo.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

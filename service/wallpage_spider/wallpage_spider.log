@@ -1,0 +1,297 @@
+[37m[T]  2020-10-15 16:54:03 999 wallpaper_spider.go:19 running [0m
+[34m[D]  2020-10-15 16:54:03 999 wallpaper_spider.go:20 running [0m
+[36m[I]  2020-10-15 16:54:03 999 wallpaper_spider.go:21 running [0m
+[33m[W]  2020-10-15 16:54:03 999 wallpaper_spider.go:22 running [0m
+[31m[E]  2020-10-15 16:54:03 999 wallpaper_spider.go:23 running [0m
+[36m[I]  2020-10-15 16:54:04 999 wallpaper_spider.go:51 caught succeed [0m
+[37m[T]  2020-10-15 16:54:30 999 wallpaper_spider.go:19 running [0m
+[34m[D]  2020-10-15 16:54:30 999 wallpaper_spider.go:20 running [0m
+[36m[I]  2020-10-15 16:54:30 999 wallpaper_spider.go:21 running [0m
+[33m[W]  2020-10-15 16:54:30 999 wallpaper_spider.go:22 running [0m
+[31m[E]  2020-10-15 16:54:30 999 wallpaper_spider.go:23 running [0m
+[36m[I]  2020-10-15 16:54:31 999 wallpaper_spider.go:51 caught succeed [0m
+[37m[T]  2020-10-15 16:54:54 999 wallpaper_spider.go:19 running [0m
+[34m[D]  2020-10-15 16:54:54 999 wallpaper_spider.go:20 running [0m
+[36m[I]  2020-10-15 16:54:54 999 wallpaper_spider.go:21 running [0m
+[33m[W]  2020-10-15 16:54:54 999 wallpaper_spider.go:22 running [0m
+[31m[E]  2020-10-15 16:54:54 999 wallpaper_spider.go:23 running [0m
+[36m[I]  2020-10-15 16:54:55 999 wallpaper_spider.go:51 caught succeed [0m
+[36m[I]  2020-10-15 16:54:55 999 wallpaper_spider.go:51 caught succeed [0m
+[36m[I]  2020-10-15 16:54:55 999 wallpaper_spider.go:51 caught succeed [0m
+[37m[T]  2020-10-15 17:01:28 999 wallpaper_spider.go:20 running [0m
+[34m[D]  2020-10-15 17:01:28 999 wallpaper_spider.go:21 running [0m
+[36m[I]  2020-10-15 17:01:28 999 wallpaper_spider.go:22 running [0m
+[33m[W]  2020-10-15 17:01:28 999 wallpaper_spider.go:23 running [0m
+[31m[E]  2020-10-15 17:01:28 999 wallpaper_spider.go:24 running [0m
+[36m[I]  2020-10-15 17:01:29 999 wallpaper_spider.go:51 caught succeed [0m
+[36m[I]  2020-10-15 17:01:30 999 wallpaper_spider.go:51 caught succeed [0m
+[37m[T]  2020-10-22 13:54:28 999 wallpaper_spider.go:19 running [0m
+[34m[D]  2020-10-22 13:54:28 999 wallpaper_spider.go:20 running [0m
+[36m[I]  2020-10-22 13:54:28 999 wallpaper_spider.go:21 running [0m
+[33m[W]  2020-10-22 13:54:28 999 wallpaper_spider.go:22 running [0m
+[31m[E]  2020-10-22 13:54:29 999 wallpaper_spider.go:23 running [0m
+[36m[I]  2020-10-22 13:54:30 999 wallpaper_spider.go:46 caught succeed [0m
+[37m[T]  2020-10-22 13:54:50 999 wallpaper_spider.go:19 running [0m
+[34m[D]  2020-10-22 13:54:50 999 wallpaper_spider.go:20 running [0m
+[36m[I]  2020-10-22 13:54:50 999 wallpaper_spider.go:21 running [0m
+[33m[W]  2020-10-22 13:54:50 999 wallpaper_spider.go:22 running [0m
+[31m[E]  2020-10-22 13:54:50 999 wallpaper_spider.go:23 running [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/oxzk8m [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/g83m3d [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/oxkjgm [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/xlx8ez [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/39xklv [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/oxkdd9 [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/vg7lv3 [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/zm1p2j [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/zml1ly [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/832511 [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/5w1561 [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/83235k [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/xlx51z [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/eydr7l [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/832grj [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/2epkm9 [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/xlx87d [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/6k9qqq [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/eydo9w [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/39xrx3 [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/oxk559 [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/832gvy [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/g83jz3 [0m
+[37m[T]  2020-10-22 13:54:52 999 wallpaper_spider.go:65 https://wallhaven.cc/w/39xqzy [0m
+[36m[I]  2020-10-22 13:54:52 999 wallpaper_spider.go:46 caught succeed [0m
+[37m[T]  2020-10-22 14:31:10 999 wallpaper_spider.go:34 running [0m
+[34m[D]  2020-10-22 14:31:10 999 wallpaper_spider.go:35 running [0m
+[36m[I]  2020-10-22 14:31:10 999 wallpaper_spider.go:36 running [0m
+[33m[W]  2020-10-22 14:31:10 999 wallpaper_spider.go:37 running [0m
+[31m[E]  2020-10-22 14:31:10 999 wallpaper_spider.go:38 running [0m
+[37m[T]  2020-10-22 14:31:10 999 wallpaper_spider.go:41 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001ca3c0 false 0 {0xc00020fef0} <nil> {{0 0} {<nil>} map[] 0} 0xc00027cb60 0x185cfc0 0xc000278940 false <nil>} dial tcp 127.0.0.1:3306: connect: connection refused [0m
+[36m[I]  2020-10-22 14:31:11 999 wallpaper_spider.go:64 caught succeed [0m
+[37m[T]  2020-10-22 14:31:32 999 wallpaper_spider.go:34 running [0m
+[34m[D]  2020-10-22 14:31:32 999 wallpaper_spider.go:35 running [0m
+[36m[I]  2020-10-22 14:31:32 999 wallpaper_spider.go:36 running [0m
+[33m[W]  2020-10-22 14:31:32 999 wallpaper_spider.go:37 running [0m
+[31m[E]  2020-10-22 14:31:32 999 wallpaper_spider.go:38 running [0m
+[37m[T]  2020-10-22 14:31:32 999 wallpaper_spider.go:41 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc000306000 false 0 {0xc00020df40} <nil> {{0 0} {<nil>} map[] 0} 0xc00007c0d0 0x185cfc0 0xc00000e0a0 false <nil>}dial tcp 127.0.0.1:3306: connect: connection refused [0m
+[36m[I]  2020-10-22 14:31:33 999 wallpaper_spider.go:64 caught succeed [0m
+[37m[T]  2020-10-22 14:33:00 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:33:00 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:33:00 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:33:00 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:33:00 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:33:00 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0000ac000 false 0 {0xc000209ef0} <nil> {{0 0} {<nil>} map[] 0} 0xc000090340 0x17f1d60 0xc00009e060 false <nil>}dial tcp 127.0.0.1:3306: connect: connection refused [0m
+[37m[T]  2020-10-22 14:33:09 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:33:09 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:33:09 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:33:09 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:33:09 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:33:09 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001963c0 false 0 {0xc0001d7f40} <nil> {{0 0} {<nil>} map[] 0} 0xc00024a8f0 0x17f1d60 0xc0002449c0 false <nil>}dial tcp 127.0.0.1:3306: connect: connection refused [0m
+[37m[T]  2020-10-22 14:33:33 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:33:33 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:33:33 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:33:33 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:33:33 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:33:33 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001c43c0 false 0 {0xc000205f40} <nil> {{0 0} {<nil>} map[] 0} 0xc000270dd0 0x17f1d60 0xc000272940 false <nil>}dial tcp 127.0.0.1:3306: connect: connection refused [0m
+[37m[T]  2020-10-22 14:33:42 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:33:42 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:33:42 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:33:42 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:33:42 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:33:42 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001c43c0 false 0 {0xc000205f40} <nil> {{0 0} {<nil>} map[] 0} 0xc000270d00 0x17f1d60 0xc000272940 false <nil>}dial tcp 127.0.0.1:3306: connect: connection refused [0m
+[37m[T]  2020-10-22 14:34:30 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:34:30 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:34:30 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:34:30 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:34:30 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:34:30 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc00031c000 false 0 {0xc000257f40} <nil> {{0 0} {<nil>} map[] 0} 0xc000300340 0x17f1d60 0xc00030e060 false <nil>}dial tcp 127.0.0.1:3306: connect: connection refused [0m
+[37m[T]  2020-10-22 14:36:00 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:36:00 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:36:00 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:36:00 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:36:00 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:36:00 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 <nil> false 0 {0xc000211ef0} <nil> {{0 0} {<nil>} map[] 0} 0xc000278c30 0x17f1d60 0xc00027a940 false <nil>}default addr for network '35.186.152.49' unknown [0m
+[37m[T]  2020-10-22 14:36:11 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:36:11 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:36:11 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:36:11 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:36:11 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:36:11 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 <nil> false 0 {0xc000209ef0} <nil> {{0 0} {<nil>} map[] 0} 0xc0002768f0 0x17f1d60 0xc000270940 false <nil>}default addr for network '35.186.152.49' unknown [0m
+[37m[T]  2020-10-22 14:36:25 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:36:25 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:36:25 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:36:25 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:36:25 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:36:25 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 <nil> false 0 {0xc000211ef0} <nil> {{0 0} {<nil>} map[] 0} 0xc00027e9c0 0x17f1d60 0xc000278940 false <nil>}default addr for network '35.186.152.49:3306' unknown [0m
+[37m[T]  2020-10-22 14:37:25 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:37:25 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:37:25 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:37:25 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:37:25 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:37:25 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001c23c0 false 0 {0xc000203f40} <nil> {{0 0} {<nil>} map[] 0} 0xc000274a90 0x17f1d60 0xc0002709a0 false <nil>}Error 1049: Unknown database 'dbname' [0m
+[37m[T]  2020-10-22 14:37:35 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:37:35 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:37:35 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:37:35 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:37:35 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:37:49 999 wallpaper_spider.go:30 running [0m
+[34m[D]  2020-10-22 14:37:49 999 wallpaper_spider.go:31 running [0m
+[36m[I]  2020-10-22 14:37:49 999 wallpaper_spider.go:32 running [0m
+[33m[W]  2020-10-22 14:37:49 999 wallpaper_spider.go:33 running [0m
+[31m[E]  2020-10-22 14:37:49 999 wallpaper_spider.go:34 running [0m
+[37m[T]  2020-10-22 14:37:49 999 wallpaper_spider.go:37 &{{{0 0} 0 0 0 0} <nil> <nil> 0 0xc0001cc3c0 false 0 {0xc000211ef0} <nil> {{0 0} {<nil>} map[] 0} 0xc00027e820 0x17f1d60 0xc0002789a0 false <nil>} <nil> [0m
+[37m[T]  2020-10-22 14:48:04 999 wallpaper_spider.go:44 running [0m
+[34m[D]  2020-10-22 14:48:04 999 wallpaper_spider.go:45 running [0m
+[36m[I]  2020-10-22 14:48:04 999 wallpaper_spider.go:46 running [0m
+[33m[W]  2020-10-22 14:48:04 999 wallpaper_spider.go:47 running [0m
+[31m[E]  2020-10-22 14:48:04 999 wallpaper_spider.go:48 running [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 oxzk8m [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 g83m3d [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 oxkjgm [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 xlx8ez [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 39xklv [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 oxkdd9 [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 vg7lv3 [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 zm1p2j [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 zml1ly [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 832511 [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 5w1561 [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 83235k [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 xlx51z [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 832grj [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 eydr7l [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 2epkm9 [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 xlx87d [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 6k9qqq [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 39xrx3 [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 eydo9w [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 oxk559 [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 832gvy [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 g83jz3 [0m
+[37m[T]  2020-10-22 14:48:05 999 wallpaper_spider.go:112 39xqzy [0m
+[36m[I]  2020-10-22 14:48:05 999 wallpaper_spider.go:82 caught succeed [0m
+[37m[T]  2020-10-22 14:54:08 999 wallpaper_spider.go:46 running [0m
+[34m[D]  2020-10-22 14:54:08 999 wallpaper_spider.go:47 running [0m
+[36m[I]  2020-10-22 14:54:08 999 wallpaper_spider.go:48 running [0m
+[33m[W]  2020-10-22 14:54:09 999 wallpaper_spider.go:49 running [0m
+[31m[E]  2020-10-22 14:54:09 999 wallpaper_spider.go:50 running [0m
+[37m[T]  2020-10-22 14:54:09 999 wallpaper_spider.go:120 oxzk8m{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349649 https://wallhaven.cc/w/oxzk8m 1 false oxzk8m} [0m
+[37m[T]  2020-10-22 14:54:09 999 wallpaper_spider.go:120 g83m3d{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349649 https://wallhaven.cc/w/g83m3d 1 false g83m3d} [0m
+[37m[T]  2020-10-22 14:54:09 999 wallpaper_spider.go:120 oxkjgm{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349649 https://wallhaven.cc/w/oxkjgm 1 false oxkjgm} [0m
+[37m[T]  2020-10-22 14:54:09 999 wallpaper_spider.go:120 xlx8ez{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349649 https://wallhaven.cc/w/xlx8ez 1 false xlx8ez} [0m
+[37m[T]  2020-10-22 14:54:09 999 wallpaper_spider.go:120 39xklv{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349649 https://wallhaven.cc/w/39xklv 1 false 39xklv} [0m
+[37m[T]  2020-10-22 14:54:09 999 wallpaper_spider.go:120 oxkdd9{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349649 https://wallhaven.cc/w/oxkdd9 1 false oxkdd9} [0m
+[37m[T]  2020-10-22 14:54:09 999 wallpaper_spider.go:120 vg7lv3{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349649 https://wallhaven.cc/w/vg7lv3 1 false vg7lv3} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 zm1p2j{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/zm1p2j 1 false zm1p2j} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 zml1ly{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/zml1ly 1 false zml1ly} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 832511{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/832511 1 false 832511} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 5w1561{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/5w1561 1 false 5w1561} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 83235k{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/83235k 1 false 83235k} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 xlx51z{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/xlx51z 1 false xlx51z} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 832grj{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/832grj 1 false 832grj} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 eydr7l{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/eydr7l 1 false eydr7l} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 2epkm9{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/2epkm9 1 false 2epkm9} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 xlx87d{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/xlx87d 1 false xlx87d} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 6k9qqq{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/6k9qqq 1 false 6k9qqq} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 39xrx3{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/39xrx3 1 false 39xrx3} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 eydo9w{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/eydo9w 1 false eydo9w} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 832gvy{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/832gvy 1 false 832gvy} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 oxk559{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/oxk559 1 false oxk559} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 g83jz3{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/g83jz3 1 false g83jz3} [0m
+[37m[T]  2020-10-22 14:54:10 999 wallpaper_spider.go:120 39xqzy{{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} 1603349650 https://wallhaven.cc/w/39xqzy 1 false 39xqzy} [0m
+[36m[I]  2020-10-22 14:54:10 999 wallpaper_spider.go:84 caught succeed [0m
+[37m[T]  2020-10-22 15:03:01 999 wallpaper_spider.go:49 running [0m
+[34m[D]  2020-10-22 15:03:01 999 wallpaper_spider.go:50 running [0m
+[36m[I]  2020-10-22 15:03:01 999 wallpaper_spider.go:51 running [0m
+[33m[W]  2020-10-22 15:03:01 999 wallpaper_spider.go:52 running [0m
+[31m[E]  2020-10-22 15:03:01 999 wallpaper_spider.go:53 running [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ oxzk8m] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxzk8m 1 false oxzk8m } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ g83m3d] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/g83m3d 1 false g83m3d } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ oxkjgm] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxkjgm 1 false oxkjgm } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ xlx8ez] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx8ez 1 false xlx8ez } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 39xklv] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xklv 1 false 39xklv } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ oxkdd9] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxkdd9 1 false oxkdd9 } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ vg7lv3] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/vg7lv3 1 false vg7lv3 } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ zm1p2j] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/zm1p2j 1 false zm1p2j } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ zml1ly] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/zml1ly 1 false zml1ly } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 832511] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832511 1 false 832511 } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 5w1561] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/5w1561 1 false 5w1561 } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 83235k] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/83235k 1 false 83235k } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ xlx51z] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx51z 1 false xlx51z } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 832grj] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832grj 1 false 832grj } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ eydr7l] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/eydr7l 1 false eydr7l } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 2epkm9] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/2epkm9 1 false 2epkm9 } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ xlx87d] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx87d 1 false xlx87d } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 6k9qqq] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/6k9qqq 1 false 6k9qqq } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 39xrx3] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xrx3 1 false 39xrx3 } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ eydo9w] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/eydo9w 1 false eydo9w } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 832gvy] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832gvy 1 false 832gvy } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ oxk559] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxk559 1 false oxk559 } [0m
+[37m[T]  2020-10-22 15:03:02 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ g83jz3] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/g83jz3 1 false g83jz3 } [0m
+[37m[T]  2020-10-22 15:03:03 999 wallpaper_spider.go:130 [https:/ / wallhaven.cc/ w/ 39xqzy] {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xqzy 1 false 39xqzy } [0m
+[36m[I]  2020-10-22 15:03:03 999 wallpaper_spider.go:92 caught succeed [0m
+[37m[T]  2020-10-22 15:03:42 999 wallpaper_spider.go:49 running [0m
+[34m[D]  2020-10-22 15:03:42 999 wallpaper_spider.go:50 running [0m
+[36m[I]  2020-10-22 15:03:42 999 wallpaper_spider.go:51 running [0m
+[33m[W]  2020-10-22 15:03:42 999 wallpaper_spider.go:52 running [0m
+[31m[E]  2020-10-22 15:03:42 999 wallpaper_spider.go:53 running [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxzk8m 1 false oxzk8m }https:/,/,wallhaven.cc/,w/,oxzk8m [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/g83m3d 1 false g83m3d }https:/,/,wallhaven.cc/,w/,g83m3d [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxkjgm 1 false oxkjgm }https:/,/,wallhaven.cc/,w/,oxkjgm [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx8ez 1 false xlx8ez }https:/,/,wallhaven.cc/,w/,xlx8ez [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xklv 1 false 39xklv }https:/,/,wallhaven.cc/,w/,39xklv [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxkdd9 1 false oxkdd9 }https:/,/,wallhaven.cc/,w/,oxkdd9 [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/vg7lv3 1 false vg7lv3 }https:/,/,wallhaven.cc/,w/,vg7lv3 [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/zm1p2j 1 false zm1p2j }https:/,/,wallhaven.cc/,w/,zm1p2j [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/zml1ly 1 false zml1ly }https:/,/,wallhaven.cc/,w/,zml1ly [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832511 1 false 832511 }https:/,/,wallhaven.cc/,w/,832511 [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/5w1561 1 false 5w1561 }https:/,/,wallhaven.cc/,w/,5w1561 [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/83235k 1 false 83235k }https:/,/,wallhaven.cc/,w/,83235k [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx51z 1 false xlx51z }https:/,/,wallhaven.cc/,w/,xlx51z [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832grj 1 false 832grj }https:/,/,wallhaven.cc/,w/,832grj [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/eydr7l 1 false eydr7l }https:/,/,wallhaven.cc/,w/,eydr7l [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/2epkm9 1 false 2epkm9 }https:/,/,wallhaven.cc/,w/,2epkm9 [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx87d 1 false xlx87d }https:/,/,wallhaven.cc/,w/,xlx87d [0m
+[37m[T]  2020-10-22 15:03:43 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/6k9qqq 1 false 6k9qqq }https:/,/,wallhaven.cc/,w/,6k9qqq [0m
+[37m[T]  2020-10-22 15:03:44 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xrx3 1 false 39xrx3 }https:/,/,wallhaven.cc/,w/,39xrx3 [0m
+[37m[T]  2020-10-22 15:03:44 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/eydo9w 1 false eydo9w }https:/,/,wallhaven.cc/,w/,eydo9w [0m
+[37m[T]  2020-10-22 15:03:44 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832gvy 1 false 832gvy }https:/,/,wallhaven.cc/,w/,832gvy [0m
+[37m[T]  2020-10-22 15:03:44 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxk559 1 false oxk559 }https:/,/,wallhaven.cc/,w/,oxk559 [0m
+[37m[T]  2020-10-22 15:03:44 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/g83jz3 1 false g83jz3 }https:/,/,wallhaven.cc/,w/,g83jz3 [0m
+[37m[T]  2020-10-22 15:03:44 999 wallpaper_spider.go:130 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xqzy 1 false 39xqzy }https:/,/,wallhaven.cc/,w/,39xqzy [0m
+[36m[I]  2020-10-22 15:03:44 999 wallpaper_spider.go:92 caught succeed [0m
+[37m[T]  2020-10-22 15:09:24 999 wallpaper_spider.go:49 running [0m
+[34m[D]  2020-10-22 15:09:24 999 wallpaper_spider.go:50 running [0m
+[36m[I]  2020-10-22 15:09:24 999 wallpaper_spider.go:51 running [0m
+[33m[W]  2020-10-22 15:09:24 999 wallpaper_spider.go:52 running [0m
+[31m[E]  2020-10-22 15:09:24 999 wallpaper_spider.go:53 running [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxzk8m 1 false oxzk8m w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/g83m3d 1 false g83m3d w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxkjgm 1 false oxkjgm w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx8ez 1 false xlx8ez w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xklv 1 false 39xklv w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxkdd9 1 false oxkdd9 w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/vg7lv3 1 false vg7lv3 w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/zm1p2j 1 false zm1p2j w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/zml1ly 1 false zml1ly w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832511 1 false 832511 w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/5w1561 1 false 5w1561 w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/83235k 1 false 83235k w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx51z 1 false xlx51z w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832grj 1 false 832grj w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/eydr7l 1 false eydr7l w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/2epkm9 1 false 2epkm9 w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/xlx87d 1 false xlx87d w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/6k9qqq 1 false 6k9qqq w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xrx3 1 false 39xrx3 w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/eydo9w 1 false eydo9w w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/832gvy 1 false 832gvy w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/oxk559 1 false oxk559 w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/g83jz3 1 false g83jz3 w} [0m
+[37m[T]  2020-10-22 15:09:26 999 wallpaper_spider.go:133 {{0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>} https://wallhaven.cc/w/39xqzy 1 false 39xqzy w} [0m
+[36m[I]  2020-10-22 15:09:26 999 wallpaper_spider.go:92 caught succeed [0m
+[37m[T]  2021-02-07 17:46:51 999 wallpage_spider.go:61 running [0m
+[34m[D]  2021-02-07 17:46:51 999 wallpage_spider.go:62 running [0m
+[36m[I]  2021-02-07 17:46:51 999 wallpage_spider.go:63 running [0m
+[33m[W]  2021-02-07 17:46:51 999 wallpage_spider.go:64 running [0m
+[31m[E]  2021-02-07 17:46:51 999 wallpage_spider.go:65 running [0m

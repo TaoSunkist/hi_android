@@ -1,0 +1,12 @@
+{
+  "csv_paths": [
+    "/data1/temp_btc/two"
+  ],
+  "load_csv_cqls": [
+    "LOAD CSV WITH HEADERS FROM '%s' AS line CREATE (:Two { time:line.time, tx_index:line.tx_index, vin_sz:line.vin_sz, hash:line.hash, vout_sz: line.vout_sz})"
+  ],
+  "http_addr": "http://xqneo.xiaoxinyong.com/db/data/transaction/commit",
+  "bolt_addr": "http://",
+  "batch_num": 6,
+  "complete_suffix": ".complete"
+}

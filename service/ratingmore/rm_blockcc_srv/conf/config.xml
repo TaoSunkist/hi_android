@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<srv_cfg env="prod" debug="W">
+    <cfg env="prod" port="9011">
+        <redis alias="redis" url="redis-server.com:6379" driver="redis"/>
+        <postgres alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_btc password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_thd_db url="host=datasource.com port=9700 user=postgres dbname=ym_data_thd password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+        <kafka_cfgs>
+            <kafka_cfg topic="priceHistory" broker_list="172.21.234.242:9092,172.21.234.243:9092,172.21.234.244:9092"/>
+            <kafka_cfg topic="symbol" broker_list="172.21.234.242:9092,172.21.234.243:9092,172.21.234.244:9092"/>
+        </kafka_cfgs>
+        <blockcc>
+            <market_pairs/>
+        </blockcc>
+    </cfg>
+
+    <cfg env="sim" port="9011">
+        <redis alias="redis" url="redis-server.com:6379" driver="redis"/>
+        <postgres alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_btc password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_thd_db url="host=datasource.com port=9700 user=postgres dbname=ym_data_thd password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+    </cfg>
+
+    <cfg env="dev" port="9011">
+        <redis alias="redis" url="redis-server.com:6379" driver="redis"/>
+        <postgres alias="psql" url="host=datasource.com port=9700 user=postgres dbname=ym_data_btc password=postgres_BTC sslmode=disable" driver="postgres"/>
+        <ym_data_thd_db url="host=datasource.com port=9700 user=postgres dbname=ym_data_thd password=postgres_BTC sslmode=disable" alias="psql" driver="postgres"/>
+    </cfg>
+</srv_cfg>

@@ -1,0 +1,9 @@
+[37m[T]  2018-07-10 19:11:44 999 ch7_test.go:46 {name1 addr1} [0m
+[37m[T]  2018-07-10 19:11:44 999 ch7_test.go:46 {name2 addr2} [0m
+[37m[T]  2018-07-10 19:11:45 999 ch7_test.go:46 {name3 addr3} [0m
+[37m[T]  2018-07-10 19:11:45 999 ch7_test.go:46 {name4 addr4} [0m
+[37m[T]  2018-07-10 19:11:46 999 ch7_test.go:46 {name5 addr5} [0m
+[37m[T]  2018-07-10 19:11:46 999 ch7_test.go:46 {name6 addr6} [0m
+[37m[T]  2018-07-10 19:11:55 999 ch7_test.go:46 {name1 addr1} [0m
+[37m[T]  2018-07-10 19:11:55 999 ch7_test.go:46 {name2 addr2} [0m
+[37m[T]  2018-07-10 19:11:56 999 ch7_test.go:46 {name3 addr3} [0m
