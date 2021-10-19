@@ -1,0 +1,80 @@
+,中文,英文,阿语
+,关注,Follower,متابعة
+,送礼,Send gift,ارسل هدية
+,资料,Profile,بروفايل
+,房间任务,Room task,مهمة الغرفة
+,成员,Member,عضو
+,房间公告,Room topic,موضوع الغرفة
+,欢迎进入房间,Welcome to the room,مرحبا بكم في الغرفة
+,房间等级,Room level,مستوى الغرفة
+,仍需要 %s 经验值才能升级,Still need %s experience point to upgrade,ما زلت بحاجة إلى ٪ s نقطة خبرة للترقية
+,家族,Guild,قبيلة
+,您还没有加入家族,You have not joined the guild,لم تنضم إلى قبيلة
+,创建,Create,إنشاء
+,加入,Join,انضم
+,房间等级升级到LV2以上，您将获得对应房间等级的宝箱奖励，每周只能打开一次,"Upgrade the room level to LV2 and above, you will get the treasure chest reward corresponding to the room level, which can only be opened once a week",قم بترقية مستوى الغرفة إلى المستوى 2 وما فوق ، سوف تحصل على مكافأة الصندوق الكنز المقابلة لمستوى الغرفة ، والتي لا يمكن فتحها إلا مرة واحدة في الأسبوع
+,成员：%s / %s,Member: %s / %s,العضو:٪ s /٪ s
+,退出,Exit,خروج
+,房间勋章奖励,Room Badge Reward,مكافأة الشارة الغرفة
+,当您的房间等级提升4-6级时，您将获得以下奖励。,"When your room level upgrade 4-6, you will get the following rewards.",عندما يرتقي مستوى غرفتك من 4 إلى 6 ، سوف تحصل على المكافآت التالية.
+,等级宝箱奖励, Level treasure chest reward,مكافأة الصندوق الكنز المستوى
+,每周升级成功将获得宝箱奖励,Successful upgrade every week will get treasure chest rewards,ترقية ناجحة كل أسبوع سوف تحصل على مكافآت الصندوق الكنز
+,房间等级：%s,Room Level: %s,مستوى الغرفة:٪ s
+,送高价值礼物，房主升级房间等级任务越快，最多只能获得99个赠品，超过99个赠品将不再赠送,"Send high price of the gift,the faster the task of upgrading the room level for the room owner，You can only get a maximum of 99 free gifts, more than 99 free gifts will not be given",أرسل سعرًا مرتفعًا للهدية ، زادت سرعة مهمة ترقية مستوى الغرفة لصاحب الغرفة، يمكنك فقط الحصول على 99 هدية مجانية كحد أقصى ، ولن يتم تقديم أكثر من 99 هدية مجانية
+,送礼,Send gift,إرسال هدية
+,送礼价格越高，为房主提升房间等级任务越快喔~,"Send high price of the gift,the faster the task of upgrading the room level for the room owner",كلما يرسل الهدية الغالية، زادت سرعة مهمة ترقية مستوى الغرفة لصاحب الغرفة
+,每日任务,Daily task,مهمة يومية
+,每周任务,Weekly task,مهمة أسبوعية
+,完成任务领取礼物，帮助房主提升房间等级,Complete tasks and receive gift to help room owner upgrade the room level.,إكمال المهام وإستلام هدية لمساعدة صاحب الغرفة ترقية مستوى الغرفة
+,本房间内送3个礼物,Send 3 gifts in this room,إرسال 3 هدايا في هذه الغرفة
+,本房间内送5个礼物,Send 5 gifts in this room,إرسال 5 هدايا في هذه الغرفة
+,本房间内送30个礼物,Send 30 gifts this room,إرسال 3 هداية في هذه الغرفة
+,本房间停留5分钟,Stay in this room for 5 minutes,البقاء في هذه الغرفة لمدة 5 دقائق
+,本房间停留30分钟,Stay in this room for 30 minutes,البقاء في هذه الغرفة لمدة 30 دقيقة
+,未完成,Uncompleted,غير مكتمل
+,已领取,Receive,إستلام
+,已领取,Received,تم الاستلام
+,累计3天完成“在本房间停留30分钟”的任务,"Complete the task of ""staying in this room for 30 minutes"" in 3 days","إكمال مهمة ""البقاء في هذه الغرفة لمدة 30 دقيقة"" في 3 أيام"
+,累计5天完成“在本房间停留30分钟”的任务,"Complete the task of ""staying in this room for 30 minutes"" in 5 days","إكمال مهمة ""البقاء في هذه الغرفة لمدة 30 دقيقة"" في 5 أيام"
+,累计7天完成“在本房间停留30分钟”的任务,"Complete the task of ""staying in this room for 30 minutes"" in 7 days","إكمال مهمة ""البقاء في هذه الغرفة لمدة 30 دقيقة"" في 7 أيام"
+,宝箱升级任务,Treasure box upgrade task,مهمة ترقية صندوق الكنز
+,房间等级升级到LV.2等级以上，你将获得对应的房间等级宝箱，打开宝箱获得奖励，每周只能打开一次,"Upgrade the room level to LV2 or above, you will get the corresponding room level treasure box,open the treasure box to get rewards,you can only open it once a week",ترقية مستوى الغرفة إلى LV2 أو أعلي، سوف تحصل على صندوق الكنز مستوى الغرفة المقابلة، فتح صندوق الكنز للحصول على المكافآت، يمكنك فتحه فقط مرة واحدة في الأسبوع
+,恭喜你,Congratulations,مبروك
+,一个免费礼物=10经验值，免费领取礼物，帮助提升房主经验值等级.,"1 free gift = 10 experience points, receive a free gift to help  room owner upgrade the experience level.",1 هدية مجانية = 10 قيمة الخبرة، الإستلام على هدية مجانية لمساعدة صاحب غرفة ترقية مستوى الخبرة.
+,每周日沙特23：59开始结算房主当前最终房间等级，房主根据每周结算的等级，每周只能打开一次宝箱,"The current final room level of the room owner will be calculated from 23:59 every Sunday in Saudi time,the room owner can only open the treasure box once a week according to the room level of weekly calculated",سيتم احتساب مستوى الغرفة الحالي لصاحب الغرفة من الساعة 23:59 كل يوم أحد بتوقيت السعودية ، ويمكن صاحب الغرفة فتح صندوق الكنز مرة واحدة فقط في الأسبوع وفقًا لمستوى الغرفة الأسبوعي المحسوب
+,免费礼物,Free gift,هدية مجانية
+,宝箱任务奖励,Treasure box task reward,مكافأة مهمة صندوق الكنز
+,宝箱,Treasure box,صندوق الكنز
+,房间等级,Room level,مستوى الغرفة
+,奖励,Reward,مكافأة
+,随机赠送,Random gift,هدية عشوائية
+,Go,Go,الذهاب
+,您还没有完成升级任务,You have not completed the upgrade task,لم تكمل مهمة الترقية
+,确认,Confirm,تأكيد
+,查看详情,View details,عرض التفاصيل
+,完成房间任务将可获得免费礼物喔~,Completing room task will get free gifts~,إكمال مهمة الغرفة سوف تحصل على هدايا مجانية ~
+,恭喜您有已完成的房间等级任务,Congratulations you have completed the room level task,مبروك ، لقد أكملت مهمة مستوى الغرفة
+,Details,Details,تفاصيل
+,重置房间封面,Reset room avatar,إعادة تعيين الصورة للغرفة
+,重设魅力值,Reset charm value,إعادة تعيين قيمة الجاذبي
+,举报房间,Report room,إبلاغ عن الغرفة
+,您的等级还差%s可升级至LV.n,Your level still less %s can be upgraded to LV.n,مستواك الذي لا يزال أقل من٪ s يمكن ترقية إلى LV.n
+,全球,Global,العالمي
+,阿语区,Arabic,العربية
+,英语区,English,الإنجليزية
+,越南区,Vietnam,فيتنام
+,印尼区,Indonesia,إندونيسيا
+,剩余%S EXP 升级 LV.N,The remaining %S EXP upgrade LV.N,%S  EXP المتبقية LV.N
+,恭喜您获得上周 财富 榜TOP1，奖励已发送，请注意查收,Congratulations you winning the Wealth rank Top1 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 1 في ترتيب الثروة الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周魅力 榜TOP1，奖励已发送，请注意查收,Congratulations you winning the Charm rank Top1 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 1 في ترتيب الجاذبي الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周 房间 榜TOP1，奖励已发送，请注意查收,Congratulations you winning the Room rank Top1 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 1 في تربيب الغرفة الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周 家族 榜TOP1，奖励已发送，请注意查收,Congratulations you winning the Guild rank Top1 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 1 في ترتيب القبائل الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周 财富 榜TOP2，奖励已发送，请注意查收,Congratulations you winning the Wealth rank Top2 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 2 في ترتيب الثروة الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周魅力 榜TOP2，奖励已发送，请注意查收,Congratulations you winning the Charm rank Top2 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 2 في ترتيب الجاذبي الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周 房间 榜TOP2，奖励已发送，请注意查收,Congratulations you winning the Room rank Top2 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 2 في تربيب الغرفة الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周家族榜TOP2，奖励已发送，请注意查收,Congratulations you winning the Guild rank Top2 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 2 في ترتيب القبائل الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周 财富 榜TOP3，奖励已发送，请注意查收,Congratulations you winning the Wealth rank Top3 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 3 في ترتيب الثروة الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周魅力 榜TOP3，奖励已发送，请注意查收,Congratulations you winning the Charm rank Top3 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 3 في ترتيب الجاذبي الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周 房间 榜TOP3，奖励已发送，请注意查收,Congratulations you winning the Room rank Top3 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 3 في تربيب الغرفة الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,恭喜您获得上周 家族 榜TOP3，奖励已发送，请注意查收,Congratulations you winning the Guild rank Top3 last week. The reward has been sent. Please check it carefully.,مبروك لك فزت توب 3 في ترتيب القبائل الأسبوع الماضي. تم إرسال المكافأة. يرجى التحقق من ذلك.
+,确定重置魅力值？,Are yousure to reset charm value?,هل تتأكد من إعادة تعيين قيمة الجاذبي؟

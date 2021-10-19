@@ -4486,3 +4486,7 @@
  [0m
 [36m[I]  2021-03-09 18:03:56 999 Csv2IosI18n.go:143 ur<string name="s_times">s% بار</string>
  [0m
+[36m[I]  2021-08-30 10:45:38 999 Csv2IosI18n.go:143 ar<string name="call_time_">مدة المكالمة s%</string>
+ [0m
+[36m[I]  2021-08-30 10:45:38 999 Csv2IosI18n.go:143 ar<string name="s_times">s% مرة</string>
+ [0m

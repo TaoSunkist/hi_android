@@ -15,122 +15,15 @@ import (
 )
 
 func main() {
-	// csvFilePath := os.Args[1]
-	// outputLanguage := os.Args[2]
-	// fmt.Println(csvFilePath)
-	// outputLanguages := strings.Split(outputLanguage, ",")
-	// for i := 0; i < len(outputLanguages); i++ {
-	// 	fmt.Println(outputLanguages[i])
-	// }
-	// Csv2AndroidI18n2(csvFilePath, outputLanguages)
-	csvFilePath := "/Users/taohui/DevStation/hi_golang/src/hi_golang/tools/csv2i18n/csv/lightchat5.csv"
+	// csvFilePath := "/Users/taohui/DevStation/hi_golang/src/hi_golang/tools/csv2i18n/csv/lightght2.csv"
+	csvFilePath := os.Args[1]
+	outputLanguage := os.Args[2]
+	fmt.Println(csvFilePath)
+	outputLanguages := strings.Split(outputLanguage, ",")
+	for i := 0; i < len(outputLanguages); i++ {
+		fmt.Println(outputLanguages[i])
+	}
 	Csv2AndroidI18n(csvFilePath)
-}
-
-func Csv2AndroidI18n2(csvFilePath string, outputLanguages []string) {
-
-	csvFile, _ := os.Open(csvFilePath)
-	reader := csv.NewReader(bufio.NewReader(csvFile))
-	reader.LazyQuotes = true
-	androidI18nFiles := make(map[string][]string, len(outputLanguages))
-
-	for {
-		firstBool := atomic.NewBool(true)
-		line, error := reader.Read()
-		if error == io.EOF {
-		}
-		if firstBool.Swap(false) == true {
-			continue
-		}
-
-		for index := 0; index < len(outputLanguages); index++ {
-			elem := outputLanguages[index]
-			androidI18nFiles[elem] = append(androidI18nFiles[elem], line[index])
-		}
-	}
-
-	fmt.Println(androidI18nFiles)
-
-	re := regexp.MustCompile("\\w{2,}")
-
-	/* initialize keys */
-	var keys []string
-	var keyDuplicateMap = make(map[string]uint32)
-	for _, v := range androidI18nFiles["en"] {
-		upperString := strings.ToLower(v)
-		upperString = strings.ReplaceAll(upperString, "’", "")
-		upperString = strings.ReplaceAll(upperString, "'", "")
-		upperString = strings.ReplaceAll(upperString, " ", "_")
-		upperString = re.FindString(upperString)
-		if duplicateID, isExist := keyDuplicateMap[upperString]; isExist {
-			keyDuplicateMap[upperString] = duplicateID + 1
-			keys = append(keys, fmt.Sprint(upperString, keyDuplicateMap[upperString]))
-		} else {
-			keyDuplicateMap[upperString] = 0
-			keys = append(keys, upperString)
-		}
-	}
-
-	/** 国家的简写 to 文件名 */
-	for countryShortName, androidI18nFileValues := range androidI18nFiles {
-		mkDirAllResultErr := os.MkdirAll("values-"+countryShortName, 0777)
-		if mkDirAllResultErr != nil {
-			log.Fatal(mkDirAllResultErr)
-		}
-		stringsPwd := "values-" + countryShortName + "/strings.xml"
-		androidI18nFile, err := os.OpenFile(stringsPwd, os.O_CREATE|os.O_RDWR, 0777)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		/** 生成xml文件头部声明 */
-		if _, err := androidI18nFile.WriteString("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n"); err != nil {
-			log.Fatal(err)
-		}
-
-		for k, content := range keys {
-			fmt.Println(countryShortName, androidI18nFileValues)
-
-			if len(content) == 0 {
-				break
-			}
-
-			var androidI18nFileValue = androidI18nFileValues[k]
-			androidI18nFileValue = strings.ReplaceAll(androidI18nFileValue, "\n", `\n`)
-			itemString := fmt.Sprint(`<string name="`, content, `">`, androidI18nFileValue, `</string>`, "\n")
-			itemString = strings.ReplaceAll(itemString, `'`, `\'`)
-
-			/** 为了处理一些特殊语言在输入的时候会自动顺序颠倒的问题 */
-			if (strings.Compare("ar", countryShortName) == 0 || strings.Compare("ur", countryShortName) == 0) && strings.Contains(itemString, "s%") {
-				lop.I(countryShortName, itemString)
-				itemString = strings.ReplaceAll(itemString, "s%", "%s")
-			}
-
-			var count = strings.Count(itemString, "%s")
-			for i := 0; i < count; i++ {
-				itemString = strings.Replace(itemString, "%s", fmt.Sprintf("%%%d$s", i+1), 1)
-			}
-
-			/** 处理百分号，%符号影响格式化的操作 */
-			var percentRegex = regexp.MustCompile("\\d+(?:\\.\\d+)?%")
-			var percentRegexResults = percentRegex.FindAllString(itemString, len(itemString))
-
-			if len(percentRegexResults) > 0 {
-				for i := 0; i < len(percentRegexResults); i++ {
-					var percentRegexResult = percentRegexResults[i]
-					var count = strings.Count(itemString, percentRegexResults[i])
-					for i := 0; i < count; i++ {
-						itemString = strings.Replace(itemString, percentRegexResult, percentRegexResult+"%", 1)
-					}
-				}
-			}
-			androidI18nFile.WriteString(itemString)
-		}
-
-		androidI18nFile.WriteString("\n</resources>")
-		androidI18nFile.Close()
-	}
-	fmt.Println("operated was successfully. ")
 }
 
 func Csv2AndroidI18n(csvFilePath string) {
@@ -204,7 +97,7 @@ func Csv2AndroidI18n(csvFilePath string) {
 		/* 乌尔都语
 		androidI18nFiles["ur"] = append(androidI18nFiles["ur"], line[13])*/
 	}
-	fmt.Println(androidI18nFiles)
+
 	re := regexp.MustCompile("\\w{2,}")
 
 	/* initialize keys */
