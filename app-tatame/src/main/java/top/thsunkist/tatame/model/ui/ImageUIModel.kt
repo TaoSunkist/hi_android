@@ -12,27 +12,25 @@ data class ImageUIModel(
     var imageRes: Int? = null,
     var placeholder: Int? = null,
     var targetWidth: Int = 0,
-    var targetHeight: Int = 0
+    var targetHeight: Int = 0,
 ) : Parcelable {
 
     companion object {
 
         private val displayImageLength = Dimens.dpToPx(50)
-        private val feedThumbnailMaximumWidth = Dimens.screenWidth / 2
-        private val chatThumbnailMaximumWidth = (Dimens.screenWidth * 0.75).toInt()
 
         fun fake(): ImageUIModel {
             return ImageUIModel(
-                    imageUrl = Debug.images.random(),
-                    placeholder = R.drawable.placeholder_image
+                imageUrl = Debug.images.random(),
+                placeholder = R.drawable.ic_baseline_image_24
             )
         }
 
         fun fakeList(): List<ImageUIModel> {
             return (0..(5..10).random()).map {
                 ImageUIModel(
-                        imageUrl = Debug.images.random(),
-                        placeholder = R.drawable.placeholder_image
+                    imageUrl = Debug.images.random(),
+                    placeholder = R.drawable.ic_baseline_image_24
                 )
             }
         }
@@ -42,7 +40,7 @@ data class ImageUIModel(
          */
         fun placeholder(imageRes: Int): ImageUIModel {
             return ImageUIModel(
-                    imageRes = imageRes
+                imageRes = imageRes
             )
         }
 
@@ -51,42 +49,21 @@ data class ImageUIModel(
          */
         fun displayImage(imageUrl: String?): ImageUIModel {
             return ImageUIModel(
-                    imageUrl = imageUrl,
-                    placeholder = R.drawable.placeholder_user,
-                    targetWidth = displayImageLength,
-                    targetHeight = displayImageLength
+                imageUrl = imageUrl,
+                placeholder = R.drawable.ic_sharp_account_box_24,
+                targetWidth = displayImageLength,
+                targetHeight = displayImageLength
             )
         }
 
-        /**
-         * 首页的缩略图.
-         */
-        fun feedThumbnail(imageUrl: String?): ImageUIModel {
-            return ImageUIModel(
-                    imageUrl = imageUrl,
-                    placeholder = R.drawable.placeholder_image,
-                    targetWidth = feedThumbnailMaximumWidth
-            )
-        }
-
-        /**
-         * 聊天的缩略图.
-         */
-        fun chatThumbnail(imageUrl: String?): ImageUIModel {
-            return ImageUIModel(
-                    imageUrl = imageUrl,
-                    placeholder = R.drawable.placeholder_image,
-                    targetWidth = chatThumbnailMaximumWidth
-            )
-        }
 
         /**
          * 原图.
          */
         fun full(imageUrl: String?): ImageUIModel {
             return ImageUIModel(
-                    imageUrl = imageUrl,
-                    placeholder = R.drawable.placeholder_image
+                imageUrl = imageUrl,
+                placeholder = R.drawable.placeholder_image
             )
         }
     }
