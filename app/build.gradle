@@ -84,7 +84,7 @@ protobuf {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     /* 素材依赖 */
-    implementation project(path: ':materials')
+    implementation project(path: ':ui-kit')
     implementation project(path: ':app-tatame')
 
     implementation 'junit:junit:4.13.2'
@@ -112,15 +112,12 @@ dependencies {
 
     /* official fragment navigation */
     def nav_version = "2.3.5"
-    // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-    // Feature module Support
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
-
-    // Testing Navigation
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
+    /* grpc */
     implementation 'io.grpc:grpc-okhttp:1.36.0'
     implementation 'io.grpc:grpc-stub:1.36.0'
 

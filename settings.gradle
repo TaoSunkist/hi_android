@@ -1,7 +1,2 @@
 include ':app-tatame'
-include ':app',
-        ':materials'
-
-//new Binding([gradle: this]))
-include ':myapplication'
-include ':appkit'
+include ':app', ':ui-kit', ':myapplication', ':app-kit'
