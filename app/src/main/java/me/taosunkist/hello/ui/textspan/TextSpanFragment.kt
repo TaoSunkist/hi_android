@@ -9,11 +9,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.NavHostFragment
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentTextSpanBinding
-import me.taosunkist.hello.ui.BaseFragment
-import top.thsunkist.appkit.utility.StringUtil
+import top.thsunkist.appkit.utility.StringUtils
 
 class TextSpanFragment : Fragment() {
 
@@ -37,11 +35,11 @@ class TextSpanFragment : Fragment() {
         val spannableStringBuilder = SpannableStringBuilder(result)
         spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")), 0, nick.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        val roomIDPositionPair = StringUtil.findKeyWordPositionInTextPart(result, roomID.toString())
+        val roomIDPositionPair = StringUtils.findKeyWordPositionInTextPart(result, roomID.toString())
         spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
             roomIDPositionPair.first, roomIDPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        val targetNickPositionPair = StringUtil.findKeyWordPositionInTextPart(result, targetNick)
+        val targetNickPositionPair = StringUtils.findKeyWordPositionInTextPart(result, targetNick)
         spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
             targetNickPositionPair.first, targetNickPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 

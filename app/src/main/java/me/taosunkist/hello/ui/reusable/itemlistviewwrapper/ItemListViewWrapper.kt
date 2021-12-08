@@ -17,7 +17,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener
 import io.reactivex.disposables.CompositeDisposable
 import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.ItemListViewWrapper.Companion.VIEW_TYPE_HEAD
-import me.taosunkist.hello.utility.Dimens
+import top.thsunkist.appkit.utility.Dimens
 import top.thsunkist.tatame.utilities.weak
 
 /** 加载的loadingView Holoder */

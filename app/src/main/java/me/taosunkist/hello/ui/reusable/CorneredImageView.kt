@@ -5,7 +5,7 @@ import android.graphics.*
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import me.taosunkist.hello.R
-import me.taosunkist.hello.utility.Dimens
+import top.thsunkist.appkit.utility.Dimens
 
 private data class PathSize(var width: Int = 0, var height: Int = 0)
 

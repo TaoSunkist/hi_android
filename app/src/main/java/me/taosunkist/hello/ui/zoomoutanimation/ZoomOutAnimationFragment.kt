@@ -3,7 +3,6 @@ package me.taosunkist.hello.ui.zoomoutanimation
 import android.os.Bundle
 import android.os.Handler
 import android.view.*
-import android.view.animation.AccelerateInterpolator
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -11,9 +10,6 @@ import androidx.fragment.app.Fragment
 import es.dmoral.toasty.Toasty
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentZoomOutAnimationBinding
-import me.taosunkist.hello.utility.Debug.Companion.colors
-import me.taosunkist.hello.utility.Dimens.screenHeight
-import me.taosunkist.hello.utility.Dimens.screenWidth
 
 const val propertyNameInScaleX = "scaleX"
 

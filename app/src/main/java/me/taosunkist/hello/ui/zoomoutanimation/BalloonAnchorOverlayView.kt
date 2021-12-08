@@ -15,7 +15,7 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.ColorInt
 import androidx.annotation.Px
-import me.taosunkist.hello.utility.Dimens
+import top.thsunkist.appkit.utility.Dimens
 
 sealed class BalloonOverlayShape
 object BalloonOverlayOval : BalloonOverlayShape()

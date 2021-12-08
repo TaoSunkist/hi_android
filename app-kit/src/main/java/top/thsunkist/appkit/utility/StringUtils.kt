@@ -7,7 +7,7 @@ import androidx.annotation.DrawableRes
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
-class StringUtil {
+class StringUtils {
 
     companion object {
 

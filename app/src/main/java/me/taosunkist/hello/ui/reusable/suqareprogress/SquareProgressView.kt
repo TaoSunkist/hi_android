@@ -9,7 +9,7 @@ import android.graphics.Path
 import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.ColorInt
-import me.taosunkist.hello.utility.Dimens.dpToPx
+import top.thsunkist.appkit.utility.Dimens.dpToPx
 import java.text.DecimalFormat
 
 class SquareProgressView : View {

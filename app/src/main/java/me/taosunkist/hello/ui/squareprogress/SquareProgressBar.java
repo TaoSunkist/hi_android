@@ -17,7 +17,7 @@ import androidx.annotation.ColorInt;
 import me.taosunkist.hello.R;
 import me.taosunkist.hello.ui.reusable.suqareprogress.PercentStyle;
 import me.taosunkist.hello.ui.reusable.suqareprogress.SquareProgressView;
-import me.taosunkist.hello.utility.Dimens;
+import top.thsunkist.appkit.utility.Dimens;
 
 /**
  * The basic {@link SquareProgressBar}. This class includes all the methods you need to modify your
