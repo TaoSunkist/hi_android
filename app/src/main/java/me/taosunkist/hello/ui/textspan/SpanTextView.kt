@@ -34,6 +34,7 @@ class SpanStyleBuilder {
 
     fun build(textView: TextView): Any {
         spannableStringBuilder = SpannableStringBuilder(textView.text)
+
         matchResultSequence.forEach {
             it.let {
                 spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#454343")),

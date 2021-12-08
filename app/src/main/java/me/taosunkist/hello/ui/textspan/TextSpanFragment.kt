@@ -28,6 +28,7 @@ class TextSpanFragment : Fragment() {
 
         createSpanStyle(binding.normalSpanTextView) {
             this.matchResultSequence = "(if)|(for)|(is)".toRegex().findAll(textContent)
+
         }
     }
 }
