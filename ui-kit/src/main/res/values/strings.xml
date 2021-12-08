@@ -1,2 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="s_s_send_to_">%1$s在%2$s房间送给%3$s</string>
 </resources>

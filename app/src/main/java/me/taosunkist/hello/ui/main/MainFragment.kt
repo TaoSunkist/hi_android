@@ -1,9 +1,13 @@
 package me.taosunkist.hello.ui.main
 
+import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import android.text.style.ImageSpan
 import android.view.LayoutInflater
 import android.view.MenuItem
@@ -20,6 +24,7 @@ import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentMainBinding
+import me.taosunkist.hello.utility.StringUtil
 import me.taosunkist.hello.utility.ToastyExt
 
 class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener, NavigationView.OnNavigationItemSelectedListener,
@@ -63,16 +68,23 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
         binding.recyclerView.adapter = MainListAdapter()
 
-        val normalText = "normal normal~"
-        val imageButtonText = "button"
+        val nick = "taohui"
+        val targetNick = "wangbo"
+        val roomID = System.currentTimeMillis()
+        val result = getString(R.string.s_s_send_to_, nick, roomID.toString(), targetNick)
 
+        val spannableStringBuilder = SpannableStringBuilder(result)
+        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")), 0, nick.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        val span: Spannable = SpannableString("Foo  imageplace Bar!")
-        val android = requireContext()!!.resources.getDrawable(R.drawable.bg_room_task_complete_details)
-        android.setBounds(0, 0, 32, 32)
-        val image: ImageSpan = ImageSpan(android, ImageSpan.ALIGN_BASELINE)
-        span.setSpan(image, 3, 4, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
-        binding.imageSpanTextView.text = span
+        val roomIDPositionPair = StringUtil.findWordPosition(result, roomID.toString())
+        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
+            roomIDPositionPair.first, roomIDPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        val targetNickPositionPair = StringUtil.findWordPosition(result, targetNick)
+        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
+            targetNickPositionPair.first, targetNickPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        binding.imageSpanTextView.text = spannableStringBuilder
 
     }
 

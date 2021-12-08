@@ -41,6 +41,7 @@
                     android:id="@+id/recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:alpha="0"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
@@ -52,7 +53,8 @@
                         android:id="@+id/image_span_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/app_name" />
+                        android:text="@string/app_name"
+                        android:textColor="@color/colorPrimary" />
                 </FrameLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -66,7 +68,8 @@
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
             app:headerLayout="@layout/nav_header_main"
-            app:menu="@menu/activity_main_drawer" />
+            app:menu="@menu/activity_main_drawer"
+            tools:alpha="0" />
     </androidx.drawerlayout.widget.DrawerLayout>
 
 </layout>
