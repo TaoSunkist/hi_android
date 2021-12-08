@@ -7,10 +7,11 @@
         android:layout_height="match_parent"
         tools:context=".ui.textspan.TextSpanFragment">
 
-        <me.taosunkist.hello.ui.textspan.SpanTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/normal_span_text_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:includeFontPadding="false" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
