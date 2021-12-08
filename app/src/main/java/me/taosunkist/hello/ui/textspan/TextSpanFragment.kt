@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.mooveit.library.Fakeit
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentTextSpanBinding
 import top.thsunkist.appkit.utility.StringUtils
@@ -27,25 +28,10 @@ class TextSpanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val nick = "taohui"
-        val targetNick = "wangbo"
-        val roomID = System.currentTimeMillis()
-        val result = getString(R.string.s_s_send_to_, nick, roomID.toString(), targetNick)
-
-        val spannableStringBuilder = SpannableStringBuilder(result)
-        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")), 0, nick.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        val roomIDPositionPair = StringUtils.findKeyWordPositionInTextPart(result, roomID.toString())
-        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
-            roomIDPositionPair.first, roomIDPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        val targetNickPositionPair = StringUtils.findKeyWordPositionInTextPart(result, targetNick)
-        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
-            targetNickPositionPair.first, targetNickPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        binding.normalSpanTextView.text = spannableStringBuilder
-
-
+        binding.normalSpanTextView.bind(SpanTextUIModel.init(
+            keywords = arrayOf("Biden", "Putin", "Ukraine", "Russia"),
+            textContent = "Biden warns Putin of sanctions, aid for Ukraine military if Russia invades")
+        )
     }
 
     companion object {
