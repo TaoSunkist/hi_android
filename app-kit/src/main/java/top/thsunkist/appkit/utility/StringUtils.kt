@@ -18,7 +18,7 @@ class StringUtils {
          * @return return target start-position and end-position in text-content
          */
         @JvmStatic
-        fun findKeyWordPositionInTextPart(text: String = "I love you so much", targetWord: String = "love"): Pair<Int, Int> {
+        fun findKeyWordPositionInTextPart(text: String = "I love you so much", targetWord: String = "love"): IntRange {
             val word: Pattern = Pattern.compile(targetWord)
             val match: Matcher = word.matcher(text)
 
@@ -30,7 +30,7 @@ class StringUtils {
                 println("Found love at index " + match.start().toString() + " - " + (match.end()))
             }
 
-            return Pair(startPosition, endPosition)
+            return IntRange(startPosition, endPosition)
         }
 
 

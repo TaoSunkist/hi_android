@@ -44,14 +44,14 @@ dependencies {
     implementation project(path: ':ui-kit')
 
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.5.31'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.31"
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.reflect
 
     implementation 'com.github.moove-it:fakeit:v0.7'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
     implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.1'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

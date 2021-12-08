@@ -1,14 +1,22 @@
 package me.taosunkist.hello.ui.textspan
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.Spanned
+import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
+import android.text.style.LineBackgroundSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.buildSpannedString
+import androidx.core.text.set
+import androidx.core.text.toSpannable
+import androidx.core.text.toSpanned
 import com.mooveit.library.Fakeit
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentTextSpanBinding
@@ -28,16 +36,24 @@ class TextSpanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.normalSpanTextView.bind(SpanTextUIModel.init(
-            keywords = arrayOf("Biden", "Putin", "Ukraine", "Russia"),
-            textContent = "Biden warns Putin of sanctions, aid for Ukraine military if Russia invades")
-        )
-    }
+        val matchResult = "a".toRegex().find("Biden warns Putin of sanctions, aid for Ukraine military if Russia invades")
 
-    companion object {
+        val buildSpannedString = buildSpannedString {
 
-        @JvmStatic
-        fun newInstance() =
-            TextSpanFragment().apply {}
+            append("Biden warns Putin of sanctions, aid for Ukraine military if Russia invades")
+
+            setSpan(ForegroundColorSpan(Color.parseColor("#454343")),
+                matchResult?.range?.start ?: 0,
+                (matchResult?.range?.endInclusive ?: 0) + 1,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+            setSpan(BackgroundColorSpan(Color.parseColor("#A12323")),
+                matchResult?.range?.first ?: 0,
+                (matchResult?.range?.endInclusive ?: 0) + 1,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        }
+        binding.normalSpanTextView.text = buildSpannedString
+
+
     }
 }

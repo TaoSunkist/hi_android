@@ -16,6 +16,7 @@ class HiApplication : MultiDexApplication() {
     lateinit var refWatcher: RefWatcher
 
     companion object {
+
         private val TAG = HiApplication::class.java.name
 
         val GSON = Gson()
@@ -29,8 +30,10 @@ class HiApplication : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        Fakeit.init()
 
+        CONTEXT = this
+
+        Fakeit.init()
         setupLeakCanary()
     }
 
