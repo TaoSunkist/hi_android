@@ -14,7 +14,7 @@ import android.view.ViewGroup
 import android.view.Window
 import top.thsunkist.tatame.ui.giftbox.views.ExplosionAnimator
 import top.thsunkist.tatame.utilities.Dimens
-import top.thsunkist.tatame.utilities.ImageUtils
+import top.thsunkist.appkit.utility.ImageUtils
 import java.util.*
 
 class ExplosionField : View {

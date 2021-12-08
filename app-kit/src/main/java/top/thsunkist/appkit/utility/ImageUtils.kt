@@ -1,4 +1,4 @@
-package top.thsunkist.tatame.utilities
+package top.thsunkist.appkit.utility
 
 import android.content.ContentValues
 import android.content.Context

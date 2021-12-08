@@ -39,6 +39,14 @@
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
 
+        <action
+            android:id="@+id/action2NavTextSpanFragment"
+            app:destination="@id/navTextSpanFragment"
+            app:enterAnim="@anim/anim_left_in"
+            app:exitAnim="@anim/anim_right_out"
+            app:popEnterAnim="@anim/anim_right_in"
+            app:popExitAnim="@anim/anim_left_out" />
+
     </fragment>
 
     <fragment

@@ -11,12 +11,12 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.GestureDetectorCompat
+import top.thsunkist.appkit.utility.printf
 import top.thsunkist.tatame.ui.reusable.viewcontroller.BaseActivity
 import top.thsunkist.tatame.ui.reusable.viewcontroller.animation.AnimationEndListener
 import top.thsunkist.tatame.ui.reusable.viewcontroller.controller.ViewController
 import top.thsunkist.tatame.ui.reusable.viewcontroller.presentation.PresentationStyle
 import top.thsunkist.tatame.ui.reusable.viewcontroller.presentation.PresentingAnimation
-import top.thsunkist.tatame.utilities.printf
 import top.thsunkist.tatame.utilities.weak
 import kotlin.math.max
 

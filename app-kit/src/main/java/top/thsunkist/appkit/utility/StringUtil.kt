@@ -1,5 +1,9 @@
 package top.thsunkist.appkit.utility
 
+import android.content.Context
+import android.graphics.drawable.Drawable
+import androidx.annotation.AnyRes
+import androidx.annotation.DrawableRes
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -27,6 +31,23 @@ class StringUtil {
             }
 
             return Pair(startPosition, endPosition)
+        }
+
+
+        /**
+         */
+        @AnyRes
+        fun getAnyResID(context: Context, defType: String = "mipmap", resName: String?): Int? {
+            return if (resName.isNullOrBlank()) {
+                val resID = context.resources.getIdentifier(resName, "mipmap", context.packageName)
+                return if (resID > 0) {
+                    resID
+                } else {
+                    null
+                }
+            } else {
+                null
+            }
         }
     }
 

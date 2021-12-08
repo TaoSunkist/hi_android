@@ -2,8 +2,8 @@ package top.thsunkist.tatame.model.ui
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
+import top.thsunkist.appkit.utility.Debug
 import top.thsunkist.tatame.R
-import top.thsunkist.tatame.utilities.Debug
 import top.thsunkist.tatame.utilities.Dimens
 
 @Parcelize

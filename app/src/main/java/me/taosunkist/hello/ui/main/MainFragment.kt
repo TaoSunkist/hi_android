@@ -62,25 +62,6 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
         binding.navigationView.getHeaderView(0).avatarImageButton.setOnClickListener { avatarImageButtonPressed(it) }
 
         binding.recyclerView.adapter = MainListAdapter()
-
-        val nick = "taohui"
-        val targetNick = "wangbo"
-        val roomID = System.currentTimeMillis()
-        val result = getString(R.string.s_s_send_to_, nick, roomID.toString(), targetNick)
-
-        val spannableStringBuilder = SpannableStringBuilder(result)
-        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")), 0, nick.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        val roomIDPositionPair = StringUtil.findKeyWordPositionInTextPart(result, roomID.toString())
-        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
-            roomIDPositionPair.first, roomIDPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        val targetNickPositionPair = StringUtil.findKeyWordPositionInTextPart(result, targetNick)
-        spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
-            targetNickPositionPair.first, targetNickPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        binding.imageSpanTextView.text = spannableStringBuilder
-
     }
 
     private fun avatarImageButtonPressed(it: View) {
@@ -103,8 +84,8 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
                 val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuRadarItemPressed()
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
-            R.id.nav_test_recycler_view -> {
-                val direction = MainFragmentDirections.action2NavMultiListFragment()
+            R.id.nav_text_span -> {
+                val direction = MainFragmentDirections.action2NavTextSpanFragment()
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
             R.id.nav_animation -> {
