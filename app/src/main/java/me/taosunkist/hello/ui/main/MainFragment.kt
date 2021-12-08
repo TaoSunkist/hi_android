@@ -1,21 +1,16 @@
 package me.taosunkist.hello.ui.main
 
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
-import android.text.style.ImageSpan
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -24,7 +19,7 @@ import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentMainBinding
-import me.taosunkist.hello.utility.StringUtil
+import top.thsunkist.appkit.utility.StringUtil
 import me.taosunkist.hello.utility.ToastyExt
 
 class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener, NavigationView.OnNavigationItemSelectedListener,
@@ -76,11 +71,11 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
         val spannableStringBuilder = SpannableStringBuilder(result)
         spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")), 0, nick.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        val roomIDPositionPair = StringUtil.findWordPosition(result, roomID.toString())
+        val roomIDPositionPair = StringUtil.findKeyWordPositionInTextPart(result, roomID.toString())
         spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
             roomIDPositionPair.first, roomIDPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
-        val targetNickPositionPair = StringUtil.findWordPosition(result, targetNick)
+        val targetNickPositionPair = StringUtil.findKeyWordPositionInTextPart(result, targetNick)
         spannableStringBuilder.setSpan(ForegroundColorSpan(Color.parseColor("#000000")),
             targetNickPositionPair.first, targetNickPositionPair.second, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 

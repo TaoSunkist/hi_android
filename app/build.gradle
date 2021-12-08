@@ -92,6 +92,7 @@ dependencies {
     /* 素材依赖 */
     implementation project(path: ':ui-kit')
     implementation project(path: ':app-tatame')
+    implementation project(path: ':app-kit')
 
     implementation 'junit:junit:4.13.2'
 

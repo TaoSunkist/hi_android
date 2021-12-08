@@ -1,4 +1,4 @@
-package me.taosunkist.hello.utility
+package top.thsunkist.appkit.utility
 
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -14,7 +14,7 @@ class StringUtil {
          * @return return target start-position and end-position in text-content
          */
         @JvmStatic
-        fun findWordPosition(text: String = "I love you so much", targetWord: String = "love"): Pair<Int, Int> {
+        fun findKeyWordPositionInTextPart(text: String = "I love you so much", targetWord: String = "love"): Pair<Int, Int> {
             val word: Pattern = Pattern.compile(targetWord)
             val match: Matcher = word.matcher(text)
 

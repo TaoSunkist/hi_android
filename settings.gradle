@@ -1,2 +1,3 @@
 include ':app-tatame'
 include ':app', ':ui-kit', ':myapplication'
+include ':app-kit'
