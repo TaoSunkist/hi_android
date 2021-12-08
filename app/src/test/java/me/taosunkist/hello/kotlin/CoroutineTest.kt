@@ -1,7 +1,6 @@
-package me.taosunkist.hello.kotlinpractice
+package me.taosunkist.hello.kotlin
 
 import kotlinx.coroutines.*
-import kotlinx.coroutines.channels.ActorScope
 import org.junit.Test
 import kotlin.concurrent.thread
 
