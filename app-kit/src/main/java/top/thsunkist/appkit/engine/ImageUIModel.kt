@@ -1,10 +1,10 @@
-package top.thsunkist.tatame.model.ui
+package top.thsunkist.appkit.engine
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
+import top.thsunkist.appkit.R
 import top.thsunkist.appkit.utility.Debug
-import top.thsunkist.tatame.R
-import top.thsunkist.tatame.utilities.Dimens
+import top.thsunkist.appkit.utility.Dimens
 
 @Parcelize
 data class ImageUIModel(

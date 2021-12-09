@@ -2,7 +2,6 @@ package me.taosunkist.hello.data.net.model
 
 import com.mooveit.library.Fakeit
 import me.taosunkist.hello.utility.Debug
-import top.thsunkist.tatame.model.ui.ImageUIModel
 
 data class MultiListItem(
     val uid: Long,

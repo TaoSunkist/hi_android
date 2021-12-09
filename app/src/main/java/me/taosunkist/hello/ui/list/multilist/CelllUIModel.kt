@@ -1,7 +1,7 @@
 package me.taosunkist.hello.ui.list.multilist
 
 import me.taosunkist.hello.data.net.model.MultiListItem
-import top.thsunkist.tatame.model.ui.ImageUIModel
+import top.thsunkist.appkit.engine.ImageUIModel
 
 data class CelllUIModel(
     val nickname: String,

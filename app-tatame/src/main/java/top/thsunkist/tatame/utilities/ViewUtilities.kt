@@ -6,7 +6,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import com.squareup.picasso.Picasso
 import top.thsunkist.tatame.R
-import top.thsunkist.tatame.model.ui.ImageUIModel
+import top.thsunkist.appkit.engine.ImageUIModel
 
 fun View.setFrame(x: Int, y: Int, width: Int, height: Int) {
     layout(x, y, x + width, y + height)
