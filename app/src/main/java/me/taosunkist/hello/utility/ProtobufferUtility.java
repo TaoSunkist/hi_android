@@ -1,4 +1,4 @@
-package me.taosunkist.hello;
+package me.taosunkist.hello.utility;
 
 public class ProtobufferUtility {
 

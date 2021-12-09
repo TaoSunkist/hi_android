@@ -12,7 +12,7 @@ import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
-import me.taosunkist.hello.ProtobufferUtility
+import me.taosunkist.hello.utility.ProtobufferUtility
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentGorillaWebSocketBinding
 import me.taosunkist.hello.hilo.UserProxy
