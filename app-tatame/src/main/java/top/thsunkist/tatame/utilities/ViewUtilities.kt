@@ -28,6 +28,7 @@ fun AppCompatTextView.setDrawableRight(drawable: Drawable?) {
     setCompoundDrawables(null, null, drawable, null)
 }
 
+
 fun AppCompatImageView.bind(model: ImageUIModel) {
     when {
         model.imageRes != null -> setImageResource(model.imageRes!!)

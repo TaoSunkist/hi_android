@@ -247,7 +247,7 @@ class CoroutineTest {
         (0..20).forEach { _ ->
             unreadMessageCount = 1
             coroutineScope.launch { // 将会获取默认调度器
-                println("Default               : I'm working in thread ${unreadMessageCount}")
+                println("Default: I'm working in thread ${unreadMessageCount}")
             }
         }
 
