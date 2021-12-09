@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.opensource.svgaplayer.SVGAImageView
+            android:id="@+id/svga_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:autoPlay="false"
+            app:clearsAfterDetached="true"
+            app:clearsAfterStop="true"
+            app:loopCount="-1"
+            app:source="svga/love_each_other.svga" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dismiss_image_view"
+            android:layout_width="@dimen/solid_button_default"
+            android:layout_height="@dimen/solid_button_default"
+            android:layout_gravity="end"
+            android:padding="@dimen/margin_large"
+            android:src="@drawable/icon_close_gather_receive" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.qiahao.nextvideo.ui.reusable.CircleImageView
+                    android:id="@+id/left_circle_image_view"
+                    android:layout_width="@dimen/circle_button_large"
+                    android:layout_height="@dimen/circle_button_large"
+                    android:layout_marginStart="@dimen/margin_xxlarge"
+                    android:layout_marginTop="@dimen/margin_xxlarge"
+                    android:layout_marginEnd="@dimen/margin_xxlarge"
+                    android:layout_marginBottom="@dimen/margin_xxlarge"
+                    android:elevation="2dp"
+                    android:src="@drawable/icon_gender_girl"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/margin_xsmall" />
+
+                <com.qiahao.nextvideo.ui.reusable.CircleImageView
+                    android:id="@+id/right_circle_image_view"
+                    android:layout_width="@dimen/circle_button_large"
+                    android:layout_height="@dimen/circle_button_large"
+                    android:layout_marginStart="@dimen/margin_xxlarge"
+                    android:layout_marginTop="@dimen/margin_xxlarge"
+                    android:layout_marginEnd="@dimen/margin_xxlarge"
+                    android:layout_marginBottom="@dimen/margin_xxlarge"
+                    android:elevation="2dp"
+                    android:src="@drawable/icon_gender_boy"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/margin_xsmall" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/like_icon_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="34dp"
+                android:alpha="0"
+                android:src="@drawable/icon_likeeachother" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:paddingTop="@dimen/margin_xlarge"
+            android:paddingBottom="@dimen/margin_xlarge"
+            android:text="@string/like_each_other"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</layout>

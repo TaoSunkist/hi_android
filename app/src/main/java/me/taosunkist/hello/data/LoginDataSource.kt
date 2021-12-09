@@ -1,6 +1,6 @@
 package me.taosunkist.hello.data
 
-import me.taosunkist.hello.data.model.LoggedInUser
+import me.taosunkist.hello.data.model.User
 import java.io.IOException
 
 /**
@@ -8,10 +8,10 @@ import java.io.IOException
  */
 class LoginDataSource {
 
-    fun login(username: String, password: String): Result<LoggedInUser> {
+    fun login(username: String, password: String): Result<User> {
         try {
             // TODO: handle loggedInUser authentication
-            val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), "Jane Doe")
+            val fakeUser = User(java.util.UUID.randomUUID().toString(), "Jane Doe")
             return Result.Success(fakeUser)
         } catch (e: Throwable) {
             return Result.Error(IOException("Error logging in", e))
