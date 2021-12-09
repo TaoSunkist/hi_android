@@ -79,7 +79,6 @@
         android:label="ZoomoutAnimationFragment"
         tools:layout="@layout/fragment_browser" />
 
-
     <fragment
         android:id="@+id/navMultiListFragment"
         android:name="me.taosunkist.hello.ui.list.multilist.MultiListFragment"
@@ -91,5 +90,11 @@
         android:name="me.taosunkist.hello.ui.textspan.TextSpanFragment"
         android:label="TextSpanFragment"
         tools:layout="@layout/fragment_text_span" />
+
+    <fragment
+        android:id="@+id/navLoginFragment"
+        android:name="me.taosunkist.hello.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login" />
 
 </navigation>
