@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">hello-android</string>
     <string name="s_s_send_to_">%1$s 在 %2$s 房间送给 %3$s.</string>
 </resources>

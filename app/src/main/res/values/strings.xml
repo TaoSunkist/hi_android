@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">hello-android</string>
     <string name="first">First</string>
     <string name="second">Second</string>
     <string name="third">Third</string>
