@@ -15,6 +15,7 @@ import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentMainBinding
+import me.taosunkist.hello.ui.mutualheartbeat.MutualHeartbeatDialog
 import me.taosunkist.hello.utility.ToastyExt
 
 class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener, NavigationView.OnNavigationItemSelectedListener,
@@ -91,6 +92,11 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
     override fun onMenuItemClick(item: MenuItem): Boolean {
         ToastyExt.error(this, "" + item.itemId)
+        when (item.itemId) {
+            R.id.action_qr_code -> {
+                MutualHeartbeatDialog.init(requireContext()).show()
+            }
+        }
         return true
     }
 }

@@ -101,7 +101,7 @@ dependencies {
     implementation deps.kotlin.reflect
 
     /* A Retrofit inspired WebSocket client for Kotlin, Java, and Android. https://github.com/Tinder/Scarlet */
-    implementation "com.tinder.scarlet:scarlet:scarletVersion"
+    implementation deps.scarlet.scarlet
     implementation deps.scarlet.core
     implementation deps.scarlet.websocket
     implementation deps.scarlet.message

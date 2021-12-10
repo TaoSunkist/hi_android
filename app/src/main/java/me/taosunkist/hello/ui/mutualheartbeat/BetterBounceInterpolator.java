@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.echolike;
+package me.taosunkist.hello.ui.mutualheartbeat;
 
 import static java.lang.Math.PI;
 import static java.lang.Math.abs;
