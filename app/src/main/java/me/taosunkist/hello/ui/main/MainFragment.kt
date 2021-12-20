@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
+import androidx.core.text.HtmlCompat
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -35,13 +36,12 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
         binding.toolbar.setOnMenuItemClickListener(this)
 
-        /*appBarConfiguration = AppBarConfiguration.Builder(
+        appBarConfiguration = AppBarConfiguration.Builder(
             R.id.navMain,
             R.id.navDashboard,
-            R.id.navRadarView,
         ).setFallbackOnNavigateUpListener(
             this
-        ).setOpenableLayout(binding.drawerLayout).build()*/
+        ).setOpenableLayout(binding.drawerLayout).build()
 
         binding.drawerLayout.addDrawerListener(
             ActionBarDrawerToggle(requireActivity(),
@@ -58,6 +58,9 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
         binding.navigationView.getHeaderView(0).avatarImageButton.setOnClickListener { avatarImageButtonPressed(it) }
 
         binding.recyclerView.adapter = MainListAdapter()
+
+        binding.imageSpanTextView.text =
+            HtmlCompat.fromHtml(getString(R.string.s_s_all_mic_sent_2, "tao", "to", "hui"), HtmlCompat.FROM_HTML_MODE_LEGACY)
     }
 
     private fun avatarImageButtonPressed(it: View) {
@@ -85,6 +88,12 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
             R.id.nav_animation -> {
+                val direction = MainFragmentDirections.action2navUserInfoFragment()
+                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
+            }
+            R.id.nav_compose -> {
+                val direction = MainFragmentDirections.action2ComposeFragment()
+                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
         }
         return true

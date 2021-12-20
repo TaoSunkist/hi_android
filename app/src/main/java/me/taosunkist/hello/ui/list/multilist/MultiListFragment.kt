@@ -12,15 +12,6 @@ import me.taosunkist.hello.ui.list.multilist.itemlistviewwrapper.SecondItemListV
 import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.ItemListViewWrapperDelegate
 import top.thsunkist.appkit.engine.ImageUIModel
 
-data class MultiListUIModel(val imageUIModel: ImageUIModel, val nickname: String) {
-
-    companion object {
-        fun fakes(): MultiListUIModel {
-            return MultiListUIModel(imageUIModel = ImageUIModel.fake(), nickname = Fakeit.pokemon().name())
-        }
-    }
-}
-
 class MultiListFragment : Fragment(), ItemListViewWrapperDelegate<CelllUIModel> {
 
     companion object {
@@ -40,9 +31,7 @@ class MultiListFragment : Fragment(), ItemListViewWrapperDelegate<CelllUIModel> 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View {
-        return FragmentMultiListBinding.inflate(inflater, container, false)?.also { _binding = it }.root
-    }
+    ): View = FragmentMultiListBinding.inflate(inflater, container, false).also { _binding = it }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -14,4 +14,9 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="sender_send_to_receiver" translatable="false"><Data><![CDATA[<font color="#000000">%1$s</font> send <font color="#000000">%2$s</font> to <font color="#000000">%3$s</font>]]></Data></string>
+
+    <string name="s_s_all_mic_sent_2" translatable="false"><Data><![CDATA[<b><font color="#fec633">%1$s</font></b> all mic sent <b><font color="#ff30cc">%2$s</font> <font color="#ff30cc">%3$s</font></b>]]></Data></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -57,7 +57,6 @@
                         android:id="@+id/collapsing_toolbar_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
@@ -93,6 +92,14 @@
                     </com.google.android.material.appbar.CollapsingToolbarLayout>
                 </com.google.android.material.appbar.AppBarLayout>
 
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/empty_tip_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="0"
+                    android:gravity="center_horizontal" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/common_id_recycler_view"
                     android:layout_width="match_parent"
@@ -107,9 +114,5 @@
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
         </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:background="@color/white" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

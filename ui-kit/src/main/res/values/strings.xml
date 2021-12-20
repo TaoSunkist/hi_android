@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">hello-android</string>
-    <string name="s_s_send_to_">%1$s 在 %2$s 房间送给 %3$s.</string>
+    <string name="sender_send_to_receiver" translatable="false"><Data><![CDATA[<font color="#000000">%1$s</font> send <font color="#000000">%2$s</font> to <font color="#000000">%3$s</font>]]></Data></string>
+
+    <string name="s_s_all_mic_sent_2" translatable="false"><Data><![CDATA[<font color="#fec633">%1$s</font> all mic sent <font color="#ff30cc">%2$s</font> <font color="#ff30cc">%3$s</font>]]></Data></string>
 </resources>

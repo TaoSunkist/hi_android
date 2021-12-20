@@ -47,6 +47,21 @@
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
 
+        <action
+            android:id="@+id/action2navUserInfoFragment"
+            app:destination="@id/navUserInfoFragment"
+            app:enterAnim="@anim/anim_left_in"
+            app:exitAnim="@anim/anim_right_out"
+            app:popEnterAnim="@anim/anim_right_in"
+            app:popExitAnim="@anim/anim_left_out" />
+
+        <action
+            android:id="@+id/action2ComposeFragment"
+            app:destination="@id/navComposeFragment"
+            app:enterAnim="@anim/anim_left_in"
+            app:exitAnim="@anim/anim_right_out"
+            app:popEnterAnim="@anim/anim_right_in"
+            app:popExitAnim="@anim/anim_left_out" />
     </fragment>
 
     <fragment
@@ -96,5 +111,17 @@
         android:name="me.taosunkist.hello.ui.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/navUserInfoFragment"
+        android:name="me.taosunkist.hello.ui.userinfo.UserInfoFragment"
+        android:label="UserInfoFragment"
+        tools:layout="@layout/fragment_user_info" />
+
+    <fragment
+        android:id="@+id/navComposeFragment"
+        android:name="me.taosunkist.hello.ui.ComposeFragment"
+        android:label="ComposeFragment"
+        tools:layout="@layout/fragment_compose" />
 
 </navigation>
