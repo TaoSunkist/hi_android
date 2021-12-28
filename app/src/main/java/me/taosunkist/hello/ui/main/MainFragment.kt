@@ -82,7 +82,7 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_radar_view -> {
-                val direction = MainFragmentDirections.actionInMainDrawerLayoutMenuRadarItemPressed()
+                val direction = MainFragmentDirections.action2NavRadarUI()
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
             R.id.nav_text_span -> {

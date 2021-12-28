@@ -16,7 +16,7 @@
             app:destination="@id/navProfile" />
 
         <action
-            android:id="@+id/action_in_main_drawer_layout_menu_radar_item_pressed"
+            android:id="@+id/action2NavRadarUI"
             app:destination="@id/navRadarViewFragment"
             app:enterAnim="@anim/anim_left_in"
             app:exitAnim="@null"
