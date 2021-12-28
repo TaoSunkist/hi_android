@@ -71,6 +71,8 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
             it.tag = null
             binding.navigationView.getHeaderView(0).rotateAnimationView.setBackgroundResource(R.drawable.ic_matching_matching_float)
         }
+
+        Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(MainFragmentDirections.action2navProfile())
     }
 
     override fun onNavigateUp(): Boolean {

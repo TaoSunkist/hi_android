@@ -4,4 +4,9 @@
         android:duration="250"
         android:fromXDelta="0"
         android:toXDelta="100%p" />
+    <alpha
+        android:duration="@android:integer/config_longAnimTime"
+        android:fromAlpha="1"
+        android:toAlpha="0" />
+
 </set>

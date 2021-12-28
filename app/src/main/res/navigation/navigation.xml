@@ -19,7 +19,7 @@
             android:id="@+id/action_in_main_drawer_layout_menu_radar_item_pressed"
             app:destination="@id/navRadarViewFragment"
             app:enterAnim="@anim/anim_left_in"
-            app:exitAnim="@anim/anim_right_out"
+            app:exitAnim="@null"
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
 
@@ -27,7 +27,7 @@
             android:id="@+id/action_in_main_drawer_layout_menu_animations_item_pressed"
             app:destination="@id/navZoomOutAnimation"
             app:enterAnim="@anim/anim_left_in"
-            app:exitAnim="@anim/anim_right_out"
+            app:exitAnim="@null"
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
 
@@ -35,7 +35,7 @@
             android:id="@+id/action2NavMultiListFragment"
             app:destination="@id/navMultiListFragment"
             app:enterAnim="@anim/anim_left_in"
-            app:exitAnim="@anim/anim_right_out"
+            app:exitAnim="@null"
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
 
@@ -43,7 +43,7 @@
             android:id="@+id/action2NavTextSpanFragment"
             app:destination="@id/navTextSpanFragment"
             app:enterAnim="@anim/anim_left_in"
-            app:exitAnim="@anim/anim_right_out"
+            app:exitAnim="@null"
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
 
@@ -51,7 +51,7 @@
             android:id="@+id/action2navUserInfoFragment"
             app:destination="@id/navUserInfoFragment"
             app:enterAnim="@anim/anim_left_in"
-            app:exitAnim="@anim/anim_right_out"
+            app:exitAnim="@null"
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
 
@@ -59,7 +59,15 @@
             android:id="@+id/action2ComposeFragment"
             app:destination="@id/navComposeFragment"
             app:enterAnim="@anim/anim_left_in"
-            app:exitAnim="@anim/anim_right_out"
+            app:exitAnim="@null"
+            app:popEnterAnim="@anim/anim_right_in"
+            app:popExitAnim="@anim/anim_left_out" />
+
+        <action
+            android:id="@+id/action2navProfile"
+            app:destination="@id/navProfile"
+            app:enterAnim="@anim/anim_left_in"
+            app:exitAnim="@null"
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
     </fragment>
@@ -120,7 +128,7 @@
 
     <fragment
         android:id="@+id/navComposeFragment"
-        android:name="me.taosunkist.hello.ui.ComposeFragment"
+        android:name="me.taosunkist.hello.ui.composeui.ComposeFragment"
         android:label="ComposeFragment"
         tools:layout="@layout/fragment_compose" />
 

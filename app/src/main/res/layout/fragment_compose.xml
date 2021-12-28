@@ -5,10 +5,10 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.ComposeFragment">
+        tools:context=".ui.composeui.ComposeFragment">
 
         <androidx.compose.ui.platform.ComposeView
-            android:id="@+id/greeting_compose_view"
+            android:id="@+id/compose_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

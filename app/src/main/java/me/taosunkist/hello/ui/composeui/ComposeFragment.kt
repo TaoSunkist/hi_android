@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui
+package me.taosunkist.hello.ui.composeui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -16,13 +15,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
-import androidx.navigation.fragment.NavHostFragment
-import com.google.android.material.composethemeadapter.MdcTheme
-import kotlinx.coroutines.flow.MutableStateFlow
 import me.taosunkist.hello.databinding.FragmentComposeBinding
 
 class ComposeFragment : Fragment() {
@@ -45,17 +39,15 @@ class ComposeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.greetingComposeView.setContent {
-            MdcTheme {
-                greeting()
-            }
+        binding.composeView.setContent {
+            MaterialTheme { initializeView() }
         }
 
     }
 
     @Preview
     @Composable
-    private fun greeting() {
+    private fun initializeView() {
         Text(
             text = System.currentTimeMillis().toString(),
             style = MaterialTheme.typography.subtitle1,
