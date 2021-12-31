@@ -8,7 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.core.content.res.ResourcesCompat.getColor
 import me.taosunkist.hello.R
-import me.taosunkist.hello.utility.printf
+import top.thsunkist.appkit.utility.printf
 
 class RadarView constructor(context: Context, attrs: AttributeSet) : View(context, attrs) {
 

@@ -34,6 +34,7 @@
 
     <color name="errorTextColor">#E64040</color>
 
+    <color name="textColorPrimary">#333333</color>
     <color name="textColorDark">#FF414141</color>
     <color name="textColorGrayDark">#FF6E6E6E</color>
 

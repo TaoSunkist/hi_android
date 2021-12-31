@@ -10,7 +10,7 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
 import me.taosunkist.hello.ui.colorfuldashboard.view.dashboard.FontUtil
-import me.taosunkist.hello.utility.printf
+import top.thsunkist.appkit.utility.printf
 
 class BadgeView : View {
 

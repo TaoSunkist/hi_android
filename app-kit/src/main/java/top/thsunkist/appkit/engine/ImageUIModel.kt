@@ -50,7 +50,7 @@ data class ImageUIModel(
         fun displayImage(imageUrl: String?): ImageUIModel {
             return ImageUIModel(
                 imageUrl = imageUrl,
-                placeholder = R.drawable.ic_sharp_account_box_24,
+                placeholder = R.drawable.ic_baseline_account_circle_24,
                 targetWidth = displayImageLength,
                 targetHeight = displayImageLength
             )

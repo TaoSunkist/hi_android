@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import leakcanary.AppWatcher
 import me.taosunkist.hello.HiApplication
 import me.taosunkist.hello.databinding.FragmentRadarViewBinding
-import me.taosunkist.hello.utility.printf
+import top.thsunkist.appkit.utility.printf
 
 private const val ARG_PARAM1 = "param1"
 

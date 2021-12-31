@@ -15,7 +15,10 @@ import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
+import me.taosunkist.hello.data.UserStore
+import me.taosunkist.hello.data.model.User
 import me.taosunkist.hello.databinding.FragmentMainBinding
+import me.taosunkist.hello.databinding.NavHeaderMainBinding
 import me.taosunkist.hello.ui.mutualheartbeat.MutualHeartbeatDialog
 import me.taosunkist.hello.utility.ToastyExt
 
@@ -54,13 +57,18 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
             }
         )
 
+        UserStore.shared.login()
+
+        binding.user = UserStore.shared.user
         binding.navigationView.setNavigationItemSelectedListener(this)
-        binding.navigationView.getHeaderView(0).avatarImageButton.setOnClickListener { avatarImageButtonPressed(it) }
+
+        val navHeaderMainBinding = NavHeaderMainBinding.bind(binding.navigationView.getHeaderView(0))
+
+        navHeaderMainBinding.user = binding.user
+        navHeaderMainBinding.avatarImageButton.setOnClickListener { avatarImageButtonPressed(it) }
 
         binding.recyclerView.adapter = MainListAdapter()
 
-        binding.imageSpanTextView.text =
-            HtmlCompat.fromHtml(getString(R.string.s_s_all_mic_sent_2, "tao", "to", "hui"), HtmlCompat.FROM_HTML_MODE_LEGACY)
     }
 
     private fun avatarImageButtonPressed(it: View) {
@@ -89,8 +97,8 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
                 val direction = MainFragmentDirections.action2NavTextSpanFragment()
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
-            R.id.nav_animation -> {
-                val direction = MainFragmentDirections.action2navUserInfoFragment()
+            R.id.nav_recycler_view -> {
+                val direction = MainFragmentDirections.action2NavMultiListFragment()
                 Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(direction)
             }
             R.id.nav_compose -> {

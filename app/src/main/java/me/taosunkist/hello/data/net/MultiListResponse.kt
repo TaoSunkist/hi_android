@@ -13,13 +13,22 @@ data class MultiListResponse(
     companion object {
 
         fun fake(pageIndex: Int, pageSize: Int, maxPages: Int): MultiListResponse {
-            return MultiListResponse(
-                list = (0 until pageSize).map { MultiListItem.fake() },
-                pageIndex = pageIndex,
-                pageSize = pageSize,
-                pages = min(maxPages, pageIndex + 1),
-                totalItems = 10000
-            )
+            if (pageIndex <= maxPages) {
+                return MultiListResponse(
+                    list = (0 until pageSize).map { MultiListItem.fake() },
+                    pageIndex = pageIndex,
+                    pageSize = pageSize,
+                    pages = min(maxPages, pageIndex + 1),
+                    totalItems = 10000
+                )
+            } else {
+                return MultiListResponse(
+                    list = arrayListOf(),
+                    pageIndex = pageIndex,
+                    pageSize = pageSize,
+                    pages = min(maxPages, pageIndex + 1),
+                    totalItems = 10000)
+            }
         }
     }
 }

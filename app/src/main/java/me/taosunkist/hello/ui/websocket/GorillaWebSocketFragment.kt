@@ -17,7 +17,7 @@ import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentGorillaWebSocketBinding
 import me.taosunkist.hello.hilo.UserProxy
 import me.taosunkist.hello.ui.BaseFragment
-import me.taosunkist.hello.utility.printf
+import top.thsunkist.appkit.utility.printf
 import okhttp3.*
 import okio.ByteString
 import java.io.ByteArrayOutputStream

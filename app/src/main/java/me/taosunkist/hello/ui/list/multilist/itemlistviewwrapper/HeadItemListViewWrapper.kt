@@ -9,26 +9,26 @@ import androidx.recyclerview.widget.RecyclerView
 import io.reactivex.rxkotlin.addTo
 import me.taosunkist.hello.data.net.AppService
 import me.taosunkist.hello.databinding.CellCommonSquareBinding
-import me.taosunkist.hello.ui.list.multilist.CelllUIModel
+import me.taosunkist.hello.ui.list.multilist.CellUIModel
 import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.CustomLinearLayoutManager
 import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.ItemListViewWrapper
 import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.ViewHolder
 import top.thsunkist.tatame.utilities.bind
 import top.thsunkist.tatame.utilities.observeOnMainThread
 
-class FirstListViewWrapper(val view: View) : ItemListViewWrapper<CelllUIModel>(view) {
+class HeadItemListViewWrapper(val view: View) : ItemListViewWrapper<CellUIModel>(view) {
 
     override var pageSize: Int = 50
 
     override fun doCreateItemViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         FirstViewHolder(CellCommonSquareBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
-    override fun doBindItemViewHolder(holder: ViewHolder, item: CelllUIModel, position: Int) =
+    override fun doBindItemViewHolder(holder: ViewHolder, item: CellUIModel, position: Int) =
         (holder as FirstViewHolder).bind(item)
 
     override fun doLoadNextPage(page: Int) {
         AppService.shared.fetchMultiListDataList(pageIndex = page, pageSize = pageSize).map {
-            it.list.map { CelllUIModel.init(it) }
+            it.list.map { CellUIModel.init(it) }
         }.observeOnMainThread(onSuccess = {
 
             if (page == 1 && it.isEmpty()) {
@@ -37,6 +37,7 @@ class FirstListViewWrapper(val view: View) : ItemListViewWrapper<CelllUIModel>(v
                 view.visibility = View.VISIBLE
             }
             addItems(it, page)
+
         }, onError = {
         }, onTerminate = {
         }).addTo(compositeDisposable = compositeDisposable)
@@ -49,8 +50,7 @@ class FirstListViewWrapper(val view: View) : ItemListViewWrapper<CelllUIModel>(v
 
 class FirstViewHolder(val binding: CellCommonSquareBinding) : ViewHolder(binding.root) {
 
-    fun bind(item: CelllUIModel) {
-
+    fun bind(item: CellUIModel) {
         binding.corneredImageView.bind(item.imageUIModel)
         binding.titleTextView.text = item.nickname
     }

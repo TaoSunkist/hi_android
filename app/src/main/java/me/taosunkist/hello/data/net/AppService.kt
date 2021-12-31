@@ -10,7 +10,7 @@ class AppService {
     fun fetchMultiListDataList(pageSize: Int, pageIndex: Int): Single<MultiListResponse> {
         return Single.create {
             Thread.sleep(2000)
-            it.onSuccess(MultiListResponse.fake(pageSize, pageIndex, 3))
+            it.onSuccess(MultiListResponse.fake(pageIndex = pageIndex, pageSize = pageSize, maxPages = 3))
         }
     }
 }

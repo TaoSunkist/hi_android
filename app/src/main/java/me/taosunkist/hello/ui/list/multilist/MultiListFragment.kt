@@ -5,45 +5,46 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mooveit.library.Fakeit
 import me.taosunkist.hello.databinding.FragmentMultiListBinding
-import me.taosunkist.hello.ui.list.multilist.itemlistviewwrapper.FirstListViewWrapper
-import me.taosunkist.hello.ui.list.multilist.itemlistviewwrapper.SecondItemListViewWrapper
+import me.taosunkist.hello.ui.list.multilist.itemlistviewwrapper.HeadItemListViewWrapper
+import me.taosunkist.hello.ui.list.multilist.itemlistviewwrapper.BodyItemListViewWrapper
 import me.taosunkist.hello.ui.reusable.itemlistviewwrapper.ItemListViewWrapperDelegate
-import top.thsunkist.appkit.engine.ImageUIModel
 
-class MultiListFragment : Fragment(), ItemListViewWrapperDelegate<CelllUIModel> {
+class MultiListFragment : Fragment(), ItemListViewWrapperDelegate<CellUIModel> {
 
-    companion object {
+    lateinit var bodyItemListViewWrapper: BodyItemListViewWrapper
 
-        @JvmStatic
-        fun newInstance() = MultiListFragment().apply {}
-    }
-
-    lateinit var secondItemListViewWrapper: SecondItemListViewWrapper
-
-    lateinit var firstItemListViewWrapper: FirstListViewWrapper
+    lateinit var headItemItemListViewWrapper: HeadItemListViewWrapper
 
     private var _binding: FragmentMultiListBinding? = null
 
     private val binding: FragmentMultiListBinding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View = FragmentMultiListBinding.inflate(inflater, container, false).also { _binding = it }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        secondItemListViewWrapper = SecondItemListViewWrapper(view).apply {
+        headItemItemListViewWrapper = HeadItemListViewWrapper(binding.likeEachOthersContainer).apply {
+
+        }
+
+        bodyItemListViewWrapper = BodyItemListViewWrapper(view).apply {
             delegate = this@MultiListFragment
         }
-        firstItemListViewWrapper = FirstListViewWrapper(binding.likeEachOthersContainer).apply {}
+
+        binding.extendedFloatingActionButton.setOnClickListener { extendedFloatingActionButtonPressed() }
+    }
+
+    private fun extendedFloatingActionButtonPressed() {
+    }
+
+    override fun listViewControllerOnItemSelected(item: CellUIModel, position: Int, clickTag: String?) {
 
     }
 
-    override fun listViewControllerOnItemSelected(item: CelllUIModel, position: Int, clickTag: String?) {
-
-    }
 }

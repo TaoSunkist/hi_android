@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.*
 import com.scwang.smartrefresh.header.MaterialHeader
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener
@@ -173,8 +171,9 @@ open class GenericListAdapter<T> : RecyclerView.Adapter<ViewHolder>(), View.OnCl
         }
     }
 
+    /** +1: load more */
     override fun getItemCount(): Int {
-        return items.size + 1
+        return ((delegate?.getItemCount()) ?: items.size) + 1
     }
 
     //view的绑定
@@ -349,7 +348,7 @@ abstract class ItemListViewWrapper<T>(private val view: View) : ItemListCallback
         private set
 
     //封装了的adapter
-    private var adapter: GenericListAdapter<T>? by weak()
+    protected var adapter: GenericListAdapter<T>? by weak()
 
     protected var compositeDisposable = CompositeDisposable()
 
@@ -416,7 +415,7 @@ abstract class ItemListViewWrapper<T>(private val view: View) : ItemListCallback
     /**
      * Append given items list at the end.在末尾附加给定的项目列表
      */
-    fun addItems(items: List<T>, page: Int) {
+    open fun addItems(items: List<T>, page: Int) {
         var nextPage = page + 1
         if (items.size < pageSize) {
             nextPage = PAGE_NO_MORE
@@ -487,5 +486,9 @@ abstract class ItemListViewWrapper<T>(private val view: View) : ItemListCallback
     //设置LayoutManager的管理器
     open fun getLayoutManager(context: Context): RecyclerView.LayoutManager {
         return CustomLinearLayoutManager(view.context)
+    }
+
+    open fun getItemCount(): Int {
+        return items?.size ?: 0
     }
 }

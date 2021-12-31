@@ -1,7 +1,7 @@
 package me.taosunkist.hello.data.net.model
 
 import com.mooveit.library.Fakeit
-import me.taosunkist.hello.utility.Debug
+import top.thsunkist.appkit.utility.Debug
 
 data class MultiListItem(
     val uid: Long,
@@ -17,8 +17,8 @@ data class MultiListItem(
         fun fake(): MultiListItem {
             return MultiListItem(
                 uid = System.nanoTime(),
-                avatarUrl = Debug.images.random(),
-                name = Fakeit.book().author(),
+                avatarUrl = Debug.images.subList(0, 3).random(),
+                name = arrayOf("A", "B", "C").random(),
             )
         }
     }

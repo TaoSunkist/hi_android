@@ -255,4 +255,5 @@ class ExampleUnitTest1 {
                     println("taohui runOnTime: $runOnTime, compositeDisposable: $compositeDisposable, it: $it")
                 }.addTo(compositeDisposable)
     }
+
 }

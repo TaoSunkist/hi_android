@@ -11,7 +11,7 @@ import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.RelativeLayout
 import me.taosunkist.hello.R
-import me.taosunkist.hello.utility.Debug
+import top.thsunkist.appkit.utility.Debug
 import java.util.*
 import kotlin.math.min
 
