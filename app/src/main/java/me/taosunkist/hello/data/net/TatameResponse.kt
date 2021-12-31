@@ -1,4 +1,4 @@
-package me.taosunkist.hello
+package me.taosunkist.hello.data.net
 
 import com.google.gson.annotations.SerializedName
 
@@ -11,10 +11,10 @@ data class ResponseError(
 )
 
 data class TatameResponse<T : Any>(
-        @SerializedName("httpStatusCode") val httpStatusCode: Int,
-        @SerializedName("data") val data: T?,
-        @SerializedName("error") val error: ResponseError?,
-        @SerializedName("timestamp") val timestamp: String
+    @SerializedName("httpStatusCode") val httpStatusCode: Int,
+    @SerializedName("data") val data: T?,
+    @SerializedName("error") val error: ResponseError?,
+    @SerializedName("timestamp") val timestamp: String
 ) {
     companion object {
         fun <T : Any> success(data: T): TatameResponse<T> {
@@ -27,7 +27,7 @@ data class TatameResponse<T : Any>(
 }
 
 data class TatameErrorResponse(
-        @SerializedName("httpStatusCode") val httpStatusCode: Int,
-        @SerializedName("error") val error: ResponseError?,
-        @SerializedName("timestamp") val timestamp: String
+    @SerializedName("httpStatusCode") val httpStatusCode: Int,
+    @SerializedName("error") val error: ResponseError?,
+    @SerializedName("timestamp") val timestamp: String
 )
