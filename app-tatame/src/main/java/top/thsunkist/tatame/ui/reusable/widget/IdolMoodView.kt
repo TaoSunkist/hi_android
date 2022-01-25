@@ -12,13 +12,13 @@ import com.google.gson.annotations.SerializedName
 import top.thsunkist.tatame.R
 
 enum class Mood(val value: String, @DrawableRes val resId: Int) {
-    @SerializedName("LOW")
+
     LOW(value = "LOW", resId = R.drawable.ic_depressed_mood),
 
-    @SerializedName("NORMAL")
+
     NORMAL(value = "NORMAL", resId = R.drawable.ic_normal_mood),
 
-    @SerializedName("HAPPY")
+
     HAPPY(value = "HAPPY", resId = R.drawable.ic_fun_mood)
 }
 

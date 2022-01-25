@@ -1,6 +1,5 @@
 package me.taosunkist.hello.data.net
 
-import com.qiahao.nextvideo.utilities.printfNetwork
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.ResponseBody

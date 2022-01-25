@@ -19,4 +19,10 @@
     <string name="s_s_all_mic_sent_2" translatable="false"><Data><![CDATA[<b><font color="#fec633">%1$s</font></b> all mic sent <b><font color="#ff30cc">%2$s</font> <font color="#ff30cc">%3$s</font></b>]]></Data></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="s_s_has_been_kicked_out_of_the_room_by_the_room_admin_">%1$s</string>
+    <string name="s_s_has_been_kicked_out_of_the_room_by_the_room_admin_1">\u0020has been kicked out of the room by the</string>
+    <string name="s_s_has_been_kicked_out_of_the_room_by_the_room_admin_2">\u0020room admin %1$s</string>
+    <string name="s_s_has_been_kicked_out_of_the_room_by_the_room_owner_2">\u0020room owner %1$s</string>
+
 </resources>

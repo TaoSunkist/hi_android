@@ -31,7 +31,6 @@ class GsonConverterFactoryConstructer private constructor(val gson: Gson) : Conv
         methodAnnotations: Array<Annotation>,
         retrofit: Retrofit,
     ): Converter<*, RequestBody>? {
-        val adapter = gson.getAdapter(TypeToken.get(type))
         return null
     }
 

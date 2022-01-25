@@ -1,14 +1,11 @@
 package me.taosunkist.hello.data.net
 
 import com.jakewharton.rxrelay2.BehaviorRelay
-import com.qiahao.nextvideo.HiloApplication
-import com.qiahao.nextvideo.data.model.DownloadProgressModel
-import com.qiahao.nextvideo.network.model.ApiResponse
-import com.qiahao.nextvideo.utilities.printf
 import com.tencent.mmkv.MMKV
 import io.reactivex.Observable
 import io.reactivex.Single
 import me.taosunkist.hello.HiApplication
+import me.taosunkist.hello.data.net.model.ApiResponse
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
@@ -155,67 +152,4 @@ class ServerApiCore {
     /**
      * 下载某个url的内容到target.
      */
-    fun download(url: String, target: File): Observable<DownloadProgressModel> {
-        return Observable.create {
-
-            val okHttpClient = OkHttpClient()
-            val request = Request.Builder().url(url).build()
-            val response: Response
-            try {
-                response = okHttpClient.newCall(request).execute()
-            } catch (e: IOException) {
-                if (it.isDisposed.not()) {
-                    it.onError(e)
-                }
-                return@create
-            }
-
-            if (response.body == null) {
-                it.onError(FileNotFoundException("download failed."))
-                return@create
-            }
-            val ins = response.body?.byteStream()
-
-            val input = BufferedInputStream(ins)
-            val output = FileOutputStream(target)
-            var shouldCancel = false
-
-            it.setCancellable {
-                shouldCancel = true
-            }
-
-            val data = ByteArray(2048)
-            var total = 0
-            var count = input.read(data)
-            while (count != -1) {
-                if (shouldCancel) {
-                    break
-                }
-                val progress = total.toFloat() / (response.body?.contentLength() ?: 1).toFloat()
-                it.onNext(DownloadProgressModel(progress = progress, file = null))
-                total += count
-                try {
-                    output.write(data, 0, count)
-                    count = input.read(data)
-                } catch (e: IOException) {
-                    if (it.isDisposed.not()) {
-                        it.onError(e)
-                    }
-                    break
-                }
-            }
-
-            try {
-                output.flush()
-                output.close()
-                input.close()
-                it.onNext(DownloadProgressModel(progress = 1f, file = target))
-                it.onComplete()
-            } catch (e: IOException) {
-                if (it.isDisposed.not()) {
-                    it.onError(e)
-                }
-            }
-        }
-    }
 }

@@ -1,11 +1,7 @@
 package me.taosunkist.hello.data.net
 
 import android.os.Build
-import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory
-import com.qiahao.nextvideo.BuildConfig
-import com.qiahao.nextvideo.data.UserStore
-import com.qiahao.nextvideo.data.service.match.MatchingServiceLauncher
-import com.qiahao.nextvideo.utilities.DecEncUtility
+import me.taosunkist.hello.data.UserStore
 import okhttp3.Interceptor
 import okhttp3.Response
 import java.io.IOException
@@ -32,31 +28,9 @@ class HeaderInterceptor : Interceptor {
 
         val request = chain.request()
         val builder = request.newBuilder()
-        val nonce = (10000000..99999999).random().toString()
-        val timestampInSecs = (System.currentTimeMillis() / 1000).toString()
-        val signature = DecEncUtility.sha1(timestampInSecs + KEY + nonce)
-        builder.addHeader(CONTENT_TYPE, "application/json")
-            .addHeader(TIMESTAMP, timestampInSecs)
-            .addHeader(NONCE, nonce)
-            .addHeader(SIGNATURE, signature)
-            .addHeader(TOKEN, UserStore.shared.authenticationToken ?: "")
-            .addHeader(DEVICE_TYPE, ANDROID)
-            .addHeader(DEVICE_VERSION, Build.VERSION.SDK_INT.toString())
-            .addHeader(APP_VERSION, BuildConfig.VERSION_NAME)
-            .addHeader(name = BITS, value = MatchingServiceLauncher.matchingFloatViewStatusPool.values.joinToString(","))
-        /** device id is variable */
-        try {
-            builder.addHeader(IMEI, PushServiceFactory.getCloudPushService().deviceId)
-        } catch (t: Throwable) {
-        }
 
         val newRequest = builder.build()
         val response = chain.proceed(newRequest)
-        response.headers[TOKEN]?.let {
-            if (it.isBlank().not()) {
-                UserStore.shared.authenticationToken = it
-            }
-        }
 
         return response
     }

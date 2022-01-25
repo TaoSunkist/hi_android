@@ -46,11 +46,19 @@
                 android:orientation="vertical"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-                <me.taosunkist.hello.ui.view.RoomTicketEnabledMinimumView
+                <me.taosunkist.hello.ui.reusable.dampinghorizonmovablelayout.DampingHorizonMovableView
+                    android:id="@+id/damping_horizon_movable_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/damping_horizon_movable_view_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="DampingHorizonMovableButton"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_view"
@@ -60,18 +68,6 @@
                     android:orientation="vertical"
                     android:visibility="gone"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-
-                    <me.taosunkist.hello.ui.view.RoomLabelView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

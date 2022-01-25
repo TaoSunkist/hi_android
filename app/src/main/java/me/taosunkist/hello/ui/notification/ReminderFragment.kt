@@ -34,22 +34,22 @@ enum class OccasionType(value: String, val tag: String, val id: Int) {
 }
 
 enum class ReminderType(val value: String, val tag: String, val reminderSoundUri: String) {
-	@SerializedName("REMINDER_GETUP")
+
 	REMINDER_GETUP("REMINDER_GETUP", "起床提醒", "android.resource://com.zhimeng.tatame/raw/reminder_getup"),
 
-	@SerializedName("REMINDER_LUNCH")
+
 	REMINDER_LUNCH("REMINDER_LUNCH", "午饭提醒", "android.resource://com.zhimeng.tatame/raw/reminder_lunch"),
 
-	@SerializedName("REMINDER_DINNER")
+
 	REMINDER_DINNER("REMINDER_DINNER", "晚餐提醒", "android.resource://com.zhimeng.tatame/raw/reminder_dinner"),
 
-	@SerializedName("REMINDER_SLEEP")
+
 	REMINDER_SLEEP("REMINDER_SLEEP", "睡觉提醒", "android.resource://com.zhimeng.tatame/raw/reminder_sleep"),
 
-	@SerializedName("REMINDER_APPOINTMENT")
+
 	REMINDER_APPOINTMENT("REMINDER_APPOINTMENT", "约会提醒", "android.resource://com.zhimeng.tatame/raw/reminder_appointment"),
 
-	@SerializedName("REMINDER_CUSTOM")
+
 	REMINDER_CUSTOM("REMINDER_CUSTOM", "自定义提醒", "");
 }
 

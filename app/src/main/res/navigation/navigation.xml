@@ -21,14 +21,6 @@
             app:popExitAnim="@anim/anim_left_out" />
 
         <action
-            android:id="@+id/action_in_main_drawer_layout_menu_animations_item_pressed"
-            app:destination="@id/navZoomOutAnimation"
-            app:enterAnim="@anim/anim_left_in"
-            app:exitAnim="@null"
-            app:popEnterAnim="@anim/anim_right_in"
-            app:popExitAnim="@anim/anim_left_out" />
-
-        <action
             android:id="@+id/action2NavMultiListFragment"
             app:destination="@id/navMultiListFragment"
             app:enterAnim="@anim/anim_left_in"
@@ -39,14 +31,6 @@
         <action
             android:id="@+id/action2NavTextSpanFragment"
             app:destination="@id/navTextSpanFragment"
-            app:enterAnim="@anim/anim_left_in"
-            app:exitAnim="@null"
-            app:popEnterAnim="@anim/anim_right_in"
-            app:popExitAnim="@anim/anim_left_out" />
-
-        <action
-            android:id="@+id/action2ComposeFragment"
-            app:destination="@id/navComposeFragment"
             app:enterAnim="@anim/anim_left_in"
             app:exitAnim="@null"
             app:popEnterAnim="@anim/anim_right_in"
@@ -80,18 +64,6 @@
         tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/navBrowser"
-        android:name="me.taosunkist.hello.ui.browser.BrowserFragment"
-        android:label="BrowserFragment"
-        tools:layout="@layout/fragment_browser" />
-
-    <fragment
-        android:id="@+id/navZoomOutAnimation"
-        android:name="me.taosunkist.hello.ui.zoomoutanimation.ZoomOutAnimationFragment"
-        android:label="ZoomoutAnimationFragment"
-        tools:layout="@layout/fragment_browser" />
-
-    <fragment
         android:id="@+id/navMultiListFragment"
         android:name="me.taosunkist.hello.ui.list.multilist.MultiListFragment"
         android:label="MultiListFragment"
@@ -108,11 +80,5 @@
         android:name="me.taosunkist.hello.ui.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login" />
-
-    <fragment
-        android:id="@+id/navComposeFragment"
-        android:name="me.taosunkist.hello.ui.composeui.ComposeFragment"
-        android:label="ComposeFragment"
-        tools:layout="@layout/fragment_compose" />
 
 </navigation>

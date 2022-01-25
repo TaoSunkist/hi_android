@@ -2,16 +2,25 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".ui.textspan.TextSpanFragment">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/normal_span_text_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:includeFontPadding="false" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/normal_span_text_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:includeFontPadding="false"
+            android:textColor="@color/light_blue_400" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

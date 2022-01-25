@@ -2,8 +2,6 @@ package me.taosunkist.hello
 
 import android.annotation.SuppressLint
 import com.google.gson.Gson
-import com.google.gson.annotations.SerializedName
-import com.google.gson.reflect.TypeToken
 import io.reactivex.Observable
 import io.reactivex.Single
 import io.reactivex.disposables.CompositeDisposable
@@ -220,10 +218,10 @@ class ExampleUnitTest1 {
     data class OrderStatus(val orderStatus: OrderStatusType)
 
     enum class OrderStatusType(val value: String) {
-        @SerializedName("PAID")
+
         PAID("PAID"),
 
-        @SerializedName("UNPAID")
+
         UNPAID("UNPAID")
     }
 
