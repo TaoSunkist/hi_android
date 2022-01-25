@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="top.thsunkist.tatame">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="top.thsunkist.tatame">
 
     <application>
         <activity
-                android:name=".MainActivity"
-                android:launchMode="standard" />
+            android:name=".MainActivity"
+            android:exported="true"
+            tools:node="merge"
+            android:launchMode="standard" />
     </application>
 
 </manifest>
