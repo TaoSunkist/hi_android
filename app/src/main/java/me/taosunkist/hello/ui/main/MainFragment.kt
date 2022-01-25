@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
-import androidx.core.text.HtmlCompat
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -16,7 +15,6 @@ import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.data.UserStore
-import me.taosunkist.hello.data.model.User
 import me.taosunkist.hello.databinding.FragmentMainBinding
 import me.taosunkist.hello.databinding.NavHeaderMainBinding
 import me.taosunkist.hello.ui.mutualheartbeat.MutualHeartbeatDialog
