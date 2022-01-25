@@ -20,7 +20,6 @@ import me.taosunkist.hello.data.model.User
 import me.taosunkist.hello.databinding.FragmentMainBinding
 import me.taosunkist.hello.databinding.NavHeaderMainBinding
 import me.taosunkist.hello.ui.mutualheartbeat.MutualHeartbeatDialog
-import me.taosunkist.hello.ui.reusable.dampinghorizonmovablelayout.FullBannerUIModel
 import me.taosunkist.hello.utility.ToastyExt
 
 class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener, NavigationView.OnNavigationItemSelectedListener,
@@ -39,7 +38,6 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
         NavigationUI.setupWithNavController(binding.navigationView, navController)
 
         binding.dampingHorizonMovableViewButton.setOnClickListener {
-            binding.dampingHorizonMovableView.bind(uiModel = FullBannerUIModel.init())
         }
         binding.toolbar.setOnMenuItemClickListener(this)
 

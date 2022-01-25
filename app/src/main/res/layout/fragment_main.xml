@@ -46,11 +46,6 @@
                 android:orientation="vertical"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-                <me.taosunkist.hello.ui.reusable.dampinghorizonmovablelayout.DampingHorizonMovableView
-                    android:id="@+id/damping_horizon_movable_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/damping_horizon_movable_view_button"
                     android:layout_width="wrap_content"
