@@ -1,5 +1,12 @@
 ext.deps = [:]
 
+def build_versions = [:]
+build_versions.compile_sdk = 31
+build_versions.build_tools = '30.0.2'
+build_versions.min_sdk = 21
+build_versions.target_sdk = 31
+ext.build_versions = build_versions
+
 def kotlinVersion = "1.5.31"
 def kotlin = [:]
 kotlin.kotlinStdlibCommon = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"

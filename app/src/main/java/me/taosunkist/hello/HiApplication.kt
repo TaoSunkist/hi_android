@@ -8,6 +8,7 @@ import com.google.gson.Gson
 import com.mooveit.library.Fakeit
 import com.squareup.leakcanary.LeakCanary
 import com.squareup.leakcanary.RefWatcher
+import com.tencent.mmkv.MMKV
 import io.reactivex.disposables.CompositeDisposable
 import top.thsunkist.tatame.utilities.weak
 
@@ -33,6 +34,7 @@ class HiApplication : MultiDexApplication() {
 
         CONTEXT = this
 
+        MMKV.initialize(this)
         Fakeit.init()
         setupLeakCanary()
     }

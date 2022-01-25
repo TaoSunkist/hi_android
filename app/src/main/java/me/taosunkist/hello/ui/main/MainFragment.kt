@@ -12,13 +12,19 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxkotlin.addTo
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.data.UserStore
+import me.taosunkist.hello.data.net.module.UserService
 import me.taosunkist.hello.databinding.FragmentMainBinding
 import me.taosunkist.hello.databinding.NavHeaderMainBinding
 import me.taosunkist.hello.ui.mutualheartbeat.MutualHeartbeatDialog
 import me.taosunkist.hello.utility.ToastyExt
+import top.thsunkist.appkit.utility.printf
+import top.thsunkist.appkit.utility.printfE
+import top.thsunkist.tatame.utilities.observeOnMainThread
 
 class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener, NavigationView.OnNavigationItemSelectedListener,
     Toolbar.OnMenuItemClickListener {
@@ -35,8 +41,6 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
         NavigationUI.setupWithNavController(binding.navigationView, navController)
 
-        binding.dampingHorizonMovableViewButton.setOnClickListener {
-        }
         binding.toolbar.setOnMenuItemClickListener(this)
 
         appBarConfiguration = AppBarConfiguration.Builder(
@@ -59,6 +63,12 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
         UserStore.shared.login()
 
+        UserService.shared.fetchUserInfo().observeOnMainThread(onSuccess = {
+           printf(it)
+        }, onError = {
+           printfE(it.localizedMessage)
+        }).addTo(compositeDisposable = CompositeDisposable())
+
         binding.user = UserStore.shared.user
         binding.navigationView.setNavigationItemSelectedListener(this)
 
@@ -68,7 +78,6 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
         navHeaderMainBinding.avatarImageButton.setOnClickListener { avatarImageButtonPressed(it) }
 
         binding.recyclerView.adapter = MainListAdapter()
-
     }
 
     private fun avatarImageButtonPressed(it: View) {

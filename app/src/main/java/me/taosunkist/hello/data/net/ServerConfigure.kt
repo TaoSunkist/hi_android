@@ -16,20 +16,20 @@ val availableServers = mapOf(
         name = "Production",
         description = " N/A",
         key = kProductionServer,
-        baseUrl = "https://api.faceline.live:8089",
+        baseUrl = "http://127.0.0.1:8080",
     ),
 
     kTestServer to ServerInfo(
         name = "Test",
         description = " N/A",
         key = kTestServer,
-        baseUrl = "http://test.faceline.live",
+        baseUrl = "http://127.0.0.1:8080",
     ),
 
     kLocalServer to ServerInfo(
         name = "Local",
         description = " N/A",
         key = kLocalServer,
-        baseUrl = "http://192.168.1.102:8089",
+        baseUrl = "http://127.0.0.1:8080",
     )
 )

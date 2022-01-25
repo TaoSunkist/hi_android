@@ -4,16 +4,15 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.protobuf'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
-/*apply plugin: 'dagger.hilt.android.plugin'*/
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion '30.0.2'
+    compileSdkVersion build_versions.compile_sdk
+    buildToolsVersion build_versions.build_tools
     defaultConfig {
         applicationId "me.taosunkist.hello"
         minSdkVersion 21
         multiDexEnabled true
-        targetSdkVersion 30
+        targetSdkVersion build_versions.compile_sdk
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -199,16 +198,6 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
     implementation "com.squareup.okhttp3:okhttp:4.9.0"
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+    api 'com.google.code.gson:gson:2.8.6'
 
 }
-
-repositories {
-    mavenCentral()
-    flatDir {
-        dirs 'libs'
-    }
-}
-/*configurations.all {
-    resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
-}*/
-

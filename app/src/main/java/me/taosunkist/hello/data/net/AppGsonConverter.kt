@@ -1,7 +1,7 @@
 package me.taosunkist.hello.data.net
 
-import com.google.common.reflect.TypeToken
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import me.taosunkist.hello.HiApplication
 import me.taosunkist.hello.data.net.model.ApiResponse
 import okhttp3.ResponseBody

@@ -116,7 +116,7 @@ class ServerApiCore {
 
         selectedServerKey.accept(serverInfo.key)
         setupServer(serverInfo)
-        MMKV.defaultMMKV().putString( KEY_SELECTED_SERVER, selectedServerKey.value.toString())
+        MMKV.defaultMMKV().putString(KEY_SELECTED_SERVER, selectedServerKey.value.toString())
     }
 
     private fun setupServer(serverInfoInfo: ServerInfo) {
@@ -131,7 +131,8 @@ class ServerApiCore {
         val timeout: Long = if (BuildConfig.DEBUG) TIMEOUT_DEBUG else TIMEOUT_PROD
         val clientBuilder = OkHttpClient.Builder()
 
-        clientBuilder.addInterceptor(HeaderInterceptor())
+        clientBuilder
+            .addInterceptor(HeaderInterceptor())
             .addInterceptor(ErrorInterceptor())//错误的拦截器
             .connectTimeout(timeout, TimeUnit.MILLISECONDS)
 
