@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LifecycleOwner
 import kotlinx.coroutines.*
 import me.taosunkist.hello.R
 import me.taosunkist.hello.data.net.module.UserService
@@ -28,9 +29,10 @@ class ProfileFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        CoroutineScope(Job() + Dispatchers.IO).launch {
-            val userDetails = UserService.shared.fetchUserDetails()
-        }
-//        UserService.shared.fetchUserDetails().
+        val profileViewModel = ProfileViewModel()
+        profileViewModel.getUserDetails().observe(this, {
+
+        })
+
     }
 }
