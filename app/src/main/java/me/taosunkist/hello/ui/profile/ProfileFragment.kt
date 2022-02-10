@@ -9,7 +9,9 @@ import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import kotlinx.coroutines.*
 import me.taosunkist.hello.R
+import me.taosunkist.hello.data.net.module.UserService
 import me.taosunkist.hello.databinding.FragmentProfileBinding
 import me.taosunkist.hello.ui.BaseFragment
 
@@ -25,5 +27,10 @@ class ProfileFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        CoroutineScope(Job() + Dispatchers.IO).launch {
+            val userDetails = UserService.shared.fetchUserDetails()
+        }
+//        UserService.shared.fetchUserDetails().
     }
 }
