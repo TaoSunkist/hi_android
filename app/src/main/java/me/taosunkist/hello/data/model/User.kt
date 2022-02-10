@@ -21,20 +21,28 @@ annotation class GenderDef {
 
 data class User(
     val userID: String,
+
     @Bindable
     val nickname: String,
+
     @Bindable
     val avatar: String,
-    @GenderDef val gender: Int,
+
+    @GenderDef
+    val gender: Int,
+
+    val age: Int?,
 ) : BaseObservable() {
 
     companion object {
 
         fun fake(): User {
-            return User(userID = java.util.UUID.randomUUID().toString(),
+            return User(
+                userID = java.util.UUID.randomUUID().toString(),
                 nickname = Fakeit.book().author(),
                 avatar = Debug.images.random(),
-                gender = arrayOf(GenderDef.Male, GenderDef.Female).random()
+                gender = arrayOf(GenderDef.Male, GenderDef.Female).random(),
+                age = (1..100).random(),
             )
         }
 
