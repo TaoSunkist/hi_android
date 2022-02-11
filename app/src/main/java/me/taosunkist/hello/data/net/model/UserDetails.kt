@@ -34,5 +34,17 @@ data class UserDetails(
                 signature = Fakeit.book().genre()
             )
         }
+
+        fun fake(): UserDetails {
+            val userInfo: User = User.fake()
+            return UserDetails(
+                userID = userInfo.userID,
+                age = userInfo.age,
+                avatar = userInfo.avatar,
+                nickname = userInfo.nickname,
+                gender = userInfo.gender,
+                signature = Fakeit.book().genre()
+            )
+        }
     }
 }

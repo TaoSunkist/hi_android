@@ -22,16 +22,16 @@ class ProfileFragment : BaseFragment() {
 
     private val binding: FragmentProfileBinding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return FragmentProfileBinding.inflate(inflater, container, false).also { _binding = it }.root
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
+        FragmentProfileBinding.inflate(inflater, container, false).also { _binding = it }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val profileViewModel = ProfileViewModel()
-        profileViewModel.getUserDetails().observe(this, {
 
+        profileViewModel.getUserDetails().observe(viewLifecycleOwner, {
+            binding.fullscreenContent.text = it.data?.toString() ?: "N/A"
         })
 
     }
