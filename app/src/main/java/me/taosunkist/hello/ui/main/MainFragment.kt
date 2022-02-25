@@ -69,6 +69,8 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
            printfE(it.localizedMessage)
         }).addTo(compositeDisposable = CompositeDisposable())
 
+
+
         binding.user = UserStore.shared.user
         binding.navigationView.setNavigationItemSelectedListener(this)
 

@@ -1,5 +1,11 @@
 package me.taosunkist.hello.data.net.model
 
+enum class Status {
+    SUCCESS,
+    ERROR,
+    LOADING
+}
+
 data class ApiResponse<T : Any>(
 
     var message: String?,
@@ -14,6 +20,14 @@ data class ApiResponse<T : Any>(
                 code = 200,
                 data = data,
                 message = System.currentTimeMillis().toString()
+            )
+        }
+
+        fun <T : Any> failure(): ApiResponse<T> {
+            return ApiResponse(
+                code = 400,
+                data = null,
+                message = "occurred some of errors"
             )
         }
     }

@@ -1,5 +1,7 @@
 package me.taosunkist.hello.data.net.module
 
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.liveData
 import androidx.test.core.app.ActivityScenario.launch
 import io.reactivex.Single
 import kotlinx.coroutines.*
@@ -12,7 +14,7 @@ import me.taosunkist.hello.data.net.model.UserDetails
 import kotlin.concurrent.thread
 import kotlin.time.Duration
 
-class UserService {
+class UserService : ViewModel() {
 
     companion object {
         val shared = UserService()
@@ -24,6 +26,11 @@ class UserService {
     fun fetchUserInfo(): Single<ApiResponse<User>> {
         return ServerApiCore.serverApi.fetchUserInfo()
     }
+
+    suspend fun fetchUserInfo2(): ApiResponse<User> {
+        return ServerApiCore.serverApi.fetchUserInfo2()
+    }
+
 
     suspend fun fetchUserDetails(): ApiResponse<UserDetails> {
         delay(1500L)

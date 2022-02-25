@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.ActivityMainBinding
-import top.thsunkist.appkit.utility.printf
+import me.taosunkist.hello.ui.reusable.DebugFloatView
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        val debugFloatView = DebugFloatView(this)
+        debugFloatView.show()
+        debugFloatView.setOnClickListener { v -> debugFloatViewPressed() }
+    }
+
+    private fun debugFloatViewPressed() {
+
     }
 
     override fun onDestroy() {

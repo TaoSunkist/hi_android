@@ -10,4 +10,8 @@ interface ServerApi {
     @GsonConverter("app")
     @GET("v1/user/info")
     fun fetchUserInfo(): Single<ApiResponse<User>>
+
+    @GsonConverter("app")
+    @GET("v1/user/info")
+    suspend fun fetchUserInfo2(): ApiResponse<User>
 }
