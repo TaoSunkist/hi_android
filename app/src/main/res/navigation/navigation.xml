@@ -43,6 +43,13 @@
             app:exitAnim="@null"
             app:popEnterAnim="@anim/anim_right_in"
             app:popExitAnim="@anim/anim_left_out" />
+        <action
+            android:id="@+id/action2navDebug"
+            app:destination="@id/navDebugFragment"
+            app:enterAnim="@anim/anim_left_in"
+            app:exitAnim="@null"
+            app:popEnterAnim="@anim/anim_right_in"
+            app:popExitAnim="@anim/anim_left_out" />
     </fragment>
 
     <fragment
@@ -80,5 +87,11 @@
         android:name="me.taosunkist.hello.ui.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/navDebugFragment"
+        android:name="me.taosunkist.hello.ui.debug.DebugFragment"
+        android:label="DebugFragment"
+        tools:layout="@layout/fragment_debug" />
 
 </navigation>

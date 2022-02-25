@@ -21,6 +21,7 @@ import me.taosunkist.hello.data.net.module.UserService
 import me.taosunkist.hello.databinding.FragmentMainBinding
 import me.taosunkist.hello.databinding.NavHeaderMainBinding
 import me.taosunkist.hello.ui.mutualheartbeat.MutualHeartbeatDialog
+import me.taosunkist.hello.ui.reusable.DebugFloatView
 import me.taosunkist.hello.utility.ToastyExt
 import top.thsunkist.appkit.utility.printf
 import top.thsunkist.appkit.utility.printfE
@@ -39,6 +40,9 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val debugFloatView = DebugFloatView(requireActivity())
+        debugFloatView.show()
+        debugFloatView.setOnClickListener { v -> debugFloatViewPressed() }
         NavigationUI.setupWithNavController(binding.navigationView, navController)
 
         binding.toolbar.setOnMenuItemClickListener(this)
@@ -64,9 +68,9 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
         UserStore.shared.login()
 
         UserService.shared.fetchUserInfo().observeOnMainThread(onSuccess = {
-           printf(it)
+            printf(it)
         }, onError = {
-           printfE(it.localizedMessage)
+            printfE(it.localizedMessage)
         }).addTo(compositeDisposable = CompositeDisposable())
 
 
@@ -116,6 +120,10 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
             }
         }
         return true
+    }
+
+    private fun debugFloatViewPressed() {
+        Navigation.findNavController(requireActivity(), R.id.nav_host_fragment).navigate(MainFragmentDirections.action2navDebug())
     }
 
     override fun onMenuItemClick(item: MenuItem): Boolean {
