@@ -21,14 +21,10 @@ interface MatchingFloatViewDelegate {
 }
 
 class DebugFloatView @JvmOverloads constructor(
-    private val mContext: Context,
+    mContext: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = 0,
 ) : RelativeLayout(mContext, attrs, defStyleAttr) {
-
-    enum class Mode {
-        NORMAL,
-    }
 
     companion object {
 
@@ -38,7 +34,6 @@ class DebugFloatView @JvmOverloads constructor(
 
     }
 
-    var mode = Mode.NORMAL
     var delegate: MatchingFloatViewDelegate? by weak()
 
     private var floatBallParamsX = -1

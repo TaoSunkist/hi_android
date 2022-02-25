@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_come_msg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/background_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        tools:src="@drawable/bg_come_msg_tip1" />
+
+
+    <com.yinyuan.mobile.view.WealthLevelView
+        android:id="@+id/wealth_level_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@mipmap/lv0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nickname_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        android:ellipsize="end"
+        android:maxWidth="100dp"
+        android:shadowColor="#1A000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wealth_level_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="XXX" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/car_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@+id/nickname_text_view"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nickname_text_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="驾着“座驾名称”来了" />
+
+</merge>
