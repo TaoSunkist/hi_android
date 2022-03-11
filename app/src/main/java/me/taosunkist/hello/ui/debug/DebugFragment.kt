@@ -1,11 +1,14 @@
 package me.taosunkist.hello.ui.debug
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import me.taosunkist.hello.R
 import me.taosunkist.hello.databinding.FragmentDebugBinding
 import me.taosunkist.hello.ui.BaseFragment
-import kotlin.reflect.KClass
 
-class DebugFragment : BaseFragment<FragmentDebugBinding>(R.layout.fragment_debug) {
+class DebugFragment : BaseFragment() {
 
     companion object {
 
@@ -13,6 +16,7 @@ class DebugFragment : BaseFragment<FragmentDebugBinding>(R.layout.fragment_debug
         fun newInstance() = DebugFragment().apply {}
     }
 
-    override fun FragmentDebugBinding.onCreateView(binding: FragmentDebugBinding) {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        return FragmentDebugBinding.inflate(inflater, container, false).root
     }
 }

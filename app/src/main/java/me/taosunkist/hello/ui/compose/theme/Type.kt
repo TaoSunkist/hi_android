@@ -1,4 +1,4 @@
-package me.taosunkist.hello.ui.compose.ui.theme
+package me.taosunkist.hello.ui.compose.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

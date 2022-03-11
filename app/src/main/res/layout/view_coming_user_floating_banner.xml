@@ -5,26 +5,30 @@
     android:id="@+id/layout_come_msg"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
     <ImageView
         android:id="@+id/background_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
         android:contentDescription="@null"
-        tools:src="@drawable/bg_come_msg_tip1" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/icon_user_detail_label" />
 
 
-    <com.yinyuan.mobile.view.WealthLevelView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/wealth_level_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:background="@mipmap/lv0" />
+        tools:background="@drawable/ic_new_message_label" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nickname_text_view"
@@ -53,6 +57,7 @@
         android:layout_marginStart="2dp"
         android:layout_toEndOf="@+id/nickname_text_view"
         android:ellipsize="end"
+        android:includeFontPadding="false"
         android:maxLines="1"
         android:textColor="@color/white"
         android:textSize="12sp"
