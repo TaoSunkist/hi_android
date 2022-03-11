@@ -75,7 +75,8 @@ class RippleBackground : RelativeLayout {
 
         with(typedArray) {
             rippleColor = getColor(R.styleable.RippleBackground_rb_color, resources.getColor(R.color.colorAccent))
-            rippleStrokeWidth = getDimension(R.styleable.RippleBackground_rb_strokeWidth, resources.getDimension(R.dimen.rippleStrokeWidth))
+            rippleStrokeWidth =
+                getDimension(R.styleable.RippleBackground_rb_strokeWidth, resources.getDimension(R.dimen.rippleStrokeWidth))
             rippleRadius = getDimension(R.styleable.RippleBackground_rb_radius, resources.getDimension(R.dimen.rippleRadius))
             rippleDurationTime = getInt(R.styleable.RippleBackground_rb_duration, DEFAULT_DURATION_TIME)
             rippleAmount = getInt(R.styleable.RippleBackground_rb_rippleAmount, DEFAULT_RIPPLE_COUNT)
@@ -153,7 +154,7 @@ class RippleBackground : RelativeLayout {
     fun switchMode() {
         for (rippleView in rippleViewList) {
             rippleView.visibility = VISIBLE
-            rippleColor = Debug.colors.random()
+            rippleColor = Debug.randomColor()
             paint.color = rippleColor
             rippleView.invalidate()
         }

@@ -37,7 +37,8 @@ data class ComingUserFloatingBannerUIModel(
                     R.drawable.activity_item_bg2,
                     R.drawable.activity_item_bg3,
                     R.drawable.activity_item_bg4,
-                    R.drawable.activity_item_bg5).random(),
+                    R.drawable.activity_item_bg5
+                ).random(),
                 experLevel = (0..50).random(),
             )
         }
