@@ -37,7 +37,6 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
     private val debugFloatView: DebugFloatView by lazy { DebugFloatView(requireActivity()).apply { show() } }
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         FragmentMainBinding.inflate(inflater, container, false).apply { binding = this }.root
 

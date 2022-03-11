@@ -7,6 +7,7 @@ import android.graphics.PixelFormat
 import android.view.*
 import android.view.animation.AccelerateInterpolator
 import android.widget.FrameLayout
+import androidx.navigation.Navigation
 import me.taosunkist.hello.databinding.FloatingViewBinding
 import top.thsunkist.appkit.utility.Dimens
 import top.thsunkist.appkit.utility.Dimens.dpToPx
@@ -103,12 +104,6 @@ class DebugFloatView @JvmOverloads constructor(
         setOnClickListener {
             delegate?.matchingFloatViewDelegateDidPressed()
         }
-    }
-
-    override fun onAttachedToWindow() {
-        super.onAttachedToWindow()
-        printf("taohui", rootView.javaClass.simpleName)
-        show()
     }
 
     @SuppressLint("ClickableViewAccessibility")
