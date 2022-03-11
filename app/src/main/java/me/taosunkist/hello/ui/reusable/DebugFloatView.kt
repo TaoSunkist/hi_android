@@ -42,8 +42,7 @@ class DebugFloatView @JvmOverloads constructor(
 
     private var floatBallParams: WindowManager.LayoutParams = WindowManager.LayoutParams()
 
-    private var windowManager: WindowManager =
-        context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+    private var windowManager: WindowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
 
     private var inputStartX = 0
 
@@ -61,9 +60,9 @@ class DebugFloatView @JvmOverloads constructor(
 
     private val screenWidth: Int = Dimens.screenWidth
 
-    private val dp160: Int = dpToPx(160)
+    private val spacingY: Int = dpToPx(160)
 
-    private val dp48: Int = dpToPx(48)
+    private val spacingX: Int = dpToPx(48)
 
     private var valueAnimator: ValueAnimator? = null
 
@@ -211,8 +210,8 @@ class DebugFloatView @JvmOverloads constructor(
         isShow = true
         if (floatBallParamsX == -1 || floatBallParamsY == -1) {
             /* 首次打开时，初始化的位置 */
-            floatBallParams.x = dp48
-            floatBallParams.y = screenHeight - dp160 - dp48
+            floatBallParams.x = spacingX
+            floatBallParams.y = screenHeight - spacingY - spacingX
             floatBallParamsX = floatBallParams.x
             floatBallParamsY = floatBallParams.y
         } else {

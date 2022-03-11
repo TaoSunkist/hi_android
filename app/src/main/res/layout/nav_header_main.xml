@@ -27,7 +27,9 @@
             android:id="@+id/avatar_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:animateLayoutChanges="true">
+            android:animateLayoutChanges="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <me.taosunkist.hello.ui.reusable.CorneredImageView
                 android:id="@+id/avatar_image_button"

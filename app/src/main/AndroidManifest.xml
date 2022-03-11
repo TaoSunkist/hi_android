@@ -21,7 +21,7 @@
             android:name=".ui.compose.ComposeActivity"
             android:exported="false"
             android:label="@string/title_activity_compose"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/ComposeAppTheme" />
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true"
