@@ -21,10 +21,10 @@ interface MatchingFloatViewDelegate {
 }
 
 class DebugFloatView @JvmOverloads constructor(
-    mContext: Context,
+    context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
-) : RelativeLayout(mContext, attrs, defStyleAttr) {
+) : RelativeLayout(context, attrs, defStyleAttr) {
 
     companion object {
 
@@ -74,9 +74,6 @@ class DebugFloatView @JvmOverloads constructor(
 
     var isShow = false
 
-    private val binding: FloatingViewBinding =
-        FloatingViewBinding.inflate(LayoutInflater.from(mContext), this, true)
-
     @Suppress("unused")
     private val isLeftSide: Boolean
         get() = x == 0f
@@ -87,6 +84,8 @@ class DebugFloatView @JvmOverloads constructor(
 
 
     init {
+        FloatingViewBinding.inflate(LayoutInflater.from(context), this, true)
+
         floatBallParams.flags = floatBallParams.flags or
                 WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH or
                 WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or

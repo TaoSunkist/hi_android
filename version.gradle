@@ -7,7 +7,7 @@ build_versions.min_sdk = 21
 build_versions.target_sdk = 30
 ext.build_versions = build_versions
 
-def kotlinVersion = "1.5.31"
+def kotlinVersion = "1.6.10"
 def kotlin = [:]
 kotlin.kotlinStdlibCommon = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
