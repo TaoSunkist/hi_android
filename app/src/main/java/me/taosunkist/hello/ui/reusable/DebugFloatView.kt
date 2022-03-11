@@ -4,10 +4,9 @@ import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.PixelFormat
-import android.util.AttributeSet
 import android.view.*
 import android.view.animation.AccelerateInterpolator
-import android.widget.RelativeLayout
+import android.widget.FrameLayout
 import me.taosunkist.hello.databinding.FloatingViewBinding
 import top.thsunkist.appkit.utility.Dimens
 import top.thsunkist.appkit.utility.Dimens.dpToPx
@@ -22,9 +21,7 @@ interface MatchingFloatViewDelegate {
 
 class DebugFloatView @JvmOverloads constructor(
     context: Context,
-    attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0,
-) : RelativeLayout(context, attrs, defStyleAttr) {
+) : FrameLayout(context, null, 0) {
 
     companion object {
 
