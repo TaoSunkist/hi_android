@@ -4,9 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import me.taosunkist.hello.R
-import me.taosunkist.hello.databinding.FragmentDebugBinding
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.material.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.tooling.preview.Preview
 import me.taosunkist.hello.ui.BaseFragment
+import me.taosunkist.hello.ui.view.ComingUserFloatingBannerView
 
 class DebugFragment : BaseFragment() {
 
@@ -16,7 +21,17 @@ class DebugFragment : BaseFragment() {
         fun newInstance() = DebugFragment().apply {}
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return FragmentDebugBinding.inflate(inflater, container, false).root
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = ComposeView(
+        requireContext()
+    ).apply {
+        setContent {
+            Button(onClick = {
+
+            }) {
+                Text(ComingUserFloatingBannerView::javaClass.name)
+            }
+        }
     }
+
+
 }
