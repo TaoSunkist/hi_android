@@ -10,6 +10,7 @@ import android.widget.FrameLayout
 import me.taosunkist.hello.databinding.FloatingViewBinding
 import top.thsunkist.appkit.utility.Dimens
 import top.thsunkist.appkit.utility.Dimens.dpToPx
+import top.thsunkist.appkit.utility.printf
 import top.thsunkist.tatame.utilities.weak
 import kotlin.math.abs
 
@@ -102,6 +103,12 @@ class DebugFloatView @JvmOverloads constructor(
         setOnClickListener {
             delegate?.matchingFloatViewDelegateDidPressed()
         }
+    }
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        printf("taohui", rootView.javaClass.simpleName)
+        show()
     }
 
     @SuppressLint("ClickableViewAccessibility")

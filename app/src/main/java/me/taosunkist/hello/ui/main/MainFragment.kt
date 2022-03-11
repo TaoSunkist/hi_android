@@ -1,6 +1,7 @@
 package me.taosunkist.hello.ui.main
 
 import android.os.Bundle
+import android.os.Debug
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -34,14 +35,15 @@ class MainFragment : NavHostFragment(), AppBarConfiguration.OnNavigateUpListener
 
     lateinit var appBarConfiguration: AppBarConfiguration
 
+    private val debugFloatView: DebugFloatView by lazy { DebugFloatView(requireActivity()).apply { show() } }
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         FragmentMainBinding.inflate(inflater, container, false).apply { binding = this }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val debugFloatView = DebugFloatView(requireActivity())
-        debugFloatView.show()
         debugFloatView.setOnClickListener { v -> debugFloatViewPressed() }
         NavigationUI.setupWithNavController(binding.navigationView, navController)
 
