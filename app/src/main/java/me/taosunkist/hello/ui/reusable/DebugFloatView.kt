@@ -30,7 +30,6 @@ class DebugFloatView @JvmOverloads constructor(
         @Suppress("unused")
         @JvmStatic
         private val TAG = "FloatingView"
-
     }
 
     var delegate: MatchingFloatViewDelegate? by weak()
