@@ -24,5 +24,6 @@
     <string name="s_s_has_been_kicked_out_of_the_room_by_the_room_admin_1">\u0020has been kicked out of the room by the</string>
     <string name="s_s_has_been_kicked_out_of_the_room_by_the_room_admin_2">\u0020room admin %1$s</string>
     <string name="s_s_has_been_kicked_out_of_the_room_by_the_room_owner_2">\u0020room owner %1$s</string>
+    <string name="title_activity_compose">ComposeActivity</string>
 
 </resources>

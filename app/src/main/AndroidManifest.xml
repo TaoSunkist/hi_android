@@ -12,18 +12,22 @@
         android:fullBackupContent="@xml/backup_descriptor"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity
+            android:name=".ui.compose.ComposeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_compose"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.main.MainActivity"
-            tools:node="merge"
             android:exported="true"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:node="merge">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,10 +36,10 @@
         </activity>
         <activity
             android:name=".ui.shakemusicbar.ShakeMusicBarActivity"
-            android:label="@string/title_activity_main"
             android:exported="false"
-            tools:node="merge"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:node="merge" />
     </application>
 
 </manifest>
