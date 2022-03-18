@@ -4,14 +4,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHost
+import androidx.navigation.fragment.findNavController
+import com.google.accompanist.flowlayout.FlowColumn
+import com.google.accompanist.flowlayout.FlowMainAxisAlignment
+import com.google.accompanist.flowlayout.FlowRow
+import com.google.accompanist.flowlayout.SizeMode
+import me.taosunkist.hello.R
 import me.taosunkist.hello.ui.BaseFragment
-import me.taosunkist.hello.ui.view.ComingUserFloatingBannerView
 
 class DebugFragment : BaseFragment() {
 
@@ -24,14 +34,45 @@ class DebugFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = ComposeView(
         requireContext()
     ).apply {
-        setContent {
-            Button(onClick = {
-
-            }) {
-                Text(ComingUserFloatingBannerView::javaClass.name)
+        MaterialTheme {
+            setContent {
+                setPadding(5, 5, 5, 5)
+                parentLayout()
             }
         }
     }
 
+    @Composable
+    @Preview
+    fun parentLayout() {
+
+        FlowRow(
+            mainAxisSize = SizeMode.Wrap,
+            mainAxisAlignment = FlowMainAxisAlignment.Start,
+            crossAxisSpacing = 5.dp,
+            mainAxisSpacing = 5.dp
+        ) {
+            Button(onClick = {
+            }, modifier = Modifier.wrapContentSize(align = Alignment.TopStart)) {
+                Text("Button1")
+            }
+            Button(onClick = {
+            }, modifier = Modifier.wrapContentSize(align = Alignment.TopStart)) {
+                Text("Button2")
+            }
+            Button(onClick = {
+            }, modifier = Modifier.wrapContentSize(align = Alignment.TopStart)) {
+                Text("Button3")
+            }
+            Button(onClick = {
+            }, modifier = Modifier.wrapContentSize(align = Alignment.TopStart)) {
+                Text("Button4")
+            }
+            Button(onClick = {
+            }, modifier = Modifier.wrapContentSize(align = Alignment.TopStart)) {
+                Text("Button5")
+            }
+        }
+    }
 
 }

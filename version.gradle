@@ -1,10 +1,10 @@
 ext.deps = [:]
 
 def build_versions = [:]
-build_versions.compile_sdk = 30
+build_versions.compile_sdk = 31
 build_versions.build_tools = '30.0.2'
 build_versions.min_sdk = 21
-build_versions.target_sdk = 30
+build_versions.target_sdk = 31
 ext.build_versions = build_versions
 
 def kotlinVersion = "1.6.10"
@@ -27,6 +27,7 @@ navigation.navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:
 navigation.navigationUiKtx = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 navigation.navigationDynamicFeaturesFragment = "androidx.navigation:navigation-dynamic-features-fragment:$navigationVersion"
 navigation.navigationTesting = "androidx.navigation:navigation-testing:$navigationVersion"
+//navigation.navigationCompose = "androidx.navigation:navigation-compose:2.4.1"
 
 def androidx = [:]
 androidx.design = 'com.android.support:design:30.0.0'
