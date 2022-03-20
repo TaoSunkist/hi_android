@@ -28,11 +28,9 @@ class DebugFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View = ComposeView(
         requireContext()
     ).apply {
-        MaterialTheme {
             setContent {
                 setPadding(5, 5, 5, 5)
                 ParentLayout()
-            }
         }
     }
 
@@ -68,5 +66,4 @@ class DebugFragment : BaseFragment() {
             }
         }
     }
-
 }
